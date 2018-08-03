@@ -43,7 +43,16 @@
     connectButton.frame = CGRectMake(self.view.bounds.size.width - (20 + connectButton.bounds.size.width), notNowButton.frame.origin.y, connectButton.bounds.size.width, connectButton.bounds.size.height);
     [connectButton addTarget:cardsSwipingView action:@selector(dismissTopCardToRight) forControlEvents:UIControlEventTouchUpInside];
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.9 green:0.5 blue:0.4 alpha:1];
+    UIButton *addConnection = [[UIButton alloc] init];
+    [addConnection setImage:[UIImage imageNamed:@"AddConnection"] forState:UIControlStateNormal];
+    [addConnection sizeToFit];
+   
+    addConnection.frame = CGRectMake(self.view.bounds.size.width - (20 + addConnection.bounds.size.width), cardsSwipingView.frame.origin.y + cardsSwipingView.frame.size.height, addConnection.bounds.size.width, addConnection.bounds.size.height);
+    [addConnection addTarget:self action:@selector(addButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newSplashBG"]];
+    [self drawRect:self.view.bounds];
+ 
 //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,0,320,35)];
 //    CAGradientLayer *gradient = [CAGradientLayer layer];
 //    gradient.frame = view.bounds;
@@ -55,10 +64,27 @@
 //
 //    [self.view addSubview:notNowButton];
 //    [self.view addSubview:connectButton];
+    [self.view addSubview:addConnection];
     [self.view addSubview:cardsSwipingView];
 
  
     
+}
+- (void)drawRect:(CGRect)rect {
+    
+    CGRect topRect = CGRectMake(0, 0, rect.size.width, rect.size.height/2.0);
+    // Fill the rectangle with grey
+    [[UIColor whiteColor] setFill];
+    UIRectFill( topRect );
+    
+    CGRect bottomRect = CGRectMake(0, rect.size.height/2.0, rect.size.width, rect.size.height/2.0);
+    [[UIColor redColor] setFill];
+    UIRectFill( bottomRect );
+    
+}
+
+- (void)addButtonTapped:(UIButton *)sender {
+    NSLog(@"Ok button was tapped: dismiss the view controller.");
 }
 
 

@@ -12,11 +12,11 @@
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
 		CEB28734211388BA00C51670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB28733211388BA00C51670 /* Assets.xcassets */; };
 		CEB2873A211388BA00C51670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28739211388BA00C51670 /* main.m */; };
-		CEB287412113897B00C51670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB287402113897B00C51670 /* LaunchScreen.storyboard */; };
 		CEB28746211391FD00C51670 /* MXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28744211391FC00C51670 /* MXViewController.m */; };
 		CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB287472113925A00C51670 /* MXMemberCardView.m */; };
 		CEB287652113F50E00C51670 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB287642113F50E00C51670 /* SplashViewController.m */; };
 		CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB287682113F6DC00C51670 /* Splash.storyboard */; };
+		CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2876D211432C700C51670 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,6 @@
 		CEB28733211388BA00C51670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB28738211388BA00C51670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB28739211388BA00C51670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CEB287402113897B00C51670 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB28744211391FC00C51670 /* MXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXViewController.m; sourceTree = "<group>"; };
 		CEB28745211391FC00C51670 /* MXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXViewController.h; sourceTree = "<group>"; };
 		CEB287472113925A00C51670 /* MXMemberCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMemberCardView.m; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		CEB287632113F50E00C51670 /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		CEB287642113F50E00C51670 /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		CEB287682113F6DC00C51670 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CEB2876E211432C700C51670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../flirtar/FlirtARViper/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECE5D163F401B0DA6BD15C3F /* Pods-simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-simple/Pods-simple.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,13 +82,14 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2876A21142F5C00C51670 /* Common */,
 				CEB2875A21139F2B00C51670 /* SplashModule */,
 				CEB28742211391D400C51670 /* TinderModule */,
 				CEB28727211388A900C51670 /* AppDelegate.h */,
 				CEB28728211388A900C51670 /* AppDelegate.m */,
 				CEB28733211388BA00C51670 /* Assets.xcassets */,
 				CEB28738211388BA00C51670 /* Info.plist */,
-				CEB287402113897B00C51670 /* LaunchScreen.storyboard */,
+				CEB2876D211432C700C51670 /* LaunchScreen.storyboard */,
 				CEB28739211388BA00C51670 /* main.m */,
 				CEB28730211388A900C51670 /* simple.xcdatamodeld */,
 			);
@@ -122,6 +123,13 @@
 				CEB287682113F6DC00C51670 /* Splash.storyboard */,
 			);
 			path = SplashModule;
+			sourceTree = "<group>";
+		};
+		CEB2876A21142F5C00C51670 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F31264CEEE5F93D74C187B73 /* Frameworks */ = {
@@ -164,6 +172,7 @@
 				TargetAttributes = {
 					CEB28723211388A900C51670 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -190,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB287412113897B00C51670 /* LaunchScreen.storyboard in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
+				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +243,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEB2876D211432C700C51670 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB2876E211432C700C51670 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CEB2873B211388BA00C51670 /* Debug */ = {
@@ -351,6 +371,7 @@
 			baseConfigurationReference = BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9TPX8D925;
 				INFOPLIST_FILE = simple/Info.plist;
@@ -361,6 +382,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yves.blindy.simple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "simple/Common/simple-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -370,6 +394,7 @@
 			baseConfigurationReference = ECE5D163F401B0DA6BD15C3F /* Pods-simple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9TPX8D925;
 				INFOPLIST_FILE = simple/Info.plist;
@@ -380,6 +405,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yves.blindy.simple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "simple/Common/simple-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
