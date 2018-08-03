@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
+    UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];
+    
+    self.window = [[UIWindow alloc] init];
+    [self.window makeKeyAndVisible];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = myNewVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    return YES;
     return YES;
 }
 
@@ -71,7 +80,7 @@
                      * The device is out of space.
                      * The store could not be migrated to the current model version.
                      Check the error message to determine what the actual problem was.
-                    */
+                     */
                     NSLog(@"Unresolved error %@, %@", error, error.userInfo);
                     abort();
                 }

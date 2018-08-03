@@ -1,0 +1,16 @@
+PODS:
+  - MXCardsSwipingView (0.2.0)
+
+DEPENDENCIES:
+  - MXCardsSwipingView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MXCardsSwipingView
+
+SPEC CHECKSUMS:
+  MXCardsSwipingView: d0a39b40a2a991a4a4f90f5573d33a33e2e1f656
+
+PODFILE CHECKSUM: 54439fe610accfd2a47760eca56fdd7d1c1d4ee6
+
+COCOAPODS: 1.5.3
