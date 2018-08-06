@@ -8,4 +8,6 @@ target 'simple' do
   # Pods for simple
 
   pod "MXCardsSwipingView"
+  pod "LSFloatingActionMenu"
+  pod "MKDropdownMenu"
 end

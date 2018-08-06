@@ -7,40 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E25048314513B685777FDD994FAE3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD46FBC041420035C341CC6342582587 /* UIKit.framework */; };
-		24ABEA1C995037C280C04766F79FF3D5 /* Pods-simple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69252E44AA67D046D4913B66D35491 /* Pods-simple-dummy.m */; };
-		4F63D3EE81B82E216126613080A3C3A9 /* MXCardsSwipingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 958870B7C3ECE28FF7E4FD81018BFF8D /* MXCardsSwipingView-dummy.m */; };
-		6DDD3EAC66A1F0A5CB0A19393BC4B65F /* MXCardsSwipingView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A2CA4B60C251508D50C24BD6BFD034 /* MXCardsSwipingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BE9A3BD46CE7851D3867B35CA5A9FC02 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A24649147D16A07A13B354CEF3C84C5 /* MXCardsSwipingView.m */; };
+		0E25048314513B685777FDD994FAE3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */; };
+		3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A697D1702934815DCD20B15F642F754 /* Pods-simple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69252E44AA67D046D4913B66D35491 /* Pods-simple-dummy.m */; };
+		4F63D3EE81B82E216126613080A3C3A9 /* MXCardsSwipingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */; };
+		6DDD3EAC66A1F0A5CB0A19393BC4B65F /* MXCardsSwipingView.h in Headers */ = {isa = PBXBuildFile; fileRef = E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */; };
+		810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */; };
+		9BA77D18CACBB4250026DBB1B63D1FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		BE9A3BD46CE7851D3867B35CA5A9FC02 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */; };
+		C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */; };
+		D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */; };
+		DF76179FA5B16B0D2336706FD42A5654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4A9A2748F81F7BE45B8C662CF8A9DC7B /* PBXContainerItemProxy */ = {
+		13BA168EDC341AA55B52E76AD885398E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7E246FB1707BC4E8C79999B014C37DCF;
 			remoteInfo = MXCardsSwipingView;
 		};
+		2E5C9DA0C005750867FAB607A7EC14CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8380E29B6975954FB3D85FCC7BC03D;
+			remoteInfo = MKDropdownMenu;
+		};
+		3B713CE62A4817BB48083ED3B1184D2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F9EF4E9757925C24DAD012F0B5E3D55;
+			remoteInfo = LSFloatingActionMenu;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D9895C5CA27471DB1BA3D782253F58D /* MXCardsSwipingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXCardsSwipingView.xcconfig; sourceTree = "<group>"; };
-		2A24649147D16A07A13B354CEF3C84C5 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXCardsSwipingView.m; path = MXCardsSwipingView/Classes/MXCardsSwipingView.m; sourceTree = "<group>"; };
-		4695B4BE00F1BDC93B1C47FB0B59436A /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-simple.a"; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BCD983573FD30321E802B56EAFFA1D0 /* libMKDropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKDropdownMenu.a; path = libMKDropdownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenuItem.m; path = LSFloatingActionMenu/LSFloatingActionMenuItem.m; sourceTree = "<group>"; };
+		11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenu.m; path = LSFloatingActionMenu/LSFloatingActionMenu.m; sourceTree = "<group>"; };
+		478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenu.h; path = LSFloatingActionMenu/LSFloatingActionMenu.h; sourceTree = "<group>"; };
 		4C69252E44AA67D046D4913B66D35491 /* Pods-simple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-simple-dummy.m"; sourceTree = "<group>"; };
+		4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXCardsSwipingView.xcconfig; sourceTree = "<group>"; };
+		5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenuItem.h; path = LSFloatingActionMenu/LSFloatingActionMenuItem.h; sourceTree = "<group>"; };
 		67B6EA3D28849097CA9932E3588C9CF1 /* Pods-simple-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-simple-acknowledgements.plist"; sourceTree = "<group>"; };
-		8398E2F12DC6663C5BF6EC3EFD607BA3 /* MXCardsSwipingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXCardsSwipingView-prefix.pch"; sourceTree = "<group>"; };
-		8B6AF77C540962A020A838FD09DA3A95 /* libMXCardsSwipingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMXCardsSwipingView.a; path = libMXCardsSwipingView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXCardsSwipingView.m; path = MXCardsSwipingView/Classes/MXCardsSwipingView.m; sourceTree = "<group>"; };
+		6F6CF5CB33FE288B6CE0801E81394C74 /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-simple.a"; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		749143FCBA2CD57D2380BD5ED19CA763 /* libLSFloatingActionMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLSFloatingActionMenu.a; path = libLSFloatingActionMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSFloatingActionMenu-dummy.m"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		958870B7C3ECE28FF7E4FD81018BFF8D /* MXCardsSwipingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXCardsSwipingView-dummy.m"; sourceTree = "<group>"; };
+		948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
 		9ED7EC26B08812B81ABC9646873E5B0A /* Pods-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-simple.debug.xcconfig"; sourceTree = "<group>"; };
+		A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXCardsSwipingView-dummy.m"; sourceTree = "<group>"; };
+		B7D66D429A36BC3ADBB792D75EC28E4C /* libMXCardsSwipingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMXCardsSwipingView.a; path = libMXCardsSwipingView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
 		BBD6C82ADF74D8E566EA342A139A063B /* Pods-simple-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-simple-frameworks.sh"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSFloatingActionMenu.xcconfig; sourceTree = "<group>"; };
 		C0C4AD3B0F9E1DB2B37ADFA702CA7F56 /* Pods-simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-simple.release.xcconfig"; sourceTree = "<group>"; };
+		C239E8C2C9350F7085EF4686F7BC9D78 /* MXCardsSwipingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXCardsSwipingView-prefix.pch"; sourceTree = "<group>"; };
+		C264D1E37EA2BF64172FE8292C674CF2 /* LSFloatingActionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LSFloatingActionMenu-prefix.pch"; sourceTree = "<group>"; };
 		CA2840CEECDACAADE11B00F03BE0E38D /* Pods-simple-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-simple-resources.sh"; sourceTree = "<group>"; };
-		DD46FBC041420035C341CC6342582587 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXCardsSwipingView.h; path = MXCardsSwipingView/Classes/MXCardsSwipingView.h; sourceTree = "<group>"; };
+		E8F1898A20779D977037D40040D3E452 /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
 		F481CA877C9FF3AB1ED0F42C9443B56D /* Pods-simple-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-simple-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F8A2CA4B60C251508D50C24BD6BFD034 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXCardsSwipingView.h; path = MXCardsSwipingView/Classes/MXCardsSwipingView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,23 +91,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2082AC393C89B10BD85E1C5167A8941 /* Frameworks */ = {
+		0697810705728E964B9723FA2B15F7C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B6E04683101F214BEB729B4DA8ABDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A84800DE74CB117738D4C6A93E7746E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA77D18CACBB4250026DBB1B63D1FD6 /* Foundation.framework in Frameworks */,
+				DF76179FA5B16B0D2336706FD42A5654 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		074F0220C39B495A0E4CBBA597A33B75 /* Products */ = {
+		00CB62CCD7D3320A4F2CDDEF516E9C22 /* MXCardsSwipingView */ = {
 			isa = PBXGroup;
 			children = (
-				8B6AF77C540962A020A838FD09DA3A95 /* libMXCardsSwipingView.a */,
-				4695B4BE00F1BDC93B1C47FB0B59436A /* libPods-simple.a */,
+				E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */,
+				683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */,
+				FA23CA65E011F429EC69A7435E950C93 /* Support Files */,
 			);
-			name = Products;
+			name = MXCardsSwipingView;
+			path = MXCardsSwipingView;
+			sourceTree = "<group>";
+		};
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		473D1AB922E7D4F9C9C66AA403115223 /* Targets Support Files */ = {
@@ -79,15 +153,28 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		65B83DAEA13AFE35CCDFF2B34B861AF9 /* MXCardsSwipingView */ = {
+		4F16E855D9237D4273CDD26B038AB8CE /* MKDropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				F8A2CA4B60C251508D50C24BD6BFD034 /* MXCardsSwipingView.h */,
-				2A24649147D16A07A13B354CEF3C84C5 /* MXCardsSwipingView.m */,
-				F58E7EC65528DDD9BB017E68C7DC21D9 /* Support Files */,
+				B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */,
+				948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */,
+				B2B2E33CBB1CEC7BDF9C2CB606C85ED0 /* Support Files */,
 			);
-			name = MXCardsSwipingView;
-			path = MXCardsSwipingView;
+			name = MKDropdownMenu;
+			path = MKDropdownMenu;
+			sourceTree = "<group>";
+		};
+		65EE2520D712DCD409B42673898F1B70 /* LSFloatingActionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */,
+				1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */,
+				5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */,
+				10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */,
+				FE87214B8582E1011378F69A2389FB8A /* Support Files */,
+			);
+			name = LSFloatingActionMenu;
+			path = LSFloatingActionMenu;
 			sourceTree = "<group>";
 		};
 		66E8E6D874D945374F31D0636FCB8B57 /* Pods-simple */ = {
@@ -105,50 +192,69 @@
 			path = "Target Support Files/Pods-simple";
 			sourceTree = "<group>";
 		};
+		68A6F18525F118FB7DE4BA7B2F13392A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				749143FCBA2CD57D2380BD5ED19CA763 /* libLSFloatingActionMenu.a */,
+				0BCD983573FD30321E802B56EAFFA1D0 /* libMKDropdownMenu.a */,
+				B7D66D429A36BC3ADBB792D75EC28E4C /* libMXCardsSwipingView.a */,
+				6F6CF5CB33FE288B6CE0801E81394C74 /* libPods-simple.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E56A736B71A1E6954FEEF7B81FC76F31 /* Pods */,
-				074F0220C39B495A0E4CBBA597A33B75 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9FF81277D78F557C59E8952FD2748B04 /* Pods */,
+				68A6F18525F118FB7DE4BA7B2F13392A /* Products */,
 				473D1AB922E7D4F9C9C66AA403115223 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		9FF81277D78F557C59E8952FD2748B04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FF5B08143E740C3777FEB0D3A952141C /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E56A736B71A1E6954FEEF7B81FC76F31 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				65B83DAEA13AFE35CCDFF2B34B861AF9 /* MXCardsSwipingView */,
+				65EE2520D712DCD409B42673898F1B70 /* LSFloatingActionMenu */,
+				4F16E855D9237D4273CDD26B038AB8CE /* MKDropdownMenu */,
+				00CB62CCD7D3320A4F2CDDEF516E9C22 /* MXCardsSwipingView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F58E7EC65528DDD9BB017E68C7DC21D9 /* Support Files */ = {
+		B2B2E33CBB1CEC7BDF9C2CB606C85ED0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D9895C5CA27471DB1BA3D782253F58D /* MXCardsSwipingView.xcconfig */,
-				958870B7C3ECE28FF7E4FD81018BFF8D /* MXCardsSwipingView-dummy.m */,
-				8398E2F12DC6663C5BF6EC3EFD607BA3 /* MXCardsSwipingView-prefix.pch */,
+				4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */,
+				11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */,
+				E8F1898A20779D977037D40040D3E452 /* MKDropdownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKDropdownMenu";
+			sourceTree = "<group>";
+		};
+		FA23CA65E011F429EC69A7435E950C93 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */,
+				A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */,
+				C239E8C2C9350F7085EF4686F7BC9D78 /* MXCardsSwipingView-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MXCardsSwipingView";
 			sourceTree = "<group>";
 		};
-		FF5B08143E740C3777FEB0D3A952141C /* iOS */ = {
+		FE87214B8582E1011378F69A2389FB8A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD46FBC041420035C341CC6342582587 /* UIKit.framework */,
+				C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */,
+				77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */,
+				C264D1E37EA2BF64172FE8292C674CF2 /* LSFloatingActionMenu-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/LSFloatingActionMenu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,24 +268,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15AB792EBA45E9E23B97002EDCF200DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40CA766FE3FDD59BC053B8A1ACD39BC9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */,
+				3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		419BD2BC85F887644EE20E3EBCF28C5A /* Pods-simple */ = {
+		5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B05DC1A9349739EA8E4C11942E803654 /* Build configuration list for PBXNativeTarget "Pods-simple" */;
+			buildConfigurationList = 756DD4DE3CB2F2E7A98DD3FCA4B52069 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */;
 			buildPhases = (
-				9806C95696DD247CE8C141583999C742 /* Sources */,
-				C2082AC393C89B10BD85E1C5167A8941 /* Frameworks */,
+				029AA34E54A7D64A812D7AAC76621AAF /* Sources */,
+				0B6E04683101F214BEB729B4DA8ABDD0 /* Frameworks */,
+				15AB792EBA45E9E23B97002EDCF200DD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D7A9EC262EE8A8A34C53BE9D09DFF78 /* PBXTargetDependency */,
 			);
-			name = "Pods-simple";
-			productName = "Pods-simple";
-			productReference = 4695B4BE00F1BDC93B1C47FB0B59436A /* libPods-simple.a */;
+			name = MKDropdownMenu;
+			productName = MKDropdownMenu;
+			productReference = 0BCD983573FD30321E802B56EAFFA1D0 /* libMKDropdownMenu.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7E246FB1707BC4E8C79999B014C37DCF /* MXCardsSwipingView */ = {
@@ -196,7 +319,43 @@
 			);
 			name = MXCardsSwipingView;
 			productName = MXCardsSwipingView;
-			productReference = 8B6AF77C540962A020A838FD09DA3A95 /* libMXCardsSwipingView.a */;
+			productReference = B7D66D429A36BC3ADBB792D75EC28E4C /* libMXCardsSwipingView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB05C8824E039CD1AF3BA5A4045F80AA /* Build configuration list for PBXNativeTarget "LSFloatingActionMenu" */;
+			buildPhases = (
+				73D2FBB646B36224B71058C6A98A5C1F /* Sources */,
+				A84800DE74CB117738D4C6A93E7746E0 /* Frameworks */,
+				40CA766FE3FDD59BC053B8A1ACD39BC9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSFloatingActionMenu;
+			productName = LSFloatingActionMenu;
+			productReference = 749143FCBA2CD57D2380BD5ED19CA763 /* libLSFloatingActionMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		96BE7BA905CA7A54674A41B6D18CC4BB /* Pods-simple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B3B5260FA0F054320A58E4318E0536 /* Build configuration list for PBXNativeTarget "Pods-simple" */;
+			buildPhases = (
+				355EC329FA35D58712293A0773E09D1D /* Sources */,
+				0697810705728E964B9723FA2B15F7C2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5052958D8B614A1A1BFD2A15C28E79AD /* PBXTargetDependency */,
+				20189C90018AC747662D65BA057FF99D /* PBXTargetDependency */,
+				F265113C60E0D5D9287357832FB02171 /* PBXTargetDependency */,
+			);
+			name = "Pods-simple";
+			productName = "Pods-simple";
+			productReference = 6F6CF5CB33FE288B6CE0801E81394C74 /* libPods-simple.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -216,22 +375,43 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 074F0220C39B495A0E4CBBA597A33B75 /* Products */;
+			productRefGroup = 68A6F18525F118FB7DE4BA7B2F13392A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */,
+				5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */,
 				7E246FB1707BC4E8C79999B014C37DCF /* MXCardsSwipingView */,
-				419BD2BC85F887644EE20E3EBCF28C5A /* Pods-simple */,
+				96BE7BA905CA7A54674A41B6D18CC4BB /* Pods-simple */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9806C95696DD247CE8C141583999C742 /* Sources */ = {
+		029AA34E54A7D64A812D7AAC76621AAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24ABEA1C995037C280C04766F79FF3D5 /* Pods-simple-dummy.m in Sources */,
+				810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */,
+				D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355EC329FA35D58712293A0773E09D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A697D1702934815DCD20B15F642F754 /* Pods-simple-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73D2FBB646B36224B71058C6A98A5C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */,
+				7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */,
+				21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,18 +427,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D7A9EC262EE8A8A34C53BE9D09DFF78 /* PBXTargetDependency */ = {
+		20189C90018AC747662D65BA057FF99D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MKDropdownMenu;
+			target = 5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */;
+			targetProxy = 2E5C9DA0C005750867FAB607A7EC14CF /* PBXContainerItemProxy */;
+		};
+		5052958D8B614A1A1BFD2A15C28E79AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LSFloatingActionMenu;
+			target = 8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */;
+			targetProxy = 3B713CE62A4817BB48083ED3B1184D2B /* PBXContainerItemProxy */;
+		};
+		F265113C60E0D5D9287357832FB02171 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MXCardsSwipingView;
 			target = 7E246FB1707BC4E8C79999B014C37DCF /* MXCardsSwipingView */;
-			targetProxy = 4A9A2748F81F7BE45B8C662CF8A9DC7B /* PBXContainerItemProxy */;
+			targetProxy = 13BA168EDC341AA55B52E76AD885398E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3BDBB49F53BCAD215864E36BF64BE51D /* Release */ = {
+		1F44D584AE2A9DDAEB5203FFBD9D57D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0C4AD3B0F9E1DB2B37ADFA702CA7F56 /* Pods-simple.release.xcconfig */;
+			baseConfigurationReference = 9ED7EC26B08812B81ABC9646873E5B0A /* Pods-simple.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -274,9 +466,130 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		307F55E460B1B41E43A4BA153D487288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LSFloatingActionMenu/LSFloatingActionMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LSFloatingActionMenu;
+				PRODUCT_NAME = LSFloatingActionMenu;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		61DEEAB38F8124F24C49C5688E6C3F5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MXCardsSwipingView/MXCardsSwipingView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MXCardsSwipingView;
+				PRODUCT_NAME = MXCardsSwipingView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74E6600169B714F0DEFBD7F924B48692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LSFloatingActionMenu/LSFloatingActionMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LSFloatingActionMenu;
+				PRODUCT_NAME = LSFloatingActionMenu;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88C907BEA5DDB8C906F74236612934A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MXCardsSwipingView/MXCardsSwipingView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MXCardsSwipingView;
+				PRODUCT_NAME = MXCardsSwipingView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88D5A3324B41212431211B87B993DFEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MKDropdownMenu/MKDropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MKDropdownMenu;
+				PRODUCT_NAME = MKDropdownMenu;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -341,28 +654,27 @@
 			};
 			name = Debug;
 		};
-		AD9ADFA0B3F78CE0E707D5E5D32AE8B1 /* Debug */ = {
+		B3C5A9D346D4AED28B0B040C122255FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D9895C5CA27471DB1BA3D782253F58D /* MXCardsSwipingView.xcconfig */;
+			baseConfigurationReference = C0C4AD3B0F9E1DB2B37ADFA702CA7F56 /* Pods-simple.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MXCardsSwipingView/MXCardsSwipingView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MXCardsSwipingView;
-				PRODUCT_NAME = MXCardsSwipingView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -422,46 +734,26 @@
 			};
 			name = Release;
 		};
-		E0E17098532C7E37ECB96D1060ED668E /* Debug */ = {
+		E1498DB01C8EB835C3520ED7B1CB1C11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ED7EC26B08812B81ABC9646873E5B0A /* Pods-simple.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E10E115F89AFC8038EB9A3EBFC10FEFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D9895C5CA27471DB1BA3D782253F58D /* MXCardsSwipingView.xcconfig */;
+			baseConfigurationReference = 4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/MXCardsSwipingView/MXCardsSwipingView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "Target Support Files/MKDropdownMenu/MKDropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = MXCardsSwipingView;
-				PRODUCT_NAME = MXCardsSwipingView;
+				PRODUCT_MODULE_NAME = MKDropdownMenu;
+				PRODUCT_NAME = MKDropdownMenu;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -479,20 +771,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CAA37848C4376DF172EEB7FBA4F5AF5 /* Build configuration list for PBXNativeTarget "MXCardsSwipingView" */ = {
+		756DD4DE3CB2F2E7A98DD3FCA4B52069 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD9ADFA0B3F78CE0E707D5E5D32AE8B1 /* Debug */,
-				E10E115F89AFC8038EB9A3EBFC10FEFD /* Release */,
+				88D5A3324B41212431211B87B993DFEB /* Debug */,
+				E1498DB01C8EB835C3520ED7B1CB1C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B05DC1A9349739EA8E4C11942E803654 /* Build configuration list for PBXNativeTarget "Pods-simple" */ = {
+		9CAA37848C4376DF172EEB7FBA4F5AF5 /* Build configuration list for PBXNativeTarget "MXCardsSwipingView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0E17098532C7E37ECB96D1060ED668E /* Debug */,
-				3BDBB49F53BCAD215864E36BF64BE51D /* Release */,
+				61DEEAB38F8124F24C49C5688E6C3F5C /* Debug */,
+				88C907BEA5DDB8C906F74236612934A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB05C8824E039CD1AF3BA5A4045F80AA /* Build configuration list for PBXNativeTarget "LSFloatingActionMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74E6600169B714F0DEFBD7F924B48692 /* Debug */,
+				307F55E460B1B41E43A4BA153D487288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B3B5260FA0F054320A58E4318E0536 /* Build configuration list for PBXNativeTarget "Pods-simple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F44D584AE2A9DDAEB5203FFBD9D57D7 /* Debug */,
+				B3C5A9D346D4AED28B0B040C122255FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
