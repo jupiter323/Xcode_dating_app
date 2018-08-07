@@ -1,16 +1,24 @@
 PODS:
+  - LSFloatingActionMenu (1.0.0)
+  - MKDropdownMenu (1.4)
   - MXCardsSwipingView (0.2.0)
 
 DEPENDENCIES:
+  - LSFloatingActionMenu
+  - MKDropdownMenu
   - MXCardsSwipingView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - LSFloatingActionMenu
+    - MKDropdownMenu
     - MXCardsSwipingView
 
 SPEC CHECKSUMS:
+  LSFloatingActionMenu: dc2d6449e817cb2eb3c3a9a751bd49c3aae416b2
+  MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
   MXCardsSwipingView: d0a39b40a2a991a4a4f90f5573d33a33e2e1f656
 
-PODFILE CHECKSUM: 54439fe610accfd2a47760eca56fdd7d1c1d4ee6
+PODFILE CHECKSUM: 0ebb267ecb37543cc815a5da9aeb2dc018fe769b
 
 COCOAPODS: 1.5.3

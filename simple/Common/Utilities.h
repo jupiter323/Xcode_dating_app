@@ -25,3 +25,8 @@ static UIColor * UIColorWithHexString(NSString *hex) {
                             blue:((CGFloat)(rgb & 0xFF)) / 255.0
                            alpha:1.0];
 }
+
+//standard color
+static UIColor * StandardColor(){
+    return UIColorWithHexString(@"ff9933");
+}

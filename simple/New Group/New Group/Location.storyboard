@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="NTf-Ub-ur2">
+            <objects>
+                <viewController storyboardIdentifier="idLocation" id="DMn-vd-KlS" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZbL-nc-jpe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="splashBackG" translatesAutoresizingMaskIntoConstraints="NO" id="6MU-X5-OMz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpi-CR-KA3">
+                                <rect key="frame" x="0.0" y="80" width="375" height="337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-WI-cyF">
+                                <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                                <color key="backgroundColor" red="0.010509200507614169" green="0.010509200507614169" blue="0.010509200507614169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="c7D-tu-7Vv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D4I-WI-cyF" firstAttribute="leading" secondItem="rp8-Jz-N39" secondAttribute="leading" id="ALT-Zv-ttU"/>
+                            <constraint firstItem="Mpi-CR-KA3" firstAttribute="top" secondItem="rp8-Jz-N39" secondAttribute="top" constant="60" id="C2g-Ch-YP2"/>
+                            <constraint firstItem="Mpi-CR-KA3" firstAttribute="leading" secondItem="rp8-Jz-N39" secondAttribute="leading" id="S3x-of-1YJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Mpi-CR-KA3" secondAttribute="trailing" id="W6e-xb-8Eh"/>
+                            <constraint firstItem="D4I-WI-cyF" firstAttribute="top" secondItem="Mpi-CR-KA3" secondAttribute="bottom" id="bhv-TJ-7L4"/>
+                            <constraint firstItem="D4I-WI-cyF" firstAttribute="trailing" secondItem="rp8-Jz-N39" secondAttribute="trailing" id="hZ6-MD-irG"/>
+                            <constraint firstItem="D4I-WI-cyF" firstAttribute="leading" secondItem="rp8-Jz-N39" secondAttribute="leading" id="j8M-wg-crH"/>
+                            <constraint firstItem="rp8-Jz-N39" firstAttribute="bottom" secondItem="D4I-WI-cyF" secondAttribute="bottom" id="qJr-aF-SlL"/>
+                            <constraint firstAttribute="trailing" secondItem="D4I-WI-cyF" secondAttribute="trailing" id="wvp-kI-wSP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rp8-Jz-N39"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HrH-NF-7jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="-174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splashBackG" width="375" height="667"/>
+    </resources>
+</document>

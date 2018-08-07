@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		691A6F5E21AFC6C61112A4C7 /* libPods-simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */; };
+		CE27DE702119B89300F5B1C2 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE6F2119B89300F5B1C2 /* Location.storyboard */; };
+		CE27DE732119B9D700F5B1C2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE27DE722119B9D700F5B1C2 /* LocationViewController.m */; };
+		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
+		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
 		CEB28734211388BA00C51670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB28733211388BA00C51670 /* Assets.xcassets */; };
@@ -22,6 +26,14 @@
 /* Begin PBXFileReference section */
 		7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simple/Pods-simple.debug.xcconfig"; sourceTree = "<group>"; };
+		CE27DE6F2119B89300F5B1C2 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		CE27DE712119B9D700F5B1C2 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		CE27DE722119B9D700F5B1C2 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		CE3BCEF72116A9A000706FD1 /* MenuControll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuControll.h; sourceTree = "<group>"; };
+		CE3D333D2118F54400FE970D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEB28728211388A900C51670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +73,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE27DE6D2119B79B00F5B1C2 /* LocationModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE27DE6E2119B7AE00F5B1C2 /* View */,
+			);
+			path = LocationModule;
+			sourceTree = "<group>";
+		};
+		CE27DE6E2119B7AE00F5B1C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE27DE6F2119B89300F5B1C2 /* Location.storyboard */,
+				CE27DE712119B9D700F5B1C2 /* LocationViewController.h */,
+				CE27DE722119B9D700F5B1C2 /* LocationViewController.m */,
+			);
+			name = View;
+			path = "../New Group/New Group";
+			sourceTree = "<group>";
+		};
+		CE3BCEE921168CA600706FD1 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE3BCEEA21168CCA00706FD1 /* View */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		CE3BCEEA21168CCA00706FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */,
+				CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */,
+				CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE3BCEF32116A41800706FD1 /* MenuControll */ = {
+			isa = PBXGroup;
+			children = (
+				CE3BCEF72116A9A000706FD1 /* MenuControll.h */,
+			);
+			path = MenuControll;
+			sourceTree = "<group>";
+		};
 		CEB2871B211388A900C51670 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +139,8 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE27DE6D2119B79B00F5B1C2 /* LocationModule */,
+				CE3BCEE921168CA600706FD1 /* ProfileModule */,
 				CEB2876A21142F5C00C51670 /* Common */,
 				CEB2875A21139F2B00C51670 /* SplashModule */,
 				CEB28742211391D400C51670 /* TinderModule */,
@@ -128,6 +187,8 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE3D333D2118F54400FE970D /* Utilities.h */,
+				CE3BCEF32116A41800706FD1 /* MenuControll */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -199,7 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE27DE702119B89300F5B1C2 /* Location.storyboard in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
+				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
@@ -236,7 +299,9 @@
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
+				CE27DE732119B9D700F5B1C2 /* LocationViewController.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,
+				CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);
@@ -372,16 +437,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9TPX8D925;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JSHQJ848VX;
 				INFOPLIST_FILE = simple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yves.blindy.simple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reema.dating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "52d94660-5190-4b03-97a7-be51df60d6a9";
+				PROVISIONING_PROFILE_SPECIFIER = ReemaDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "simple/Common/simple-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -395,16 +462,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9TPX8D925;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JSHQJ848VX;
 				INFOPLIST_FILE = simple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yves.blindy.simple;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reema.dating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "52d94660-5190-4b03-97a7-be51df60d6a9";
+				PROVISIONING_PROFILE_SPECIFIER = ReemaDev;
 				SWIFT_OBJC_BRIDGING_HEADER = "simple/Common/simple-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
