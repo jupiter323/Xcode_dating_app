@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		691A6F5E21AFC6C61112A4C7 /* libPods-simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */; };
-		CE27DE702119B89300F5B1C2 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE6F2119B89300F5B1C2 /* Location.storyboard */; };
-		CE27DE732119B9D700F5B1C2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE27DE722119B9D700F5B1C2 /* LocationViewController.m */; };
+		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
+		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
+		CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE77211A329000F5B1C2 /* Location.storyboard */; };
+		CE27DE7B211A329000F5B1C2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE27DE79211A329000F5B1C2 /* LocationViewController.m */; };
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
+		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
 		CEB28734211388BA00C51670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB28733211388BA00C51670 /* Assets.xcassets */; };
@@ -26,13 +29,17 @@
 /* Begin PBXFileReference section */
 		7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simple/Pods-simple.debug.xcconfig"; sourceTree = "<group>"; };
-		CE27DE6F2119B89300F5B1C2 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
-		CE27DE712119B9D700F5B1C2 /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
-		CE27DE722119B9D700F5B1C2 /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
+		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
+		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
+		CE27DE77211A329000F5B1C2 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Location.storyboard; path = simple/LocationModule/View/Location.storyboard; sourceTree = SOURCE_ROOT; };
+		CE27DE78211A329000F5B1C2 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = simple/LocationModule/View/LocationViewController.h; sourceTree = SOURCE_ROOT; };
+		CE27DE79211A329000F5B1C2 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = simple/LocationModule/View/LocationViewController.m; sourceTree = SOURCE_ROOT; };
 		CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		CE3BCEF72116A9A000706FD1 /* MenuControll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuControll.h; sourceTree = "<group>"; };
+		CE3D2BCE211C7C5F005DE85C /* AddingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingViewController.h; sourceTree = "<group>"; };
+		CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddingViewController.m; sourceTree = "<group>"; };
 		CE3D333D2118F54400FE970D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +80,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE1CCF56211B017900AD8701 /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D2BCD211C7C2B005DE85C /* AddConnect */,
+				CE3BCEF32116A41800706FD1 /* MenuControll */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
 		CE27DE6D2119B79B00F5B1C2 /* LocationModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +100,9 @@
 		CE27DE6E2119B7AE00F5B1C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE27DE6F2119B89300F5B1C2 /* Location.storyboard */,
-				CE27DE712119B9D700F5B1C2 /* LocationViewController.h */,
-				CE27DE722119B9D700F5B1C2 /* LocationViewController.m */,
+				CE27DE77211A329000F5B1C2 /* Location.storyboard */,
+				CE27DE78211A329000F5B1C2 /* LocationViewController.h */,
+				CE27DE79211A329000F5B1C2 /* LocationViewController.m */,
 			);
 			name = View;
 			path = "../New Group/New Group";
@@ -113,9 +129,19 @@
 		CE3BCEF32116A41800706FD1 /* MenuControll */ = {
 			isa = PBXGroup;
 			children = (
-				CE3BCEF72116A9A000706FD1 /* MenuControll.h */,
+				CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */,
+				CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */,
 			);
 			path = MenuControll;
+			sourceTree = "<group>";
+		};
+		CE3D2BCD211C7C2B005DE85C /* AddConnect */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D2BCE211C7C5F005DE85C /* AddingViewController.h */,
+				CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */,
+			);
+			path = AddConnect;
 			sourceTree = "<group>";
 		};
 		CEB2871B211388A900C51670 = {
@@ -139,6 +165,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE27DE75211A2FCA00F5B1C2 /* data */,
 				CE27DE6D2119B79B00F5B1C2 /* LocationModule */,
 				CE3BCEE921168CA600706FD1 /* ProfileModule */,
 				CEB2876A21142F5C00C51670 /* Common */,
@@ -187,8 +214,8 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE1CCF56211B017900AD8701 /* SubModules */,
 				CE3D333D2118F54400FE970D /* Utilities.h */,
-				CE3BCEF32116A41800706FD1 /* MenuControll */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -212,6 +239,7 @@
 				CEB28720211388A900C51670 /* Sources */,
 				CEB28721211388A900C51670 /* Frameworks */,
 				CEB28722211388A900C51670 /* Resources */,
+				F98689981D0F9ACB8713665B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,10 +288,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE27DE702119B89300F5B1C2 /* Location.storyboard in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
+				CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */,
+				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +318,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F98689981D0F9ACB8713665B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-simple/Pods-simple-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simple/Pods-simple-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,7 +348,9 @@
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
-				CE27DE732119B9D700F5B1C2 /* LocationViewController.m in Sources */,
+				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
+				CE27DE7B211A329000F5B1C2 /* LocationViewController.m in Sources */,
+				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,
 				CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,

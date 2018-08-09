@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+@import GoogleMaps;
+@import GooglePlaces;
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+//    map service api key
+    [GMSServices provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
+    [GMSPlacesClient provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
+    
     // Override point for customization after application launch.
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
     UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];

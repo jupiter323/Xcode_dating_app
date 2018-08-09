@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0E25048314513B685777FDD994FAE3F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */; };
-		3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 300B266AFFD6F3AC022EC1ED150902B8 /* LSFloatingActionMenuItem.m */; };
+		3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A38D288E08D3CB8DDDE0796E3DB69760 /* LSFloatingActionMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1C5483528AE0E48F2B092A383110F0 /* LSFloatingActionMenuItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4A697D1702934815DCD20B15F642F754 /* Pods-simple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69252E44AA67D046D4913B66D35491 /* Pods-simple-dummy.m */; };
-		4F63D3EE81B82E216126613080A3C3A9 /* MXCardsSwipingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */; };
-		6DDD3EAC66A1F0A5CB0A19393BC4B65F /* MXCardsSwipingView.h in Headers */ = {isa = PBXBuildFile; fileRef = E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */; };
-		810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */; };
+		4F63D3EE81B82E216126613080A3C3A9 /* MXCardsSwipingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2940EAFC489B855C838C60136EFBA1B4 /* MXCardsSwipingView-dummy.m */; };
+		6DDD3EAC66A1F0A5CB0A19393BC4B65F /* MXCardsSwipingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 883BFFD1296BCA50C65E188B617EC754 /* MXCardsSwipingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF882DB653C01B8AA7F2780A556AA52 /* LSFloatingActionMenu.m */; };
+		810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B55D6284DE8F9DFA971D7B4D41291C28 /* MKDropdownMenu-dummy.m */; };
 		9BA77D18CACBB4250026DBB1B63D1FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		BE9A3BD46CE7851D3867B35CA5A9FC02 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */; };
-		C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */; };
-		D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */; };
+		BE9A3BD46CE7851D3867B35CA5A9FC02 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD94297D903B4FB605823C424EC1650 /* MXCardsSwipingView.m */; };
+		C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 735CE620B4296E154850160C978E2D61 /* LSFloatingActionMenu-dummy.m */; };
+		D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D1B492625868E97874D4F0E762CD28 /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FD33129ED884D19BEEDF85E0FF7E78A6 /* MKDropdownMenu.m */; };
 		DF76179FA5B16B0D2336706FD42A5654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,36 +50,42 @@
 
 /* Begin PBXFileReference section */
 		0BCD983573FD30321E802B56EAFFA1D0 /* libMKDropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKDropdownMenu.a; path = libMKDropdownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenuItem.m; path = LSFloatingActionMenu/LSFloatingActionMenuItem.m; sourceTree = "<group>"; };
-		11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
-		1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenu.m; path = LSFloatingActionMenu/LSFloatingActionMenu.m; sourceTree = "<group>"; };
-		478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenu.h; path = LSFloatingActionMenu/LSFloatingActionMenu.h; sourceTree = "<group>"; };
+		0C1C5483528AE0E48F2B092A383110F0 /* LSFloatingActionMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenuItem.h; path = LSFloatingActionMenu/LSFloatingActionMenuItem.h; sourceTree = "<group>"; };
+		17C9D71BDF67E4087FEE402476A339E6 /* LSFloatingActionMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSFloatingActionMenu.xcconfig; sourceTree = "<group>"; };
+		2940EAFC489B855C838C60136EFBA1B4 /* MXCardsSwipingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXCardsSwipingView-dummy.m"; sourceTree = "<group>"; };
+		300B266AFFD6F3AC022EC1ED150902B8 /* LSFloatingActionMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenuItem.m; path = LSFloatingActionMenu/LSFloatingActionMenuItem.m; sourceTree = "<group>"; };
 		4C69252E44AA67D046D4913B66D35491 /* Pods-simple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-simple-dummy.m"; sourceTree = "<group>"; };
-		4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
-		5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXCardsSwipingView.xcconfig; sourceTree = "<group>"; };
-		5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenuItem.h; path = LSFloatingActionMenu/LSFloatingActionMenuItem.h; sourceTree = "<group>"; };
 		67B6EA3D28849097CA9932E3588C9CF1 /* Pods-simple-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-simple-acknowledgements.plist"; sourceTree = "<group>"; };
-		683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXCardsSwipingView.m; path = MXCardsSwipingView/Classes/MXCardsSwipingView.m; sourceTree = "<group>"; };
+		6D523AD8F3495FDBECAE46F71CBC6D6C /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		6F6CF5CB33FE288B6CE0801E81394C74 /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-simple.a"; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7143D2018B4AE81161CF29ADAB9BB9BE /* MXCardsSwipingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXCardsSwipingView-prefix.pch"; sourceTree = "<group>"; };
+		735CE620B4296E154850160C978E2D61 /* LSFloatingActionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSFloatingActionMenu-dummy.m"; sourceTree = "<group>"; };
 		749143FCBA2CD57D2380BD5ED19CA763 /* libLSFloatingActionMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLSFloatingActionMenu.a; path = libLSFloatingActionMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSFloatingActionMenu-dummy.m"; sourceTree = "<group>"; };
+		883BFFD1296BCA50C65E188B617EC754 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXCardsSwipingView.h; path = MXCardsSwipingView/Classes/MXCardsSwipingView.h; sourceTree = "<group>"; };
+		8AF882DB653C01B8AA7F2780A556AA52 /* LSFloatingActionMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenu.m; path = LSFloatingActionMenu/LSFloatingActionMenu.m; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
+		95D1B492625868E97874D4F0E762CD28 /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
+		9BFE1966FB06D23149C93C7CB58142FB /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		9ED7EC26B08812B81ABC9646873E5B0A /* Pods-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-simple.debug.xcconfig"; sourceTree = "<group>"; };
-		A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MXCardsSwipingView-dummy.m"; sourceTree = "<group>"; };
+		A38D288E08D3CB8DDDE0796E3DB69760 /* LSFloatingActionMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenu.h; path = LSFloatingActionMenu/LSFloatingActionMenu.h; sourceTree = "<group>"; };
+		A48464B22CDFCFF7AB0B277C618DE6F2 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		AF2C85AD782DFEE0F4D08B12BE5C432F /* MXCardsSwipingView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXCardsSwipingView.xcconfig; sourceTree = "<group>"; };
+		AFD94297D903B4FB605823C424EC1650 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MXCardsSwipingView.m; path = MXCardsSwipingView/Classes/MXCardsSwipingView.m; sourceTree = "<group>"; };
+		B55D6284DE8F9DFA971D7B4D41291C28 /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
 		B7D66D429A36BC3ADBB792D75EC28E4C /* libMXCardsSwipingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMXCardsSwipingView.a; path = libMXCardsSwipingView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
 		BBD6C82ADF74D8E566EA342A139A063B /* Pods-simple-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-simple-frameworks.sh"; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSFloatingActionMenu.xcconfig; sourceTree = "<group>"; };
 		C0C4AD3B0F9E1DB2B37ADFA702CA7F56 /* Pods-simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-simple.release.xcconfig"; sourceTree = "<group>"; };
-		C239E8C2C9350F7085EF4686F7BC9D78 /* MXCardsSwipingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MXCardsSwipingView-prefix.pch"; sourceTree = "<group>"; };
-		C264D1E37EA2BF64172FE8292C674CF2 /* LSFloatingActionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LSFloatingActionMenu-prefix.pch"; sourceTree = "<group>"; };
+		C45D981397CE7D3F16B55E2F6D004427 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		C702100DE1C137D5A3CAF232D744363E /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
 		CA2840CEECDACAADE11B00F03BE0E38D /* Pods-simple-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-simple-resources.sh"; sourceTree = "<group>"; };
-		E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MXCardsSwipingView.h; path = MXCardsSwipingView/Classes/MXCardsSwipingView.h; sourceTree = "<group>"; };
-		E8F1898A20779D977037D40040D3E452 /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
+		D4B65B20FED323EE0E207F4F9C6C8EC4 /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		E03F0E403349C751C0C2C9E5D4EE9777 /* LSFloatingActionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LSFloatingActionMenu-prefix.pch"; sourceTree = "<group>"; };
+		E9510E95F712784D4274A08B726E65BD /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		F41C24DDF74697BBA9ABF24B22EE638C /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		F481CA877C9FF3AB1ED0F42C9443B56D /* Pods-simple-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-simple-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD33129ED884D19BEEDF85E0FF7E78A6 /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,17 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00CB62CCD7D3320A4F2CDDEF516E9C22 /* MXCardsSwipingView */ = {
-			isa = PBXGroup;
-			children = (
-				E61CC37BBC8D2427467B6EE95A417278 /* MXCardsSwipingView.h */,
-				683EFC97E1F7957960D1F52CEAA6B059 /* MXCardsSwipingView.m */,
-				FA23CA65E011F429EC69A7435E950C93 /* Support Files */,
-			);
-			name = MXCardsSwipingView;
-			path = MXCardsSwipingView;
-			sourceTree = "<group>";
-		};
 		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +130,57 @@
 				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		159CC201C6F6FAEBCF11A07B342AB6C2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C85AD782DFEE0F4D08B12BE5C432F /* MXCardsSwipingView.xcconfig */,
+				2940EAFC489B855C838C60136EFBA1B4 /* MXCardsSwipingView-dummy.m */,
+				7143D2018B4AE81161CF29ADAB9BB9BE /* MXCardsSwipingView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MXCardsSwipingView";
+			sourceTree = "<group>";
+		};
+		19DD4003EF0E8FF60EB530EB04FFDC83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BFE1966FB06D23149C93C7CB58142FB /* GoogleMaps.framework */,
+				C45D981397CE7D3F16B55E2F6D004427 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A01747CA60DE7DF25C62B35B4861909 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6F879752ECA1BAF7B136DB406CA9F31D /* Base */,
+				3EFB41E73590E442839C36C80E627116 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		3EFB41E73590E442839C36C80E627116 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				19DD4003EF0E8FF60EB530EB04FFDC83 /* Frameworks */,
+				DE7E77F2FB4A948FE3452ACE5FC3FCBE /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		3F2689C7462B0625B919C945372074E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A01747CA60DE7DF25C62B35B4861909 /* GoogleMaps */,
+				B96DFD5602AE1316169443CD455B7523 /* GooglePlaces */,
+				DFADE6A9772D24BA0C3B4546D75BC749 /* LSFloatingActionMenu */,
+				6F591360F15CCBB6DBE7852B233A2D73 /* MKDropdownMenu */,
+				8F04E41636284E597D02B76E63D85934 /* MXCardsSwipingView */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -145,36 +191,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		44BCF4E38B75C405CD90B96F623AE07D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D523AD8F3495FDBECAE46F71CBC6D6C /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		473D1AB922E7D4F9C9C66AA403115223 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				66E8E6D874D945374F31D0636FCB8B57 /* Pods-simple */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		4F16E855D9237D4273CDD26B038AB8CE /* MKDropdownMenu */ = {
-			isa = PBXGroup;
-			children = (
-				B978D37E553EF5CDFA8C9DE4BB0315C9 /* MKDropdownMenu.h */,
-				948C2E4C96FBC622EEDEE30BF62AE6E0 /* MKDropdownMenu.m */,
-				B2B2E33CBB1CEC7BDF9C2CB606C85ED0 /* Support Files */,
-			);
-			name = MKDropdownMenu;
-			path = MKDropdownMenu;
-			sourceTree = "<group>";
-		};
-		65EE2520D712DCD409B42673898F1B70 /* LSFloatingActionMenu */ = {
-			isa = PBXGroup;
-			children = (
-				478A6DE01CE333AE10794D398BEF8BF8 /* LSFloatingActionMenu.h */,
-				1ECAE696DC27D540048BDDFE2F6ED9D8 /* LSFloatingActionMenu.m */,
-				5F584C50C05BB26757304D642BDD8FC8 /* LSFloatingActionMenuItem.h */,
-				10FC63076EB6979F94631FD6443EA185 /* LSFloatingActionMenuItem.m */,
-				FE87214B8582E1011378F69A2389FB8A /* Support Files */,
-			);
-			name = LSFloatingActionMenu;
-			path = LSFloatingActionMenu;
 			sourceTree = "<group>";
 		};
 		66E8E6D874D945374F31D0636FCB8B57 /* Pods-simple */ = {
@@ -203,58 +233,114 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F591360F15CCBB6DBE7852B233A2D73 /* MKDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				95D1B492625868E97874D4F0E762CD28 /* MKDropdownMenu.h */,
+				FD33129ED884D19BEEDF85E0FF7E78A6 /* MKDropdownMenu.m */,
+				F43D7FF2CE96ED6F46C30AB14B2B0076 /* Support Files */,
+			);
+			name = MKDropdownMenu;
+			path = MKDropdownMenu;
+			sourceTree = "<group>";
+		};
+		6F879752ECA1BAF7B136DB406CA9F31D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				44BCF4E38B75C405CD90B96F623AE07D /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				9FF81277D78F557C59E8952FD2748B04 /* Pods */,
+				3F2689C7462B0625B919C945372074E5 /* Pods */,
 				68A6F18525F118FB7DE4BA7B2F13392A /* Products */,
 				473D1AB922E7D4F9C9C66AA403115223 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9FF81277D78F557C59E8952FD2748B04 /* Pods */ = {
+		82065E29E6EF1ACEA850F8D086A13376 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				65EE2520D712DCD409B42673898F1B70 /* LSFloatingActionMenu */,
-				4F16E855D9237D4273CDD26B038AB8CE /* MKDropdownMenu */,
-				00CB62CCD7D3320A4F2CDDEF516E9C22 /* MXCardsSwipingView */,
+				A48464B22CDFCFF7AB0B277C618DE6F2 /* GooglePlaces.bundle */,
 			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		B2B2E33CBB1CEC7BDF9C2CB606C85ED0 /* Support Files */ = {
+		8F04E41636284E597D02B76E63D85934 /* MXCardsSwipingView */ = {
 			isa = PBXGroup;
 			children = (
-				4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */,
-				11E9594DA6C5CD6A8E1C488CDD35B87F /* MKDropdownMenu-dummy.m */,
-				E8F1898A20779D977037D40040D3E452 /* MKDropdownMenu-prefix.pch */,
+				883BFFD1296BCA50C65E188B617EC754 /* MXCardsSwipingView.h */,
+				AFD94297D903B4FB605823C424EC1650 /* MXCardsSwipingView.m */,
+				159CC201C6F6FAEBCF11A07B342AB6C2 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MKDropdownMenu";
+			name = MXCardsSwipingView;
+			path = MXCardsSwipingView;
 			sourceTree = "<group>";
 		};
-		FA23CA65E011F429EC69A7435E950C93 /* Support Files */ = {
+		935B529A96F210C4239BD7B46B929C35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */,
-				A0A923FB3A0D3B99815325609F659FBF /* MXCardsSwipingView-dummy.m */,
-				C239E8C2C9350F7085EF4686F7BC9D78 /* MXCardsSwipingView-prefix.pch */,
+				F41C24DDF74697BBA9ABF24B22EE638C /* GooglePlaces.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MXCardsSwipingView";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FE87214B8582E1011378F69A2389FB8A /* Support Files */ = {
+		B96DFD5602AE1316169443CD455B7523 /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */,
-				77A263D19A201E21F9A3518114B244BA /* LSFloatingActionMenu-dummy.m */,
-				C264D1E37EA2BF64172FE8292C674CF2 /* LSFloatingActionMenu-prefix.pch */,
+				935B529A96F210C4239BD7B46B929C35 /* Frameworks */,
+				82065E29E6EF1ACEA850F8D086A13376 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		DE7E77F2FB4A948FE3452ACE5FC3FCBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9510E95F712784D4274A08B726E65BD /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DFADE6A9772D24BA0C3B4546D75BC749 /* LSFloatingActionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A38D288E08D3CB8DDDE0796E3DB69760 /* LSFloatingActionMenu.h */,
+				8AF882DB653C01B8AA7F2780A556AA52 /* LSFloatingActionMenu.m */,
+				0C1C5483528AE0E48F2B092A383110F0 /* LSFloatingActionMenuItem.h */,
+				300B266AFFD6F3AC022EC1ED150902B8 /* LSFloatingActionMenuItem.m */,
+				E887CB318EC3FCE28492D4C056C6E891 /* Support Files */,
+			);
+			name = LSFloatingActionMenu;
+			path = LSFloatingActionMenu;
+			sourceTree = "<group>";
+		};
+		E887CB318EC3FCE28492D4C056C6E891 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17C9D71BDF67E4087FEE402476A339E6 /* LSFloatingActionMenu.xcconfig */,
+				735CE620B4296E154850160C978E2D61 /* LSFloatingActionMenu-dummy.m */,
+				E03F0E403349C751C0C2C9E5D4EE9777 /* LSFloatingActionMenu-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/LSFloatingActionMenu";
+			sourceTree = "<group>";
+		};
+		F43D7FF2CE96ED6F46C30AB14B2B0076 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4B65B20FED323EE0E207F4F9C6C8EC4 /* MKDropdownMenu.xcconfig */,
+				B55D6284DE8F9DFA971D7B4D41291C28 /* MKDropdownMenu-dummy.m */,
+				C702100DE1C137D5A3CAF232D744363E /* MKDropdownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKDropdownMenu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,7 +557,7 @@
 		};
 		307F55E460B1B41E43A4BA153D487288 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */;
+			baseConfigurationReference = 17C9D71BDF67E4087FEE402476A339E6 /* LSFloatingActionMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -496,7 +582,7 @@
 		};
 		61DEEAB38F8124F24C49C5688E6C3F5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */;
+			baseConfigurationReference = AF2C85AD782DFEE0F4D08B12BE5C432F /* MXCardsSwipingView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -520,7 +606,7 @@
 		};
 		74E6600169B714F0DEFBD7F924B48692 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C09C85F7C319C126DE67F14DA2CD03B3 /* LSFloatingActionMenu.xcconfig */;
+			baseConfigurationReference = 17C9D71BDF67E4087FEE402476A339E6 /* LSFloatingActionMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -544,7 +630,7 @@
 		};
 		88C907BEA5DDB8C906F74236612934A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD095A6E0E3FAC306EAE9F854C4A601 /* MXCardsSwipingView.xcconfig */;
+			baseConfigurationReference = AF2C85AD782DFEE0F4D08B12BE5C432F /* MXCardsSwipingView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -569,7 +655,7 @@
 		};
 		88D5A3324B41212431211B87B993DFEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */;
+			baseConfigurationReference = D4B65B20FED323EE0E207F4F9C6C8EC4 /* MKDropdownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -736,7 +822,7 @@
 		};
 		E1498DB01C8EB835C3520ED7B1CB1C11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D7EFBBDB520B364CCADCA6E08E35F08 /* MKDropdownMenu.xcconfig */;
+			baseConfigurationReference = D4B65B20FED323EE0E207F4F9C6C8EC4 /* MKDropdownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -8,7 +8,6 @@
 
 #import "ProfileViewController.h"
 #import "MXMemberCardView.h"
-#import "LSFloatingActionMenu.h"
 #import "MKDropdownMenu.h"
 #import "Utilities.h"
 
@@ -17,6 +16,7 @@ NS_ENUM(NSInteger, DropdownComponents) {
     DropdownComponentColor,
     DropdownComponentsCount
 };
+
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIView *dropdownCateContainView;
 @property (weak, nonatomic) IBOutlet UIView *dropdownContainView;
@@ -30,11 +30,14 @@ NS_ENUM(NSInteger, DropdownComponents) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //    remove returnButton button
+    self.returnButton.removeFromSuperview;
+    //    notification button invisible
+    self.notificationButton.removeFromSuperview;
     // Do any additional setup after loading the view.
     //init data
     self.visible = true;
-//    dropdown contain
+    //    dropdown contain
     MKDropdownMenu *dropdownMenu = [[MKDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, self.dropdownContainView.bounds.size.width,self.dropdownContainView.bounds.size.height )];
     dropdownMenu.dataSource = self;
     dropdownMenu.delegate = self;
@@ -54,28 +57,22 @@ NS_ENUM(NSInteger, DropdownComponents) {
     dropdownMenu1.layer.borderWidth = 0.9f;
     dropdownMenu1.layer.borderColor = StandardColor().CGColor;
     
-//    //dropdown style
-//    dropdownMenu1.layer.borderColor = [[UIColor colorWithRed:0.78 green:0.78 blue:0.8 alpha:1.0] CGColor];
-//    dropdownMenu1.layer.borderWidth = 0.5;
-
+    //    //dropdown style
+    //    dropdownMenu1.layer.borderColor = [[UIColor colorWithRed:0.78 green:0.78 blue:0.8 alpha:1.0] CGColor];
+    //    dropdownMenu1.layer.borderWidth = 0.5;
+    
     UIColor *selectedBackgroundColor = [UIColor colorWithRed:0.91 green:0.92 blue:0.94 alpha:1.0];
     dropdownMenu1.selectedComponentBackgroundColor = selectedBackgroundColor;
     dropdownMenu1.dropdownBackgroundColor = selectedBackgroundColor;
-
+    
     dropdownMenu1.dropdownShowsTopRowSeparator = YES;
     dropdownMenu1.dropdownShowsBottomRowSeparator = NO;
     dropdownMenu1.dropdownShowsBorder = YES;
-
+    
     dropdownMenu1.backgroundDimmingOpacity = 0.05;
     
     [self.dropdownCateContainView addSubview:dropdownMenu1];
-
-    //    float buttons menu
-    UIButton *floatingButton = [[UIButton alloc] init];
-    [floatingButton setImage:[UIImage imageNamed:@"pro_menu"] forState:UIControlStateNormal];
-    [floatingButton sizeToFit];
-    floatingButton.frame = CGRectMake(20,20, floatingButton.bounds.size.width, floatingButton.bounds.size.height);
-    [floatingButton addTarget:self action:@selector(tapedToggle:) forControlEvents:UIControlEventTouchUpInside];
+    
     //    visible or unvisible button
     self.visibleORU = [[UIButton alloc] init];
     if(self.visible)
@@ -108,7 +105,6 @@ NS_ENUM(NSInteger, DropdownComponents) {
     //    adding part
     //    [self.view addSubview:contain];
     [self.view addSubview:avatar];
-    [self.view addSubview:floatingButton];
     [self.view addSubview:self.visibleORU];
     
     //    images and video
@@ -130,7 +126,7 @@ NS_ENUM(NSInteger, DropdownComponents) {
         image1.layer.borderColor = [UIColor redColor].CGColor;
         
         UIButton *image1button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [floatingButton sizeToFit];
+        [image1button sizeToFit];
         [image1button addTarget:self
                          action:@selector(deletAvatar:)
                forControlEvents:UIControlEventTouchDown];
@@ -160,11 +156,11 @@ NS_ENUM(NSInteger, DropdownComponents) {
             return 3;
         case DropdownComponentColor:
             return 64;
-       
+            
         default:
             return 0;
     }
-   
+    
     
 }
 
@@ -176,7 +172,7 @@ NS_ENUM(NSInteger, DropdownComponents) {
 
 - (CGFloat)dropdownMenu:(MKDropdownMenu *)dropdownMenu widthForComponent:(NSInteger)component {
     switch (component) {
-                    case DropdownComponentShape:
+        case DropdownComponentShape:
             return self.dropdownContainView.bounds.size.width;
         case DropdownComponentColor:
             return self.dropdownCateContainView.bounds.size.width;
@@ -207,7 +203,7 @@ NS_ENUM(NSInteger, DropdownComponents) {
     [[NSMutableAttributedString alloc] initWithString: [NSString stringWithFormat:@"%d: ", row + 1]
                                            attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:23 weight:UIFontWeightLight],
                                                         NSForegroundColorAttributeName: [UIColor blackColor]}];
-   
+    
     return string;
 }
 
@@ -232,7 +228,7 @@ NS_ENUM(NSInteger, DropdownComponents) {
     delay(0.15, ^{
         [dropdownMenu closeAllComponentsAnimated:YES];
     });
-  
+    
 }
 //
 
@@ -249,54 +245,6 @@ NS_ENUM(NSInteger, DropdownComponents) {
     } else
         [sender setImage:[UIImage imageNamed:@"inVi"] forState:UIControlStateNormal];
     
-}
-
--(void)tapedToggle:(UIButton *) sender {
-    [self showMenuFromButton:sender withDirection:LSFloatingActionMenuDirectionLeft];
-}
-- (void)showMenuFromButton:(UIButton *)button withDirection:(LSFloatingActionMenuDirection)direction {
-    button.hidden = YES;
-    self.visibleORU.hidden = YES;
-    
-    NSArray *menuIcons = @[@"pro_close", @"pro_match", @"pro_location", @"pro_analysis"];
-    NSMutableArray *menus = [NSMutableArray array];
-    
-    CGSize itemSize = button.frame.size;
-    for (NSString *icon in menuIcons) {
-        LSFloatingActionMenuItem *item = [[LSFloatingActionMenuItem alloc] initWithImage:[UIImage imageNamed:icon] highlightedImage:[UIImage imageNamed:[icon stringByAppendingString:@"pro_menu"]]];
-        item.itemSize = itemSize;
-        [menus addObject:item];
-    }
-    
-    self.actionMenu = [[LSFloatingActionMenu alloc] initWithFrame:self.view.bounds direction:direction menuItems:menus menuHandler:^(LSFloatingActionMenuItem *item, NSUInteger index) {
-        //TODO
-        
-        switch (index) {
-            case 1:
-                NSLog(@"1 clicked");
-                break;
-            case 2:
-                NSLog(@"2 clicked");
-                break;
-            case 3:
-                NSLog(@"3 clicked");
-                break;
-            default:
-                break;
-        }
-        
-    } closeHandler:^{
-        [self.actionMenu removeFromSuperview];
-        self.actionMenu = nil;
-        button.hidden = NO;
-        self.visibleORU.hidden = NO;
-    }];
-    
-    self.actionMenu.itemSpacing = 12;
-    self.actionMenu.startPoint = button.center;
-    
-    [self.view addSubview:self.actionMenu];
-    [self.actionMenu open];
 }
 
 -(void)goBackToTinder:(UIButton *) sender{

@@ -10,4 +10,7 @@ target 'simple' do
   pod "MXCardsSwipingView"
   pod "LSFloatingActionMenu"
   pod "MKDropdownMenu"
+  pod "GoogleMaps"
+  pod "GooglePlaces"
+
 end

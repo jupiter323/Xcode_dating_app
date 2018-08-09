@@ -1,24 +1,37 @@
 PODS:
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
   - LSFloatingActionMenu (1.0.0)
   - MKDropdownMenu (1.4)
   - MXCardsSwipingView (0.2.0)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
   - LSFloatingActionMenu
   - MKDropdownMenu
   - MXCardsSwipingView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - GooglePlaces
     - LSFloatingActionMenu
     - MKDropdownMenu
     - MXCardsSwipingView
 
 SPEC CHECKSUMS:
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   LSFloatingActionMenu: dc2d6449e817cb2eb3c3a9a751bd49c3aae416b2
   MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
   MXCardsSwipingView: d0a39b40a2a991a4a4f90f5573d33a33e2e1f656
 
-PODFILE CHECKSUM: 0ebb267ecb37543cc815a5da9aeb2dc018fe769b
+PODFILE CHECKSUM: fbd4904138af14e8c929525cffc45f1c896c241a
 
 COCOAPODS: 1.5.3

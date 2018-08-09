@@ -97,10 +97,11 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _bioLabel.textColor = [UIColor whiteColor];
     [_topMatterView addSubview:_bioLabel];
     
-    _swipeLeftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notNowStamp"]];
+    _swipeLeftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dislike"]];
     _swipeLeftView.hidden = YES;
-    _swipeRightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"connectStamp"]];
+    _swipeRightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"like"]];
     _swipeRightView.hidden = YES;
+    
     [_innerClippedView addSubview:_swipeLeftView];
     [_innerClippedView addSubview:_swipeRightView];
     
@@ -141,7 +142,8 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _bioLabel.frame = CGRectMake(10, userViewHeight - spaceFromBottom, w - 20, _bioLabel.frame.size.height);
     spaceFromBottom += _nameLabel.frame.size.height;
     _nameLabel.frame = CGRectMake(10, userViewHeight - spaceFromBottom, w - 20, _nameLabel.frame.size.height);
-    _swipeLeftView.frame = CGRectMake(w - _swipeLeftView.frame.size.width, 0, _swipeLeftView.frame.size.width, _swipeLeftView.frame.size.height);
+    _swipeLeftView.frame = CGRectMake(w/2 - _swipeLeftView.frame.size.width/2, h/2-_swipeLeftView.frame.size.height/2, _swipeLeftView.frame.size.width, _swipeLeftView.frame.size.height);
+    _swipeRightView.frame = CGRectMake(w/2 - _swipeRightView.frame.size.width/2, h/2-_swipeRightView.frame.size.height/2, _swipeRightView.frame.size.width, _swipeRightView.frame.size.height);
 }
 
 - (void)setupWithAModel:(id)someModel {
