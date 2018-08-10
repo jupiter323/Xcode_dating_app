@@ -7,7 +7,7 @@
 //
 
 #import "MXViewController.h"
-#import <MXCardsSwipingView/MXCardsSwipingView.h>
+#import "MXCardsSwipingView.h"
 #import "MXMemberCardView.h"
 
 @interface MXViewController () <MXCardsSwipingViewDelegate>
@@ -89,12 +89,24 @@
 
 
 
-- (BOOL)cardsSwipingView:(MXCardsSwipingView *)cardsSwipingView willDismissCard:(UIView *)card toLeft:(BOOL)toLeft {
+- (BOOL)cardsSwipingView:(MXCardsSwipingView *)cardsSwipingView willDismissCard:(UIView *)card destination:(MXCardDestination)destination {
+  
+    switch (destination) {
+        case MXCardDestinationRight:
+            NSLog(@"right");
+            break;
+        case MXCardDestinationLeft:
+            NSLog(@"left");
+            break;
+        case MXCardDestinationUp:
+            NSLog(@"up");
+            break;
+            
+        default:
+            break;
+    }
+ 
     
-    if(toLeft)
-        NSLog(@"left");
-    else
-        NSLog(@"Right");
     static int i=0;
     if (++i % 5 == 0) return NO;
     [self addCard];

@@ -1,1 +1,0 @@
-../../../MXCardsSwipingView/MXCardsSwipingView/Classes/MXCardsSwipingView.h

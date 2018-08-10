@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM(NSInteger, MXCardDestination) {
+    MXCardDestinationCenter = 0,
+    MXCardDestinationLeft,
+    MXCardDestinationRight,
+    MXCardDestinationUp
+};
 @class MXCardsSwipingView;
 
 @protocol MXSwipableCard <NSObject>
 @optional
 - (UIView*)viewShownOnSwipeLeft;
 - (UIView*)viewShownOnSwipeRight;
+- (UIView*)viewShownOnSwipeUp;
 - (void)prepareToBecomeTopCard; // changes will be animated
 - (void)prepareToBecomeBackgroundCard;
 
@@ -27,7 +33,7 @@
  
  return YES to continue dismissing the card or NO to cancel the dismissal and recenter the card.
  */
-- (BOOL)cardsSwipingView:(MXCardsSwipingView*)cardsSwipingView willDismissCard:(UIView*)card toLeft:(BOOL)toLeft;
+- (BOOL)cardsSwipingView:(MXCardsSwipingView*)cardsSwipingView willDismissCard:(UIView*)card destination:(MXCardDestination)destination;
 
 @end
 
@@ -45,6 +51,7 @@
 - (void)enqueueCard:(UIView*)card;
 - (UIView*)dismissTopCardToLeft;
 - (UIView*)dismissTopCardToRight;
+- (UIView*)dismissTopCardToUp;
 - (NSUInteger)numberOfCardsInQueue;
 - (void)clearQueue;
 

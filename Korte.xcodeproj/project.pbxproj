@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		691A6F5E21AFC6C61112A4C7 /* libPods-simple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */; };
+		4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC948564BF5250A0D997D8C5 /* libPods-Korte.a */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
 		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
 		CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE77211A329000F5B1C2 /* Location.storyboard */; };
@@ -15,6 +15,7 @@
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
+		CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
 		CEB28734211388BA00C51670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB28733211388BA00C51670 /* Assets.xcassets */; };
@@ -27,8 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-simple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simple/Pods-simple.debug.xcconfig"; sourceTree = "<group>"; };
+		0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
+		A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
 		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
 		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
@@ -41,7 +42,9 @@
 		CE3D2BCE211C7C5F005DE85C /* AddingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingViewController.h; sourceTree = "<group>"; };
 		CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddingViewController.m; sourceTree = "<group>"; };
 		CE3D333D2118F54400FE970D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		CEB28724211388A900C51670 /* simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCardsSwipingView.m; sourceTree = "<group>"; };
+		CE603A47211DA4C4006E95F3 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCardsSwipingView.h; sourceTree = "<group>"; };
+		CEB28724211388A900C51670 /* Korte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEB28728211388A900C51670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CEB28731211388A900C51670 /* simple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = simple.xcdatamodel; sourceTree = "<group>"; };
@@ -56,7 +59,7 @@
 		CEB287642113F50E00C51670 /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		CEB287682113F6DC00C51670 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		CEB2876E211432C700C51670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../flirtar/FlirtARViper/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ECE5D163F401B0DA6BD15C3F /* Pods-simple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simple.release.xcconfig"; path = "Pods/Target Support Files/Pods-simple/Pods-simple.release.xcconfig"; sourceTree = "<group>"; };
+		FC948564BF5250A0D997D8C5 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691A6F5E21AFC6C61112A4C7 /* libPods-simple.a in Frameworks */,
+				4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +77,8 @@
 		559FE5F51B1CCD4D6D384768 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */,
-				ECE5D163F401B0DA6BD15C3F /* Pods-simple.release.xcconfig */,
+				A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */,
+				0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,6 +147,15 @@
 			path = AddConnect;
 			sourceTree = "<group>";
 		};
+		CE603A42211DA424006E95F3 /* MXCardsSwipingView */ = {
+			isa = PBXGroup;
+			children = (
+				CE603A47211DA4C4006E95F3 /* MXCardsSwipingView.h */,
+				CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */,
+			);
+			path = MXCardsSwipingView;
+			sourceTree = "<group>";
+		};
 		CEB2871B211388A900C51670 = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +169,7 @@
 		CEB28725211388A900C51670 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEB28724211388A900C51670 /* simple.app */,
+				CEB28724211388A900C51670 /* Korte.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +197,7 @@
 		CEB28742211391D400C51670 /* TinderModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CEB28743211391E300C51670 /* View */,
 			);
 			path = TinderModule;
@@ -223,7 +236,7 @@
 		F31264CEEE5F93D74C187B73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BA3F03E0D87DACEBFEF1F99 /* libPods-simple.a */,
+				FC948564BF5250A0D997D8C5 /* libPods-Korte.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEB28723211388A900C51670 /* simple */ = {
+		CEB28723211388A900C51670 /* Korte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEB2873D211388BA00C51670 /* Build configuration list for PBXNativeTarget "simple" */;
+			buildConfigurationList = CEB2873D211388BA00C51670 /* Build configuration list for PBXNativeTarget "Korte" */;
 			buildPhases = (
 				0E1174D323B0D9023667400C /* [CP] Check Pods Manifest.lock */,
 				CEB28720211388A900C51670 /* Sources */,
@@ -245,9 +258,9 @@
 			);
 			dependencies = (
 			);
-			name = simple;
+			name = Korte;
 			productName = simple;
-			productReference = CEB28724211388A900C51670 /* simple.app */;
+			productReference = CEB28724211388A900C51670 /* Korte.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +278,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEB2871F211388A900C51670 /* Build configuration list for PBXProject "simple" */;
+			buildConfigurationList = CEB2871F211388A900C51670 /* Build configuration list for PBXProject "Korte" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -278,7 +291,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEB28723211388A900C51670 /* simple */,
+				CEB28723211388A900C51670 /* Korte */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +324,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-simple-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Korte-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -324,7 +337,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-simple/Pods-simple-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Korte/Pods-Korte-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -335,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simple/Pods-simple-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Korte/Pods-Korte-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -345,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
@@ -484,7 +498,7 @@
 		};
 		CEB2873E211388BA00C51670 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDF750B398100183F1A8DCB0 /* Pods-simple.debug.xcconfig */;
+			baseConfigurationReference = A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,7 +523,7 @@
 		};
 		CEB2873F211388BA00C51670 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECE5D163F401B0DA6BD15C3F /* Pods-simple.release.xcconfig */;
+			baseConfigurationReference = 0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -534,7 +548,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEB2871F211388A900C51670 /* Build configuration list for PBXProject "simple" */ = {
+		CEB2871F211388A900C51670 /* Build configuration list for PBXProject "Korte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEB2873B211388BA00C51670 /* Debug */,
@@ -543,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEB2873D211388BA00C51670 /* Build configuration list for PBXNativeTarget "simple" */ = {
+		CEB2873D211388BA00C51670 /* Build configuration list for PBXNativeTarget "Korte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEB2873E211388BA00C51670 /* Debug */,

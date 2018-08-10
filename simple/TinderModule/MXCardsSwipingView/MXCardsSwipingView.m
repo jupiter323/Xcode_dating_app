@@ -8,11 +8,7 @@
 
 #import "MXCardsSwipingView.h"
 
-typedef NS_ENUM(NSInteger, MXCardDestination) {
-    MXCardDestinationCenter = 0,
-    MXCardDestinationLeft,
-    MXCardDestinationRight
-};
+
 
 static const CGFloat kMXMinimumSpeedForDismissal = 80.0f;
 static const CGFloat kMXDistanceFromCenterDismissalThreshold = 30.0f;
@@ -87,22 +83,50 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
 }
 
 - (UIView*)dismissTopCardToLeft {
-    return [self dismissTopCardToLeft:YES];
+    return [self dismissTopCard:MXCardDestinationLeft];
 }
 
 - (UIView*)dismissTopCardToRight {
-    return [self dismissTopCardToLeft:NO];
+    
+    return [self dismissTopCard:MXCardDestinationRight];
 }
 
-- (UIView*)dismissTopCardToLeft:(BOOL)toLeft {
+- (UIView*)dismissTopCardToUp {
+  return [self dismissTopCard:MXCardDestinationUp];
+    
+}
+
+- (UIView*)dismissTopCard:(MXCardDestination)destination{
+    
     UIView* topCard = [self topCard];
-    if (!topCard || ![self.delegate cardsSwipingView:self willDismissCard:topCard toLeft:toLeft]) {
+    if (!topCard || ![self.delegate cardsSwipingView:self willDismissCard:topCard destination:destination]) {
         return nil;
     }
     UIAttachmentBehavior* attachment = [self attachCard:topCard ToPoint:CGPointMake(topCard.center.x, topCard.center.y + 40)];
     [self.animator addBehavior:attachment];
-    CGPoint newAnchor = toLeft ? CGPointMake(-topCard.frame.size.height, topCard.center.y) : CGPointMake(self.bounds.size.width + topCard.frame.size.height, topCard.center.y);
-    UIView* accessoryView = toLeft ? [MXCardsSwipingView viewShownOnSwipeLeftForCard:topCard] : [MXCardsSwipingView viewShownOnSwipeRightForCard:topCard];
+    
+    CGPoint newAnchor;
+    UIView* accessoryView;
+    switch (destination) {
+        case MXCardDestinationLeft:
+            newAnchor = CGPointMake(-topCard.frame.size.height, topCard.center.y);
+            accessoryView = [MXCardsSwipingView viewShownOnSwipeLeftForCard:topCard];
+            break;
+        case MXCardDestinationRight:
+            newAnchor = CGPointMake(self.bounds.size.width + topCard.frame.size.height, topCard.center.y);
+            accessoryView = [MXCardsSwipingView viewShownOnSwipeRightForCard:topCard];
+            break;
+        case MXCardDestinationUp:
+            newAnchor = CGPointMake(topCard.center.x, -topCard.frame.size.height);
+            accessoryView = [MXCardsSwipingView viewShownOnSwipeUpForCard:topCard];
+            break;
+        default:
+            NSLog(@"default");
+            newAnchor = CGPointMake(self.bounds.size.width + topCard.frame.size.height, topCard.center.y);
+            accessoryView = [MXCardsSwipingView viewShownOnSwipeRightForCard:topCard];
+            break;
+    }
+  
     accessoryView.hidden = NO;
     accessoryView.alpha = 1.0f;
     [self dismissCard:topCard toPoint:newAnchor viaAttachment:attachment];
@@ -110,10 +134,12 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
 }
 
 - (UIAttachmentBehavior*)attachCard:(UIView*)card ToPoint:(CGPoint)location {
+    
     return [[UIAttachmentBehavior alloc] initWithItem:card offsetFromCenter:UIOffsetMake(location.x - card.center.x, location.y - card.center.y) attachedToAnchor:location];
 }
 
 - (void)pan:(UIPanGestureRecognizer*)gesture {
+    
     UIView* topCard = [self topCard];
     if (!topCard) {
         return;
@@ -124,18 +150,20 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
         self.attachment = [self attachCard:topCard ToPoint:location];
         [self.animator addBehavior:self.attachment];
     } else if (gesture.state == UIGestureRecognizerStateChanged) {
+        //
         self.attachment.anchorPoint = location;
-        [self showLeftOrRightViewsOnCard:topCard];
+        [self showLeftOrRightOrUpViewsOnCard:topCard];
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
         
-        [self showLeftOrRightViewsOnCard:topCard];
+        [self showLeftOrRightOrUpViewsOnCard:topCard];
         
         MXCardDestination destination = [self destinationForCard:topCard];
         
         if (destination == MXCardDestinationCenter) {
             [self restoreTopCardToCenter];
         } else {
-            BOOL continueDismissing = [self.delegate cardsSwipingView:self willDismissCard:topCard toLeft:(destination == MXCardDestinationLeft)];
+                      
+            BOOL continueDismissing = [self.delegate cardsSwipingView:self willDismissCard:topCard destination:destination];
             
             if (!continueDismissing) {
                 [self restoreTopCardToCenter];
@@ -146,6 +174,8 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
                 velocity = CGPointMake(-kMXMinimumSpeedForDismissal, 0);
             } else if (destination == MXCardDestinationRight && velocity.x < kMXMinimumSpeedForDismissal) {
                 velocity = CGPointMake(kMXMinimumSpeedForDismissal, 0);
+            }if(destination == MXCardDestinationUp && velocity.y > -kMXMinimumSpeedForDismissal){
+                velocity = CGPointMake(0, -kMXMinimumSpeedForDismissal);
             }
             CGPoint newAnchor = [self movePoint:location withVelocity:velocity offScreenHorizontallyByAtLeast:topCard.frame.size.height];
             [self dismissCard:topCard toPoint:newAnchor viaAttachment:self.attachment];
@@ -161,30 +191,46 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
         return MXCardDestinationLeft;
     } else if (card.center.x > (self.centerPointOfCardStack.x + kMXDistanceFromCenterDismissalThreshold)) {
         return MXCardDestinationRight;
+    } else if (card.center.y < (self.centerPointOfCardStack.y - kMXDistanceFromCenterDismissalThreshold)) {
+        return MXCardDestinationUp;
     } else {
         return MXCardDestinationCenter;
     }
 }
 
-- (void)showLeftOrRightViewsOnCard:(UIView*)card {
+- (void)showLeftOrRightOrUpViewsOnCard:(UIView*)card {
     UIView* leftView = [MXCardsSwipingView viewShownOnSwipeLeftForCard:card];
     UIView* rightView = [MXCardsSwipingView viewShownOnSwipeRightForCard:card];
-    if (!leftView && !rightView) {
+    UIView* upView = [MXCardsSwipingView viewShownOnSwipeUpForCard:card];
+    if (!leftView && !rightView &&!upView) {
         return;
     }
     CGFloat threshold = kMXDistanceFromCenterShowViewsThreshold;
     CGFloat viewAlpha = MIN(MAX(0,(ABS(self.centerPointOfCardStack.x - card.center.x) - threshold)/(kMXDistanceFromCenterDismissalThreshold - threshold)),1);
+//    CGFloat deltaX = abs(card.center.x-self.centerPointOfCardStack.x);
+//    CGFloat deltaY = abs(card.center.y-self.centerPointOfCardStack.y);
+
     if (card.center.x < (self.centerPointOfCardStack.x - threshold)) {
         leftView.hidden = NO;
         rightView.hidden = YES;
+        upView.hidden = YES;
         leftView.alpha = viewAlpha;
     } else if (card.center.x > (self.centerPointOfCardStack.x + threshold)) {
         leftView.hidden = YES;
         rightView.hidden = NO;
+        upView.hidden =YES;
         rightView.alpha = viewAlpha;
+    } else if (card.center.y < (self.centerPointOfCardStack.y - threshold)) {
+        NSLog(@"up signal");
+        viewAlpha = MIN(MAX(0,(ABS(self.centerPointOfCardStack.y - card.center.y) - threshold)/(kMXDistanceFromCenterDismissalThreshold - threshold)),1);
+        leftView.hidden = YES;
+        rightView.hidden = YES;
+        upView.hidden= NO;
+        upView.alpha = viewAlpha;
     } else {
         leftView.hidden = YES;
         rightView.hidden = YES;
+        upView.hidden=YES;
     }
 }
 
@@ -196,6 +242,10 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
         }
     } else if (velocity.x > 0) {
         while (newPoint.x < self.bounds.size.width + offscreenPoints) {
+            newPoint = CGPointMake(newPoint.x + velocity.x, newPoint.y + velocity.y);
+        }
+    } else {
+        while (newPoint.y > -offscreenPoints) {
             newPoint = CGPointMake(newPoint.x + velocity.x, newPoint.y + velocity.y);
         }
     }
@@ -224,14 +274,17 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
     UIView* topCard = [self topCard];
     UIView* leftView = [MXCardsSwipingView viewShownOnSwipeLeftForCard:topCard];
     UIView* rightView = [MXCardsSwipingView viewShownOnSwipeRightForCard:topCard];
+    UIView* upView = [MXCardsSwipingView viewShownOnSwipeUpForCard:topCard];
     [UIView animateWithDuration:0.3f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         leftView.alpha = 0.0f;
         rightView.alpha = 0.0f;
+        upView.alpha = 0.0f;
         topCard.center = self.centerPointOfCardStack;
         topCard.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         leftView.hidden = YES;
         rightView.hidden = YES;
+        upView.hidden = YES;
     }];
 }
 
@@ -245,6 +298,10 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
 
 + (UIView*)viewShownOnSwipeRightForCard:(UIView*)card {
     return ([card conformsToProtocol:@protocol(MXSwipableCard)] && [card respondsToSelector:@selector(viewShownOnSwipeRight)]) ? [((id<MXSwipableCard>) card) viewShownOnSwipeRight] : nil;
+}
+
++ (UIView*)viewShownOnSwipeUpForCard:(UIView*)card {
+    return ([card conformsToProtocol:@protocol(MXSwipableCard)] && [card respondsToSelector:@selector(viewShownOnSwipeUp)]) ? [((id<MXSwipableCard>) card) viewShownOnSwipeUp] : nil;
 }
 
 + (void)prepareToBecomeTopCard:(UIView*)card {

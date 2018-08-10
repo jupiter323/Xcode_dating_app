@@ -25,6 +25,7 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     // during swipe
     UIImageView* _swipeLeftView;
     UIImageView* _swipeRightView;
+    UIImageView* _swipeUpView;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
@@ -101,10 +102,12 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _swipeLeftView.hidden = YES;
     _swipeRightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"like"]];
     _swipeRightView.hidden = YES;
+    _swipeUpView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ignore"]];
+    _swipeUpView.hidden = YES;
     
     [_innerClippedView addSubview:_swipeLeftView];
     [_innerClippedView addSubview:_swipeRightView];
-    
+    [_innerClippedView addSubview:_swipeUpView];
     //
     // Initialize heights of one-line labels
     //
@@ -144,6 +147,7 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _nameLabel.frame = CGRectMake(10, userViewHeight - spaceFromBottom, w - 20, _nameLabel.frame.size.height);
     _swipeLeftView.frame = CGRectMake(w/2 - _swipeLeftView.frame.size.width/2, h/2-_swipeLeftView.frame.size.height/2, _swipeLeftView.frame.size.width, _swipeLeftView.frame.size.height);
     _swipeRightView.frame = CGRectMake(w/2 - _swipeRightView.frame.size.width/2, h/2-_swipeRightView.frame.size.height/2, _swipeRightView.frame.size.width, _swipeRightView.frame.size.height);
+    _swipeUpView.frame = CGRectMake(w/2 - _swipeUpView.frame.size.width/2, h/2-_swipeUpView.frame.size.height/2, _swipeUpView.frame.size.width, _swipeUpView.frame.size.height);
 }
 
 - (void)setupWithAModel:(id)someModel {
@@ -207,6 +211,9 @@ static const NSUInteger kMXCornerRadius = 6.0f;
 
 - (UIView *)viewShownOnSwipeRight {
     return _swipeRightView;
+}
+- (UIView *)viewShownOnSwipeUp {
+    return _swipeUpView;
 }
 
 - (void)prepareToBecomeTopCard {
