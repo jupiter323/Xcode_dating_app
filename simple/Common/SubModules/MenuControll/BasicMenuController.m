@@ -130,7 +130,7 @@
     button.hidden = YES;
     self.notificationButton.hidden = YES;
     
-    NSArray *menuIcons = @[@"pro_close", @"pro_match", @"pro_location", @"pro_analysis"];
+    NSArray *menuIcons = @[@"pro_close", @"pro_match", @"pro_location", @"addCon"];
     NSMutableArray *menus = [NSMutableArray array];
     
     CGSize itemSize = button.frame.size;
@@ -148,11 +148,12 @@
                 NSLog(@"1 clicked");
                 break;
             case 2:
-                //                location
+                // location
                 [self toLocation];
                 break;
             case 3:
-                NSLog(@"3 clicked");
+                // add connection
+                [self toAddConnection];
                 break;
             default:
                 break;
@@ -187,6 +188,24 @@
     UINavigationController *locationScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idLocation"];
     
     [self.navigationController pushViewController:locationScene animated:NO];
+    
+}
+-(void)toAddConnection {
+    NSLog(@"addconnection");
+    //    for animation navigating
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+    transition.subtype = kCATransitionFromLeft; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    
+    
+    //        navigating to addconnection
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
+    UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
+    
+    [self.navigationController pushViewController:addScene animated:NO];
     
 }
 

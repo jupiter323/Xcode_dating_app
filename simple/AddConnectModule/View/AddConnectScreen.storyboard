@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Connect View Controller-->
+        <scene sceneID="Dyu-9u-e8b">
+            <objects>
+                <viewController storyboardIdentifier="idAddConnection" id="ngO-3A-O36" customClass="AddConnectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zTb-td-k3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6g-x1-Dd1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ldb-rT-qx0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fF2-mE-xg9">
+                                <rect key="frame" x="0.0" y="100" width="375" height="447"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ref-5A-xOm">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe for me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxs-Cu-vQb">
+                                        <rect key="frame" x="10" y="10" width="109" height="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                        <color key="textColor" red="0.79607843137254897" green="0.44705882352941173" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-WR-PvV">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="55"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wxs-Cu-vQb" firstAttribute="top" secondItem="ref-5A-xOm" secondAttribute="top" constant="10" id="3Pn-1q-rxZ"/>
+                                    <constraint firstItem="wxs-Cu-vQb" firstAttribute="leading" secondItem="ref-5A-xOm" secondAttribute="leading" constant="10" id="EFf-gz-18p"/>
+                                    <constraint firstAttribute="height" constant="120" id="GSh-Hh-t9D"/>
+                                    <constraint firstAttribute="trailing" secondItem="6qL-WR-PvV" secondAttribute="trailing" id="QaS-6E-cJ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="6qL-WR-PvV" secondAttribute="bottom" constant="10" id="bWb-9x-3P9"/>
+                                    <constraint firstItem="6qL-WR-PvV" firstAttribute="leading" secondItem="ref-5A-xOm" secondAttribute="leading" id="l4f-jV-hDt"/>
+                                    <constraint firstItem="6qL-WR-PvV" firstAttribute="top" secondItem="wxs-Cu-vQb" secondAttribute="bottom" constant="20" id="u59-IS-3ME"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fF2-mE-xg9" firstAttribute="leading" secondItem="zTb-td-k3c" secondAttribute="leading" id="1QD-S0-MCE"/>
+                            <constraint firstItem="P6g-x1-Dd1" firstAttribute="leading" secondItem="olS-be-L4i" secondAttribute="leading" id="6nc-Fa-XDS"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="bottom" secondItem="olS-be-L4i" secondAttribute="bottom" id="A3f-uB-jl5"/>
+                            <constraint firstItem="fF2-mE-xg9" firstAttribute="top" secondItem="P6g-x1-Dd1" secondAttribute="bottom" id="Ggc-ce-hbv"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="top" secondItem="fF2-mE-xg9" secondAttribute="bottom" id="UwK-1O-aWg"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="leading" secondItem="olS-be-L4i" secondAttribute="leading" id="WaF-Sf-b17"/>
+                            <constraint firstItem="olS-be-L4i" firstAttribute="trailing" secondItem="P6g-x1-Dd1" secondAttribute="trailing" id="gMQ-rK-6Lk"/>
+                            <constraint firstItem="fF2-mE-xg9" firstAttribute="top" secondItem="P6g-x1-Dd1" secondAttribute="bottom" id="iC0-Gg-6aQ"/>
+                            <constraint firstItem="olS-be-L4i" firstAttribute="trailing" secondItem="fF2-mE-xg9" secondAttribute="trailing" id="iSO-Wp-Z7k"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="trailing" secondItem="olS-be-L4i" secondAttribute="trailing" id="rvf-Z1-Blh"/>
+                            <constraint firstItem="P6g-x1-Dd1" firstAttribute="top" secondItem="zTb-td-k3c" secondAttribute="top" id="wSP-Ot-f2b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="olS-be-L4i"/>
+                    </view>
+                    <connections>
+                        <outlet property="addContainView" destination="fF2-mE-xg9" id="0kx-wx-0F1"/>
+                        <outlet property="swipeForMeScroll" destination="ref-5A-xOm" id="kHU-U4-b3i"/>
+                        <outlet property="swipeformeScrollContent" destination="6qL-WR-PvV" id="nkm-AD-P0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffd-bi-kdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="75"/>
+        </scene>
+    </scenes>
+</document>

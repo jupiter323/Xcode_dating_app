@@ -25,6 +25,8 @@
 		CEB287652113F50E00C51670 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB287642113F50E00C51670 /* SplashViewController.m */; };
 		CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB287682113F6DC00C51670 /* Splash.storyboard */; };
 		CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2876D211432C700C51670 /* LaunchScreen.storyboard */; };
+		CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB6FC9021214488003A7E69 /* AddConnectViewController.m */; };
+		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		CEB287642113F50E00C51670 /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		CEB287682113F6DC00C51670 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		CEB2876E211432C700C51670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../flirtar/FlirtARViper/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddConnectViewController.h; sourceTree = "<group>"; };
+		CEB6FC9021214488003A7E69 /* AddConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddConnectViewController.m; sourceTree = "<group>"; };
+		CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddConnectScreen.storyboard; sourceTree = "<group>"; };
 		FC948564BF5250A0D997D8C5 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,6 +182,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6FC8D21214457003A7E69 /* AddConnectModule */,
 				CE27DE75211A2FCA00F5B1C2 /* data */,
 				CE27DE6D2119B79B00F5B1C2 /* LocationModule */,
 				CE3BCEE921168CA600706FD1 /* ProfileModule */,
@@ -231,6 +237,24 @@
 				CE3D333D2118F54400FE970D /* Utilities.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		CEB6FC8D21214457003A7E69 /* AddConnectModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6FC8E2121446D003A7E69 /* View */,
+			);
+			path = AddConnectModule;
+			sourceTree = "<group>";
+		};
+		CEB6FC8E2121446D003A7E69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */,
+				CEB6FC9021214488003A7E69 /* AddConnectViewController.m */,
+				CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F31264CEEE5F93D74C187B73 /* Frameworks */ = {
@@ -305,6 +329,7 @@
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
 				CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */,
+				CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
@@ -361,6 +386,7 @@
 				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
+				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE27DE7B211A329000F5B1C2 /* LocationViewController.m in Sources */,
