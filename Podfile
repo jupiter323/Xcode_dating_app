@@ -12,5 +12,6 @@ target 'Korte' do
   pod "MKDropdownMenu"
   pod "GoogleMaps"
   pod "GooglePlaces"
+  pod "DSCircularCollectionView"
 
 end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddConnectViewController : UIViewController
-
+#import "DSCircularLayout.h"
+#import "DSCollectionViewCell.h"
+#import "AddingFriendViewController.h"
+@interface AddConnectViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end

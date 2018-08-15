@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D89872716021FF2EAB6C60E4835AE913"
-               BlueprintName = "Pods-Korte"
+               BlueprintIdentifier = "0BD6FA51AB2008C37490CD1A25C2EBC9"
+               BlueprintName = "DSCircularCollectionView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-Korte.a">
+               BuildableName = "libDSCircularCollectionView.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

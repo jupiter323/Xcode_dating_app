@@ -7,28 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8571EEE7B62D6C868C0EBBE5F2D6838E /* LSFloatingActionMenuItem.m */; };
-		3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 42C1408337F413CE39DEC6BD7D223CAC /* LSFloatingActionMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3E42E7CF6AC67D20FB8C5C14BCE744 /* LSFloatingActionMenuItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EA1572722B771ED0DE68BEDFF8B4A8 /* LSFloatingActionMenu.m */; };
-		810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DDD8A1DC36A47437F2634C6C9A31F8 /* MKDropdownMenu-dummy.m */; };
+		21650C4DA0B7E9C335EEB557D1672702 /* LSFloatingActionMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B349C7168197FE9946C0F1503312D95E /* LSFloatingActionMenuItem.m */; };
+		3D3B23D7821E784FECBB9EA75A810E43 /* LSFloatingActionMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 866EA6A9378E6B10A300FA24500CD1EF /* LSFloatingActionMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F1C015BF7D09E83D88467BAF950AEA3 /* LSFloatingActionMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CC9787CE8AA71C42024CE6B6EA9AF2 /* LSFloatingActionMenuItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		425AEF307B0CDF3AA61F3086EB151632 /* Pods-Korte-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9857D7E98D099F7A10CFDF129245582B /* Pods-Korte-dummy.m */; };
+		4460B632B5CF1AA25F52DD4EBE399B64 /* DSCircularLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = CDCFFE8142D5565DC88F64A2AB2A1079 /* DSCircularLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7ADD0A53B159168C7F41A91BB7AB4259 /* LSFloatingActionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF1CA9A4F3D4B62FE209CE15791638B /* LSFloatingActionMenu.m */; };
+		810897698B7DD7C264B0916617AB4DE9 /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 344783385530A4D500B4B55ABF9C8511 /* MKDropdownMenu-dummy.m */; };
 		9BA77D18CACBB4250026DBB1B63D1FD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		AA9E84B15111ECF28AE8574DBF88AF2B /* Pods-Korte-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9857D7E98D099F7A10CFDF129245582B /* Pods-Korte-dummy.m */; };
-		C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B9172A91551707E5907EEF7FF4CCA /* LSFloatingActionMenu-dummy.m */; };
-		D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = AA550C454688F870715D91A83AF7F02F /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB9473E61A012E40D0031AD5CB8348A /* MKDropdownMenu.m */; };
+		C6F87571B9FEFC3676A86862667A73E3 /* LSFloatingActionMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AEB7727B3B14C7A219A9C5147D525B /* LSFloatingActionMenu-dummy.m */; };
+		D1DF71D6C13881B0CB8EF0ECB00C8E22 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 941692F57D4B41CAC9EFC94B100A4CAF /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D941037BDBF8082CFB4A8A0CCC3A06F6 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E93AD9DC48D0C5C32704DAFD53186A26 /* MKDropdownMenu.m */; };
 		DF76179FA5B16B0D2336706FD42A5654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		E962D1B9839513B79E6FD5F14640C14A /* DSCircularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E8B99AF5D22247E416B99FBD6680A4 /* DSCircularLayout.m */; };
+		ECA41A6F6F30967FD7D8CD76C1BD40CB /* DSCircularCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2525500115127AC9222CE88E11F96DE0 /* DSCircularCollectionView-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0020C3A7BAFE7D55C7FFA7824C2671AF /* PBXContainerItemProxy */ = {
+		53978EBC271B5465FAD265C7978635F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5F8380E29B6975954FB3D85FCC7BC03D;
 			remoteInfo = MKDropdownMenu;
 		};
-		9B44812E65FA31A3AC799140711DB1D3 /* PBXContainerItemProxy */ = {
+		6CC73B1A2B7DC4D41E06B26E0B3BF52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BD6FA51AB2008C37490CD1A25C2EBC9;
+			remoteInfo = DSCircularCollectionView;
+		};
+		A41FB9A7DF55B2EBF5158ABD11F5BC8C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -38,41 +48,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		006994F107EE21EFBE34693B71199B8A /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		0324D9F776A423BE0A0F743261E284A0 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		0A208107FA2AE2F7C2A4807BEDB40A64 /* LSFloatingActionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LSFloatingActionMenu-prefix.pch"; sourceTree = "<group>"; };
+		0358601F3F2398DC429AD222C6948580 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		09CC9787CE8AA71C42024CE6B6EA9AF2 /* LSFloatingActionMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenuItem.h; path = LSFloatingActionMenu/LSFloatingActionMenuItem.h; sourceTree = "<group>"; };
 		1BA0BA15449D7B5F7C540B8DB2614C49 /* Pods-Korte-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Korte-acknowledgements.plist"; sourceTree = "<group>"; };
-		1D2ECD03454AADCC900D05FDEDF1BA44 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		42C1408337F413CE39DEC6BD7D223CAC /* LSFloatingActionMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenu.h; path = LSFloatingActionMenu/LSFloatingActionMenu.h; sourceTree = "<group>"; };
+		2525500115127AC9222CE88E11F96DE0 /* DSCircularCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DSCircularCollectionView-dummy.m"; sourceTree = "<group>"; };
+		26AEB7727B3B14C7A219A9C5147D525B /* LSFloatingActionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSFloatingActionMenu-dummy.m"; sourceTree = "<group>"; };
+		344783385530A4D500B4B55ABF9C8511 /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		3D23838F9ED52820ED92068DDBC16179 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		47B6E3204D8CFACBDDBF1D41BA045B3E /* Pods-Korte-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Korte-resources.sh"; sourceTree = "<group>"; };
-		4E2B9172A91551707E5907EEF7FF4CCA /* LSFloatingActionMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LSFloatingActionMenu-dummy.m"; sourceTree = "<group>"; };
-		5C98497160AD452BE26A74C73A2053EE /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
+		4B9DA2DE700F37FE69041504941D4D07 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		58E8B99AF5D22247E416B99FBD6680A4 /* DSCircularLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSCircularLayout.m; path = DSCircularCollectionView/Classes/DSCircularLayout.m; sourceTree = "<group>"; };
+		6262C874478D03B5AD6C06894A185039 /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
 		646C05661F64066C3505A2F830BEFE98 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
-		67EA1572722B771ED0DE68BEDFF8B4A8 /* LSFloatingActionMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenu.m; path = LSFloatingActionMenu/LSFloatingActionMenu.m; sourceTree = "<group>"; };
 		712295779DFF4DCE124626F361E684AD /* Pods-Korte-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Korte-frameworks.sh"; sourceTree = "<group>"; };
-		73FF006CE8C4E164E0EA854A7BF01042 /* libMKDropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKDropdownMenu.a; path = libMKDropdownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		79D1CDB7789B889E698F3BDC35731BB7 /* LSFloatingActionMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSFloatingActionMenu.xcconfig; sourceTree = "<group>"; };
-		8571EEE7B62D6C868C0EBBE5F2D6838E /* LSFloatingActionMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenuItem.m; path = LSFloatingActionMenu/LSFloatingActionMenuItem.m; sourceTree = "<group>"; };
-		8635DA5CAED7B2C79997AA66E2765EA4 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		866EA6A9378E6B10A300FA24500CD1EF /* LSFloatingActionMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenu.h; path = LSFloatingActionMenu/LSFloatingActionMenu.h; sourceTree = "<group>"; };
+		87F59971836223B382A407925F95CD21 /* libDSCircularCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDSCircularCollectionView.a; path = libDSCircularCollectionView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A81192AAC4D6A5B2FB3325881D1037A /* DSCircularCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSCircularCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		8BFDD76501949130974FEE998C415B28 /* LSFloatingActionMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LSFloatingActionMenu-prefix.pch"; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941692F57D4B41CAC9EFC94B100A4CAF /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
 		9857D7E98D099F7A10CFDF129245582B /* Pods-Korte-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Korte-dummy.m"; sourceTree = "<group>"; };
-		AA550C454688F870715D91A83AF7F02F /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
-		B7DDD8A1DC36A47437F2634C6C9A31F8 /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		A3A250BD366BA477A9BD778B8D7ED2F1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		AB8ECB1853BDE1EEC6CE8B830BC88554 /* libLSFloatingActionMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLSFloatingActionMenu.a; path = libLSFloatingActionMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC35F9E612F7A78F07B20F0B88E20B63 /* DSCircularCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DSCircularCollectionView.xcconfig; sourceTree = "<group>"; };
+		B349C7168197FE9946C0F1503312D95E /* LSFloatingActionMenuItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenuItem.m; path = LSFloatingActionMenu/LSFloatingActionMenuItem.m; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BCD529A5B0F145EDAEB1B76FA3C20E76 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Korte.a"; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3B99AF140B93AB4EBBDF34FCC20F8D5 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		BF2A323E25A2AE615DCCBC3331D76384 /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		BF5ABDD56BA4D34F5562C5103D37A6DC /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		CDCFFE8142D5565DC88F64A2AB2A1079 /* DSCircularLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSCircularLayout.h; path = DSCircularCollectionView/Classes/DSCircularLayout.h; sourceTree = "<group>"; };
+		CF3166F5BA87FB3A7A046F6AF09D004B /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Korte.a"; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF1CA9A4F3D4B62FE209CE15791638B /* LSFloatingActionMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LSFloatingActionMenu.m; path = LSFloatingActionMenu/LSFloatingActionMenu.m; sourceTree = "<group>"; };
+		DDFD4C92875353510C44D302A0575CF6 /* LSFloatingActionMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LSFloatingActionMenu.xcconfig; sourceTree = "<group>"; };
 		E4783E549B9B326B5478CDFC2E326775 /* Pods-Korte-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Korte-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E62CAAED1C96534D8A52880D0126C384 /* libLSFloatingActionMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLSFloatingActionMenu.a; path = libLSFloatingActionMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECB9473E61A012E40D0031AD5CB8348A /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
-		ED9E4B25004137446D0EFDA5C03E88C5 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		F51E3E9565274A7782E68FC476C5BC3C /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		E93AD9DC48D0C5C32704DAFD53186A26 /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
 		F7D6E5E1194CD35FE003616CBFF400C2 /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
-		FF3E42E7CF6AC67D20FB8C5C14BCE744 /* LSFloatingActionMenuItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LSFloatingActionMenuItem.h; path = LSFloatingActionMenu/LSFloatingActionMenuItem.h; sourceTree = "<group>"; };
+		FB306FFD13FD98C9D1945EB556821162 /* libMKDropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKDropdownMenu.a; path = libMKDropdownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE163EE0DDD5AA93AE877488225673C4 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0B6E04683101F214BEB729B4DA8ABDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A97B485F4FE5FDA166ED2100365D033 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,7 +111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB857D0D14627870E3F38F12E9B2E128 /* Frameworks */ = {
+		A966821FB7AB954BB92606ADE39C1B11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050A17C485FAD441E56DF3ADB8930855 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE163EE0DDD5AA93AE877488225673C4 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		06BEBB728EEE98C5AFB35102FDA07DAF /* Pods-Korte */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +152,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		0F84FDB330204FF83D393F998862A424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFEC256A7C4184E4680952550528C8E7 /* DSCircularCollectionView */,
+				6F2315203A0FB595258C9B83730D8405 /* GoogleMaps */,
+				2D9C8D8D5893974E4FBD74F9BF1E251F /* GooglePlaces */,
+				F3635D6C030560FCCE60C8B6A7FF98BD /* LSFloatingActionMenu */,
+				89F562A5DED410729469138140737FD6 /* MKDropdownMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,24 +173,33 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		150370ADA11423CEAA863EEAA99526EE /* Maps */ = {
+		24F9A218E432CAA4E989E81751395DF9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8A62662B643A6D4BDD1013EBADE85D17 /* Frameworks */,
-				C3C9510100526C261A758789D3A06F91 /* Resources */,
-			);
-			name = Maps;
-			sourceTree = "<group>";
-		};
-		1BA7803C2D11DCAEA13698FFAB33B794 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F51E3E9565274A7782E68FC476C5BC3C /* MKDropdownMenu.xcconfig */,
-				B7DDD8A1DC36A47437F2634C6C9A31F8 /* MKDropdownMenu-dummy.m */,
-				5C98497160AD452BE26A74C73A2053EE /* MKDropdownMenu-prefix.pch */,
+				DDFD4C92875353510C44D302A0575CF6 /* LSFloatingActionMenu.xcconfig */,
+				26AEB7727B3B14C7A219A9C5147D525B /* LSFloatingActionMenu-dummy.m */,
+				8BFDD76501949130974FEE998C415B28 /* LSFloatingActionMenu-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MKDropdownMenu";
+			path = "../Target Support Files/LSFloatingActionMenu";
+			sourceTree = "<group>";
+		};
+		27D07E2F1B0E2F180E448C4D29C98BA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B9DA2DE700F37FE69041504941D4D07 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2D9C8D8D5893974E4FBD74F9BF1E251F /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				050A17C485FAD441E56DF3ADB8930855 /* Frameworks */,
+				27D07E2F1B0E2F180E448C4D29C98BA6 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -158,34 +210,63 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C3B161825BAC74B2C05790BEB3AA28A /* Pods */ = {
+		4881A8F9BD954D0195353F8725FA4DA2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BA698A8CEB82478D7C81E14B0FCE0381 /* GoogleMaps */,
-				A6A8A437D16F20EDC1B53991395D6761 /* GooglePlaces */,
-				ED879F73022C9513DCC5574165E48AAF /* LSFloatingActionMenu */,
-				6033ADCC659AEE932721A823CB4E7515 /* MKDropdownMenu */,
+				A3A250BD366BA477A9BD778B8D7ED2F1 /* GoogleMaps.bundle */,
 			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		6033ADCC659AEE932721A823CB4E7515 /* MKDropdownMenu */ = {
+		502998D765D9AC76E67A7E9530627AC3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA550C454688F870715D91A83AF7F02F /* MKDropdownMenu.h */,
-				ECB9473E61A012E40D0031AD5CB8348A /* MKDropdownMenu.m */,
-				1BA7803C2D11DCAEA13698FFAB33B794 /* Support Files */,
+				AC35F9E612F7A78F07B20F0B88E20B63 /* DSCircularCollectionView.xcconfig */,
+				2525500115127AC9222CE88E11F96DE0 /* DSCircularCollectionView-dummy.m */,
+				8A81192AAC4D6A5B2FB3325881D1037A /* DSCircularCollectionView-prefix.pch */,
 			);
-			name = MKDropdownMenu;
-			path = MKDropdownMenu;
+			name = "Support Files";
+			path = "../Target Support Files/DSCircularCollectionView";
 			sourceTree = "<group>";
 		};
-		79CF7D9C77F02AD2FAE8D002BF55E160 /* Base */ = {
+		54DAA36154991F5F4B84B6AA00FE541C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B159E7275625DD43FF4127C952422E66 /* Frameworks */,
+				87F59971836223B382A407925F95CD21 /* libDSCircularCollectionView.a */,
+				AB8ECB1853BDE1EEC6CE8B830BC88554 /* libLSFloatingActionMenu.a */,
+				FB306FFD13FD98C9D1945EB556821162 /* libMKDropdownMenu.a */,
+				CF3166F5BA87FB3A7A046F6AF09D004B /* libPods-Korte.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D8974DE608BA5C77C0D7BE145B7447F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9C56758AD59B5AF23D7BB43E54C841CC /* Frameworks */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		6F2315203A0FB595258C9B83730D8405 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6D8974DE608BA5C77C0D7BE145B7447F /* Base */,
+				B7580B272295B37C551503942AD98ABD /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		73ADEB58D229541ACC206A7809EF8751 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF2A323E25A2AE615DCCBC3331D76384 /* MKDropdownMenu.xcconfig */,
+				344783385530A4D500B4B55ABF9C8511 /* MKDropdownMenu-dummy.m */,
+				6262C874478D03B5AD6C06894A185039 /* MKDropdownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKDropdownMenu";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -193,105 +274,71 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				4C3B161825BAC74B2C05790BEB3AA28A /* Pods */,
-				C2A36D611792379195AB6EF8AF47A0B3 /* Products */,
+				0F84FDB330204FF83D393F998862A424 /* Pods */,
+				54DAA36154991F5F4B84B6AA00FE541C /* Products */,
 				0BED6D9BB464AB84C750BA7A815B5C14 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8A62662B643A6D4BDD1013EBADE85D17 /* Frameworks */ = {
+		89F562A5DED410729469138140737FD6 /* MKDropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				ED9E4B25004137446D0EFDA5C03E88C5 /* GoogleMaps.framework */,
-				8635DA5CAED7B2C79997AA66E2765EA4 /* GoogleMapsCore.framework */,
+				941692F57D4B41CAC9EFC94B100A4CAF /* MKDropdownMenu.h */,
+				E93AD9DC48D0C5C32704DAFD53186A26 /* MKDropdownMenu.m */,
+				73ADEB58D229541ACC206A7809EF8751 /* Support Files */,
+			);
+			name = MKDropdownMenu;
+			path = MKDropdownMenu;
+			sourceTree = "<group>";
+		};
+		9557DB81B31A77020A19ED4B4BEA900F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D23838F9ED52820ED92068DDBC16179 /* GoogleMaps.framework */,
+				BF5ABDD56BA4D34F5562C5103D37A6DC /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		975ACC1BCA309BE41F4E2F959B3DF315 /* Support Files */ = {
+		9C56758AD59B5AF23D7BB43E54C841CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				79D1CDB7789B889E698F3BDC35731BB7 /* LSFloatingActionMenu.xcconfig */,
-				4E2B9172A91551707E5907EEF7FF4CCA /* LSFloatingActionMenu-dummy.m */,
-				0A208107FA2AE2F7C2A4807BEDB40A64 /* LSFloatingActionMenu-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LSFloatingActionMenu";
-			sourceTree = "<group>";
-		};
-		A6A8A437D16F20EDC1B53991395D6761 /* GooglePlaces */ = {
-			isa = PBXGroup;
-			children = (
-				FCB6A9954D16E13D43337A9703E7EBDE /* Frameworks */,
-				CECF0A9CD98A234CE455D1C2D09CFE8E /* Resources */,
-			);
-			name = GooglePlaces;
-			path = GooglePlaces;
-			sourceTree = "<group>";
-		};
-		B159E7275625DD43FF4127C952422E66 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				006994F107EE21EFBE34693B71199B8A /* GoogleMapsBase.framework */,
+				0358601F3F2398DC429AD222C6948580 /* GoogleMapsBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA698A8CEB82478D7C81E14B0FCE0381 /* GoogleMaps */ = {
+		B7580B272295B37C551503942AD98ABD /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				79CF7D9C77F02AD2FAE8D002BF55E160 /* Base */,
-				150370ADA11423CEAA863EEAA99526EE /* Maps */,
+				9557DB81B31A77020A19ED4B4BEA900F /* Frameworks */,
+				4881A8F9BD954D0195353F8725FA4DA2 /* Resources */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = Maps;
 			sourceTree = "<group>";
 		};
-		C2A36D611792379195AB6EF8AF47A0B3 /* Products */ = {
+		F3635D6C030560FCCE60C8B6A7FF98BD /* LSFloatingActionMenu */ = {
 			isa = PBXGroup;
 			children = (
-				E62CAAED1C96534D8A52880D0126C384 /* libLSFloatingActionMenu.a */,
-				73FF006CE8C4E164E0EA854A7BF01042 /* libMKDropdownMenu.a */,
-				BCD529A5B0F145EDAEB1B76FA3C20E76 /* libPods-Korte.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C3C9510100526C261A758789D3A06F91 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1D2ECD03454AADCC900D05FDEDF1BA44 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		CECF0A9CD98A234CE455D1C2D09CFE8E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E3B99AF140B93AB4EBBDF34FCC20F8D5 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		ED879F73022C9513DCC5574165E48AAF /* LSFloatingActionMenu */ = {
-			isa = PBXGroup;
-			children = (
-				42C1408337F413CE39DEC6BD7D223CAC /* LSFloatingActionMenu.h */,
-				67EA1572722B771ED0DE68BEDFF8B4A8 /* LSFloatingActionMenu.m */,
-				FF3E42E7CF6AC67D20FB8C5C14BCE744 /* LSFloatingActionMenuItem.h */,
-				8571EEE7B62D6C868C0EBBE5F2D6838E /* LSFloatingActionMenuItem.m */,
-				975ACC1BCA309BE41F4E2F959B3DF315 /* Support Files */,
+				866EA6A9378E6B10A300FA24500CD1EF /* LSFloatingActionMenu.h */,
+				CFF1CA9A4F3D4B62FE209CE15791638B /* LSFloatingActionMenu.m */,
+				09CC9787CE8AA71C42024CE6B6EA9AF2 /* LSFloatingActionMenuItem.h */,
+				B349C7168197FE9946C0F1503312D95E /* LSFloatingActionMenuItem.m */,
+				24F9A218E432CAA4E989E81751395DF9 /* Support Files */,
 			);
 			name = LSFloatingActionMenu;
 			path = LSFloatingActionMenu;
 			sourceTree = "<group>";
 		};
-		FCB6A9954D16E13D43337A9703E7EBDE /* Frameworks */ = {
+		FFEC256A7C4184E4680952550528C8E7 /* DSCircularCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				0324D9F776A423BE0A0F743261E284A0 /* GooglePlaces.framework */,
+				CDCFFE8142D5565DC88F64A2AB2A1079 /* DSCircularLayout.h */,
+				58E8B99AF5D22247E416B99FBD6680A4 /* DSCircularLayout.m */,
+				502998D765D9AC76E67A7E9530627AC3 /* Support Files */,
 			);
-			name = Frameworks;
+			name = DSCircularCollectionView;
+			path = DSCircularCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +361,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84EB467183C416A18531B0C2F79EB644 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4460B632B5CF1AA25F52DD4EBE399B64 /* DSCircularLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0BD6FA51AB2008C37490CD1A25C2EBC9 /* DSCircularCollectionView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88171258D6784C8B050D80F8B77E7D9E /* Build configuration list for PBXNativeTarget "DSCircularCollectionView" */;
+			buildPhases = (
+				D51B6C865C31395BF5CB246D62E881B7 /* Sources */,
+				A966821FB7AB954BB92606ADE39C1B11 /* Frameworks */,
+				84EB467183C416A18531B0C2F79EB644 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSCircularCollectionView;
+			productName = DSCircularCollectionView;
+			productReference = 87F59971836223B382A407925F95CD21 /* libDSCircularCollectionView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 756DD4DE3CB2F2E7A98DD3FCA4B52069 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */;
@@ -331,7 +403,7 @@
 			);
 			name = MKDropdownMenu;
 			productName = MKDropdownMenu;
-			productReference = 73FF006CE8C4E164E0EA854A7BF01042 /* libMKDropdownMenu.a */;
+			productReference = FB306FFD13FD98C9D1945EB556821162 /* libMKDropdownMenu.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */ = {
@@ -348,25 +420,26 @@
 			);
 			name = LSFloatingActionMenu;
 			productName = LSFloatingActionMenu;
-			productReference = E62CAAED1C96534D8A52880D0126C384 /* libLSFloatingActionMenu.a */;
+			productReference = AB8ECB1853BDE1EEC6CE8B830BC88554 /* libLSFloatingActionMenu.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EB9C56DFB930A08563130C24EA36649C /* Pods-Korte */ = {
+		D89872716021FF2EAB6C60E4835AE913 /* Pods-Korte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D97B1A09316934A9AC04CAF19FACB324 /* Build configuration list for PBXNativeTarget "Pods-Korte" */;
+			buildConfigurationList = 49E84E4159251A07AF45AB17DFE6C9A0 /* Build configuration list for PBXNativeTarget "Pods-Korte" */;
 			buildPhases = (
-				66D21987D07D6C33B551817B2910B702 /* Sources */,
-				BB857D0D14627870E3F38F12E9B2E128 /* Frameworks */,
+				A5C92C88A819F1FFDA40A9D6BB232090 /* Sources */,
+				4A97B485F4FE5FDA166ED2100365D033 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				68656EE4A63C4ED5DEEC34D1B08CB3D6 /* PBXTargetDependency */,
-				BEBE6D3D5960E7C761BC15F01BE610DF /* PBXTargetDependency */,
+				015ECC099865622FDF3385FC55091869 /* PBXTargetDependency */,
+				8A62CAB92AAD6615E188E5470EFA280F /* PBXTargetDependency */,
+				9C29EE275DA852ED6BEE898F18332037 /* PBXTargetDependency */,
 			);
 			name = "Pods-Korte";
 			productName = "Pods-Korte";
-			productReference = BCD529A5B0F145EDAEB1B76FA3C20E76 /* libPods-Korte.a */;
+			productReference = CF3166F5BA87FB3A7A046F6AF09D004B /* libPods-Korte.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -386,13 +459,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C2A36D611792379195AB6EF8AF47A0B3 /* Products */;
+			productRefGroup = 54DAA36154991F5F4B84B6AA00FE541C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				0BD6FA51AB2008C37490CD1A25C2EBC9 /* DSCircularCollectionView */,
 				8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */,
 				5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */,
-				EB9C56DFB930A08563130C24EA36649C /* Pods-Korte */,
+				D89872716021FF2EAB6C60E4835AE913 /* Pods-Korte */,
 			);
 		};
 /* End PBXProject section */
@@ -407,14 +481,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66D21987D07D6C33B551817B2910B702 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA9E84B15111ECF28AE8574DBF88AF2B /* Pods-Korte-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73D2FBB646B36224B71058C6A98A5C1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,27 +491,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5C92C88A819F1FFDA40A9D6BB232090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425AEF307B0CDF3AA61F3086EB151632 /* Pods-Korte-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D51B6C865C31395BF5CB246D62E881B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA41A6F6F30967FD7D8CD76C1BD40CB /* DSCircularCollectionView-dummy.m in Sources */,
+				E962D1B9839513B79E6FD5F14640C14A /* DSCircularLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		68656EE4A63C4ED5DEEC34D1B08CB3D6 /* PBXTargetDependency */ = {
+		015ECC099865622FDF3385FC55091869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DSCircularCollectionView;
+			target = 0BD6FA51AB2008C37490CD1A25C2EBC9 /* DSCircularCollectionView */;
+			targetProxy = 6CC73B1A2B7DC4D41E06B26E0B3BF52E /* PBXContainerItemProxy */;
+		};
+		8A62CAB92AAD6615E188E5470EFA280F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LSFloatingActionMenu;
 			target = 8F9EF4E9757925C24DAD012F0B5E3D55 /* LSFloatingActionMenu */;
-			targetProxy = 9B44812E65FA31A3AC799140711DB1D3 /* PBXContainerItemProxy */;
+			targetProxy = A41FB9A7DF55B2EBF5158ABD11F5BC8C /* PBXContainerItemProxy */;
 		};
-		BEBE6D3D5960E7C761BC15F01BE610DF /* PBXTargetDependency */ = {
+		9C29EE275DA852ED6BEE898F18332037 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MKDropdownMenu;
 			target = 5F8380E29B6975954FB3D85FCC7BC03D /* MKDropdownMenu */;
-			targetProxy = 0020C3A7BAFE7D55C7FFA7824C2671AF /* PBXContainerItemProxy */;
+			targetProxy = 53978EBC271B5465FAD265C7978635F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		148E67F971ABED545079ACB68C02005C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC35F9E612F7A78F07B20F0B88E20B63 /* DSCircularCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DSCircularCollectionView/DSCircularCollectionView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DSCircularCollectionView;
+				PRODUCT_NAME = DSCircularCollectionView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		307F55E460B1B41E43A4BA153D487288 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79D1CDB7789B889E698F3BDC35731BB7 /* LSFloatingActionMenu.xcconfig */;
+			baseConfigurationReference = DDFD4C92875353510C44D302A0575CF6 /* LSFloatingActionMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -468,9 +582,9 @@
 			};
 			name = Release;
 		};
-		34D0BFA93372622BEAB9D15EE7E2AA53 /* Release */ = {
+		427A659377C2894EB4A3081094783769 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646C05661F64066C3505A2F830BEFE98 /* Pods-Korte.release.xcconfig */;
+			baseConfigurationReference = F7D6E5E1194CD35FE003616CBFF400C2 /* Pods-Korte.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -486,13 +600,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		74E6600169B714F0DEFBD7F924B48692 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79D1CDB7789B889E698F3BDC35731BB7 /* LSFloatingActionMenu.xcconfig */;
+			baseConfigurationReference = DDFD4C92875353510C44D302A0575CF6 /* LSFloatingActionMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -514,9 +627,33 @@
 			};
 			name = Debug;
 		};
+		7E8B4DD787FB79A79ABDC2488109E4FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC35F9E612F7A78F07B20F0B88E20B63 /* DSCircularCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/DSCircularCollectionView/DSCircularCollectionView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = DSCircularCollectionView;
+				PRODUCT_NAME = DSCircularCollectionView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		88D5A3324B41212431211B87B993DFEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F51E3E9565274A7782E68FC476C5BC3C /* MKDropdownMenu.xcconfig */;
+			baseConfigurationReference = BF2A323E25A2AE615DCCBC3331D76384 /* MKDropdownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -659,9 +796,9 @@
 			};
 			name = Release;
 		};
-		DE7741793EA735D470F8B543BBDF62E5 /* Debug */ = {
+		B842C58FAA768709991594A90BAD931A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7D6E5E1194CD35FE003616CBFF400C2 /* Pods-Korte.debug.xcconfig */;
+			baseConfigurationReference = 646C05661F64066C3505A2F830BEFE98 /* Pods-Korte.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -677,12 +814,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		E1498DB01C8EB835C3520ED7B1CB1C11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F51E3E9565274A7782E68FC476C5BC3C /* MKDropdownMenu.xcconfig */;
+			baseConfigurationReference = BF2A323E25A2AE615DCCBC3331D76384 /* MKDropdownMenu.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -717,6 +855,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		49E84E4159251A07AF45AB17DFE6C9A0 /* Build configuration list for PBXNativeTarget "Pods-Korte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				427A659377C2894EB4A3081094783769 /* Debug */,
+				B842C58FAA768709991594A90BAD931A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		756DD4DE3CB2F2E7A98DD3FCA4B52069 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -726,20 +873,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		88171258D6784C8B050D80F8B77E7D9E /* Build configuration list for PBXNativeTarget "DSCircularCollectionView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E8B4DD787FB79A79ABDC2488109E4FA /* Debug */,
+				148E67F971ABED545079ACB68C02005C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB05C8824E039CD1AF3BA5A4045F80AA /* Build configuration list for PBXNativeTarget "LSFloatingActionMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74E6600169B714F0DEFBD7F924B48692 /* Debug */,
 				307F55E460B1B41E43A4BA153D487288 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D97B1A09316934A9AC04CAF19FACB324 /* Build configuration list for PBXNativeTarget "Pods-Korte" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE7741793EA735D470F8B543BBDF62E5 /* Debug */,
-				34D0BFA93372622BEAB9D15EE7E2AA53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
