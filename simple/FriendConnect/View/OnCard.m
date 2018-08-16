@@ -157,6 +157,11 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     NSString* bio = nil;
     NSString* bottomTitle = nil;
     NSString* imageName = nil;
+    category = @"good";
+    name = @"Mohd";
+    bio = @"Lucky man";
+    bottomTitle = @"Lucky man";
+    imageName = @"cityStudent";
     if (someModel == LeftSecion) {
         category = @"";
         name = @"";

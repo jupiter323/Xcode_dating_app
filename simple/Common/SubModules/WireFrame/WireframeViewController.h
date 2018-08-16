@@ -13,10 +13,12 @@
 @interface WireframeViewController : UIViewController {
     ThemDefinition *  themKind;
 }
+-(void)returnFun:(UIButton *) sender ;
 @property (strong, nonatomic) UIButton *messageButton;
 @property (strong, nonatomic) UIButton *returnButton;
 @property (strong, nonatomic) UIButton *notificationButton;
 @property (strong, nonatomic) UIButton *addConnection;
 @property (strong, nonatomic) LSFloatingActionMenu *actionMenu;
 @property (strong, nonatomic) UIButton *myProfile;
+@property (strong, nonatomic) UIView *bottom;
 @end

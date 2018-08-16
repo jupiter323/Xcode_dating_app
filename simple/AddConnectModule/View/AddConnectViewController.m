@@ -35,6 +35,8 @@
     [self setCircularLayout];
     
     
+    
+    
     // Do any additional setup after loading the view.s
 }
 -(void)returnFun:(UIButton *) sender {
@@ -92,6 +94,8 @@
     
     
     //    add friend views
+    static BOOL flagForCollect = YES;
+    if(flagForCollect)
     [self.collectionView performBatchUpdates:^{
         [self.collectionView insertItemsAtIndexPaths:[NSArray arrayWithObjects:
                                                       [NSIndexPath indexPathForRow:0 inSection:0],
@@ -119,6 +123,7 @@
     } completion:^(BOOL finished) {
         [self.collectionView reloadData];
     }];
+//    flagForCollect = NO;
     
     
     //    swipe for me scroll adding
@@ -139,7 +144,7 @@
         [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
         avatar.imageView.contentMode =UIViewContentModeScaleAspectFill;
         avatar.tag = i;
-        [avatar addTarget:self action:@selector(goToToMtch:) forControlEvents:UIControlEventTouchUpInside];
+        [avatar addTarget:self action:@selector(goToFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
         avatar.layer.cornerRadius = avatar.frame.size.width / 2;
         avatar.clipsToBounds = YES;
         
@@ -170,9 +175,7 @@
     circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [self.collectionView setCollectionViewLayout:circularLayout];
 }
-//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-//    return 1;
-//}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return count;
 }
@@ -185,7 +188,7 @@
 }
 
 
--(void)goToToMtch:(UIButton *)sender{
+-(void)goToFriendsSwiping:(UIButton *)sender{
     NSLog(@"match button tag: %d",sender.tag);
 //    goto friend connect
     // //   animating
@@ -196,10 +199,10 @@
     transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
     // //   navigating
-    //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"FriendConnect" bundle:nil];
-    //    UINavigationController *locationScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idFriendConnect"];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddingFriend" bundle:nil];
+        UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddingFriend"];
     
-    [self.navigationController pushViewController:[AddingFriendViewController new] animated:YES];
+    [self.navigationController pushViewController:addingFriendScene animated:YES];
 
     
 }

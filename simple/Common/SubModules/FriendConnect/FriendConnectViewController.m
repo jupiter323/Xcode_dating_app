@@ -18,13 +18,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     //    theme kind
     themKind = StandardTheme;
     //    bottom style
-    UIView *bottom = [[UIView alloc] init];
-    bottom.frame = CGRectMake(0,self.view.frame.size.height-50, self.view.bounds.size.width, 50);
-    bottom.backgroundColor = BottomColor();
-    [self.view addSubview:bottom];
+    self.bottom = [[UIView alloc] init];
+    self.bottom.frame = CGRectMake(0,self.view.frame.size.height-50, self.view.bounds.size.width, 50);
+    self.bottom.backgroundColor = BottomColor();
+    [self.view addSubview:self.bottom];
     //    add connect button
     self.addConnection = [[UIButton alloc] init];
     [self.addConnection setImage:[UIImage imageNamed:@"AddConnection"] forState:UIControlStateNormal];

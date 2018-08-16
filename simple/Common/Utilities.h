@@ -11,7 +11,8 @@
 //enum definition
 typedef NS_ENUM(NSInteger, SectionDefinition) {//for two cards
     LeftSecion = 0,
-    RightSection
+    RightSection,
+    Center
 };
 typedef NS_ENUM(NSInteger, ThemDefinition) {//for Theme distinguish
     StandardTheme = 0,
@@ -29,7 +30,11 @@ typedef NS_ENUM(NSInteger, MXCardDestination) {//tinder card
     MXCardDestinationUp
 };
 
-
+static UIView* copyView(UIView * view) {
+    NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject: view];
+    UIView* copy = [NSKeyedUnarchiver unarchiveObjectWithData: archivedData];
+    return copy;
+}
 //delay(0.15, ^{[dropdownMenu closeAllComponentsAnimated:YES];});
 static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
