@@ -18,6 +18,8 @@
     UIButton *blockAndListButton;
     BOOL block;
     NSObject *data;
+    
+    UIButton * returnButton;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *searchButtonView;
@@ -38,6 +40,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     //    remove flat button
     self.floatingButton.removeFromSuperview;
     //    remove notify button
@@ -122,7 +126,6 @@
     blockAndListButton.frame = CGRectMake(self.mapViewContent.bounds.size.width-10-blockAndListButton.bounds.size.width, self.mapViewContent.bounds.size.height-10-blockAndListButton.bounds.size.height, blockAndListButton.bounds.size.width, blockAndListButton.bounds.size.height);
     //    venus and match info
     [self addBlockLists:true];
-
     
     
 }

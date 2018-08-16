@@ -5,9 +5,10 @@
 //  Created by Scott Kensell on 07/01/2016.
 //  Copyright (c) 2016 Scott Kensell. All rights reserved.
 //
-#import "AddingViewController.h"
+
+#import "FriendConnectViewController.h"
 @import UIKit;
 
-@interface AddingFriendViewController : AddingViewController
+@interface AddingFriendViewController : FriendConnectViewController
 
 @end

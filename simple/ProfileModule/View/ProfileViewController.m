@@ -11,11 +11,7 @@
 #import "MKDropdownMenu.h"
 #import "Utilities.h"
 
-NS_ENUM(NSInteger, DropdownComponents) {
-    DropdownComponentShape = 0,
-    DropdownComponentColor,
-    DropdownComponentsCount
-};
+
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIView *dropdownCateContainView;

@@ -18,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //top background
+    UIView *layer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    gradient.colors = @[
+                        (id)[[UIColor colorWithRed:0.98 green:0.49 blue:0.38 alpha:1] CGColor],
+                        (id)[[UIColor colorWithRed:0.85 green:0.49 blue:0.45 alpha:1] CGColor]
+                        ];
+    gradient.locations = @[@(0), @(1)];
+    gradient.startPoint = CGPointMake(0.5, 0);
+    gradient.endPoint = CGPointMake(0.5, 0.98);
+    [[layer layer] addSublayer:gradient];
+    [[self view] insertSubview:layer atIndex:0];
     //    bottom style
     UIView *bottom = [[UIView alloc] init];
     bottom.frame = CGRectMake(0,self.view.frame.size.height-50, self.view.bounds.size.width, 50);
@@ -40,7 +54,7 @@
     [self.view addSubview:self.returnButton];
     //    message buttons menu
     self.messageButton = [[UIButton alloc] init];
-    [self.messageButton setImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
+    [self.messageButton setImage:[UIImage imageNamed:@"pro_message"] forState:UIControlStateNormal];
     [self.messageButton sizeToFit];
     self.messageButton.frame = CGRectMake(self.view.bounds.size.width-20-self.messageButton.bounds.size.width, 20, self.messageButton.bounds.size.width, self.messageButton.bounds.size.height);
     [self.messageButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
@@ -80,7 +94,7 @@
     if(button==self.notificationButton)
         menuIcons = @[@"pro_noti_acti", @"sunglassesGirl",@"cityStudent"];
     else
-        menuIcons = @[@"message", @"sunglassesGirl",@"cityStudent"];
+        menuIcons = @[@"pro_message", @"sunglassesGirl",@"cityStudent"];
     NSMutableArray *menus = [NSMutableArray array];
     
     CGSize itemSize = button.frame.size;

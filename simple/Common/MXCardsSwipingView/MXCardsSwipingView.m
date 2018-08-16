@@ -221,7 +221,7 @@ static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
         upView.hidden =YES;
         rightView.alpha = viewAlpha;
     } else if (card.center.y < (self.centerPointOfCardStack.y - threshold)) {
-        NSLog(@"up signal");
+        
         viewAlpha = MIN(MAX(0,(ABS(self.centerPointOfCardStack.y - card.center.y) - threshold)/(kMXDistanceFromCenterDismissalThreshold - threshold)),1);
         leftView.hidden = YES;
         rightView.hidden = YES;

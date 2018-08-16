@@ -56,9 +56,10 @@
     
     
     //    with friends connect
-    self.connectWithFriendsLabel.attributedText = attributedString(@"Connect with Friends");
+    self.connectWithFriendsLabel.attributedText = attributedString(@"Connect with Friends",StandardColor());
+    
     //swipe for me label
-    self.swipeForMeLabel.attributedText = attributedString(@"Swipe for me");
+    self.swipeForMeLabel.attributedText = attributedString(@"Swipe for me",StandardColor());
     
     //    info Button
     

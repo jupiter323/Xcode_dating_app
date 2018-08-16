@@ -10,14 +10,15 @@
 		4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC948564BF5250A0D997D8C5 /* libPods-Korte.a */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
 		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
-		CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE77211A329000F5B1C2 /* Location.storyboard */; };
-		CE27DE7B211A329000F5B1C2 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE27DE79211A329000F5B1C2 /* LocationViewController.m */; };
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
 		CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */; };
 		CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72D21243C1900C6E9F7 /* OnCard.m */; };
-		CE4DF73521243C9200C6E9F7 /* ONCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF73421243C9200C6E9F7 /* ONCardsSwipingView.m */; };
+		CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4DF73A21246DC200C6E9F7 /* Location.storyboard */; };
+		CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF73C21246DC200C6E9F7 /* LocationViewController.m */; };
+		CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */; };
+		CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */; };
 		CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
@@ -39,9 +40,6 @@
 		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
 		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
 		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
-		CE27DE77211A329000F5B1C2 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Location.storyboard; path = simple/LocationModule/View/Location.storyboard; sourceTree = SOURCE_ROOT; };
-		CE27DE78211A329000F5B1C2 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = simple/LocationModule/View/LocationViewController.h; sourceTree = SOURCE_ROOT; };
-		CE27DE79211A329000F5B1C2 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = simple/LocationModule/View/LocationViewController.m; sourceTree = SOURCE_ROOT; };
 		CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
@@ -52,8 +50,13 @@
 		CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingFriendViewController.m; sourceTree = "<group>"; };
 		CE4DF72C21243C1900C6E9F7 /* OnCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnCard.h; sourceTree = "<group>"; };
 		CE4DF72D21243C1900C6E9F7 /* OnCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnCard.m; sourceTree = "<group>"; };
-		CE4DF73321243C9200C6E9F7 /* ONCardsSwipingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONCardsSwipingView.h; sourceTree = "<group>"; };
-		CE4DF73421243C9200C6E9F7 /* ONCardsSwipingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONCardsSwipingView.m; sourceTree = "<group>"; };
+		CE4DF73A21246DC200C6E9F7 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Location.storyboard; path = simple/LocationModule/View/Location.storyboard; sourceTree = SOURCE_ROOT; };
+		CE4DF73B21246DC200C6E9F7 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationViewController.h; path = simple/LocationModule/View/LocationViewController.h; sourceTree = SOURCE_ROOT; };
+		CE4DF73C21246DC200C6E9F7 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationViewController.m; path = simple/LocationModule/View/LocationViewController.m; sourceTree = SOURCE_ROOT; };
+		CE4DF74021246F7100C6E9F7 /* FriendConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendConnectViewController.h; sourceTree = "<group>"; };
+		CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendConnectViewController.m; sourceTree = "<group>"; };
+		CE4DF74421247B8900C6E9F7 /* WireframeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WireframeViewController.h; sourceTree = "<group>"; };
+		CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WireframeViewController.m; sourceTree = "<group>"; };
 		CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCardsSwipingView.m; sourceTree = "<group>"; };
 		CE603A47211DA4C4006E95F3 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCardsSwipingView.h; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* Korte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korte.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +106,8 @@
 		CE1CCF56211B017900AD8701 /* SubModules */ = {
 			isa = PBXGroup;
 			children = (
+				CE4DF74321247B4600C6E9F7 /* WireFrame */,
+				CE4DF73F21246F4900C6E9F7 /* FriendConnect */,
 				CE3D2BCD211C7C2B005DE85C /* AddConnect */,
 				CE3BCEF32116A41800706FD1 /* MenuControll */,
 			);
@@ -112,20 +117,9 @@
 		CE27DE6D2119B79B00F5B1C2 /* LocationModule */ = {
 			isa = PBXGroup;
 			children = (
-				CE27DE6E2119B7AE00F5B1C2 /* View */,
+				CE4DF73921246D8F00C6E9F7 /* View */,
 			);
 			path = LocationModule;
-			sourceTree = "<group>";
-		};
-		CE27DE6E2119B7AE00F5B1C2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE27DE77211A329000F5B1C2 /* Location.storyboard */,
-				CE27DE78211A329000F5B1C2 /* LocationViewController.h */,
-				CE27DE79211A329000F5B1C2 /* LocationViewController.m */,
-			);
-			name = View;
-			path = "../New Group/New Group";
 			sourceTree = "<group>";
 		};
 		CE3BCEE921168CA600706FD1 /* ProfileModule */ = {
@@ -168,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				CE4DF736212445E000C6E9F7 /* SwipingTrainModule */,
-				CE4DF73221243C4B00C6E9F7 /* Swip */,
 				CE4DF7202123E32E00C6E9F7 /* View */,
 			);
 			path = FriendConnect;
@@ -185,20 +178,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CE4DF73221243C4B00C6E9F7 /* Swip */ = {
-			isa = PBXGroup;
-			children = (
-				CE4DF73321243C9200C6E9F7 /* ONCardsSwipingView.h */,
-				CE4DF73421243C9200C6E9F7 /* ONCardsSwipingView.m */,
-			);
-			path = Swip;
-			sourceTree = "<group>";
-		};
 		CE4DF736212445E000C6E9F7 /* SwipingTrainModule */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = SwipingTrainModule;
+			sourceTree = "<group>";
+		};
+		CE4DF73921246D8F00C6E9F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4DF73A21246DC200C6E9F7 /* Location.storyboard */,
+				CE4DF73B21246DC200C6E9F7 /* LocationViewController.h */,
+				CE4DF73C21246DC200C6E9F7 /* LocationViewController.m */,
+			);
+			name = View;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CE4DF73F21246F4900C6E9F7 /* FriendConnect */ = {
+			isa = PBXGroup;
+			children = (
+				CE4DF74021246F7100C6E9F7 /* FriendConnectViewController.h */,
+				CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */,
+			);
+			path = FriendConnect;
+			sourceTree = "<group>";
+		};
+		CE4DF74321247B4600C6E9F7 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				CE4DF74421247B8900C6E9F7 /* WireframeViewController.h */,
+				CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		CE603A42211DA424006E95F3 /* MXCardsSwipingView */ = {
@@ -253,7 +266,6 @@
 		CEB28742211391D400C51670 /* TinderModule */ = {
 			isa = PBXGroup;
 			children = (
-				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CEB28743211391E300C51670 /* View */,
 			);
 			path = TinderModule;
@@ -283,6 +295,7 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CE1CCF56211B017900AD8701 /* SubModules */,
 				CE3D333D2118F54400FE970D /* Utilities.h */,
 			);
@@ -380,8 +393,8 @@
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
-				CE27DE7A211A329000F5B1C2 /* Location.storyboard in Resources */,
 				CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */,
+				CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
@@ -441,14 +454,15 @@
 				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
-				CE27DE7B211A329000F5B1C2 /* LocationViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
+				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,
 				CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */,
+				CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
-				CE4DF73521243C9200C6E9F7 /* ONCardsSwipingView.m in Sources */,
+				CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */,
 				CEE5F17F2122EDA3004F49CC /* DSCollectionViewCell.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);

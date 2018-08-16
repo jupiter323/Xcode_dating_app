@@ -8,6 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+//enum definition
+typedef NS_ENUM(NSInteger, SectionDefinition) {//for two cards
+    LeftSecion = 0,
+    RightSection
+};
+typedef NS_ENUM(NSInteger, ThemDefinition) {//for Theme distinguish
+    StandardTheme = 0,
+    ProTheme
+};
+typedef NS_ENUM(NSInteger, DropdownComponents) {//drop down
+    DropdownComponentShape = 0,
+    DropdownComponentColor,
+    DropdownComponentsCount
+};
+typedef NS_ENUM(NSInteger, MXCardDestination) {//tinder card
+    MXCardDestinationCenter = 0,
+    MXCardDestinationLeft,
+    MXCardDestinationRight,
+    MXCardDestinationUp
+};
+
 
 //delay(0.15, ^{[dropdownMenu closeAllComponentsAnimated:YES];});
 static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
@@ -29,6 +50,11 @@ static UIColor * UIColorWithHexString(NSString *hex) {
 //standard color
 static UIColor * StandardColor(){
     return UIColorWithHexString(@"ff9933");
+}
+
+//bottom style color
+static UIColor * BottomColor(){
+    return UIColorWithHexString(@"EF7D68");
 }
 
 static UIImage * croppIngimageByImageName(UIImage * imageToCrop, CGRect rect)
@@ -75,9 +101,9 @@ static UIImage * makeRoundedImage(UIImage * image,
     return roundedImage;
 }
 
-static NSAttributedString* attributedString(NSString * contentString){
+static NSAttributedString* attributedString(NSString * contentString, UIColor * color){
     NSString *textContent = contentString;
-    UIColor *textColor = StandardColor();
+    UIColor *textColor = color?color:StandardColor();
     NSAttributedString *attributedString =
     [[NSAttributedString alloc]
      initWithString:textContent

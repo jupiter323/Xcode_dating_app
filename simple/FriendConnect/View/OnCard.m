@@ -78,7 +78,7 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     gradient.locations = @[@0.0, @0.2, @0.5, @0.66, @0.8, @1.0];
     _gradientView = [[UIView alloc] init];
     [_gradientView.layer addSublayer:gradient];
-    [_topMatterView addSubview:_gradientView];
+//    [_topMatterView addSubview:_gradientView];
     
     _categoryLabel = [[UILabel alloc] init];
     _categoryLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:10];
@@ -150,39 +150,27 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _swipeUpView.frame = CGRectMake(w/2 - _swipeUpView.frame.size.width/2, h/2-_swipeUpView.frame.size.height/2, _swipeUpView.frame.size.width, _swipeUpView.frame.size.height);
 }
 
-- (void)setupWithAModel:(id)someModel {
-    static int i = 0;
+- (void)setupWithAModel:(SectionDefinition)someModel {
+
     NSString* category = nil;
     NSString* name = nil;
     NSString* bio = nil;
     NSString* bottomTitle = nil;
     NSString* imageName = nil;
-    if (i % 4 == 0) {
-        category = @"FEMALE";
-        name = @"Ashley Sunglasses";
-        bio = @"Free Spirit";
-        bottomTitle = @"Loves wearing sunglasses.";
-        imageName = @"sunglassesGirl";
-    } else if (i % 4 == 1) {
-        category = @"MALE";
-        name = @"Jonathan Jumper";
-        bio = @"Outdoorsman";
-        bottomTitle = @"Lives life to the fullest.";
-        imageName = @"jumpingMan";
-    } else if (i% 4 == 2) {
-        category = @"MALE";
-        name = @"Matthew Student";
-        bio = @"Tiny Ant in a Big World";
-        bottomTitle = @"Love. Listen. Learn.";
-        imageName = @"cityStudent";
-    } else {
-        category = @"FEMALE";
-        name = @"Samantha Beach";
-        bio = @"Model";
-        bottomTitle = @"Let's go for a swim!";
-        imageName = @"bikiniGirl";
+    if (someModel == LeftSecion) {
+        category = @"";
+        name = @"";
+        bio = @"";
+        bottomTitle = @"";
+        imageName = @"me";
+    } else if (someModel == RightSection) {
+        category = @"";
+        name = @"";
+        bio = @"";
+        bottomTitle = @"";
+        imageName = @"mypartner";
     }
-    i++;
+
     
     _categoryLabel.text = category;
     _nameLabel.text = name;

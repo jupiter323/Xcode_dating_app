@@ -18,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //top background
+    UIView *layer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    gradient.colors = @[
+                        (id)[[UIColor colorWithRed:0.98 green:0.49 blue:0.38 alpha:1] CGColor],
+                        (id)[[UIColor colorWithRed:0.85 green:0.49 blue:0.45 alpha:1] CGColor]
+                        ];
+    gradient.locations = @[@(0), @(1)];
+    gradient.startPoint = CGPointMake(0.5, 0);
+    gradient.endPoint = CGPointMake(0.5, 0.98);
+    [[layer layer] addSublayer:gradient];
+    [[self view] insertSubview:layer atIndex:0];
     // return button
     self.returnButton = [[UIButton alloc] init];
     [self.returnButton setImage:[UIImage imageNamed:@"pro_close"] forState:UIControlStateNormal];

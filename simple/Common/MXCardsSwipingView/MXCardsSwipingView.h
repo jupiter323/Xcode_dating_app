@@ -7,13 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef NS_ENUM(NSInteger, MXCardDestination) {
-    MXCardDestinationCenter = 0,
-    MXCardDestinationLeft,
-    MXCardDestinationRight,
-    MXCardDestinationUp
-};
-@class ONCardsSwipingView;
+#import "Utilities.h"
+@class MXCardsSwipingView;
 
 @protocol MXSwipableCard <NSObject>
 @optional
@@ -33,11 +28,11 @@ typedef NS_ENUM(NSInteger, MXCardDestination) {
  
  return YES to continue dismissing the card or NO to cancel the dismissal and recenter the card.
  */
-- (BOOL)cardsSwipingView:(ONCardsSwipingView*)cardsSwipingView willDismissCard:(UIView*)card destination:(MXCardDestination)destination;
+- (BOOL)cardsSwipingView:(MXCardsSwipingView*)cardsSwipingView willDismissCard:(UIView*)card destination:(MXCardDestination)destination;
 
 @end
 
-@interface ONCardsSwipingView : UIView
+@interface MXCardsSwipingView : UIView
 
 @property (nonatomic, weak) id<MXCardsSwipingViewDelegate> delegate;
 

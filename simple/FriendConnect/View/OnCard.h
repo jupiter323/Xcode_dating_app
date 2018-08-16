@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "ONCardsSwipingView.h"
+#import "Utilities.h"
+#import "MXCardsSwipingView.h"
 
 @interface OnCard : UIView <MXSwipableCard>
 
-- (void)setupWithAModel:(id)someModel;
+- (void)setupWithAModel:(SectionDefinition)someModel;
 - (void)addShadow;
 
 + (CGFloat)aspectRatio;
 
 @end
+

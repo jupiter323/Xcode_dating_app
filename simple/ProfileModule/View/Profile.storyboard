@@ -228,7 +228,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-6g-KXo">
-                                                <rect key="frame" x="192" y="6" width="51" height="30"/>
+                                                <rect key="frame" x="192" y="5.5" width="51" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9Ou-78-zeJ"/>
@@ -263,7 +263,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-6s-CuT">
-                                                <rect key="frame" x="192" y="6" width="51" height="30"/>
+                                                <rect key="frame" x="192" y="5.5" width="51" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="QsV-GQ-jxQ"/>
@@ -393,10 +393,9 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96276372669999999" green="0.3579802513" blue="0.43089693779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oIC-R0-3dw" firstAttribute="leading" secondItem="v2C-71-gHN" secondAttribute="leading" id="5Cl-9X-Pzf"/>
-                            <constraint firstItem="oIC-R0-3dw" firstAttribute="top" secondItem="lFu-wu-p2K" secondAttribute="bottom" constant="100" id="MMd-aI-vSe"/>
+                            <constraint firstItem="oIC-R0-3dw" firstAttribute="top" secondItem="4P8-Vh-fLM" secondAttribute="top" constant="120" id="MMd-aI-vSe"/>
                             <constraint firstItem="oIC-R0-3dw" firstAttribute="trailing" secondItem="v2C-71-gHN" secondAttribute="trailing" id="Rui-lr-dRr"/>
                             <constraint firstItem="1Jn-NU-r8B" firstAttribute="top" secondItem="oIC-R0-3dw" secondAttribute="bottom" id="dwq-Ry-8si"/>
                         </constraints>
