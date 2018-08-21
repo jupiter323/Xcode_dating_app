@@ -11,6 +11,12 @@
 
 @interface AddConnectViewController (){
     int count;
+    UIScrollView *matches;
+    UIView *layer;
+    UIView *smalllayer;
+    UIButton *imageButton;
+    
+    __weak IBOutlet UICollectionView *cooll;
 }
 @property (weak, nonatomic) IBOutlet UIView *addContainView;
 @property (weak, nonatomic) IBOutlet UIView *swipeForMeScroll;
@@ -29,14 +35,9 @@
     [super viewDidLoad];
     [self.returnButton addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    //    init friend views
+    ////    init friend views
     count = 0;
     [self setCircularLayout];
-    
-    
-    
-    
     // Do any additional setup after loading the view.s
 }
 -(void)returnFun:(UIButton *) sender {
@@ -54,6 +55,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)viewDidDisappear:(BOOL)animated {
+    //avatars remove
+    matches.removeFromSuperview;
+    //remove layers
+    for(UIView *subView in self.view.subviews){
+        if(subView == layer || subView==smalllayer || subView==imageButton)
+        [subView removeFromSuperview];
+    }
+    //remove collection
+    cooll.removeFromSuperview;
+}
 - (void)viewDidAppear:(BOOL)animated{
     
     
@@ -69,20 +81,20 @@
     self.infoButton.layer.cornerRadius = self.infoButton.frame.size.width/2;
     // add contain collect View
     
-    [self.collectionView setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
-    self.collectionView.layer.cornerRadius= self.addContainView.frame.size.height/2;
+    [cooll setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
+    cooll.layer.cornerRadius= self.addContainView.frame.size.height/2;
     //// add small contain collect view
     CGFloat originX = self.view.frame.size.width/2;
     CGFloat originY = self.addContainView.frame.origin.y+self.addContainView.frame.size.height/2;
-    UIView *layer = [[UIView alloc] initWithFrame:CGRectMake(originX-81, originY-81, 162, 162)];
+    layer = [[UIView alloc] initWithFrame:CGRectMake(originX-81, originY-81, 162, 162)];
     layer.backgroundColor = [UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6];
     layer.layer.cornerRadius = 81;
     //////add the smallest contain collect view
-    UIView *smalllayer = [[UIView alloc] initWithFrame:CGRectMake(originX-55, originY-55, 110, 110)];
+    smalllayer = [[UIView alloc] initWithFrame:CGRectMake(originX-55, originY-55, 110, 110)];
     smalllayer.backgroundColor = [UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6];
     smalllayer.layer.cornerRadius = 55;
     ////////image button
-    UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(originX-30, originY-30, 60, 60)];
+    imageButton = [[UIButton alloc] initWithFrame:CGRectMake(originX-30, originY-30, 60, 60)];
     [imageButton setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
     imageButton.layer.cornerRadius = 30;
     imageButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -94,10 +106,14 @@
     
     
     //    add friend views
-    static BOOL flagForCollect = YES;
-    if(flagForCollect)
-    [self.collectionView performBatchUpdates:^{
-        [self.collectionView insertItemsAtIndexPaths:[NSArray arrayWithObjects:
+    
+    
+    
+//    static BOOL flagForCollect = YES;
+//
+//    if(flagForCollect)
+    [cooll performBatchUpdates:^{
+        [cooll insertItemsAtIndexPaths:[NSArray arrayWithObjects:
                                                       [NSIndexPath indexPathForRow:0 inSection:0],
                                                       [NSIndexPath indexPathForRow:1 inSection:0],
                                                       [NSIndexPath indexPathForRow:2 inSection:0],
@@ -121,13 +137,13 @@
                                                       nil]];
         self->count = 20;
     } completion:^(BOOL finished) {
-        [self.collectionView reloadData];
+        [cooll reloadData];
     }];
 //    flagForCollect = NO;
     
     
     //    swipe for me scroll adding
-    UIScrollView *matches = [[UIScrollView alloc] init];
+    matches = [[UIScrollView alloc] init];
     [self.swipeForMeScroll setBackgroundColor:UIColorWithHexString(@"#E8E3E3")];
     CGFloat marginLeft = 0;
     CGFloat ContentScrollHeight = self.swipeformeScrollContent.frame.size.height;
@@ -158,7 +174,7 @@
 //
 
 -(void)setCircularLayout{
-    CGFloat SCREEN_HEIGHT = self.collectionView.frame.size.height;
+    CGFloat SCREEN_HEIGHT = cooll.frame.size.height;
     CGFloat SCREEN_WIDTH = SCREEN_HEIGHT;
     CGFloat ITEM_WIDTH = 60;
     CGFloat ITEM_HEIGHT = 60;
@@ -173,7 +189,7 @@
     circularLayout.mirrorY = NO;
     circularLayout.rotateItems = YES;
     circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    [self.collectionView setCollectionViewLayout:circularLayout];
+    [cooll setCollectionViewLayout:circularLayout];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -182,8 +198,15 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     DSCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.lbl.text = [NSString stringWithFormat:@"%d",(int)indexPath.item + 1];
-    
+  
+    cell.lbl.text = [NSString stringWithFormat:@"Name by %d",(int)indexPath.item + 1];
+
+    [cell.avatarImageButton setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+    cell.avatarImageButton.imageView.contentMode=UIViewContentModeScaleToFill;
+
+    cell.avatarImageButton.layer.cornerRadius = 25;
+//    cell.coverButton.tag = (int)indexPath;
+//    [cell.coverButton addTarget:self action:@selector(onClickCoverButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 

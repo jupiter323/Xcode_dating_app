@@ -14,6 +14,12 @@
     ThemDefinition *  themKind;
 }
 -(void)returnFun:(UIButton *) sender ;
+-(void)toAddConnection:(UIButton *)sender;
+-(void)addButtonTapped:(UIButton *)sender;
+-(void)toProfile:(UIButton *) sender;
+-(void)tapedNoti:(UIButton *) sender;
+-(void)tapedToggle:(UIButton *) sender;
+-(void) navAnimating:(NSString *) type subtype:(NSString *) subtype;
 @property (strong, nonatomic) UIButton *messageButton;
 @property (strong, nonatomic) UIButton *returnButton;
 @property (strong, nonatomic) UIButton *notificationButton;

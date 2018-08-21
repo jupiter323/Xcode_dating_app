@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(void)tapedToggle:(UIButton *) sender{
+    [self showMenuFromButton:sender withDirection:LSFloatingActionMenuDirectionLeft];
+}
 - (void)addButtonTapped:(UIButton *)sender {
     [self showMenuFromButton:sender withDirection:LSFloatingActionMenuDirectionUp];
 }
@@ -43,7 +46,8 @@
         
         switch (index) {
             case 1:
-                NSLog(@"1 clicked");
+                // to matches
+                [self toMatches];
                 break;
             case 2:
                 // to location
@@ -91,6 +95,16 @@
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
     
 }
+-(void)toMatches{
+    //for animation navigating
+    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    
+    //    navigating to profile
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
+    UINavigationController *profileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMatches"];    
+    [self.navigationController pushViewController:profileScene animated:NO];
+    
+}
 -(void)toProfile:(UIButton *) sender{
   //for animation navigating
     [self navAnimating:kCATransitionPush subtype:kCATransitionFromTop];
@@ -112,6 +126,17 @@
     UINavigationController *locationScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idLocation"];
     
     [self.navigationController pushViewController:locationScene animated:NO];
+    
+}
+-(void)toAddConnection:(UIButton *)sender {
+    
+    //for animation navigating
+    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    //        navigating to addconnection
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
+    UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
+    
+    [self.navigationController pushViewController:addScene animated:NO];
     
 }
 -(void)toAddConnection {

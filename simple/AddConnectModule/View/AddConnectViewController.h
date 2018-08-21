@@ -11,5 +11,5 @@
 #import "DSCollectionViewCell.h"
 #import "AddingFriendViewController.h"
 @interface AddConnectViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end

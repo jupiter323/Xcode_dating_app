@@ -6,12 +6,10 @@
 //  Copyright © 2018 Peace. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "LSFloatingActionMenu.h"
-#import <Foundation/Foundation.h>
-#import "Utilities.h"
-@interface BasicMenuController : UIViewController
+#import "WireframeViewController.h"
+@interface BasicMenuController : WireframeViewController
 @property (strong, nonatomic) UIButton *floatingButton;
 @property (strong, nonatomic) UIButton *returnButton;
 @property (strong, nonatomic) UIButton *notificationButton;
+@property (strong, nonatomic) LSFloatingActionMenu *actionMenu;
 @end

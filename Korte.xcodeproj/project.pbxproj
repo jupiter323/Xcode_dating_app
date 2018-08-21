@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC948564BF5250A0D997D8C5 /* libPods-Korte.a */; };
+		CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B3212AE081004CACDB /* MatchesViewController.m */; };
+		CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
 		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
@@ -32,12 +34,17 @@
 		CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2876D211432C700C51670 /* LaunchScreen.storyboard */; };
 		CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB6FC9021214488003A7E69 /* AddConnectViewController.m */; };
 		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
+		CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2A59212A90FD0046D01E /* Matches.storyboard */; };
 		CEE5F17F2122EDA3004F49CC /* DSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F17E2122EDA3004F49CC /* DSCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
 		A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
+		CE18E2B2212AE081004CACDB /* MatchesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
+		CE18E2B3212AE081004CACDB /* MatchesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
+		CE18E2B8212B5A37004CACDB /* SearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
 		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
 		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
@@ -79,6 +86,7 @@
 		CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddConnectViewController.h; sourceTree = "<group>"; };
 		CEB6FC9021214488003A7E69 /* AddConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddConnectViewController.m; sourceTree = "<group>"; };
 		CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddConnectScreen.storyboard; sourceTree = "<group>"; };
+		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
 		CEE5F17D2122EDA2004F49CC /* DSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCollectionViewCell.h; path = "../../../../DSCircularCollectionView-master/Example/DSCircularCollectionView/DSCollectionViewCell.h"; sourceTree = "<group>"; };
 		CEE5F17E2122EDA3004F49CC /* DSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCollectionViewCell.m; path = "../../../../DSCircularCollectionView-master/Example/DSCircularCollectionView/DSCollectionViewCell.m"; sourceTree = "<group>"; };
 		FC948564BF5250A0D997D8C5 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +255,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CEDF2A58212A8EE30046D01E /* MatchesModule */,
 				CE4DF71F2123E2B500C6E9F7 /* FriendConnect */,
 				CEB6FC8D21214457003A7E69 /* AddConnectModule */,
 				CE27DE75211A2FCA00F5B1C2 /* data */,
@@ -325,6 +334,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CEDF2A58212A8EE30046D01E /* MatchesModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF2A5B212A911E0046D01E /* view */,
+			);
+			path = MatchesModule;
+			sourceTree = "<group>";
+		};
+		CEDF2A5B212A911E0046D01E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CEDF2A59212A90FD0046D01E /* Matches.storyboard */,
+				CE18E2B2212AE081004CACDB /* MatchesViewController.h */,
+				CE18E2B3212AE081004CACDB /* MatchesViewController.m */,
+				CE18E2B8212B5A37004CACDB /* SearchTableViewCell.h */,
+				CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		F31264CEEE5F93D74C187B73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +428,7 @@
 				CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */,
 				CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */,
 				CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */,
+				CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
@@ -460,6 +490,8 @@
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
+				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
+				CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,

@@ -89,7 +89,7 @@
     self.mapViewContent.layer.backgroundColor=[UIColor blackColor].CGColor;
     [self.mapViewContent addSubview:blockAndListButton];
     
-    //// Creates a marker in the center of the map.
+    //// Creates a marker in the center of the map
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
     marker.title = @"Sydney";

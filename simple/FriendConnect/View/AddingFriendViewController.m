@@ -37,6 +37,11 @@
     
     
 }
+-(void)viewDidDisappear:(BOOL)animated{
+    for(UIView * subViews in self.pageScrollView.subviews){
+        subViews.removeFromSuperview;
+    }
+}
 -(void)viewDidAppear:(BOOL)animated{
     //    scroll
     CGFloat width = self.pageScrollView.frame.size.width;
@@ -105,8 +110,16 @@
     [self.returnButton setImage:[UIImage imageNamed:@"pro_close"] forState:UIControlStateNormal];
     [self.returnButton sizeToFit];
     self.returnButton.frame = CGRectMake(20,20, self.returnButton.bounds.size.width, self.returnButton.bounds.size.height);
-    [self.returnButton addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
+    [self.returnButton addTarget:self action:@selector(toAddConnection:) forControlEvents:UIControlEventTouchUpInside];
     [centerTopView addSubview:self.returnButton];
+    /////// avatar on entertopview
+    UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(width/2-30, 30, 45, 45)];
+    [imageButton setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+    imageButton.layer.cornerRadius = 45/2;
+    imageButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageButton.clipsToBounds = YES;
+    [centerTopView addSubview:imageButton];
+    
     //////removing super's button(status of page)
     [self initStatusOfPage];
     //adding three card
@@ -117,6 +130,10 @@
     [forBottomScrollView addSubview:bottomView];
     [forBottomScrollView addSubview:centerTopView];
     [centerView addSubview:forBottomScrollView];
+    
+    //for template
+    bottomView.removeFromSuperview;
+    forBottomScrollView.contentSize = CGSizeMake(width, height);
     
 }
 
@@ -174,9 +191,7 @@
         [self addCard];
         
     }
-    //for template
-    bottomView.removeFromSuperview;
-    forBottomScrollView.contentSize = CGSizeMake(width, height);
+    
 }
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if(scrollView.tag==1){
