@@ -119,23 +119,9 @@
                                                       [NSIndexPath indexPathForRow:2 inSection:0],
                                                       [NSIndexPath indexPathForRow:3 inSection:0],
                                                       [NSIndexPath indexPathForRow:4 inSection:0],
-                                                      [NSIndexPath indexPathForRow:5 inSection:0],
-                                                      [NSIndexPath indexPathForRow:6 inSection:0],
-                                                      [NSIndexPath indexPathForRow:7 inSection:0],
-                                                      [NSIndexPath indexPathForRow:8 inSection:0],
-                                                      [NSIndexPath indexPathForRow:9 inSection:0],
-                                                      [NSIndexPath indexPathForRow:10 inSection:0],
-                                                      [NSIndexPath indexPathForRow:11 inSection:0],
-                                                      [NSIndexPath indexPathForRow:12 inSection:0],
-                                                      [NSIndexPath indexPathForRow:13 inSection:0],
-                                                      [NSIndexPath indexPathForRow:14 inSection:0],
-                                                      [NSIndexPath indexPathForRow:15 inSection:0],
-                                                      [NSIndexPath indexPathForRow:16 inSection:0],
-                                                      [NSIndexPath indexPathForRow:17 inSection:0],
-                                                      [NSIndexPath indexPathForRow:18 inSection:0],
-                                                      [NSIndexPath indexPathForRow:19 inSection:0],
+                                        
                                                       nil]];
-        self->count = 20;
+        self->count = 5;
     } completion:^(BOOL finished) {
         [cooll reloadData];
     }];
@@ -144,11 +130,11 @@
     
     //    swipe for me scroll adding
     matches = [[UIScrollView alloc] init];
-    [self.swipeForMeScroll setBackgroundColor:UIColorWithHexString(@"#E8E3E3")];
+    [self.swipeForMeScroll setBackgroundColor:UIColorWithHexString(@"#f4f2f2")];
     CGFloat marginLeft = 0;
     CGFloat ContentScrollHeight = self.swipeformeScrollContent.frame.size.height;
     CGFloat ContentScrollWidth = self.swipeformeScrollContent.frame.size.width;
-    CGFloat avatarWidth = self.swipeformeScrollContent.frame.size.height;
+    CGFloat avatarWidth = 70;
     matches.frame = CGRectMake(marginLeft,ContentScrollHeight-avatarWidth-10 , ContentScrollWidth, avatarWidth);
     float sizeOfMatches = 10;
     matches.contentSize=CGSizeMake(sizeOfMatches*(avatarWidth+10)+10, avatarWidth);
@@ -157,17 +143,26 @@
         CGFloat buttonSide = 10;
         UIButton *avatar = [[UIButton alloc] init];
         avatar.frame = CGRectMake(i*(buttonWidth+buttonSide)+10,0 , buttonWidth, buttonWidth);
-        [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+        if(i==0)
+            [avatar setImage:[UIImage imageNamed:@"swipadd"] forState:UIControlStateNormal];
+        else
+            [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
         avatar.imageView.contentMode =UIViewContentModeScaleAspectFill;
         avatar.tag = i;
+        if(i==0)
+            [avatar addTarget:self action:@selector(goToGettingFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
+            else
         [avatar addTarget:self action:@selector(goToFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
         avatar.layer.cornerRadius = avatar.frame.size.width / 2;
         avatar.clipsToBounds = YES;
         
+       
+        
         [matches addSubview:avatar];
     }
+    matches.showsHorizontalScrollIndicator = NO;
     [self.swipeformeScrollContent addSubview:matches];
-    [self.swipeformeScrollContent setBackgroundColor:UIColorWithHexString(@"#E8E3E3")];
+    [self.swipeformeScrollContent setBackgroundColor:UIColorWithHexString(@"#f4f2f2")];
     //
     
 }
@@ -181,13 +176,13 @@
     
     DSCircularLayout *circularLayout = [[DSCircularLayout alloc] init];
     [circularLayout initWithCentre:CGPointMake(SCREEN_WIDTH/2-25, SCREEN_HEIGHT/2-25)
-                            radius:SCREEN_WIDTH/2 -ITEM_WIDTH *1.2
+                            radius:SCREEN_WIDTH/2 -ITEM_WIDTH *1.3
                           itemSize:CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT)
                  andAngularSpacing:60];
     [circularLayout setStartAngle:M_PI endAngle:0];
     circularLayout.mirrorX = NO;
     circularLayout.mirrorY = NO;
-    circularLayout.rotateItems = YES;
+    circularLayout.rotateItems = NO;
     circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     [cooll setCollectionViewLayout:circularLayout];
 }
@@ -210,17 +205,17 @@
     return cell;
 }
 
-
+-(void)goToGettingFriendsSwiping:(UIButton *)sender{
+    
+    // //   navigating
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"GettingForFriendSwiping" bundle:nil];
+    UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idGettingForFriendSwiping"];
+    
+    [self.navigationController pushViewController:addingFriendScene animated:YES];
+}
 -(void)goToFriendsSwiping:(UIButton *)sender{
     NSLog(@"match button tag: %d",sender.tag);
-//    goto friend connect
-    // //   animating
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-    transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+
     // //   navigating
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddingFriend" bundle:nil];
         UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddingFriend"];

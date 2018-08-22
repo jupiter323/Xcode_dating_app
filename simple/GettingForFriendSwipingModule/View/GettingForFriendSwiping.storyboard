@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Getting For Friend Swiping View Controller-->
+        <scene sceneID="4bl-M8-iiY">
+            <objects>
+                <viewController storyboardIdentifier="idGettingForFriendSwiping" id="hTc-v5-2qw" customClass="GettingForFriendSwipingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcC-2W-Je3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-3q-PNt">
+                                <rect key="frame" x="97" y="15.5" width="180" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A50-uT-hMH">
+                                        <rect key="frame" x="8" y="-3.5" width="130" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="QsP-Hj-4S7"/>
+                                            <constraint firstAttribute="width" constant="130" id="w5Q-YE-6If"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.92549019610000005" green="0.49019607840000001" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="addingLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-37-J2y">
+                                        <rect key="frame" x="132" y="16.5" width="40" height="40"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="36z-u1-jl7"/>
+                                    <constraint firstAttribute="trailing" secondItem="YjM-37-J2y" secondAttribute="trailing" constant="8" id="QRT-Iu-nNX"/>
+                                    <constraint firstItem="A50-uT-hMH" firstAttribute="leading" secondItem="ctP-3q-PNt" secondAttribute="leading" constant="8" id="XgD-T1-X2H"/>
+                                    <constraint firstItem="A50-uT-hMH" firstAttribute="centerY" secondItem="ctP-3q-PNt" secondAttribute="centerY" id="dWe-Us-fdY"/>
+                                    <constraint firstItem="YjM-37-J2y" firstAttribute="bottom" secondItem="A50-uT-hMH" secondAttribute="bottom" id="diP-5F-rOf"/>
+                                    <constraint firstAttribute="height" constant="53" id="wBe-KJ-Sa0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ctP-3q-PNt" firstAttribute="top" secondItem="vcC-2W-Je3" secondAttribute="top" constant="15.5" id="TZf-Lw-oLB"/>
+                            <constraint firstItem="ctP-3q-PNt" firstAttribute="centerX" secondItem="vcC-2W-Je3" secondAttribute="centerX" id="eyN-wf-ucM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8e-y3-ZF4"/>
+                    </view>
+                    <connections>
+                        <outlet property="gettingForFriendLabel" destination="A50-uT-hMH" id="U3k-u5-r7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5v5-rL-KEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="-215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addingLogo" width="40" height="40"/>
+    </resources>
+</document>

@@ -22,6 +22,8 @@
 		CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */; };
 		CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */; };
 		CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */; };
+		CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */; };
+		CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */; };
 		CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
@@ -67,6 +69,9 @@
 		CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WireframeViewController.m; sourceTree = "<group>"; };
 		CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCardsSwipingView.m; sourceTree = "<group>"; };
 		CE603A47211DA4C4006E95F3 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCardsSwipingView.h; sourceTree = "<group>"; };
+		CE6A2B6E212C5BD400766A39 /* GettingForFriendSwipingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GettingForFriendSwipingViewController.h; sourceTree = "<group>"; };
+		CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GettingForFriendSwipingViewController.m; sourceTree = "<group>"; };
+		CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GettingForFriendSwiping.storyboard; sourceTree = "<group>"; };
 		CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingFriend.storyboard; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* Korte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -234,6 +239,24 @@
 			path = MXCardsSwipingView;
 			sourceTree = "<group>";
 		};
+		CE6A2B6C212C5B6A00766A39 /* GettingForFriendSwipingModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A2B6D212C5B8B00766A39 /* View */,
+			);
+			path = GettingForFriendSwipingModule;
+			sourceTree = "<group>";
+		};
+		CE6A2B6D212C5B8B00766A39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE6A2B6E212C5BD400766A39 /* GettingForFriendSwipingViewController.h */,
+				CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */,
+				CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CEB2871B211388A900C51670 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +278,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE6A2B6C212C5B6A00766A39 /* GettingForFriendSwipingModule */,
 				CEDF2A58212A8EE30046D01E /* MatchesModule */,
 				CE4DF71F2123E2B500C6E9F7 /* FriendConnect */,
 				CEB6FC8D21214457003A7E69 /* AddConnectModule */,
@@ -427,6 +451,7 @@
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
 				CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */,
 				CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */,
+				CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */,
 				CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */,
 				CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
@@ -489,6 +514,7 @@
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
+				CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */,
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
 				CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */,
