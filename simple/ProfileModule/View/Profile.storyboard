@@ -19,11 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="1Jn-NU-r8B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4P8-Vh-fLM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdy-yz-fZO">
+                                <rect key="frame" x="0.0" y="120" width="320" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dpI-yw-TZE"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIC-R0-3dw">
-                                <rect key="frame" x="0.0" y="120" width="320" height="360"/>
+                                <rect key="frame" x="0.0" y="150" width="320" height="850"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3g-AM-3YX" userLabel="imagesContainView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
@@ -394,13 +401,17 @@
                             </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="v2C-71-gHN" firstAttribute="trailing" secondItem="rdy-yz-fZO" secondAttribute="trailing" id="32E-hJ-pnL"/>
                             <constraint firstItem="oIC-R0-3dw" firstAttribute="leading" secondItem="v2C-71-gHN" secondAttribute="leading" id="5Cl-9X-Pzf"/>
-                            <constraint firstItem="oIC-R0-3dw" firstAttribute="top" secondItem="4P8-Vh-fLM" secondAttribute="top" constant="120" id="MMd-aI-vSe"/>
+                            <constraint firstItem="rdy-yz-fZO" firstAttribute="leading" secondItem="v2C-71-gHN" secondAttribute="leading" id="F2V-To-hNZ"/>
+                            <constraint firstItem="oIC-R0-3dw" firstAttribute="top" secondItem="4P8-Vh-fLM" secondAttribute="top" constant="150" id="MMd-aI-vSe"/>
                             <constraint firstItem="oIC-R0-3dw" firstAttribute="trailing" secondItem="v2C-71-gHN" secondAttribute="trailing" id="Rui-lr-dRr"/>
                             <constraint firstItem="1Jn-NU-r8B" firstAttribute="top" secondItem="oIC-R0-3dw" secondAttribute="bottom" id="dwq-Ry-8si"/>
+                            <constraint firstItem="rdy-yz-fZO" firstAttribute="top" secondItem="4P8-Vh-fLM" secondAttribute="top" constant="120" id="xvu-zz-IEi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v2C-71-gHN"/>
                     </view>
+                    <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="dropdownCateContainView" destination="0b2-nE-aoT" id="vki-Du-dWa"/>
                         <outlet property="dropdownContainView" destination="v6b-jc-xdd" id="o3o-47-cE1"/>

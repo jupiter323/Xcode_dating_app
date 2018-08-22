@@ -96,7 +96,7 @@
     avatar.clipsToBounds = YES;
     avatar.layer.borderWidth = 5.0f;
     avatar.layer.borderColor = [UIColor whiteColor].CGColor;
-    
+        
     
     //    adding part
     //    [self.view addSubview:contain];

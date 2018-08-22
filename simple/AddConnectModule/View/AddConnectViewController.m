@@ -61,7 +61,7 @@
     //remove layers
     for(UIView *subView in self.view.subviews){
         if(subView == layer || subView==smalllayer || subView==imageButton)
-        [subView removeFromSuperview];
+            [subView removeFromSuperview];
     }
     //remove collection
     cooll.removeFromSuperview;
@@ -109,56 +109,83 @@
     
     
     
-//    static BOOL flagForCollect = YES;
-//
-//    if(flagForCollect)
+    //    static BOOL flagForCollect = YES;
+    //
+    //    if(flagForCollect)
     [cooll performBatchUpdates:^{
         [cooll insertItemsAtIndexPaths:[NSArray arrayWithObjects:
-                                                      [NSIndexPath indexPathForRow:0 inSection:0],
-                                                      [NSIndexPath indexPathForRow:1 inSection:0],
-                                                      [NSIndexPath indexPathForRow:2 inSection:0],
-                                                      [NSIndexPath indexPathForRow:3 inSection:0],
-                                                      [NSIndexPath indexPathForRow:4 inSection:0],
+                                        [NSIndexPath indexPathForRow:0 inSection:0],
+                                        [NSIndexPath indexPathForRow:1 inSection:0],
+                                        [NSIndexPath indexPathForRow:2 inSection:0],
+                                        [NSIndexPath indexPathForRow:3 inSection:0],
+                                        [NSIndexPath indexPathForRow:4 inSection:0],
                                         
-                                                      nil]];
+                                        nil]];
         self->count = 5;
     } completion:^(BOOL finished) {
         [cooll reloadData];
     }];
-//    flagForCollect = NO;
+    //    flagForCollect = NO;
     
     
     //    swipe for me scroll adding
     matches = [[UIScrollView alloc] init];
     [self.swipeForMeScroll setBackgroundColor:UIColorWithHexString(@"#f4f2f2")];
-    CGFloat marginLeft = 0;
+    CGFloat marginLeft = 80;
     CGFloat ContentScrollHeight = self.swipeformeScrollContent.frame.size.height;
-    CGFloat ContentScrollWidth = self.swipeformeScrollContent.frame.size.width;
+    CGFloat ContentScrollWidth = self.swipeformeScrollContent.frame.size.width-marginLeft;
     CGFloat avatarWidth = 70;
     matches.frame = CGRectMake(marginLeft,ContentScrollHeight-avatarWidth-10 , ContentScrollWidth, avatarWidth);
     float sizeOfMatches = 10;
     matches.contentSize=CGSizeMake(sizeOfMatches*(avatarWidth+10)+10, avatarWidth);
+    
+    ////    adding add matches button
+    CGFloat buttonWidth = avatarWidth;
+    UIButton *addMatchButton = [[UIButton alloc] init];
+    addMatchButton.frame = CGRectMake(10,ContentScrollHeight-avatarWidth-10,buttonWidth,buttonWidth);
+    [addMatchButton setImage:[UIImage imageNamed:@"swipadd"] forState:UIControlStateNormal];
+    [addMatchButton addTarget:self action:@selector(goToGettingFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
+    addMatchButton.layer.cornerRadius = addMatchButton.frame.size.width / 2;
+    addMatchButton.clipsToBounds = YES;
+    [self.swipeformeScrollContent addSubview:addMatchButton];
+    ////scroll
     for(int i=0;i<sizeOfMatches;i++){
-        CGFloat buttonWidth = avatarWidth;
         CGFloat buttonSide = 10;
         UIButton *avatar = [[UIButton alloc] init];
         avatar.frame = CGRectMake(i*(buttonWidth+buttonSide)+10,0 , buttonWidth, buttonWidth);
-        if(i==0)
-            [avatar setImage:[UIImage imageNamed:@"swipadd"] forState:UIControlStateNormal];
-        else
-            [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+        
+        
+        [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
         avatar.imageView.contentMode =UIViewContentModeScaleAspectFill;
         avatar.tag = i;
-        if(i==0)
-            [avatar addTarget:self action:@selector(goToGettingFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
-            else
+        
         [avatar addTarget:self action:@selector(goToFriendsSwiping:) forControlEvents:UIControlEventTouchUpInside];
         avatar.layer.cornerRadius = avatar.frame.size.width / 2;
         avatar.clipsToBounds = YES;
-        
-       
-        
         [matches addSubview:avatar];
+        
+        //////avatar's subbutton
+        CGFloat subbuttonWidth = 18;
+        UIButton * closeLeftTopButton=[[UIButton alloc] init];
+        closeLeftTopButton.frame=CGRectMake(avatar.frame.origin.x,avatar.frame.origin.y, subbuttonWidth, subbuttonWidth);
+        [closeLeftTopButton setImage:[UIImage imageNamed:@"closeAvatar"] forState:UIControlStateNormal];
+        if(i==0)
+            [matches addSubview:closeLeftTopButton];
+        
+        UIButton * closeLeftBottomButton=[[UIButton alloc] init];
+        closeLeftBottomButton.frame=CGRectMake(avatar.frame.origin.x,avatar.frame.origin.y+ avatarWidth - subbuttonWidth, subbuttonWidth, subbuttonWidth);
+        [closeLeftBottomButton setImage:[UIImage imageNamed:@"closeLeftBottom"] forState:UIControlStateNormal];
+        if(i!=0)
+            [matches addSubview:closeLeftBottomButton];
+        
+        UIButton * closeRightBottomButton=[[UIButton alloc] init];
+        closeRightBottomButton.frame=CGRectMake(avatar.frame.origin.x+avatarWidth-subbuttonWidth,avatar.frame.origin.y+avatarWidth - subbuttonWidth, subbuttonWidth, subbuttonWidth);
+        [closeRightBottomButton setImage:[UIImage imageNamed:@"connectRightBottom"] forState:UIControlStateNormal];
+        if(i!=0)
+            [matches addSubview:closeRightBottomButton];
+        
+        
+        
     }
     matches.showsHorizontalScrollIndicator = NO;
     [self.swipeformeScrollContent addSubview:matches];
@@ -193,15 +220,15 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     DSCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-  
+    
     cell.lbl.text = [NSString stringWithFormat:@"Name by %d",(int)indexPath.item + 1];
-
+    
     [cell.avatarImageButton setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
     cell.avatarImageButton.imageView.contentMode=UIViewContentModeScaleToFill;
-
+    
     cell.avatarImageButton.layer.cornerRadius = 25;
-//    cell.coverButton.tag = (int)indexPath;
-//    [cell.coverButton addTarget:self action:@selector(onClickCoverButton:) forControlEvents:UIControlEventTouchUpInside];
+    //    cell.coverButton.tag = (int)indexPath;
+    //    [cell.coverButton addTarget:self action:@selector(onClickCoverButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
@@ -215,13 +242,13 @@
 }
 -(void)goToFriendsSwiping:(UIButton *)sender{
     NSLog(@"match button tag: %d",sender.tag);
-
+    
     // //   navigating
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddingFriend" bundle:nil];
-        UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddingFriend"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddingFriend" bundle:nil];
+    UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddingFriend"];
     
     [self.navigationController pushViewController:addingFriendScene animated:YES];
-
+    
     
 }
 /*
@@ -235,4 +262,5 @@
  */
 
 @end
+
 
