@@ -15,8 +15,6 @@
     UIView *layer;
     UIView *smalllayer;
     UIButton *imageButton;
-    
-    __weak IBOutlet UICollectionView *cooll;
 }
 @property (weak, nonatomic) IBOutlet UIView *addContainView;
 @property (weak, nonatomic) IBOutlet UIView *swipeForMeScroll;
@@ -34,10 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.returnButton addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
-    
-    ////    init friend views
-    count = 0;
-    [self setCircularLayout];
+
+  
     // Do any additional setup after loading the view.s
 }
 -(void)returnFun:(UIButton *) sender {
@@ -63,8 +59,7 @@
         if(subView == layer || subView==smalllayer || subView==imageButton)
             [subView removeFromSuperview];
     }
-    //remove collection
-    cooll.removeFromSuperview;
+
 }
 - (void)viewDidAppear:(BOOL)animated{
     
@@ -79,10 +74,12 @@
     
     self.infoButton.backgroundColor = [UIColor colorWithRed:0.98 green:0.74 blue:0.48 alpha:1];
     self.infoButton.layer.cornerRadius = self.infoButton.frame.size.width/2;
-    // add contain collect View
     
-    [cooll setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
-    cooll.layer.cornerRadius= self.addContainView.frame.size.height/2;
+    // contain circle
+    [self.addContainView setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
+    self.addContainView.layer.cornerRadius= self.addContainView.frame.size.width/2;
+    
+    
     //// add small contain collect view
     CGFloat originX = self.view.frame.size.width/2;
     CGFloat originY = self.addContainView.frame.origin.y+self.addContainView.frame.size.height/2;
@@ -103,31 +100,8 @@
     [[self view] addSubview:layer];
     [[self view] addSubview:smalllayer];
     [[self view] addSubview:imageButton];
-    
-    
-    //    add friend views
-    
-    
-    
-    //    static BOOL flagForCollect = YES;
-    //
-    //    if(flagForCollect)
-    [cooll performBatchUpdates:^{
-        [cooll insertItemsAtIndexPaths:[NSArray arrayWithObjects:
-                                        [NSIndexPath indexPathForRow:0 inSection:0],
-                                        [NSIndexPath indexPathForRow:1 inSection:0],
-                                        [NSIndexPath indexPathForRow:2 inSection:0],
-                                        [NSIndexPath indexPathForRow:3 inSection:0],
-                                        [NSIndexPath indexPathForRow:4 inSection:0],
-                                        
-                                        nil]];
-        self->count = 5;
-    } completion:^(BOOL finished) {
-        [cooll reloadData];
-    }];
-    //    flagForCollect = NO;
-    
-    
+  
+   
     //    swipe for me scroll adding
     matches = [[UIScrollView alloc] init];
     [self.swipeForMeScroll setBackgroundColor:UIColorWithHexString(@"#f4f2f2")];
@@ -195,42 +169,6 @@
 }
 //
 
--(void)setCircularLayout{
-    CGFloat SCREEN_HEIGHT = cooll.frame.size.height;
-    CGFloat SCREEN_WIDTH = SCREEN_HEIGHT;
-    CGFloat ITEM_WIDTH = 60;
-    CGFloat ITEM_HEIGHT = 60;
-    
-    DSCircularLayout *circularLayout = [[DSCircularLayout alloc] init];
-    [circularLayout initWithCentre:CGPointMake(SCREEN_WIDTH/2-25, SCREEN_HEIGHT/2-25)
-                            radius:SCREEN_WIDTH/2 -ITEM_WIDTH *1.3
-                          itemSize:CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT)
-                 andAngularSpacing:60];
-    [circularLayout setStartAngle:M_PI endAngle:0];
-    circularLayout.mirrorX = NO;
-    circularLayout.mirrorY = NO;
-    circularLayout.rotateItems = NO;
-    circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    [cooll setCollectionViewLayout:circularLayout];
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return count;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    DSCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    cell.lbl.text = [NSString stringWithFormat:@"Name by %d",(int)indexPath.item + 1];
-    
-    [cell.avatarImageButton setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
-    cell.avatarImageButton.imageView.contentMode=UIViewContentModeScaleToFill;
-    
-    cell.avatarImageButton.layer.cornerRadius = 25;
-    //    cell.coverButton.tag = (int)indexPath;
-    //    [cell.coverButton addTarget:self action:@selector(onClickCoverButton:) forControlEvents:UIControlEventTouchUpInside];
-    return cell;
-}
 
 -(void)goToGettingFriendsSwiping:(UIButton *)sender{
     

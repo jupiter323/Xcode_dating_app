@@ -110,7 +110,7 @@
     [self.returnButton setImage:[UIImage imageNamed:@"pro_close"] forState:UIControlStateNormal];
     [self.returnButton sizeToFit];
     self.returnButton.frame = CGRectMake(20,20, self.returnButton.bounds.size.width, self.returnButton.bounds.size.height);
-    [self.returnButton addTarget:self action:@selector(toAddConnection:) forControlEvents:UIControlEventTouchUpInside];
+    [self.returnButton addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
     [centerTopView addSubview:self.returnButton];
     /////// avatar on entertopview
     UIButton *imageButton = [[UIButton alloc] initWithFrame:CGRectMake(width/2-30, 30, 45, 45)];

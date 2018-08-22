@@ -37,7 +37,6 @@
 		CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB6FC9021214488003A7E69 /* AddConnectViewController.m */; };
 		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
 		CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2A59212A90FD0046D01E /* Matches.storyboard */; };
-		CEE5F17F2122EDA3004F49CC /* DSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE5F17E2122EDA3004F49CC /* DSCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,8 +91,6 @@
 		CEB6FC9021214488003A7E69 /* AddConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddConnectViewController.m; sourceTree = "<group>"; };
 		CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddConnectScreen.storyboard; sourceTree = "<group>"; };
 		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
-		CEE5F17D2122EDA2004F49CC /* DSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCollectionViewCell.h; path = "../../../../DSCircularCollectionView-master/Example/DSCircularCollectionView/DSCollectionViewCell.h"; sourceTree = "<group>"; };
-		CEE5F17E2122EDA3004F49CC /* DSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCollectionViewCell.m; path = "../../../../DSCircularCollectionView-master/Example/DSCircularCollectionView/DSCollectionViewCell.m"; sourceTree = "<group>"; };
 		FC948564BF5250A0D997D8C5 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -349,8 +346,6 @@
 		CEB6FC8E2121446D003A7E69 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEE5F17D2122EDA2004F49CC /* DSCollectionViewCell.h */,
-				CEE5F17E2122EDA3004F49CC /* DSCollectionViewCell.m */,
 				CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */,
 				CEB6FC9021214488003A7E69 /* AddConnectViewController.m */,
 				CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */,
@@ -525,7 +520,6 @@
 				CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
 				CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */,
-				CEE5F17F2122EDA3004F49CC /* DSCollectionViewCell.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
