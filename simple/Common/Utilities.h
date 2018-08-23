@@ -106,7 +106,7 @@ static UIImage * makeRoundedImage(UIImage * image,
     return roundedImage;
 }
 
-static NSAttributedString* attributedString(NSString * contentString, UIColor * color){
+static NSAttributedString* attributedString(NSString * contentString, UIColor * color, CGFloat fontSize){
     NSString *textContent = contentString;
     UIColor *textColor = color?color:StandardColor();
     NSAttributedString *attributedString =
@@ -115,7 +115,7 @@ static NSAttributedString* attributedString(NSString * contentString, UIColor * 
      attributes:
      @{
        NSForegroundColorAttributeName:textColor,
-       NSKernAttributeName : @(2.22f)
+       NSKernAttributeName : @(fontSize)
        }];
     return attributedString;
     

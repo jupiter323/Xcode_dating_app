@@ -24,7 +24,7 @@
     // Dispose of any resources that can be recreated.
     
     //    with friends connect
-    self.gettingForFriendLabel.attributedText = attributedString(@"Request to Swipe for Friends",StandardColor());
+    self.gettingForFriendLabel.attributedText = attributedString(@"Request to Swipe for Friends",StandardColor(), 2.22f);
 }
 
 /*

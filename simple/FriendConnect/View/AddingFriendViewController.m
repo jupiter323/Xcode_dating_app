@@ -148,7 +148,7 @@
         
         ////description
         UILabel *loremLabel = [[UILabel alloc]init];
-        loremLabel.attributedText = attributedString(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit?", UIColorWithHexString(@"898887"));
+        loremLabel.attributedText = attributedString(@"Lorem ipsum dolor sit amet, consectetur adipiscing elit?", UIColorWithHexString(@"898887"), 2.22f);
         loremLabel.numberOfLines = 3;
         [loremLabel setFont:[UIFont systemFontOfSize:18]];
         loremLabel.textAlignment = UITextAlignmentCenter;
