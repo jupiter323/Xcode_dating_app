@@ -180,19 +180,20 @@
         [tapToButton addSubview:tapTotextLayer];
         [tapToButton addSubview:expireTextLayer];
         
-        ////// add adding button
-        UIView *layer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2*r, 2*r)];
-        layer.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.17];
-        layer.layer.borderWidth = 2;
-        layer.layer.borderColor = [[UIColor whiteColor] CGColor];
-        layer.layer.cornerRadius = r;
+      
         
         i=-i;
         switch (i) {
-            case 0:
+            case 0://////adding connect button
                 [self.view addSubview: avatar];
                 [avatar setImage:[UIImage imageNamed:@"plus"] forState:UIControlStateNormal];
-                [avatar addSubview:layer];
+               
+//                avatar.layer.frame = CGRectMake(0, 0, 2*r, 2*r);
+                avatar.layer.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.17].CGColor;
+                avatar.layer.borderWidth = 2;
+                avatar.layer.borderColor = [[UIColor whiteColor] CGColor];
+                avatar.layer.cornerRadius = r;
+                [avatar addTarget:self action:@selector(goToMeSwiping:) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 1:
                 [self.view addSubview: avatar];
@@ -325,14 +326,33 @@
 }
 //
 
-
--(void)goToGettingFriendsSwiping:(UIButton *)sender{
+-(void)goToMeSwiping:(UIButton *)sender{
+    //    animating
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+    transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    // //   navigating
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"GettingForMeSwiping" bundle:nil];
+    UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idGettingForMeSwiping"];
     
+    [self.navigationController pushViewController:addingFriendScene animated:NO];
+}
+-(void)goToGettingFriendsSwiping:(UIButton *)sender{
+    //    animating
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+    transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
     // //   navigating
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"GettingForFriendSwiping" bundle:nil];
     UINavigationController *addingFriendScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idGettingForFriendSwiping"];
     
-    [self.navigationController pushViewController:addingFriendScene animated:YES];
+    [self.navigationController pushViewController:addingFriendScene animated:NO];
 }
 -(void)goToFriendsSwiping:(UIButton *)sender{
     NSLog(@"match button tag: %d",sender.tag);

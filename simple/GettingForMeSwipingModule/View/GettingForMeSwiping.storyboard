@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Getting For Friend Swiping View Controller-->
+        <!--Getting For Me Swiping View Controller-->
         <scene sceneID="4bl-M8-iiY">
             <objects>
-                <viewController storyboardIdentifier="idGettingForFriendSwiping" id="hTc-v5-2qw" customClass="GettingForFriendSwipingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idGettingForMeSwiping" id="hTc-v5-2qw" customClass="GettingForMeSwipingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcC-2W-Je3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="157" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IdGettingFriend" id="EO6-gP-QWs" customClass="FriendsTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IdGettingMe" id="EO6-gP-QWs" customClass="MeTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EO6-gP-QWs" id="CA6-5Z-isv">

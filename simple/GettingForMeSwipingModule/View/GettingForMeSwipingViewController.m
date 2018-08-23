@@ -6,9 +6,9 @@
 //  Copyright © 2018 Peace. All rights reserved.
 //
 
-#import "GettingForFriendSwipingViewController.h"
+#import "GettingForMeSwipingViewController.h"
 
-@interface GettingForFriendSwipingViewController (){
+@interface GettingForMeSwipingViewController (){
     BOOL facebook;
     NSMutableArray * arr;
 }
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation GettingForFriendSwipingViewController
+@implementation GettingForMeSwipingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,7 +54,7 @@
 }
 -(void) viewDidAppear:(BOOL)animated{
     //    with friends connect
-    self.gettingForFriendLabel.attributedText = attributedString(@"Request to Swipe for Friends",StandardColor(), 2.22f);
+    self.gettingForFriendLabel.attributedText = attributedString(@"Request a Friend to Swipe for Me",StandardColor(), 2.22f);
     
     //toggle view
     self.toggleView.layer.cornerRadius=22;
@@ -101,7 +101,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FriendsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdGettingFriend" forIndexPath:indexPath];
+    MeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IdGettingMe" forIndexPath:indexPath];
     
     CGFloat buttonWidth = 60;
     

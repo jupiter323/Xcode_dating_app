@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Utilities.h"
-#import "FriendsTableViewCell.h"
-@interface GettingForFriendSwipingViewController : UIViewController
+#import "MeTableViewCell.h"
+@interface GettingForMeSwipingViewController : UIViewController
 
 @end

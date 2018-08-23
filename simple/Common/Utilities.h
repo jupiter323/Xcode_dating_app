@@ -120,3 +120,9 @@ static NSAttributedString* attributedString(NSString * contentString, UIColor * 
     return attributedString;
     
 }
+static NSString* jsonStringify(NSDictionary *arr){
+    NSError *error;
+    NSData *jsonData2 = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData2 encoding:NSUTF8StringEncoding];
+    return jsonString;
+}

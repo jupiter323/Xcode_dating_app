@@ -11,6 +11,10 @@
 		CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B3212AE081004CACDB /* MatchesViewController.m */; };
 		CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
+		CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6CF212EF0820094C0E9 /* FriendsTableViewCell.m */; };
+		CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6D6212F28B50094C0E9 /* MeTableViewCell.m */; };
+		CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1FC6D7212F28B50094C0E9 /* GettingForMeSwiping.storyboard */; };
+		CE1FC6DC212F28B50094C0E9 /* GettingForMeSwipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6D9212F28B50094C0E9 /* GettingForMeSwipingViewController.m */; };
 		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
@@ -48,6 +52,13 @@
 		CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
 		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
+		CE1FC6CE212EF0820094C0E9 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
+		CE1FC6CF212EF0820094C0E9 /* FriendsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewCell.m; sourceTree = "<group>"; };
+		CE1FC6D5212F28B50094C0E9 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
+		CE1FC6D6212F28B50094C0E9 /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
+		CE1FC6D7212F28B50094C0E9 /* GettingForMeSwiping.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GettingForMeSwiping.storyboard; sourceTree = "<group>"; };
+		CE1FC6D8212F28B50094C0E9 /* GettingForMeSwipingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingForMeSwipingViewController.h; sourceTree = "<group>"; };
+		CE1FC6D9212F28B50094C0E9 /* GettingForMeSwipingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingForMeSwipingViewController.m; sourceTree = "<group>"; };
 		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
 		CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -124,6 +135,26 @@
 				CE3BCEF32116A41800706FD1 /* MenuControll */,
 			);
 			path = SubModules;
+			sourceTree = "<group>";
+		};
+		CE1FC6D3212F28B50094C0E9 /* GettingForMeSwipingModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FC6D4212F28B50094C0E9 /* View */,
+			);
+			path = GettingForMeSwipingModule;
+			sourceTree = "<group>";
+		};
+		CE1FC6D4212F28B50094C0E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FC6D5212F28B50094C0E9 /* MeTableViewCell.h */,
+				CE1FC6D6212F28B50094C0E9 /* MeTableViewCell.m */,
+				CE1FC6D7212F28B50094C0E9 /* GettingForMeSwiping.storyboard */,
+				CE1FC6D8212F28B50094C0E9 /* GettingForMeSwipingViewController.h */,
+				CE1FC6D9212F28B50094C0E9 /* GettingForMeSwipingViewController.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CE27DE6D2119B79B00F5B1C2 /* LocationModule */ = {
@@ -250,6 +281,8 @@
 				CE6A2B6E212C5BD400766A39 /* GettingForFriendSwipingViewController.h */,
 				CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */,
 				CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */,
+				CE1FC6CE212EF0820094C0E9 /* FriendsTableViewCell.h */,
+				CE1FC6CF212EF0820094C0E9 /* FriendsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +308,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE1FC6D3212F28B50094C0E9 /* GettingForMeSwipingModule */,
 				CE6A2B6C212C5B6A00766A39 /* GettingForFriendSwipingModule */,
 				CEDF2A58212A8EE30046D01E /* MatchesModule */,
 				CE4DF71F2123E2B500C6E9F7 /* FriendConnect */,
@@ -450,6 +484,7 @@
 				CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */,
 				CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
+				CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,14 +546,17 @@
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
 				CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */,
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
+				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
 				CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */,
+				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,
 				CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */,
 				CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
+				CE1FC6DC212F28B50094C0E9 /* GettingForMeSwipingViewController.m in Sources */,
 				CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);
