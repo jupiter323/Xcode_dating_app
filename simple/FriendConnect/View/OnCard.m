@@ -84,19 +84,19 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _categoryLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:10];
     _categoryLabel.textColor = [UIColor whiteColor];
     _categoryLabel.textAlignment = NSTextAlignmentCenter;
-    [_topMatterView addSubview:_categoryLabel];
+//    [_topMatterView addSubview:_categoryLabel];
     
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:22];
     _nameLabel.textAlignment = NSTextAlignmentCenter;
     _nameLabel.textColor = [UIColor whiteColor];
-    [_topMatterView addSubview:_nameLabel];
+//    [_topMatterView addSubview:_nameLabel];
     
     _bioLabel = [[UILabel alloc] init];
     _bioLabel.font = [UIFont fontWithName:@"AvenirNext-Medium" size:10];
     _bioLabel.textAlignment = NSTextAlignmentCenter;
     _bioLabel.textColor = [UIColor whiteColor];
-    [_topMatterView addSubview:_bioLabel];
+//    [_topMatterView addSubview:_bioLabel];
     
     _swipeLeftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dislike"]];
     _swipeLeftView.hidden = YES;
