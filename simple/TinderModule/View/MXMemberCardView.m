@@ -98,6 +98,7 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _bioLabel.textColor = [UIColor whiteColor];
 //    [_topMatterView addSubview:_bioLabel];
     
+    
     _swipeLeftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dislike"]];
     _swipeLeftView.hidden = YES;
     _swipeRightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"like"]];

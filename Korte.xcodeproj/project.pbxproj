@@ -287,6 +287,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE1FC6D3212F28B50094C0E9 /* GettingForMeSwipingModule */,
+				CE6A2B6C212C5B6A00766A39 /* GettingForFriendSwipingModule */,
+			);
+			path = GettingSwipingModule;
+			sourceTree = "<group>";
+		};
 		CEB2871B211388A900C51670 = {
 			isa = PBXGroup;
 			children = (
@@ -308,8 +317,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
-				CE1FC6D3212F28B50094C0E9 /* GettingForMeSwipingModule */,
-				CE6A2B6C212C5B6A00766A39 /* GettingForFriendSwipingModule */,
+				CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */,
 				CEDF2A58212A8EE30046D01E /* MatchesModule */,
 				CE4DF71F2123E2B500C6E9F7 /* FriendConnect */,
 				CEB6FC8D21214457003A7E69 /* AddConnectModule */,
