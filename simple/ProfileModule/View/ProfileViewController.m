@@ -134,11 +134,28 @@
         [self.imagesContainView addSubview:image1button];
     }
     
-    
-    
-    
-    
 }
+-(void)viewDidAppear:(BOOL)animated{
+    UITapGestureRecognizer *singleViewTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(goToIDVerify:)];
+    [self.verifyView addGestureRecognizer:singleViewTap];
+}
+- (void)goToIDVerify:(UITapGestureRecognizer *)recognizer
+{
+    CGPoint location = [recognizer locationInView:[recognizer.view superview]];
+    
+    //Do stuff here...
+    //for animation navigating
+    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    
+    //        navigating to verify
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IDVerify" bundle:nil];
+    UINavigationController *locationScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idVerify"];
+    
+    [self.navigationController pushViewController:locationScene animated:NO];
+}
+
 
 #pragma mark - MKDropdownMenuDataSource
 

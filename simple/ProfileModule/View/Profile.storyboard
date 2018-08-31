@@ -416,6 +416,7 @@
                         <outlet property="dropdownCateContainView" destination="0b2-nE-aoT" id="vki-Du-dWa"/>
                         <outlet property="dropdownContainView" destination="v6b-jc-xdd" id="o3o-47-cE1"/>
                         <outlet property="imagesContainView" destination="J3g-AM-3YX" id="GJc-fx-vAn"/>
+                        <outlet property="verifyView" destination="RIh-2y-jvA" id="A5Z-55-0uI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrT-tY-paj" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,8 +23,8 @@
     [GMSPlacesClient provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
     
 //     Override point for customization after application launch.
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"GettingForMeSwiping" bundle:nil];
-//    UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idGettingForMeSwiping"];
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"IDVerify" bundle:nil];
+//    UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idVerify"];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
     UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];
     self.window = [[UIWindow alloc] init];

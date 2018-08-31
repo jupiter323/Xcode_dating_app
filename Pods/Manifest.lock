@@ -1,4 +1,9 @@
 PODS:
+  - AffdexSDK-iOS (4.0.1):
+    - AWSKinesis
+  - AWSCore (2.6.6)
+  - AWSKinesis (2.6.6):
+    - AWSCore (= 2.6.6)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
   - GoogleMaps/Base (2.5.0)
@@ -10,6 +15,7 @@ PODS:
   - MKDropdownMenu (1.4)
 
 DEPENDENCIES:
+  - AffdexSDK-iOS
   - GoogleMaps
   - GooglePlaces
   - LSFloatingActionMenu
@@ -17,17 +23,23 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AffdexSDK-iOS
+    - AWSCore
+    - AWSKinesis
     - GoogleMaps
     - GooglePlaces
     - LSFloatingActionMenu
     - MKDropdownMenu
 
 SPEC CHECKSUMS:
+  AffdexSDK-iOS: 46f04df6a0259957190f3a592ccd0b33367b3d66
+  AWSCore: 64619e45b47678afab53ca0f9b4fa380ebee6f0b
+  AWSKinesis: b638cef07832fd966fe18d9bb9488dea0ffa70dd
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   LSFloatingActionMenu: dc2d6449e817cb2eb3c3a9a751bd49c3aae416b2
   MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
 
-PODFILE CHECKSUM: b106d781659e13b499627142b23588e107b41e6b
+PODFILE CHECKSUM: 1a29b6987cd3aef0566535019d28d5bba45fe2e2
 
 COCOAPODS: 1.5.3

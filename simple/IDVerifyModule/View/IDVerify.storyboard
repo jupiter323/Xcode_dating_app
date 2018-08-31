@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Q28-qV-iZQ">
+            <objects>
+                <viewController storyboardIdentifier="idVerify" id="CSb-0E-rv9" customClass="IDViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQ1-gF-Som">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRH-dr-urZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facePol" translatesAutoresizingMaskIntoConstraints="NO" id="1nV-EN-5P8">
+                                <rect key="frame" x="87.5" y="193.5" width="200" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YDc-q0-agd"/>
+                                    <constraint firstAttribute="height" constant="280" id="Yda-Gb-plg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="VRH-dr-urZ" secondAttribute="bottom" id="6oC-bG-U6F"/>
+                            <constraint firstItem="1nV-EN-5P8" firstAttribute="centerY" secondItem="JQ1-gF-Som" secondAttribute="centerY" id="9oJ-0e-xw2"/>
+                            <constraint firstItem="1nV-EN-5P8" firstAttribute="centerX" secondItem="JQ1-gF-Som" secondAttribute="centerX" id="AYH-A4-UJN"/>
+                            <constraint firstItem="VRH-dr-urZ" firstAttribute="top" secondItem="JQ1-gF-Som" secondAttribute="top" id="TKf-Ud-LE1"/>
+                            <constraint firstAttribute="trailing" secondItem="VRH-dr-urZ" secondAttribute="trailing" id="UPE-Mv-Y9F"/>
+                            <constraint firstItem="VRH-dr-urZ" firstAttribute="leading" secondItem="JQ1-gF-Som" secondAttribute="leading" id="XgO-zE-V1h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="VRH-dr-urZ" id="KMB-TH-a0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54v-AF-EOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facePol" width="198" height="294"/>
+    </resources>
+</document>

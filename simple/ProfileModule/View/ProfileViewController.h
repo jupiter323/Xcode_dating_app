@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : BasicMenuController
+@property (weak, nonatomic) IBOutlet UIView *verifyView;
 
 @end

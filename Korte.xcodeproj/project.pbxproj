@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC948564BF5250A0D997D8C5 /* libPods-Korte.a */; };
+		2287A49515E261FA5ACBECE0 /* Pods_Korte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */; };
 		CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B3212AE081004CACDB /* MatchesViewController.m */; };
 		CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
@@ -25,6 +25,8 @@
 		CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF73C21246DC200C6E9F7 /* LocationViewController.m */; };
 		CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */; };
 		CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */; };
+		CE598E3F21380B6800306488 /* IDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE598E3E21380B6800306488 /* IDViewController.m */; };
+		CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE598E4021380B8300306488 /* IDVerify.storyboard */; };
 		CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */; };
 		CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */; };
 		CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */; };
@@ -45,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
+		66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
 		CE18E2B2212AE081004CACDB /* MatchesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
 		CE18E2B3212AE081004CACDB /* MatchesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
@@ -77,6 +80,9 @@
 		CE4DF74121246F7100C6E9F7 /* FriendConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendConnectViewController.m; sourceTree = "<group>"; };
 		CE4DF74421247B8900C6E9F7 /* WireframeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WireframeViewController.h; sourceTree = "<group>"; };
 		CE4DF74521247B8900C6E9F7 /* WireframeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WireframeViewController.m; sourceTree = "<group>"; };
+		CE598E3D21380B6800306488 /* IDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDViewController.h; sourceTree = "<group>"; };
+		CE598E3E21380B6800306488 /* IDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDViewController.m; sourceTree = "<group>"; };
+		CE598E4021380B8300306488 /* IDVerify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IDVerify.storyboard; sourceTree = "<group>"; };
 		CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCardsSwipingView.m; sourceTree = "<group>"; };
 		CE603A47211DA4C4006E95F3 /* MXCardsSwipingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCardsSwipingView.h; sourceTree = "<group>"; };
 		CE6A2B6E212C5BD400766A39 /* GettingForFriendSwipingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GettingForFriendSwipingViewController.h; sourceTree = "<group>"; };
@@ -102,7 +108,6 @@
 		CEB6FC9021214488003A7E69 /* AddConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddConnectViewController.m; sourceTree = "<group>"; };
 		CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddConnectScreen.storyboard; sourceTree = "<group>"; };
 		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
-		FC948564BF5250A0D997D8C5 /* libPods-Korte.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Korte.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AA356E6E3C056B9D7BC2175 /* libPods-Korte.a in Frameworks */,
+				2287A49515E261FA5ACBECE0 /* Pods_Korte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +263,14 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
+		CE598E3C2138097C00306488 /* IDVerifyModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEC440802138503E00D678F7 /* View */,
+			);
+			path = IDVerifyModule;
+			sourceTree = "<group>";
+		};
 		CE603A42211DA424006E95F3 /* MXCardsSwipingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +330,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE598E3C2138097C00306488 /* IDVerifyModule */,
 				CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */,
 				CEDF2A58212A8EE30046D01E /* MatchesModule */,
 				CE4DF71F2123E2B500C6E9F7 /* FriendConnect */,
@@ -395,6 +409,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CEC440802138503E00D678F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE598E3D21380B6800306488 /* IDViewController.h */,
+				CE598E3E21380B6800306488 /* IDViewController.m */,
+				CE598E4021380B8300306488 /* IDVerify.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CEDF2A58212A8EE30046D01E /* MatchesModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,7 +442,7 @@
 		F31264CEEE5F93D74C187B73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC948564BF5250A0D997D8C5 /* libPods-Korte.a */,
+				66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -435,6 +459,7 @@
 				CEB28721211388A900C51670 /* Frameworks */,
 				CEB28722211388A900C51670 /* Resources */,
 				F98689981D0F9ACB8713665B /* [CP] Copy Pods Resources */,
+				980D71903DAC754CD63099D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
@@ -516,6 +542,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		980D71903DAC754CD63099D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Korte/Pods-Korte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework",
+				"${PODS_ROOT}/AffdexSDK-iOS/ios/Affdex.framework",
+				"${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSKinesis.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Affdex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSFloatingActionMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKDropdownMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Korte/Pods-Korte-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F98689981D0F9ACB8713665B /* [CP] Copy Pods Resources */ = {
@@ -565,6 +617,7 @@
 				CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
 				CE1FC6DC212F28B50094C0E9 /* GettingForMeSwipingViewController.m in Sources */,
+				CE598E3F21380B6800306488 /* IDViewController.m in Sources */,
 				CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);

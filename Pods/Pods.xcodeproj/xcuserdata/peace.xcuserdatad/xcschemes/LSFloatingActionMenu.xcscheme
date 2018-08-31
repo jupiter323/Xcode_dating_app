@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8F9EF4E9757925C24DAD012F0B5E3D55"
+               BlueprintIdentifier = "1064FB58C822D847FD533D93813B646F"
                BlueprintName = "LSFloatingActionMenu"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libLSFloatingActionMenu.a">
+               BuildableName = "LSFloatingActionMenu.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
