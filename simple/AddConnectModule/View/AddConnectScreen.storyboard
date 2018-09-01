@@ -115,18 +115,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fF2-mE-xg9" firstAttribute="leading" secondItem="olS-be-L4i" secondAttribute="leading" constant="-25" id="3H4-JK-zK6"/>
-                            <constraint firstItem="P6g-x1-Dd1" firstAttribute="leading" secondItem="olS-be-L4i" secondAttribute="leading" id="6nc-Fa-XDS"/>
-                            <constraint firstItem="ref-5A-xOm" firstAttribute="bottom" secondItem="olS-be-L4i" secondAttribute="bottom" id="A3f-uB-jl5"/>
+                            <constraint firstItem="fF2-mE-xg9" firstAttribute="leading" secondItem="zTb-td-k3c" secondAttribute="leading" constant="-25" id="3H4-JK-zK6"/>
+                            <constraint firstItem="P6g-x1-Dd1" firstAttribute="leading" secondItem="zTb-td-k3c" secondAttribute="leading" id="6nc-Fa-XDS"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="bottom" secondItem="zTb-td-k3c" secondAttribute="bottom" id="A3f-uB-jl5"/>
                             <constraint firstItem="fF2-mE-xg9" firstAttribute="top" secondItem="P6g-x1-Dd1" secondAttribute="bottom" id="Ggc-ce-hbv"/>
-                            <constraint firstItem="ref-5A-xOm" firstAttribute="leading" secondItem="olS-be-L4i" secondAttribute="leading" id="WaF-Sf-b17"/>
-                            <constraint firstItem="fF2-mE-xg9" firstAttribute="top" secondItem="P6g-x1-Dd1" secondAttribute="bottom" id="Yka-Ak-9uq"/>
-                            <constraint firstItem="fF2-mE-xg9" firstAttribute="trailing" secondItem="olS-be-L4i" secondAttribute="trailing" constant="25" id="b6u-w8-jkH"/>
-                            <constraint firstItem="olS-be-L4i" firstAttribute="trailing" secondItem="P6g-x1-Dd1" secondAttribute="trailing" id="gMQ-rK-6Lk"/>
-                            <constraint firstItem="ref-5A-xOm" firstAttribute="trailing" secondItem="olS-be-L4i" secondAttribute="trailing" id="rvf-Z1-Blh"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="leading" secondItem="zTb-td-k3c" secondAttribute="leading" id="WaF-Sf-b17"/>
+                            <constraint firstItem="fF2-mE-xg9" firstAttribute="trailing" secondItem="zTb-td-k3c" secondAttribute="trailing" constant="25" id="b6u-w8-jkH"/>
+                            <constraint firstAttribute="trailing" secondItem="P6g-x1-Dd1" secondAttribute="trailing" id="gMQ-rK-6Lk"/>
+                            <constraint firstItem="ref-5A-xOm" firstAttribute="trailing" secondItem="zTb-td-k3c" secondAttribute="trailing" id="rvf-Z1-Blh"/>
                             <constraint firstItem="P6g-x1-Dd1" firstAttribute="top" secondItem="zTb-td-k3c" secondAttribute="top" id="wSP-Ot-f2b"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="olS-be-L4i"/>
+                        <viewLayoutGuide key="safeArea" id="9X7-Mg-tn6"/>
                     </view>
                     <connections>
                         <outlet property="addContainView" destination="fF2-mE-xg9" id="0kx-wx-0F1"/>

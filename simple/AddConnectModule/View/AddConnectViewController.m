@@ -41,7 +41,7 @@
     CATransition* transition = [CATransition animation];
     transition.duration = 0.5;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
+    transition.type = kCATransitionMoveIn; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
     transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
     //    navigating
@@ -57,6 +57,10 @@
     //remove layers
     for(UIView *subView in self.view.subviews){
         if(subView == layer || subView==smalllayer || subView==imageButton)
+            [subView removeFromSuperview];
+    }
+    for(UIView *subView in self.addContainView.subviews){
+       
             [subView removeFromSuperview];
     }
     

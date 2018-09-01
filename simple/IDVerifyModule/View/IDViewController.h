@@ -15,6 +15,5 @@
 @property (strong) IBOutlet UIImageView *cameraView;
 
 
-
 @end
 

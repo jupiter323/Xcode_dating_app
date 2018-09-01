@@ -81,7 +81,7 @@
     layer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     //////centertopview background
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = CGRectMake(0, 0, 378.97, 676);
+    gradient.frame = self.view.frame;
     gradient.colors = @[
                         (id)[[UIColor colorWithRed:0.98 green:0.49 blue:0.38 alpha:1] CGColor],
                         (id)[[UIColor colorWithRed:0.85 green:0.49 blue:0.45 alpha:1] CGColor]
