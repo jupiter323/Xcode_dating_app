@@ -31,27 +31,34 @@ static const NSUInteger kMXCornerRadius = 6.0f;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setup];
+//        [self setup];
     }
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame  {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
+//        [self setup];
     }
     return self;
 }
 
-- (void)setup {
+- (void)setup:(SectionDefinition)someModel{
     // inner clipped view is necessary to have rounded corners clip to bounds and drop shadow on self simultaneously
-    _innerClippedView = [[UIView alloc] initWithFrame:self.frame];
-    _innerClippedView.layer.cornerRadius = kMXCornerRadius;
-    _innerClippedView.layer.masksToBounds = YES;
-    _innerClippedView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    _innerClippedView.layer.borderWidth = 0.5f;
-    [self addSubview:_innerClippedView];
+    if(someModel == Center){
+        _innerClippedView = [[UIView alloc] initWithFrame:self.frame];
+        _innerClippedView.layer.cornerRadius = 14.7;
+        _innerClippedView.layer.masksToBounds = YES;
+        _innerClippedView.layer.borderColor = [[UIColor whiteColor] CGColor];
+        _innerClippedView.layer.borderWidth = 6.86f;
+        [self addSubview:_innerClippedView];
+    } else {
+        _innerClippedView = [[UIView alloc] initWithFrame:self.frame];
+        _innerClippedView.layer.cornerRadius = kMXCornerRadius;
+        _innerClippedView.layer.masksToBounds = YES;
+        [self addSubview:_innerClippedView];
+    }
     
     //
     // top matter
@@ -59,7 +66,7 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     
     _topMatterView = [[UIView alloc] init];
     _topMatterView.clipsToBounds = YES;
-    _topMatterView.backgroundColor = [UIColor whiteColor];
+    _topMatterView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0];
     [_innerClippedView addSubview:_topMatterView];
     
     _avatarImageView = [[UIImageView alloc] init];

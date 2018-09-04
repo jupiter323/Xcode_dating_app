@@ -10,7 +10,10 @@
 #import "MXCardsSwipingView.h"
 #import "MXMemberCardView.h"
 
-@interface MXViewController () <MXCardsSwipingViewDelegate>
+@interface MXViewController () <MXCardsSwipingViewDelegate>{
+    CGFloat cardWidth;
+    CGFloat cardRatio;
+}
 
 @property (nonatomic, strong) MXCardsSwipingView* cardsSwipingView;
 
@@ -22,7 +25,10 @@
     
     
     [super viewDidLoad];
-    MXCardsSwipingView *cardsSwipingView = [[MXCardsSwipingView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, self.view.bounds.size.height - 120)];
+    themKind = ProTheme;
+    cardWidth = self.view.bounds.size.width - 38*2;
+    cardRatio = 299.88/466.48;
+    MXCardsSwipingView *cardsSwipingView = [[MXCardsSwipingView alloc] initWithFrame:CGRectMake(38, 82, cardWidth, cardWidth / cardRatio)];
     cardsSwipingView.delegate = self;
     self.cardsSwipingView = cardsSwipingView;
     [self addCard];
@@ -50,14 +56,15 @@
     [connectButton addTarget:cardsSwipingView action:@selector(dismissTopCardToRight) forControlEvents:UIControlEventTouchUpInside];
 
     //    profile button
+    CGFloat profileWidth = 62;
     UIButton *myProfile = [[UIButton alloc] init];
-    myProfile.frame = CGRectMake(self.view.bounds.size.width/2-self.view.bounds.size.width/12, cardsSwipingView.frame.origin.y + cardsSwipingView.frame.size.height-self.view.bounds.size.width/18, self.view.bounds.size.width/6, self.view.bounds.size.width/6);
+    myProfile.frame = CGRectMake(self.view.bounds.size.width/2-profileWidth/2, self.view.bounds.size.height - 72 , profileWidth,profileWidth);
     [myProfile setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
     myProfile.imageView.contentMode =UIViewContentModeScaleAspectFill;
     [myProfile addTarget:self action:@selector(toProfile:) forControlEvents:UIControlEventTouchUpInside];
     myProfile.layer.cornerRadius = myProfile.frame.size.width / 2;
     myProfile.clipsToBounds = YES;
-    myProfile.layer.borderWidth = 5.0f;
+    myProfile.layer.borderWidth = 9.03f;
     myProfile.layer.borderColor = [UIColor whiteColor].CGColor;
     
     
@@ -114,9 +121,9 @@
 }
 
 - (void)addCard {
-    MXMemberCardView* card = [[MXMemberCardView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width - 40, (self.view.bounds.size.height - 250)/[MXMemberCardView aspectRatio])];
+    MXMemberCardView* card = [[MXMemberCardView alloc] initWithFrame:CGRectMake(0, 0, cardWidth, cardWidth/cardRatio)];
     [card setupWithAModel:nil];
-    [card addShadow];
+//    [card addShadow];
     [self.cardsSwipingView enqueueCard:card];
 }
 

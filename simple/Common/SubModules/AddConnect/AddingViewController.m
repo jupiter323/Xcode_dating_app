@@ -34,14 +34,15 @@
     [[self view] insertSubview:layer atIndex:0];
     //    bottom style
     UIView *bottom = [[UIView alloc] init];
-    bottom.frame = CGRectMake(0,self.view.frame.size.height-50, self.view.bounds.size.width, 50);
+    bottom.frame = CGRectMake(0,self.view.frame.size.height-56, self.view.bounds.size.width, 56);
+    bottom.layer.cornerRadius = 3;
     bottom.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bottom];
     //    add connect button
     self.addConnection = [[UIButton alloc] init];
     [self.addConnection setImage:[UIImage imageNamed:@"AddConnection"] forState:UIControlStateNormal];
     [self.addConnection sizeToFit];
-    self.addConnection.frame = CGRectMake(self.view.bounds.size.width - (20 + self.addConnection.bounds.size.width), self.view.frame.size.height-50-self.addConnection.frame.size.height/2, self.addConnection.bounds.size.width, self.addConnection.bounds.size.height);
+    self.addConnection.frame = CGRectMake(self.view.bounds.size.width - (23 + self.addConnection.frame.size.width), self.view.bounds.size.height-56-33, self.addConnection.frame.size.width, self.addConnection.frame.size.width);
     [self.addConnection addTarget:self action:@selector(addButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.addConnection];
@@ -56,15 +57,15 @@
     self.messageButton = [[UIButton alloc] init];
     [self.messageButton setImage:[UIImage imageNamed:@"pro_message"] forState:UIControlStateNormal];
     [self.messageButton sizeToFit];
-    self.messageButton.frame = CGRectMake(self.view.bounds.size.width-20-self.messageButton.bounds.size.width, 20, self.messageButton.bounds.size.width, self.messageButton.bounds.size.height);
-    [self.messageButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
+    self.messageButton.frame = CGRectMake(self.view.bounds.size.width-15-self.messageButton.bounds.size.width, 33, self.messageButton.bounds.size.width, self.messageButton.bounds.size.height);
+    [self.messageButton addTarget:self action:@selector(toMessage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.messageButton];
     
     //    Notification buttons menu
     self.notificationButton = [[UIButton alloc] init];
     [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti"] forState:UIControlStateNormal];
     [self.notificationButton sizeToFit];
-    self.notificationButton.frame = CGRectMake(20, 20, self.notificationButton.bounds.size.width, self.notificationButton.bounds.size.height);
+    self.notificationButton.frame = CGRectMake(18, 36, self.notificationButton.bounds.size.width, self.notificationButton.bounds.size.height);
     [self.notificationButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.notificationButton];
     //    background

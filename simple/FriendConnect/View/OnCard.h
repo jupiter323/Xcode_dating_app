@@ -14,6 +14,7 @@
 
 - (void)setupWithAModel:(SectionDefinition)someModel;
 - (void)addShadow;
+- (void)setup:(SectionDefinition)someModel;
 
 + (CGFloat)aspectRatio;
 

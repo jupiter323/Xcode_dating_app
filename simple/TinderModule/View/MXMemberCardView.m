@@ -8,7 +8,7 @@
 
 #import "MXMemberCardView.h"
 
-static const NSUInteger kMXCornerRadius = 6.0f;
+static const NSUInteger kMXCornerRadius = 14.7f;
 
 @implementation MXMemberCardView {
     UIView* _innerClippedView;
@@ -49,8 +49,8 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     _innerClippedView = [[UIView alloc] initWithFrame:self.frame];
     _innerClippedView.layer.cornerRadius = kMXCornerRadius;
     _innerClippedView.layer.masksToBounds = YES;
-    _innerClippedView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    _innerClippedView.layer.borderWidth = 0.5f;
+    _innerClippedView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    _innerClippedView.layer.borderWidth = 6.86f;
     [self addSubview:_innerClippedView];
     
     //
@@ -59,8 +59,10 @@ static const NSUInteger kMXCornerRadius = 6.0f;
     
     _topMatterView = [[UIView alloc] init];
     _topMatterView.clipsToBounds = YES;
-    _topMatterView.backgroundColor = [UIColor whiteColor];
+    _topMatterView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0];
     [_innerClippedView addSubview:_topMatterView];
+    
+   
     
     _avatarImageView = [[UIImageView alloc] init];
     _avatarImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -223,8 +225,8 @@ static const NSUInteger kMXCornerRadius = 6.0f;
 }
 
 - (void)prepareToBecomeBackgroundCard {
-    _topMatterView.alpha = 0.25f;
-    self.transform = [MXMemberCardView transformOfNextCard];
+//    _topMatterView.alpha = 0.25f;
+//    self.transform = [MXMemberCardView transformOfNextCard];
 }
 
 + (CGAffineTransform)transformOfNextCard {

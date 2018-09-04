@@ -8,7 +8,9 @@
 
 #import "WireframeViewController.h"
 
-@interface WireframeViewController ()
+@interface WireframeViewController (){
+    UIImageView *notiBackView;
+}
 
 @end
 
@@ -28,16 +30,26 @@
     button.hidden = YES;
     
     NSArray *menuIcons;
-    if(button==self.addConnection)
+    
+    if(button==self.addConnection){
         menuIcons = @[@"AddConnection", @"pro_match", @"pro_location", @"addCon"];
+        
+    }
     else
         menuIcons = @[@"pro_close", @"pro_match", @"pro_location", @"addCon"];
+    CGSize itemSize = CGSizeMake(70, 70);
     NSMutableArray *menus = [NSMutableArray array];
+   
     
-    CGSize itemSize = button.frame.size;
     for (NSString *icon in menuIcons) {
         LSFloatingActionMenuItem *item = [[LSFloatingActionMenuItem alloc] initWithImage:[UIImage imageNamed:icon] highlightedImage:[UIImage imageNamed:[icon stringByAppendingString:@"pro_menu"]]];
-        item.itemSize = itemSize;
+        if(button==self.addConnection){
+            if(icon==@"AddConnection")
+                item.itemSize = button.frame.size;
+            else item.itemSize = itemSize;
+                
+        } else item.itemSize = itemSize;
+        
         [menus addObject:item];
     }
     
@@ -150,24 +162,54 @@
     [self.navigationController pushViewController:addScene animated:NO];
     
 }
-
+-(void)toMessage:(UIButton *) sender {
+    //for animation navigating
+    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    //        navigating to matches
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
+    UINavigationController *profileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMatches"];
+    [self.navigationController pushViewController:profileScene animated:NO];
+}
 -(void)tapedNoti:(UIButton *) sender {
-    [self showNotiFromButton:sender withDirection:LSFloatingActionMenuDirectionDown];
+//    [self showNotiFromButton:sender withDirection:LSFloatingActionMenuDirectionDown];
+//    appear notification
+    static int flag_noti = 0;
+    flag_noti++;
+    if(flag_noti%2==1){
+        [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti_acti"] forState:UIControlStateNormal];
+        CGFloat notiWidth = 49;
+        CGFloat notiHeight = 100;
+        
+        notiBackView = [[UIImageView alloc] initWithFrame:CGRectMake(sender.frame.origin.x + sender.frame.size.width+10, sender.frame.origin.y, notiWidth, notiHeight)];
+        [notiBackView setImage:[UIImage imageNamed:@"notify"]];
+        [notiBackView sizeToFit];
+        [self.view addSubview:notiBackView];
+    }else {
+        [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti"] forState:UIControlStateNormal];
+        [notiBackView removeFromSuperview];
+    }
+    
+    
+    CGFloat profileWidth = 62;
+    UIButton *myProfile = [[UIButton alloc] init];
+    myProfile.frame = CGRectMake(0, 0 , profileWidth,profileWidth);
+    [myProfile setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+    myProfile.imageView.contentMode =UIViewContentModeScaleAspectFill;
+    [myProfile addTarget:self action:@selector(toMessage:) forControlEvents:UIControlEventTouchUpInside];
+    myProfile.layer.cornerRadius = myProfile.frame.size.width / 2;
+    myProfile.clipsToBounds = YES;
+    myProfile.layer.borderWidth = 9.03f;
+    myProfile.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+//    [notiBackView addSubview:myProfile];
+//    [self.view addSubview:myProfile];
 }
 - (void)showNotiFromButton:(UIButton *)button withDirection:(LSFloatingActionMenuDirection)direction {
     button.hidden = YES;
     NSArray *menuIcons;
-    if(button==self.notificationButton){
-        if(themKind==StandardTheme)
-            menuIcons = @[@"noti", @"sunglassesGirl",@"cityStudent"];
-        else menuIcons = @[@"pro_noti_acti", @"sunglassesGirl",@"cityStudent"];
-    }
-    else {
-        if(themKind==StandardTheme)
-            menuIcons = @[@"message", @"sunglassesGirl",@"cityStudent"];
-        else
-            menuIcons = @[@"pro_message", @"sunglassesGirl",@"cityStudent"];
-    }
+    if(themKind==StandardTheme)
+        menuIcons = @[@"noti", @"sunglassesGirl",@"cityStudent"];
+    else menuIcons = @[@"pro_noti_acti", @"sunglassesGirl",@"cityStudent"];
     NSMutableArray *menus = [NSMutableArray array];
     
     CGSize itemSize = button.frame.size;
@@ -180,7 +222,7 @@
             CGRect cropRect = CGRectMake(0, 0, rectWidth, rectWidth); //set your rect size.
             croppedImg = croppIngimageByImageName(IconImage, cropRect);
             IconImage = makeRoundedImage(croppedImg,rectWidth/2);
-            //        IconImage = imageWithBorderFromImage(IconImage);
+            IconImage = imageWithBorderFromImage(IconImage);
         }
         LSFloatingActionMenuItem *item = [[LSFloatingActionMenuItem alloc] initWithImage:IconImage highlightedImage:[UIImage imageNamed:[icon stringByAppendingString:@"pro_menu"]]];
         item.itemSize = itemSize;

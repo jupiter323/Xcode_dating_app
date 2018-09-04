@@ -20,6 +20,8 @@
     UIView *bottomView;
     UIView *layer;
     UIScrollView * forBottomScrollView;
+    CGFloat cardWidth;
+    CGFloat cardRatio;
 }
 
 
@@ -38,6 +40,7 @@
     
 }
 -(void)viewDidDisappear:(BOOL)animated{
+    
     for(UIView * subViews in self.pageScrollView.subviews){
         subViews.removeFromSuperview;
     }
@@ -46,7 +49,8 @@
     //    scroll
     CGFloat width = self.pageScrollView.frame.size.width;
     CGFloat height = self.pageScrollView.frame.size.height;
-    
+    cardWidth = self.view.bounds.size.width - 38*2;
+    cardRatio = 299.88/466.48;
     
     ////slide pages
     //////
@@ -94,13 +98,14 @@
     
     //////adding card to centertopview
 
-    cardsSwipingView = [[MXCardsSwipingView alloc] initWithFrame:CGRectMake(0, 60, width, height - 120)];
-    UIView *coverCard = [[UIView alloc]initWithFrame:CGRectMake(0, 60, width, height - 120)];
+    cardsSwipingView = [[MXCardsSwipingView alloc] initWithFrame:CGRectMake(38, 119, cardWidth, cardWidth / cardRatio)];
+    UIView *coverCard = [[UIView alloc]initWithFrame:CGRectMake(38, 119, cardWidth, cardWidth / cardRatio)];
     
     cardsSwipingView.delegate = self;
-    OnCard* card = [[OnCard alloc] initWithFrame:CGRectMake(0, 0, width - 40, (height - 250)/[OnCard aspectRatio])];
+    OnCard* card = [[OnCard alloc] initWithFrame:CGRectMake(0, 0, cardWidth, cardWidth / cardRatio)];
+    [card setup:Center];
     [card setupWithAModel:Center];
-    [card addShadow];
+//    [card addShadow];
     [cardsSwipingView enqueueCard:card];
     
     [centerTopView addSubview:cardsSwipingView];
@@ -286,12 +291,14 @@
 }
 - (void)addCard {
     OnCard* leftCard = [[OnCard alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width/2-20 , self.view.bounds.size.height/3)];
+    [leftCard setup:LeftSecion];
     leftCard.tag = LeftSecion;
     [leftCard setupWithAModel:LeftSecion];
     [leftCard addShadow];
     [cardsLeftSwipingView enqueueCard:leftCard];
     
     OnCard* RightCard = [[OnCard alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width/2-20 , self.view.bounds.size.height/3)];
+    [RightCard setup:RightSection];
     RightCard.tag = RightSection;
     [RightCard setupWithAModel:RightSection];
     [RightCard addShadow];
