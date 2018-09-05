@@ -35,7 +35,8 @@
     self.returnButton = [[UIButton alloc] init];
     [self.returnButton setImage:[UIImage imageNamed:@"pro_close"] forState:UIControlStateNormal];
     [self.returnButton sizeToFit];
-    self.returnButton.frame = CGRectMake(20,20, self.returnButton.bounds.size.width, self.returnButton.bounds.size.height);
+    self.returnButton.frame = CGRectMake(20,34, self.returnButton.bounds.size.width, self.returnButton.bounds.size.height);
+ 
     [self.returnButton addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.returnButton];
     //    float buttons menu

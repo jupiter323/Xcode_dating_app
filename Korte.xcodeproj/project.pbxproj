@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2287A49515E261FA5ACBECE0 /* Pods_Korte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */; };
+		CE1778A7213FEF2700764C3B /* gothamroundedmedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778A6213FEEFB00764C3B /* gothamroundedmedium_21022.ttf */; };
+		CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */; };
+		CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */; };
 		CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B3212AE081004CACDB /* MatchesViewController.m */; };
 		CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
@@ -49,6 +52,9 @@
 		0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
 		66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
+		CE1778A6213FEEFB00764C3B /* gothamroundedmedium_21022.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothamroundedmedium_21022.ttf; sourceTree = "<group>"; };
+		CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBold_21016.ttf; sourceTree = "<group>"; };
+		CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBook_21018.ttf; sourceTree = "<group>"; };
 		CE18E2B2212AE081004CACDB /* MatchesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
 		CE18E2B3212AE081004CACDB /* MatchesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
 		CE18E2B8212B5A37004CACDB /* SearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
@@ -129,6 +135,16 @@
 				0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE1778A4213FEE0000764C3B /* font */ = {
+			isa = PBXGroup;
+			children = (
+				CE1778A6213FEEFB00764C3B /* gothamroundedmedium_21022.ttf */,
+				CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */,
+				CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 		CE1CCF56211B017900AD8701 /* SubModules */ = {
@@ -330,6 +346,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE1778A4213FEE0000764C3B /* font */,
 				CE598E3C2138097C00306488 /* IDVerifyModule */,
 				CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */,
 				CEDF2A58212A8EE30046D01E /* MatchesModule */,
@@ -508,7 +525,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */,
 				CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */,
+				CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
 				CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */,
@@ -517,6 +536,7 @@
 				CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */,
 				CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */,
 				CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */,
+				CE1778A7213FEF2700764C3B /* gothamroundedmedium_21022.ttf in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
