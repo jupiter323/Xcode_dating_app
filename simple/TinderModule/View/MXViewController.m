@@ -76,26 +76,6 @@
     
     
 }
--(void)toProfile:(UIButton *) sender{
-    //    for animation navigating
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionPush; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-    transition.subtype = kCATransitionFromTop; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-    
-    
-    //    navigating to profile
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
-    UINavigationController *profileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idProfile"];
-    
-    [self.navigationController pushViewController:profileScene animated:NO];
-    
-}
-
-
-
 - (BOOL)cardsSwipingView:(MXCardsSwipingView *)cardsSwipingView willDismissCard:(UIView *)card destination:(MXCardDestination)destination {
   
     switch (destination) {

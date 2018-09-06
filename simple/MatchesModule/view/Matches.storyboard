@@ -57,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="103" width="375" height="328"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="72" id="56a-vX-FKP" customClass="SearchTableViewCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="72" id="56a-vX-FKP" customClass="MSCMoreOptionTableViewCell">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56a-vX-FKP" id="fde-2F-uni">
@@ -86,13 +86,39 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNj-rp-Hwn">
+                                                            <rect key="frame" x="299" y="19" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvt-EN-ZuH">
+                                                            <rect key="frame" x="299" y="40" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6C-nR-igw">
+                                                            <rect key="frame" x="316" y="46" width="8" height="8"/>
+                                                            <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="8" id="jSc-Zb-3Iv"/>
+                                                                <constraint firstAttribute="height" constant="8" id="ucg-MP-drz"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <gestureRecognizers/>
                                                     <constraints>
+                                                        <constraint firstItem="fvt-EN-ZuH" firstAttribute="centerX" secondItem="dNj-rp-Hwn" secondAttribute="centerX" id="F3v-7o-esy"/>
+                                                        <constraint firstItem="fvt-EN-ZuH" firstAttribute="top" secondItem="0Lz-AF-gcW" secondAttribute="centerY" constant="5" id="MFx-Gr-UBg"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="dNj-rp-Hwn" secondAttribute="trailing" constant="19" id="POQ-aN-2qg"/>
                                                         <constraint firstItem="kmC-Kh-FU2" firstAttribute="leading" secondItem="fde-2F-uni" secondAttribute="leading" constant="106" id="PY0-Nu-6wh"/>
+                                                        <constraint firstItem="S6C-nR-igw" firstAttribute="top" secondItem="0Lz-AF-gcW" secondAttribute="bottom" constant="-17.5" id="U0M-Xa-bfr"/>
                                                         <constraint firstItem="6yb-a3-AbE" firstAttribute="top" secondItem="fde-2F-uni" secondAttribute="topMargin" constant="25" id="UnK-CC-zju"/>
                                                         <constraint firstItem="0Lz-AF-gcW" firstAttribute="centerY" secondItem="fde-2F-uni" secondAttribute="centerY" id="gVb-Vo-cD3"/>
                                                         <constraint firstItem="6yb-a3-AbE" firstAttribute="leading" secondItem="kmC-Kh-FU2" secondAttribute="leading" id="hOS-2D-yVT"/>
+                                                        <constraint firstItem="0Lz-AF-gcW" firstAttribute="centerY" secondItem="dNj-rp-Hwn" secondAttribute="bottom" constant="-5" id="jWj-bh-zMu"/>
+                                                        <constraint firstItem="S6C-nR-igw" firstAttribute="centerX" secondItem="dNj-rp-Hwn" secondAttribute="centerX" id="ker-1B-jPC"/>
                                                         <constraint firstItem="kmC-Kh-FU2" firstAttribute="top" secondItem="fde-2F-uni" secondAttribute="topMargin" constant="9" id="sRi-2Z-yds"/>
                                                         <constraint firstItem="0Lz-AF-gcW" firstAttribute="leading" secondItem="fde-2F-uni" secondAttribute="leading" constant="32.200000000000003" id="u0K-pd-GF3"/>
                                                     </constraints>
@@ -101,9 +127,12 @@
                                                     </connections>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="avatar" destination="0Lz-AF-gcW" id="bF9-rC-IgC"/>
-                                                    <outlet property="messageLabel" destination="6yb-a3-AbE" id="Kaq-HP-hag"/>
-                                                    <outlet property="nameLabel" destination="kmC-Kh-FU2" id="1D7-eH-kcD"/>
+                                                    <outlet property="avatar" destination="0Lz-AF-gcW" id="623-RL-Jeb"/>
+                                                    <outlet property="dateLabel" destination="dNj-rp-Hwn" id="nod-N6-PZj"/>
+                                                    <outlet property="messageLabel" destination="6yb-a3-AbE" id="0Ek-4V-Heu"/>
+                                                    <outlet property="nameLabel" destination="kmC-Kh-FU2" id="xBf-ea-b0L"/>
+                                                    <outlet property="pinkDot" destination="S6C-nR-igw" id="0kO-hh-Q8I"/>
+                                                    <outlet property="timeLabel" destination="fvt-EN-ZuH" id="EEM-u2-e5o"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

@@ -58,7 +58,7 @@
     [self.messageButton setImage:[UIImage imageNamed:@"pro_message"] forState:UIControlStateNormal];
     [self.messageButton sizeToFit];
     self.messageButton.frame = CGRectMake(self.view.bounds.size.width-15-self.messageButton.bounds.size.width, 33, self.messageButton.bounds.size.width, self.messageButton.bounds.size.height);
-    [self.messageButton addTarget:self action:@selector(toMessage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.messageButton addTarget:self action:@selector(toMatches:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.messageButton];
     
     //    Notification buttons menu

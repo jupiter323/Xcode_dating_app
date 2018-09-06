@@ -20,7 +20,7 @@
 -(void)tapedNoti:(UIButton *) sender;
 -(void)tapedToggle:(UIButton *) sender;
 -(void) navAnimating:(NSString *) type subtype:(NSString *) subtype;
--(void)toMessage:(UIButton *) sender;
+-(void)toMatches:(UIButton *) sender;
 @property (strong, nonatomic) UIButton *messageButton;
 @property (strong, nonatomic) UIButton *returnButton;
 @property (strong, nonatomic) UIButton *notificationButton;

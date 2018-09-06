@@ -12,7 +12,6 @@
 		CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */; };
 		CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */; };
 		CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B3212AE081004CACDB /* MatchesViewController.m */; };
-		CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */; };
 		CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */; };
 		CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6CF212EF0820094C0E9 /* FriendsTableViewCell.m */; };
 		CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6D6212F28B50094C0E9 /* MeTableViewCell.m */; };
@@ -22,6 +21,7 @@
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
+		CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */; };
 		CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */; };
 		CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72D21243C1900C6E9F7 /* OnCard.m */; };
 		CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4DF73A21246DC200C6E9F7 /* Location.storyboard */; };
@@ -57,8 +57,6 @@
 		CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBook_21018.ttf; sourceTree = "<group>"; };
 		CE18E2B2212AE081004CACDB /* MatchesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
 		CE18E2B3212AE081004CACDB /* MatchesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
-		CE18E2B8212B5A37004CACDB /* SearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
-		CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		CE1CCF53211AFFB800AD8701 /* BasicMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicMenuController.h; sourceTree = "<group>"; };
 		CE1CCF54211AFFB800AD8701 /* BasicMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicMenuController.m; sourceTree = "<group>"; };
 		CE1FC6CE212EF0820094C0E9 /* FriendsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewCell.h; sourceTree = "<group>"; };
@@ -75,6 +73,9 @@
 		CE3D2BCE211C7C5F005DE85C /* AddingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingViewController.h; sourceTree = "<group>"; };
 		CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddingViewController.m; sourceTree = "<group>"; };
 		CE3D333D2118F54400FE970D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		CE47908E2140D97B004DA76F /* MSCMoreOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCell.h; sourceTree = "<group>"; };
+		CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCMoreOptionTableViewCell.m; sourceTree = "<group>"; };
+		CE4790902140D97B004DA76F /* MSCMoreOptionTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCellDelegate.h; sourceTree = "<group>"; };
 		CE4DF72A21243C1800C6E9F7 /* AddingFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddingFriendViewController.h; sourceTree = "<group>"; };
 		CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingFriendViewController.m; sourceTree = "<group>"; };
 		CE4DF72C21243C1900C6E9F7 /* OnCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnCard.h; sourceTree = "<group>"; };
@@ -220,6 +221,16 @@
 				CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */,
 			);
 			path = AddConnect;
+			sourceTree = "<group>";
+		};
+		CE47908C2140D97B004DA76F /* MSCMoreOptionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE47908E2140D97B004DA76F /* MSCMoreOptionTableViewCell.h */,
+				CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */,
+				CE4790902140D97B004DA76F /* MSCMoreOptionTableViewCellDelegate.h */,
+			);
+			path = MSCMoreOptionTableViewCell;
 			sourceTree = "<group>";
 		};
 		CE4DF71F2123E2B500C6E9F7 /* FriendConnect */ = {
@@ -401,6 +412,7 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE47908C2140D97B004DA76F /* MSCMoreOptionTableViewCell */,
 				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CE1CCF56211B017900AD8701 /* SubModules */,
 				CE3D333D2118F54400FE970D /* Utilities.h */,
@@ -450,8 +462,6 @@
 				CEDF2A59212A90FD0046D01E /* Matches.storyboard */,
 				CE18E2B2212AE081004CACDB /* MatchesViewController.h */,
 				CE18E2B3212AE081004CACDB /* MatchesViewController.m */,
-				CE18E2B8212B5A37004CACDB /* SearchTableViewCell.h */,
-				CE18E2B9212B5A37004CACDB /* SearchTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -618,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
+				CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
@@ -628,7 +639,6 @@
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
 				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
-				CE18E2BA212B5A37004CACDB /* SearchTableViewCell.m in Sources */,
 				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,

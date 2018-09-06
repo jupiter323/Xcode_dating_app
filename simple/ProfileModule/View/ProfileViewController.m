@@ -91,7 +91,7 @@
     avatar.frame = CGRectMake(self.view.bounds.size.width/2-self.view.bounds.size.width/12, self.view.bounds.size.height/5-self.view.bounds.size.width/18, self.view.bounds.size.width/6, self.view.bounds.size.width/6);
     [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
     avatar.imageView.contentMode =UIViewContentModeScaleAspectFill;
-    [avatar addTarget:self action:@selector(goBackToTinder:) forControlEvents:UIControlEventTouchUpInside];
+    [avatar addTarget:self action:@selector(returnFun:) forControlEvents:UIControlEventTouchUpInside];
     avatar.layer.cornerRadius = avatar.frame.size.width / 2;
     avatar.clipsToBounds = YES;
     avatar.layer.borderWidth = 5.0f;
@@ -260,17 +260,6 @@
     
 }
 
--(void)goBackToTinder:(UIButton *) sender{
-    //    animating
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionPush; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-    transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-    //    navigating
-    [self.navigationController popViewControllerAnimated:NO];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

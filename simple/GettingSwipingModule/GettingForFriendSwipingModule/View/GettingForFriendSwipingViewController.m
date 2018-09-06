@@ -115,9 +115,9 @@
     cell.requestView.frame =  CGRectMake(cell.name.frame.origin.x + cell.name.frame.size.width+10, (buttonWidth-23)/2, 93, 23);
     cell.requestView.layer.cornerRadius = 4;
     if(arr[indexPath.row][@"requestStatus"]==@"ok")
-    cell.requestView.backgroundColor = UIColorWithHexString(@"#f69226");
+        cell.requestView.backgroundColor = UIColorWithHexString(@"#f69226");
     else
-    cell.requestView.backgroundColor = UIColorWithHexString(@"#f8b368");
+        cell.requestView.backgroundColor = UIColorWithHexString(@"#f8b368");
     
  
     cell.requestLabel.frame = CGRectMake(0,0, 93, 23);

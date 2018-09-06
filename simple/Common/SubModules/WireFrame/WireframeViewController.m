@@ -88,19 +88,15 @@
 }
 -(void)returnFun:(UIButton *) sender {
     //    animating
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionFade; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
-    transition.subtype = kCATransitionFromBottom; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
-    [self.navigationController.view.layer addAnimation:transition forKey:nil];
+    [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
+  
     //    navigating
     [self.navigationController popViewControllerAnimated:NO];
 }
 -(void) navAnimating:(NSString *) type subtype:(NSString *) subtype{
     //    for animation navigating
     CATransition* transition = [CATransition animation];
-    transition.duration = 0.5;
+    transition.duration = 0.7;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = type; //kCATransitionMoveIn; //, kCATransitionPush, kCATransitionReveal, kCATransitionFade
     transition.subtype = subtype; //kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom
@@ -109,7 +105,7 @@
 }
 -(void)toMatches{
     //for animation navigating
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
     
     //    navigating to profile
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
@@ -117,9 +113,19 @@
     [self.navigationController pushViewController:profileScene animated:NO];
     
 }
+-(void)toMatches:(UIButton *) sender{
+    //for animation navigating
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
+    
+    //    navigating to profile
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
+    UINavigationController *profileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMatches"];
+    [self.navigationController pushViewController:profileScene animated:NO];
+    
+}
 -(void)toProfile:(UIButton *) sender{
   //for animation navigating
-    [self navAnimating:kCATransitionPush subtype:kCATransitionFromTop];
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
     
     //    navigating to profile
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
@@ -131,7 +137,7 @@
 -(void)toLocation {
 
     //for animation navigating
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
     
     //        navigating to location
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Location" bundle:nil];
@@ -143,7 +149,7 @@
 -(void)toAddConnection:(UIButton *)sender {
     
     //for animation navigating
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
     //        navigating to addconnection
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
     UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
@@ -154,7 +160,7 @@
 -(void)toAddConnection {
 
     //for animation navigating
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
     //        navigating to addconnection
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
     UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
@@ -162,14 +168,7 @@
     [self.navigationController pushViewController:addScene animated:NO];
     
 }
--(void)toMessage:(UIButton *) sender {
-    //for animation navigating
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
-    //        navigating to matches
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
-    UINavigationController *profileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMatches"];
-    [self.navigationController pushViewController:profileScene animated:NO];
-}
+
 -(void)tapedNoti:(UIButton *) sender {
 //    [self showNotiFromButton:sender withDirection:LSFloatingActionMenuDirectionDown];
 //    appear notification
@@ -195,14 +194,12 @@
     myProfile.frame = CGRectMake(0, 0 , profileWidth,profileWidth);
     [myProfile setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
     myProfile.imageView.contentMode =UIViewContentModeScaleAspectFill;
-    [myProfile addTarget:self action:@selector(toMessage:) forControlEvents:UIControlEventTouchUpInside];
+    [myProfile addTarget:self action:@selector(toMatches:) forControlEvents:UIControlEventTouchUpInside];
     myProfile.layer.cornerRadius = myProfile.frame.size.width / 2;
     myProfile.clipsToBounds = YES;
     myProfile.layer.borderWidth = 9.03f;
     myProfile.layer.borderColor = [UIColor whiteColor].CGColor;
-    
-//    [notiBackView addSubview:myProfile];
-//    [self.view addSubview:myProfile];
+
 }
 - (void)showNotiFromButton:(UIButton *)button withDirection:(LSFloatingActionMenuDirection)direction {
     button.hidden = YES;
@@ -238,7 +235,7 @@
                 break;
             case 2:
                 //                location
-                //                [self toLocation];
+            
                 break;
             case 3:
                 NSLog(@"3 clicked");

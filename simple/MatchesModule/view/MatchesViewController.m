@@ -7,8 +7,8 @@
 //
 
 #import "MatchesViewController.h"
-
-@interface MatchesViewController (){
+#import "MSCMoreOptionTableViewCell.h"
+@interface MatchesViewController () <MSCMoreOptionTableViewCellDelegate>{
     UIScrollView *matches;
     
     NSMutableArray *contentList;
@@ -21,13 +21,23 @@
 @end
 
 @implementation MatchesViewController
+////////////////////////////////////////////////////////////////////////
+#pragma mark - Initializer
+////////////////////////////////////////////////////////////////////////
+
+//- (instancetype)initWithStyle:(UITableViewStyle)style {
+//    self = [super initWithStyle:style];
+//    if (self) {
+//    }
+//    return self;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //search bar style
     UITextField *searchTextField = [((UITextField *)[self.searchBar.subviews objectAtIndex:0]).subviews lastObject];
-    searchTextField.layer.cornerRadius = 19.0f;
+    searchTextField.layer.cornerRadius = 16.0f;
     searchTextField.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1];
     searchTextField.layer.borderWidth = 1;
     searchTextField.layer.borderColor = [[UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1] CGColor];
@@ -99,14 +109,31 @@
         avatar.layer.borderColor = [[UIColor whiteColor] CGColor];
         avatar.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0];
         [matches addSubview:avatar];
+        
+        //// subbuton
+        CGFloat subbuttonWidth = 27;
+        UIButton * connectRightBottomButton=[[UIButton alloc] init];
+        connectRightBottomButton.frame=CGRectMake(avatar.frame.origin.x+avatarWidth-subbuttonWidth*1.2,avatar.frame.origin.y+avatarWidth - subbuttonWidth, subbuttonWidth, subbuttonWidth);
+        if(i==0)
+            [connectRightBottomButton setImage:[UIImage imageNamed:@"logomatch"] forState:UIControlStateNormal];
+        else if(i==1)
+            [connectRightBottomButton setImage:[UIImage imageNamed:@"logomatch"] forState:UIControlStateNormal];
+        else
+            [connectRightBottomButton setImage:nil forState:UIControlStateNormal];
+        [matches addSubview:connectRightBottomButton];
     }
     matches.showsVerticalScrollIndicator = NO;
     matches.showsHorizontalScrollIndicator = NO;
     [self.view addSubview:matches];
-    //    [self.swipeformeScrollContent setBackgroundColor:UIColorWithHexString(@"#E8E3E3")];
+
 }
 -(void)toMatchProfile:(UIButton *)sender {
     [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
+    UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
+    
+    [self.navigationController pushViewController:addScene animated:NO];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -128,21 +155,57 @@
         return [contentList count];
     }
 }
-
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//}
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *moreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:nil handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        // show UIActionSheet
+        NSLog(@"report button pressed in row at: %@", indexPath.description);
+//         Hide 'unfollow'- and 'report'-confirmation view
+        [tableView.visibleCells enumerateObjectsUsingBlock:^(MSCMoreOptionTableViewCell *cell, NSUInteger idx, BOOL *stop) {
+            if ([[tableView indexPathForCell:cell] isEqual:indexPath]) {
+                [cell hideDeleteConfirmation];
+            }
+        }];
+    }];
+    
+    moreAction.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"report"]];
+    
+    UITableViewRowAction *flagAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:nil handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        // flag the row
+        NSLog(@"unfollow button pressed in row at: %@", indexPath.description);
+        // Hide 'unfollow'- and 'report'-confirmation view
+        [tableView.visibleCells enumerateObjectsUsingBlock:^(MSCMoreOptionTableViewCell *cell, NSUInteger idx, BOOL *stop) {
+            if ([[tableView indexPathForCell:cell] isEqual:indexPath]) {
+                [cell hideDeleteConfirmation];
+            }
+        }];
+    }];
+    flagAction.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"unfollow"]];
+    return @[moreAction, flagAction];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"searchCell";
     
-    SearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MSCMoreOptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
+
+
     //avatar
     
     cell.avatar.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [cell.avatar addTarget:self action:@selector(toMatchProfile:) forControlEvents:UIControlEventTouchUpInside];
     cell.avatar.layer.cornerRadius = cell.avatar.frame.size.width / 2;
     cell.avatar.clipsToBounds = YES;
+    
+    
     // name
     
     cell.nameLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -167,8 +230,56 @@
     cell.messageLabel.attributedText = textString;
     [cell.messageLabel sizeToFit];
   
+    //date label
+   
+    cell.dateLabel .lineBreakMode = NSLineBreakByWordWrapping;
+    cell.dateLabel .numberOfLines = 0;
+    cell.dateLabel .textColor = [UIColor colorWithRed:0.67 green:0.65 blue:0.65 alpha:1];
+    if(indexPath.row==0)
+        textContent = @"Today";
+    else if(indexPath.row == 1)
+        textContent = @"Yesterday";
+    else
+        textContent = @"8/31/2018";
+        
+    textRange = NSMakeRange(0, textContent.length);
+    textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+    font = [UIFont fontWithName:@"GothamRounded-Book" size:9];
+    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+    paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 1.31;
+    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+    [textString addAttribute:NSKernAttributeName value:@(-0.14) range:textRange];
+    cell.dateLabel.attributedText = textString;
+    [cell.dateLabel sizeToFit];
     
-    
+
+    //time label
+    if(indexPath.row!=0){
+        cell.timeLabel.hidden = NO;
+        cell.timeLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        cell.timeLabel.numberOfLines = 0;
+        cell.timeLabel.textColor = [UIColor grayColor];
+        textContent = @"1:20PM";
+        textRange = NSMakeRange(0, textContent.length);
+        textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+        font = [UIFont fontWithName:@"GothamRounded-Book" size:8];
+        [textString addAttribute:NSFontAttributeName value:font range:textRange];
+        paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineSpacing = 1.08;
+        [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+        [textString addAttribute:NSKernAttributeName value:@(-0.13) range:textRange];
+        cell.timeLabel.attributedText = textString;
+        [cell.timeLabel sizeToFit];
+        cell.pinkDot.hidden=YES;
+    }
+    // unread message indicate
+    if(indexPath.row == 0){
+        cell.pinkDot.hidden=NO;
+        cell.pinkDot.backgroundColor = [UIColor colorWithRed:0.93 green:0.49 blue:0.41 alpha:1];
+        cell.pinkDot.layer.cornerRadius = cell.pinkDot.frame.size.width/2;
+        cell.timeLabel.hidden = YES;
+    }
     
     //// Configure the cell...
     if (tableView == self.searchBarController.searchResultsTableView) {
@@ -208,10 +319,39 @@
     return cell;
     
 }
+
+#pragma mark - UITableViewDelegate
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 71;
 }
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+#pragma mark - MSCMoreOptionTableViewCellDelegate
+////////////////////////////////////////////////////////////////////////
+
+//- (void)tableView:(UITableView *)tableView moreOptionButtonPressedInRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // Called when 'more' button is pushed.
+//    NSLog(@"MORE button pressed in row at: %@", indexPath.description);
+//    // Hide 'more'- and 'delete'-confirmation view
+//    [tableView.visibleCells enumerateObjectsUsingBlock:^(MSCMoreOptionTableViewCell *cell, NSUInteger idx, BOOL *stop) {
+//        if ([[tableView indexPathForCell:cell] isEqual:indexPath]) {
+//            [cell hideDeleteConfirmation];
+//        }
+//    }];
+//}
+
+//- (NSString *)tableView:(UITableView *)tableView titleForMoreOptionButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return @"More";
+//}
+
 #pragma mark - Search Function Responsible For Searching
 
 - (void)searchTableList {
