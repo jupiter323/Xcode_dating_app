@@ -22,6 +22,8 @@
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
 		CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */; };
+		CE47909E21423328004DA76F /* DSCircularLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47909C21423328004DA76F /* DSCircularLayout.m */; };
+		CE4790A121424956004DA76F /* FriendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4790A021424956004DA76F /* FriendCollectionViewCell.m */; };
 		CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */; };
 		CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DF72D21243C1900C6E9F7 /* OnCard.m */; };
 		CE4DF73D21246DC200C6E9F7 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4DF73A21246DC200C6E9F7 /* Location.storyboard */; };
@@ -76,6 +78,10 @@
 		CE47908E2140D97B004DA76F /* MSCMoreOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCell.h; sourceTree = "<group>"; };
 		CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCMoreOptionTableViewCell.m; sourceTree = "<group>"; };
 		CE4790902140D97B004DA76F /* MSCMoreOptionTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCellDelegate.h; sourceTree = "<group>"; };
+		CE47909C21423328004DA76F /* DSCircularLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCircularLayout.m; sourceTree = "<group>"; };
+		CE47909D21423328004DA76F /* DSCircularLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCircularLayout.h; sourceTree = "<group>"; };
+		CE47909F21424956004DA76F /* FriendCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendCollectionViewCell.h; sourceTree = "<group>"; };
+		CE4790A021424956004DA76F /* FriendCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendCollectionViewCell.m; sourceTree = "<group>"; };
 		CE4DF72A21243C1800C6E9F7 /* AddingFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddingFriendViewController.h; sourceTree = "<group>"; };
 		CE4DF72B21243C1900C6E9F7 /* AddingFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingFriendViewController.m; sourceTree = "<group>"; };
 		CE4DF72C21243C1900C6E9F7 /* OnCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnCard.h; sourceTree = "<group>"; };
@@ -231,6 +237,15 @@
 				CE4790902140D97B004DA76F /* MSCMoreOptionTableViewCellDelegate.h */,
 			);
 			path = MSCMoreOptionTableViewCell;
+			sourceTree = "<group>";
+		};
+		CE47909B21423303004DA76F /* CollectionCellCricleLayout */ = {
+			isa = PBXGroup;
+			children = (
+				CE47909D21423328004DA76F /* DSCircularLayout.h */,
+				CE47909C21423328004DA76F /* DSCircularLayout.m */,
+			);
+			path = CollectionCellCricleLayout;
 			sourceTree = "<group>";
 		};
 		CE4DF71F2123E2B500C6E9F7 /* FriendConnect */ = {
@@ -412,6 +427,7 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE47909B21423303004DA76F /* CollectionCellCricleLayout */,
 				CE47908C2140D97B004DA76F /* MSCMoreOptionTableViewCell */,
 				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CE1CCF56211B017900AD8701 /* SubModules */,
@@ -434,6 +450,8 @@
 				CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */,
 				CEB6FC9021214488003A7E69 /* AddConnectViewController.m */,
 				CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */,
+				CE47909F21424956004DA76F /* FriendCollectionViewCell.h */,
+				CE4790A021424956004DA76F /* FriendCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -635,8 +653,10 @@
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
+				CE47909E21423328004DA76F /* DSCircularLayout.m in Sources */,
 				CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */,
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
+				CE4790A121424956004DA76F /* FriendCollectionViewCell.m in Sources */,
 				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
 				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,

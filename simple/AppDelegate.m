@@ -23,9 +23,9 @@
     [GMSPlacesClient provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
     
     //     Override point for customization after application launch.
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Matches" bundle:nil];
-//        UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMatches"];
-    
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
+//        UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
+//    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
     UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];
     self.window = [[UIWindow alloc] init];

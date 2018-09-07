@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AddingFriendViewController.h"
+#import "DSCircularLayout.h"
+#import "FriendCollectionViewCell.h"
+
 @interface AddConnectViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end

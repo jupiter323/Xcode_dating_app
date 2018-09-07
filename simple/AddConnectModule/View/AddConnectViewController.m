@@ -14,7 +14,9 @@
     UIScrollView *matches;
     UIView *layer;
     UIView *smalllayer;
-    UIButton *imageButton;
+    UIButton *imageButton;    
+    CGFloat R;
+    CGFloat r;
 }
 @property (weak, nonatomic) IBOutlet UIView *addContainView;
 @property (weak, nonatomic) IBOutlet UIView *swipeForMeScroll;
@@ -25,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *swipeForMeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *returnButton;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation AddConnectViewController
@@ -59,15 +62,163 @@
         if(subView == layer || subView==smalllayer || subView==imageButton)
             [subView removeFromSuperview];
     }
-    for(UIView *subView in self.addContainView.subviews){
-       
-            [subView removeFromSuperview];
-    }
+ 
     
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"friendCell";
+    int i = indexPath.item;
+    r=30;
+    CGFloat smallR = 81;
+    CGFloat rSR = (R-smallR-r*2)/2;
+    CGFloat originX = self.view.frame.size.width/2;
+    CGFloat originY = self.addContainView.frame.origin.y+self.addContainView.frame.size.height/2;
+    CGFloat offsetX = -(originX+ cosf(i*M_PI/5) * (R-r-rSR)-2*r);
+    CGFloat offsetY = -(originY+ sinf(i*M_PI/5) * (R-r-rSR)-2*r);
+    
+    CGFloat x = originX+ cosf(i*M_PI/5) * (R-r-rSR) - r;
+    CGFloat y = originY+ sinf(i*M_PI/5) * (R-r-rSR) - r;
+    FriendCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    cell.avatar.frame = CGRectMake(x+offsetX, y+offsetY, 2*r, 2*r);
+    [cell.avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+    cell.avatar.layer.cornerRadius = 30;
+    cell.avatar.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.avatar.clipsToBounds = YES;
+    
+    ////// adding delete button
+    CGFloat subbuttonR = 10;
+    x =x+r+cosf((i-1)*M_PI/5)*r - subbuttonR;
+    y =y+r+sinf((i-1)*M_PI/5)*r - subbuttonR;
+    cell.subCloseButton.frame = CGRectMake(x+offsetX,y+offsetY , 2*subbuttonR, 2*subbuttonR);
+    [cell.subCloseButton setImage:[UIImage imageNamed:@"closeAvatar"] forState:UIControlStateNormal];
+    cell.subCloseButton.layer.cornerRadius = subbuttonR;
+    cell.subCloseButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.subCloseButton.clipsToBounds = YES;   
+    
+    ////// name
+    x =originX+ cosf(i*M_PI/5) * (R-r-rSR) - r +15;
+    y = originY+ sinf(i*M_PI/5) * (R-r-rSR) - r -13;
+    cell.name.frame =  CGRectMake(x+offsetX, y+offsetY, cell.avatar.frame.size.width, cell.avatar.frame.size.height);
+    cell.name.textColor = [UIColor whiteColor];
+    cell.name.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.name.numberOfLines = 0;
+    cell.name.textColor = [UIColor blackColor];
+    NSString *textContent = @"Ashley";
+    NSRange textRange = NSMakeRange(0, textContent.length);
+    NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+    UIFont *font = [UIFont fontWithName:@"Helvetica Neue" size:10];
+    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 1.2;
+    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+    cell.name.attributedText = textString;
+    [cell.name sizeToFit];
+    
+    ////// adding connect button
+    x = originX+ cosf(i*M_PI/5) * (R-r-rSR) - r;
+    y = originY+ sinf(i*M_PI/5) * (R-r-rSR) - r;
+    CGFloat subbuttonX = x+r-cosf(i*M_PI/5)*r-subbuttonR;
+    CGFloat subbuttonY = y+r-sinf(i*M_PI/5)*r-subbuttonR;
+ 
+    cell.subConnectButton.frame = CGRectMake(subbuttonX+offsetX, subbuttonY+offsetY, 2*subbuttonR, 2*subbuttonR);
+    [cell.subConnectButton setImage:[UIImage imageNamed:@"connectFriends"] forState:UIControlStateNormal];
+    cell.subConnectButton.layer.cornerRadius = subbuttonR;
+    cell.subConnectButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    cell.subConnectButton.clipsToBounds = YES;
+    
+    //////// line
+  
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(x+r-cosf(i*M_PI/5)*r+offsetX, y+r-sinf(i*M_PI/5)*r+offsetY)];
+    [path addLineToPoint:CGPointMake(x+r-cosf(i*M_PI/5)*r - ((rSR-3)*cosf(i*M_PI/5))+offsetX, offsetY+ y+r-sinf(i*M_PI/5)*r- ((rSR-3)*sinf(i*M_PI/5)))];
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [path CGPath];
+    shapeLayer.strokeColor = [[UIColor whiteColor] CGColor];
+    shapeLayer.lineWidth = 4.0;
+    shapeLayer.fillColor = [[UIColor clearColor] CGColor];
+    shapeLayer.cornerRadius = 2;
+    [cell.layer addSublayer:shapeLayer];/////////// need customizing
+    
+    
+    ////// percentage show view
+    cell.percentView.frame = CGRectMake(0, 0, 2*r, 2*r);
+    [cell.percentView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
+    UILabel *textLayer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 2*r, 2*r)];
+    textLayer.textColor = [UIColor colorWithRed:0.92 green:0.91 blue:0.91 alpha:1];
+    textLayer.textAlignment = UITextAlignmentCenter;
+    textLayer.text = @"50%";
+    [cell.percentView addSubview:textLayer];
+    
+    ////// tap to connect button
+    cell.tapToButton.frame = CGRectMake(0, 0, 2*r, 2*r);
+    [cell.tapToButton setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.7]];
+    UILabel *tapTotextLayer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 2*r, r)];
+    tapTotextLayer.textColor = [UIColor grayColor];
+    tapTotextLayer.textAlignment = UITextAlignmentCenter;
+    tapTotextLayer.text = @"Tap to connect";
+    tapTotextLayer.numberOfLines = 2;
+    [tapTotextLayer setFont:[UIFont systemFontOfSize:10]];
+    
+    UILabel *expireTextLayer = [[UILabel alloc] initWithFrame:CGRectMake(0+8,0+ r-5, 2*r-16, r)];
+    expireTextLayer.textColor = [UIColor colorWithRed:0.82 green:0.02 blue:0.02 alpha:1];
+    expireTextLayer.textAlignment = UITextAlignmentCenter;
+    expireTextLayer.text = @"Expires in 24 HRS";
+    expireTextLayer.numberOfLines = 2;
+    [expireTextLayer setFont:[UIFont systemFontOfSize:7]];
+    
+    [cell.tapToButton addSubview:tapTotextLayer];
+    [cell.tapToButton addSubview:expireTextLayer];
+  
+    switch (i) {
+        case 0:
+            cell.status = AddingConnectButton;
+            break;
+            
+        case 1:
+            cell.status = LoadingState;
+            break;
+            
+        case 2:
+            cell.status = LoadedState;
+            break;
+        case 3:
+            cell.status = LoadedState;
+            break;
+        case 4:
+            cell.status = TapToConnectState;
+            break;
+        default:
+            cell.status = DisappearedState;
+            break;
+    }
+    
+    [cell dataConfig];
+    
+    
+    return cell;
+}
+
+
 - (void)viewDidAppear:(BOOL)animated{
+    //collection layout
+    R =self.addContainView.frame.size.width/2;
+    r = 30;
+
+    DSCircularLayout *circularLayout = [[DSCircularLayout alloc] init];
+    [circularLayout initWithCentre:CGPointMake(0, 0)
+                            radius:R
+                          itemSize:CGSizeMake(2*r, 2*r)
+                 andAngularSpacing:20];
+    circularLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self.collectionView setCollectionViewLayout:circularLayout];
     
     
+   
     //    with friends connect
     self.connectWithFriendsLabel.attributedText = attributedString(@"Connect with Friends",StandardColor(),2.22f);
     
@@ -79,17 +230,15 @@
     self.infoButton.backgroundColor = [UIColor colorWithRed:0.98 green:0.74 blue:0.48 alpha:1];
     self.infoButton.layer.cornerRadius = self.infoButton.frame.size.width/2;
     
-    // contain circle
+    // collection circle
     
     CGFloat originX = self.view.frame.size.width/2;
     CGFloat originY = self.addContainView.frame.origin.y+self.addContainView.frame.size.height/2;
     CGFloat smallR = 81;
-    CGFloat R =self.addContainView.frame.size.width/2;
-    
-    [self.addContainView setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
-    self.addContainView.layer.cornerRadius= R;
+    [self.collectionView setBackgroundColor:[UIColor colorWithRed:0.94 green:0.49 blue:0.4 alpha:0.6]];
+    self.collectionView.layer.cornerRadius= R;
     //// add friends connect
-    CGFloat r = 30;
+//    CGFloat r = 30;
     CGFloat rSR = (R-smallR-r*2)/2;
     for(int i = 0;i<10;i++){
         i = -i;
@@ -97,12 +246,13 @@
         CGFloat x = originX+ cosf(i*M_PI/5) * (R-r-rSR) - r;
         CGFloat y = originY+ sinf(i*M_PI/5) * (R-r-rSR) - r;
         UIButton * avatar = [[UIButton alloc]init];
+        avatar = [[UIButton alloc]init];
         avatar.frame = CGRectMake(x, y, 2*r, 2*r);
         [avatar setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
         avatar.layer.cornerRadius = r;
         avatar.imageView.contentMode = UIViewContentModeScaleAspectFill;
         avatar.clipsToBounds = YES;
-        
+     
         ////// name
         UILabel *name = [[UILabel alloc] initWithFrame:CGRectMake(x+15, y-13, avatar.frame.size.width, avatar.frame.size.height)];
         name.textColor = [UIColor whiteColor];
@@ -187,44 +337,51 @@
       
         
         i=-i;
-        switch (i) {
-            case 0://////adding connect button
-                [self.view addSubview: avatar];
-                [avatar setImage:[UIImage imageNamed:@"plus"] forState:UIControlStateNormal];
-               
-//                avatar.layer.frame = CGRectMake(0, 0, 2*r, 2*r);
-                avatar.layer.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.17].CGColor;
-                avatar.layer.borderWidth = 2;
-                avatar.layer.borderColor = [[UIColor whiteColor] CGColor];
-                avatar.layer.cornerRadius = r;
-                [avatar addTarget:self action:@selector(goToMeSwiping:) forControlEvents:UIControlEventTouchUpInside];
-                break;
-            case 1:
-                [self.view addSubview: avatar];
-                [[self view] addSubview:name];
-                [avatar addSubview:percentView];
-                break;
-            case 2:
-                [self.view addSubview: avatar];
-                [[self view] addSubview:name];
-                [self.view.layer addSublayer:shapeLayer];
-                [self.view addSubview: subConnectButton];
-                break;
-            case 3:
-                [self.view addSubview: avatar];
-                [[self view] addSubview:name];
-                [self.view addSubview:subCloseButton];
-                [self.view.layer addSublayer:shapeLayer];
-                [self.view addSubview: subConnectButton];
-                break;
-            case 4:
-                [self.view addSubview: avatar];
-                [[self view] addSubview:name];
-                [avatar addSubview:tapToButton];
-                break;
-            default:
-                break;
-        }
+//        switch (i) {
+//            case 0://////adding connect button
+//                [self.view addSubview: avatar];
+//                [avatar setImage:[UIImage imageNamed:@"plus"] forState:UIControlStateNormal];
+//
+////                avatar.layer.frame = CGRectMake(0, 0, 2*r, 2*r);
+//                avatar.layer.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.17].CGColor;
+//                avatar.layer.borderWidth = 2;
+//                avatar.layer.borderColor = [[UIColor whiteColor] CGColor];
+//                avatar.layer.cornerRadius = r;
+//                [avatar addTarget:self action:@selector(goToMeSwiping:) forControlEvents:UIControlEventTouchUpInside];
+//                break;
+//            case 1://////loading state avatar
+//                [self.view addSubview: avatar];
+//                [[self view] addSubview:name];
+//                [avatar addSubview:percentView];
+//                break;
+//            case 2://////loaded state avatar
+//
+//                [self.view addSubview: avatar];
+//                [[self view] addSubview:name];
+//                [self.view.layer addSublayer:shapeLayer];
+//                [self.view addSubview: subConnectButton];
+//
+//                break;
+//            case 3://////loaded state avatar
+//
+//                [self.view addSubview: avatar];
+//                [[self view] addSubview:name];
+//                [self.view addSubview:subCloseButton];
+//                [self.view.layer addSublayer:shapeLayer];
+//                [self.view addSubview: subConnectButton];
+//
+//
+//                [avatar addTarget:self action:@selector(avatarClicked:) forControlEvents:UIControlEventTouchUpInside];
+//
+//                break;
+//            case 4://////tapp to connect avatar
+//                [self.view addSubview: avatar];
+//                [[self view] addSubview:name];
+//                [avatar addSubview:tapToButton];
+//                break;
+//            default:
+//                break;
+//        }
         
         
         
@@ -329,7 +486,10 @@
     
 }
 //
-
+-(void)avatarClicked:(UIButton *)sender{
+    NSLog(@"first cliced");
+  
+}
 -(void)goToMeSwiping:(UIButton *)sender{
     //    animating
     CATransition* transition = [CATransition animation];

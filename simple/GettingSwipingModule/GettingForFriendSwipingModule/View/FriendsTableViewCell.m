@@ -9,7 +9,6 @@
 #import "FriendsTableViewCell.h"
 
 @implementation FriendsTableViewCell
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
