@@ -53,7 +53,7 @@
     CGFloat R = self.radius;
     CGFloat r = self.itemSize.width / 2;
     CGFloat rSR = (R-smallR-r*2)/2;
-    int i = indexPath.item;
+    int i = -indexPath.item;
     CGFloat x = originX+ cosf(i*M_PI/5) * (R-r-rSR);
     CGFloat y = originY+ sinf(i*M_PI/5) * (R-r-rSR);
     

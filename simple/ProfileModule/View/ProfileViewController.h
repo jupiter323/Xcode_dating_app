@@ -7,8 +7,11 @@
 //
 #import "BasicMenuController.h"
 #import <UIKit/UIKit.h>
-
-@interface ProfileViewController : BasicMenuController
+#import "MKDropdownMenu.h"
+@interface ProfileViewController : BasicMenuController<MKDropdownMenuDelegate, MKDropdownMenuDataSource>
 @property (weak, nonatomic) IBOutlet UIView *verifyView;
+@property (weak, nonatomic) IBOutlet UILabel *holdLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *idVerifyView;
 
 @end
