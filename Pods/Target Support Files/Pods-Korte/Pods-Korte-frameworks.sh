@@ -147,6 +147,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework"
   install_framework "${PODS_ROOT}/AffdexSDK-iOS/ios/Affdex.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -154,6 +155,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework"
   install_framework "${PODS_ROOT}/AffdexSDK-iOS/ios/Affdex.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

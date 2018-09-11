@@ -21,6 +21,8 @@
 -(void)tapedToggle:(UIButton *) sender;
 -(void) navAnimating:(NSString *) type subtype:(NSString *) subtype;
 -(void)toMatches:(UIButton *) sender;
+-(void)toChatbox:(UIButton *)sender;
+-(void)toMatchProfile:(UIButton *)sender;
 @property (strong, nonatomic) UIButton *messageButton;
 @property (strong, nonatomic) UIButton *returnButton;
 @property (strong, nonatomic) UIButton *notificationButton;

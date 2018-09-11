@@ -35,6 +35,11 @@
 		CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE603A46211DA4C4006E95F3 /* MXCardsSwipingView.m */; };
 		CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */; };
 		CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */; };
+		CE7A350C2146F34D00973CB8 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7A35052146F34C00973CB8 /* Chat.storyboard */; };
+		CE7A350E2146F34D00973CB8 /* ChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A350A2146F34D00973CB8 /* ChatController.m */; };
+		CE7A350F2146F34D00973CB8 /* MessageModal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A350B2146F34D00973CB8 /* MessageModal.m */; };
+		CE7A351921470D9900973CB8 /* MatchProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A351821470D9900973CB8 /* MatchProfileViewController.m */; };
+		CE7A351B214711B300973CB8 /* MProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7A351A214711B300973CB8 /* MProfile.storyboard */; };
 		CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
@@ -47,6 +52,8 @@
 		CEB2876F211432C700C51670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2876D211432C700C51670 /* LaunchScreen.storyboard */; };
 		CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB6FC9021214488003A7E69 /* AddConnectViewController.m */; };
 		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
+		CEBA56BA214828320025C87A /* SBSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA56B8214828320025C87A /* SBSliderView.m */; };
+		CEBA56BB214828320025C87A /* SBSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBA56B9214828320025C87A /* SBSliderView.xib */; };
 		CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2A59212A90FD0046D01E /* Matches.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +108,14 @@
 		CE6A2B6E212C5BD400766A39 /* GettingForFriendSwipingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GettingForFriendSwipingViewController.h; sourceTree = "<group>"; };
 		CE6A2B6F212C5BD400766A39 /* GettingForFriendSwipingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GettingForFriendSwipingViewController.m; sourceTree = "<group>"; };
 		CE6A2B71212C5BF300766A39 /* GettingForFriendSwiping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GettingForFriendSwiping.storyboard; sourceTree = "<group>"; };
+		CE7A35052146F34C00973CB8 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		CE7A35072146F34D00973CB8 /* MessageModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModal.h; sourceTree = "<group>"; };
+		CE7A35092146F34D00973CB8 /* ChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatController.h; sourceTree = "<group>"; };
+		CE7A350A2146F34D00973CB8 /* ChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatController.m; sourceTree = "<group>"; };
+		CE7A350B2146F34D00973CB8 /* MessageModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModal.m; sourceTree = "<group>"; };
+		CE7A351721470D9900973CB8 /* MatchProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchProfileViewController.h; sourceTree = "<group>"; };
+		CE7A351821470D9900973CB8 /* MatchProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchProfileViewController.m; sourceTree = "<group>"; };
+		CE7A351A214711B300973CB8 /* MProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MProfile.storyboard; sourceTree = "<group>"; };
 		CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingFriend.storyboard; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* Korte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +135,9 @@
 		CEB6FC8F21214488003A7E69 /* AddConnectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddConnectViewController.h; sourceTree = "<group>"; };
 		CEB6FC9021214488003A7E69 /* AddConnectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddConnectViewController.m; sourceTree = "<group>"; };
 		CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddConnectScreen.storyboard; sourceTree = "<group>"; };
+		CEBA56B7214828320025C87A /* SBSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSliderView.h; sourceTree = "<group>"; };
+		CEBA56B8214828320025C87A /* SBSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSliderView.m; sourceTree = "<group>"; };
+		CEBA56B9214828320025C87A /* SBSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBSliderView.xib; sourceTree = "<group>"; };
 		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +360,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CE7A35042146F2E600973CB8 /* ChatModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A351C2147120D00973CB8 /* View */,
+			);
+			path = ChatModule;
+			sourceTree = "<group>";
+		};
+		CE7A351621470D4400973CB8 /* MatchProfile */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA56B6214828320025C87A /* SBSlider */,
+				CE7A351721470D9900973CB8 /* MatchProfileViewController.h */,
+				CE7A351821470D9900973CB8 /* MatchProfileViewController.m */,
+				CE7A351A214711B300973CB8 /* MProfile.storyboard */,
+			);
+			path = MatchProfile;
+			sourceTree = "<group>";
+		};
+		CE7A351C2147120D00973CB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A35052146F34C00973CB8 /* Chat.storyboard */,
+				CE7A35072146F34D00973CB8 /* MessageModal.h */,
+				CE7A350B2146F34D00973CB8 /* MessageModal.m */,
+				CE7A35092146F34D00973CB8 /* ChatController.h */,
+				CE7A350A2146F34D00973CB8 /* ChatController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +421,8 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CE7A351621470D4400973CB8 /* MatchProfile */,
+				CE7A35042146F2E600973CB8 /* ChatModule */,
 				CE1778A4213FEE0000764C3B /* font */,
 				CE598E3C2138097C00306488 /* IDVerifyModule */,
 				CE7B4CBF2131A9CD00BA425C /* GettingSwipingModule */,
@@ -454,6 +505,16 @@
 				CE4790A021424956004DA76F /* FriendCollectionViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEBA56B6214828320025C87A /* SBSlider */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA56B7214828320025C87A /* SBSliderView.h */,
+				CEBA56B8214828320025C87A /* SBSliderView.m */,
+				CEBA56B9214828320025C87A /* SBSliderView.xib */,
+			);
+			path = SBSlider;
 			sourceTree = "<group>";
 		};
 		CEC440802138503E00D678F7 /* View */ = {
@@ -553,8 +614,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBA56BB214828320025C87A /* SBSliderView.xib in Resources */,
 				CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */,
 				CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */,
+				CE7A351B214711B300973CB8 /* MProfile.storyboard in Resources */,
 				CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
@@ -564,6 +627,7 @@
 				CE6A2B72212C5BF300766A39 /* GettingForFriendSwiping.storyboard in Resources */,
 				CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */,
 				CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */,
+				CE7A350C2146F34D00973CB8 /* Chat.storyboard in Resources */,
 				CE1778A7213FEF2700764C3B /* gothamroundedmedium_21022.ttf in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
 				CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */,
@@ -603,6 +667,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework",
 				"${PODS_ROOT}/AffdexSDK-iOS/ios/Affdex.framework",
 				"${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -611,6 +676,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSKinesis.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Affdex.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSFloatingActionMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGCollapsingHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKDropdownMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,8 +719,10 @@
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
+				CE7A350E2146F34D00973CB8 /* ChatController.m in Sources */,
 				CE47909E21423328004DA76F /* DSCircularLayout.m in Sources */,
 				CE6A2B70212C5BD400766A39 /* GettingForFriendSwipingViewController.m in Sources */,
+				CEBA56BA214828320025C87A /* SBSliderView.m in Sources */,
 				CE4DF74221246F7100C6E9F7 /* FriendConnectViewController.m in Sources */,
 				CE4790A121424956004DA76F /* FriendCollectionViewCell.m in Sources */,
 				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
@@ -662,7 +730,9 @@
 				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
+				CE7A350F2146F34D00973CB8 /* MessageModal.m in Sources */,
 				CEB2873A211388BA00C51670 /* main.m in Sources */,
+				CE7A351921470D9900973CB8 /* MatchProfileViewController.m in Sources */,
 				CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */,
 				CE4DF73E21246DC200C6E9F7 /* LocationViewController.m in Sources */,
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,

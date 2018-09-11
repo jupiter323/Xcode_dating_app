@@ -17,6 +17,12 @@ target 'Korte' do
 
 #  pod "DSCircularCollectionView"
 
+# for chat
+    pod 'MGCollapsingHeader'
+#    pod 'NoChat', '~> 0.3'
+#    pod 'YYText'
+#    pod 'HPGrowingTextView'
+
 end
 
 post_install do |installer|

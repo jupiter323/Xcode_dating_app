@@ -103,6 +103,23 @@
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
     
 }
+
+-(void)toMatchProfile:(UIButton *)sender {
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MProfile" bundle:nil];
+    UINavigationController *mProfileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMProfile"];
+    
+    [self.navigationController pushViewController:mProfileScene animated:NO];
+}
+-(void)toChatbox:(UIButton *)sender {
+    [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];
+    
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+            UINavigationController *chatScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idChat"];
+    [self.navigationController pushViewController:chatScene animated:NO];
+}
 -(void)toMatches{
     //for animation navigating
     [self navAnimating:kCATransitionMoveIn subtype:kCATransitionFromTop];

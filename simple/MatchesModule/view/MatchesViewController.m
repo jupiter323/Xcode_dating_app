@@ -127,14 +127,7 @@
     [self.view addSubview:matches];
 
 }
--(void)toMatchProfile:(UIButton *)sender {
-    [self navAnimating:kCATransitionFade subtype:kCATransitionFromLeft];
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AddConnectScreen" bundle:nil];
-    UINavigationController *addScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idAddConnection"];
-    
-    [self.navigationController pushViewController:addScene animated:NO];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -201,7 +194,7 @@
     //avatar
     
     cell.avatar.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    [cell.avatar addTarget:self action:@selector(toMatchProfile:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.avatar addTarget:self action:@selector(toChatbox:) forControlEvents:UIControlEventTouchUpInside];
     cell.avatar.layer.cornerRadius = cell.avatar.frame.size.width / 2;
     cell.avatar.clipsToBounds = YES;
     

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="idChat" id="BYZ-38-t0r" customClass="ChatController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUr-X1-uNS" customClass="MGCollapsingHeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="lxm-jo-OCU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="sSO-1q-2V1">
+                                        <rect key="frame" x="8" y="28" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="ACb-UG-cG8"/>
+                                            <constraint firstAttribute="height" constant="30" id="ER0-W5-J4Z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="block" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-kb-wuf">
+                                        <rect key="frame" x="337" y="28" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="9G3-Xx-xNp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-5z-Zfl">
+                                        <rect key="frame" x="8" y="212" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="R9d-NI-kFK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lxm-jo-OCU" firstAttribute="top" secondItem="TUr-X1-uNS" secondAttribute="top" id="7OW-aW-vOY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxm-jo-OCU" secondAttribute="trailing" id="8zD-kz-bOO"/>
+                                    <constraint firstItem="8ra-5z-Zfl" firstAttribute="bottom" secondItem="TUr-X1-uNS" secondAttribute="bottomMargin" id="CXW-0H-BC3"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="top" secondItem="TUr-X1-uNS" secondAttribute="topMargin" id="Ken-T4-eF6"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="trailing" secondItem="8ra-5z-Zfl" secondAttribute="trailing" id="Mso-dX-wOH"/>
+                                    <constraint firstItem="NmT-kb-wuf" firstAttribute="trailing" secondItem="TUr-X1-uNS" secondAttribute="trailingMargin" id="SAf-Z3-Slj"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="top" secondItem="NmT-kb-wuf" secondAttribute="top" id="ThY-9j-v2A"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="leading" secondItem="TUr-X1-uNS" secondAttribute="leadingMargin" id="ZYQ-XK-Usn"/>
+                                    <constraint firstAttribute="height" constant="250" id="jDT-qM-MgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="lxm-jo-OCU" secondAttribute="bottom" id="lvk-se-JoB"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="leading" secondItem="8ra-5z-Zfl" secondAttribute="leading" id="skX-Uc-G0p"/>
+                                    <constraint firstItem="sSO-1q-2V1" firstAttribute="bottom" secondItem="NmT-kb-wuf" secondAttribute="bottom" id="uLC-l5-uqf"/>
+                                    <constraint firstItem="lxm-jo-OCU" firstAttribute="leading" secondItem="TUr-X1-uNS" secondAttribute="leading" id="wYR-Bb-Aox"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qnw-4d-NhL">
+                                <rect key="frame" x="0.0" y="258" width="375" height="409"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="409" id="HRE-9N-V5P"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uyt-V8-fUr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lGU-7n-x5n"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qnw-4d-NhL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="628-ge-TJe"/>
+                            <constraint firstItem="TUr-X1-uNS" firstAttribute="leading" secondItem="qnw-4d-NhL" secondAttribute="leading" id="ISn-AK-BQL"/>
+                            <constraint firstItem="TUr-X1-uNS" firstAttribute="trailing" secondItem="qnw-4d-NhL" secondAttribute="trailing" id="K57-3u-qzV"/>
+                            <constraint firstItem="TUr-X1-uNS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Q1t-2m-Wl6"/>
+                            <constraint firstAttribute="trailing" secondItem="TUr-X1-uNS" secondAttribute="trailing" id="alt-uF-ahf"/>
+                            <constraint firstItem="TUr-X1-uNS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jIR-Iq-Ag3"/>
+                            <constraint firstItem="qnw-4d-NhL" firstAttribute="top" secondItem="TUr-X1-uNS" secondAttribute="bottom" constant="8" symbolic="YES" id="lHo-39-e26"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="callapsingHeaderView" destination="TUr-X1-uNS" id="5b5-f9-BFx"/>
+                        <outlet property="heightCollapsingHeader" destination="jDT-qM-MgX" id="2PH-st-Zvd"/>
+                        <outlet property="imageBlock" destination="NmT-kb-wuf" id="9eO-aS-gJo"/>
+                        <outlet property="imageHeader" destination="lxm-jo-OCU" id="GKQ-yX-cP0"/>
+                        <outlet property="imageInfo" destination="8ra-5z-Zfl" id="pZA-Vu-Ges"/>
+                        <outlet property="imageLeftArrow" destination="sSO-1q-2V1" id="5yl-Jf-mNT"/>
+                        <outlet property="tableviewChat" destination="qnw-4d-NhL" id="X6h-kh-wQn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="block" width="42" height="42"/>
+        <image name="header" width="640" height="380"/>
+        <image name="info" width="75" height="75"/>
+        <image name="left_arrow" width="64" height="64"/>
+    </resources>
+</document>
