@@ -23,6 +23,28 @@
 -(void)tapedToggle:(UIButton *) sender{
     [self showMenuFromButton:sender withDirection:LSFloatingActionMenuDirectionLeft];
 }
+-(void)logOut{
+    if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
+        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login logOut];
+        NSLog(@"deleted FBToken");
+        //    animating
+        [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
+        // go to root
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        
+        
+    } else if([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"logToken"]) {
+        [[PDKeychainBindings sharedKeychainBindings] removeObjectForKey:@"logToken"];
+        NSLog(@"deleted logToken");
+        //    animating
+        [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
+        // go to root
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+    
+}
 - (void)addButtonTapped:(UIButton *)sender {
     [self showMenuFromButton:sender withDirection:LSFloatingActionMenuDirectionUp];
 }
@@ -90,6 +112,13 @@
     //    animating
     [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
   
+    //    navigating
+    [self.navigationController popViewControllerAnimated:NO];
+}
+-(void)returnFun{
+    //    animating
+    [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
+    
     //    navigating
     [self.navigationController popViewControllerAnimated:NO];
 }

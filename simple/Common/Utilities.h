@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 //enum definition
 typedef NS_ENUM(NSInteger, SectionDefinition) {//for two cards
     LeftSecion = 0,
@@ -125,4 +126,9 @@ static NSString* jsonStringify(NSDictionary *arr){
     NSData *jsonData2 = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData2 encoding:NSUTF8StringEncoding];
     return jsonString;
+}
+static NSData* jsonParse(NSString *stringJson){
+    NSData *data = [stringJson dataUsingEncoding:NSUTF8StringEncoding];
+    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    return json;
 }

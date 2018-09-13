@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.3'
+platform :ios, '9.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'Korte' do
@@ -14,6 +14,8 @@ target 'Korte' do
   pod "GoogleMaps"
   pod "GooglePlaces"
   pod "AffdexSDK-iOS"
+  pod "Unirest", "~> 1.1.4"
+#  pod "FBSDKLoginKit"
 
 #  pod "DSCircularCollectionView"
 

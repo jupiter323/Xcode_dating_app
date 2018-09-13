@@ -183,6 +183,10 @@
     
     [self.navigationController pushViewController:locationScene animated:NO];
 }
+- (IBAction)logout:(id)sender {
+    [self logOut];  
+    
+}
 
 
 #pragma mark - MKDropdownMenuDataSource

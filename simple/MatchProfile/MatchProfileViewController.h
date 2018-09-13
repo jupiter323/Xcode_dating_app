@@ -9,4 +9,5 @@
 #import "WireframeViewController.h"
 #import "SBSliderView.h"
 @interface MatchProfileViewController : WireframeViewController<SBSliderDelegate>
+@property (weak, nonatomic) IBOutlet UIView *imageSlideView;
 @end

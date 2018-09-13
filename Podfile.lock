@@ -14,6 +14,7 @@ PODS:
   - LSFloatingActionMenu (1.0.0)
   - MGCollapsingHeader (1.0.6)
   - MKDropdownMenu (1.4)
+  - Unirest (1.1.4)
 
 DEPENDENCIES:
   - AffdexSDK-iOS
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - LSFloatingActionMenu
   - MGCollapsingHeader
   - MKDropdownMenu
+  - Unirest (~> 1.1.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - LSFloatingActionMenu
     - MGCollapsingHeader
     - MKDropdownMenu
+    - Unirest
 
 SPEC CHECKSUMS:
   AffdexSDK-iOS: 46f04df6a0259957190f3a592ccd0b33367b3d66
@@ -43,7 +46,8 @@ SPEC CHECKSUMS:
   LSFloatingActionMenu: dc2d6449e817cb2eb3c3a9a751bd49c3aae416b2
   MGCollapsingHeader: 82a52988e0dcdd32558e883ae4df4c9c1a1674b1
   MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
+  Unirest: 5e4d93eaf32463bf619a4ecd3bbc8c32acf21eac
 
-PODFILE CHECKSUM: 6d624eef8149efa063c1721ebf60e4485b947daf
+PODFILE CHECKSUM: 9a26ce3c4d67866e59499de0d84f5d734a599f62
 
 COCOAPODS: 1.5.3

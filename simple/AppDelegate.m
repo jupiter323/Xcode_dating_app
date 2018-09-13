@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 @import GoogleMaps;
 @import GooglePlaces;
 @interface AppDelegate ()
@@ -17,17 +18,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // fb
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
     
     //    map service api key
     [GMSServices provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
     [GMSPlacesClient provideAPIKey:@"AIzaSyBWLKs15pmraoU3aJg_k1mucVPyQuOeqXs"];
     
     //     Override point for customization after application launch.
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MProfile" bundle:nil];
-        UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMProfile"];
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MProfile" bundle:nil];
+//        UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMProfile"];
 //
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
-//    UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Splash" bundle:nil];
+    UINavigationController *myNewVC = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idSplashNaviagation"];
     self.window = [[UIWindow alloc] init];
     [self.window makeKeyAndVisible];
     self.window.frame = [UIScreen mainScreen].bounds;
@@ -35,6 +39,19 @@
     self.window.backgroundColor = [UIColor whiteColor];
     return YES;
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                    ];
+    // Add any custom logic here.
+    return handled;
 }
 
 
@@ -54,9 +71,10 @@
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 
-
+//to see how many peoples are using our app
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 

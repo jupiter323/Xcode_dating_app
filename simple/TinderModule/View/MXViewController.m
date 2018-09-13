@@ -24,7 +24,8 @@
 - (void)viewDidLoad {
     
     
-    [super viewDidLoad];
+    [super viewDidLoad]; 
+    
     themKind = ProTheme;
     cardWidth = self.view.bounds.size.width - 38*2;
     cardRatio = 299.88/466.48;
@@ -72,7 +73,7 @@
     //    adding part 
     [self.view addSubview:myProfile];
     [self.view addSubview:cardsSwipingView];
-    
+  
     
     
 }

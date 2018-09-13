@@ -8,6 +8,7 @@
 #import "BasicMenuController.h"
 #import <UIKit/UIKit.h>
 #import "MKDropdownMenu.h"
+
 @interface ProfileViewController : BasicMenuController<MKDropdownMenuDelegate, MKDropdownMenuDataSource>
 @property (weak, nonatomic) IBOutlet UIView *verifyView;
 @property (weak, nonatomic) IBOutlet UILabel *holdLabel;

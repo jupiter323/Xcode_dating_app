@@ -18,6 +18,11 @@
 		CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1FC6D7212F28B50094C0E9 /* GettingForMeSwiping.storyboard */; };
 		CE1FC6DC212F28B50094C0E9 /* GettingForMeSwipingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1FC6D9212F28B50094C0E9 /* GettingForMeSwipingViewController.m */; };
 		CE27DE76211A2FCB00F5B1C2 /* data in Resources */ = {isa = PBXBuildFile; fileRef = CE27DE75211A2FCA00F5B1C2 /* data */; };
+		CE3480BE21493428005F33FB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3480BB21493428005F33FB /* Bolts.framework */; };
+		CE3480BF21493428005F33FB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3480BC21493428005F33FB /* FBSDKCoreKit.framework */; };
+		CE3480C021493428005F33FB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3480BD21493428005F33FB /* FBSDKLoginKit.framework */; };
+		CE3480C6214A35A1005F33FB /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3480C3214A35A1005F33FB /* PDKeychainBindings.m */; };
+		CE3480C7214A35A1005F33FB /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3480C5214A35A1005F33FB /* PDKeychainBindingsController.m */; };
 		CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */; };
 		CE3BCEF221169B6A00706FD1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */; };
 		CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */; };
@@ -76,6 +81,13 @@
 		CE1FC6D8212F28B50094C0E9 /* GettingForMeSwipingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingForMeSwipingViewController.h; sourceTree = "<group>"; };
 		CE1FC6D9212F28B50094C0E9 /* GettingForMeSwipingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingForMeSwipingViewController.m; sourceTree = "<group>"; };
 		CE27DE75211A2FCA00F5B1C2 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = simple/data; sourceTree = SOURCE_ROOT; };
+		CE3480BB21493428005F33FB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		CE3480BC21493428005F33FB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		CE3480BD21493428005F33FB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		CE3480C2214A35A1005F33FB /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
+		CE3480C3214A35A1005F33FB /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
+		CE3480C4214A35A1005F33FB /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
+		CE3480C5214A35A1005F33FB /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
 		CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
@@ -147,6 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2287A49515E261FA5ACBECE0 /* Pods_Korte.framework in Frameworks */,
+				CE3480BF21493428005F33FB /* FBSDKCoreKit.framework in Frameworks */,
+				CE3480C021493428005F33FB /* FBSDKLoginKit.framework in Frameworks */,
+				CE3480BE21493428005F33FB /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,27 @@
 				CE4DF73921246D8F00C6E9F7 /* View */,
 			);
 			path = LocationModule;
+			sourceTree = "<group>";
+		};
+		CE3480BA21493428005F33FB /* fbSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE3480BB21493428005F33FB /* Bolts.framework */,
+				CE3480BC21493428005F33FB /* FBSDKCoreKit.framework */,
+				CE3480BD21493428005F33FB /* FBSDKLoginKit.framework */,
+			);
+			path = fbSDK;
+			sourceTree = "<group>";
+		};
+		CE3480C1214A35A1005F33FB /* PDKeychainBindingsController */ = {
+			isa = PBXGroup;
+			children = (
+				CE3480C2214A35A1005F33FB /* PDKeychainBindings.h */,
+				CE3480C3214A35A1005F33FB /* PDKeychainBindings.m */,
+				CE3480C4214A35A1005F33FB /* PDKeychainBindingsController.h */,
+				CE3480C5214A35A1005F33FB /* PDKeychainBindingsController.m */,
+			);
+			path = PDKeychainBindingsController;
 			sourceTree = "<group>";
 		};
 		CE3BCEE921168CA600706FD1 /* ProfileModule */ = {
@@ -433,7 +469,7 @@
 				CE27DE6D2119B79B00F5B1C2 /* LocationModule */,
 				CE3BCEE921168CA600706FD1 /* ProfileModule */,
 				CEB2876A21142F5C00C51670 /* Common */,
-				CEB2875A21139F2B00C51670 /* SplashModule */,
+				CEB2875A21139F2B00C51670 /* loginModule */,
 				CEB28742211391D400C51670 /* TinderModule */,
 				CEB28727211388A900C51670 /* AppDelegate.h */,
 				CEB28728211388A900C51670 /* AppDelegate.m */,
@@ -465,19 +501,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CEB2875A21139F2B00C51670 /* SplashModule */ = {
+		CEB2875A21139F2B00C51670 /* loginModule */ = {
 			isa = PBXGroup;
 			children = (
 				CEB287632113F50E00C51670 /* SplashViewController.h */,
 				CEB287642113F50E00C51670 /* SplashViewController.m */,
 				CEB287682113F6DC00C51670 /* Splash.storyboard */,
 			);
-			path = SplashModule;
+			path = loginModule;
 			sourceTree = "<group>";
 		};
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE3480C1214A35A1005F33FB /* PDKeychainBindingsController */,
+				CE3480BA21493428005F33FB /* fbSDK */,
 				CE47909B21423303004DA76F /* CollectionCellCricleLayout */,
 				CE47908C2140D97B004DA76F /* MSCMoreOptionTableViewCell */,
 				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
@@ -669,6 +707,7 @@
 				"${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Unirest/Unirest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -678,6 +717,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSFloatingActionMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGCollapsingHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKDropdownMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unirest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -714,6 +754,7 @@
 				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
 				CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
+				CE3480C6214A35A1005F33FB /* PDKeychainBindings.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
@@ -728,6 +769,7 @@
 				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
 				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,
+				CE3480C7214A35A1005F33FB /* PDKeychainBindingsController.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
 				CE7A350F2146F34D00973CB8 /* MessageModal.m in Sources */,
@@ -875,6 +917,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JSHQJ848VX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/simple/Common/fbSDK",
+				);
 				INFOPLIST_FILE = simple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -900,6 +946,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JSHQJ848VX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/simple/Common/fbSDK",
+				);
 				INFOPLIST_FILE = simple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (

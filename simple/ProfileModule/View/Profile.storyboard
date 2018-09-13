@@ -201,7 +201,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-6g-KXo">
-                                                <rect key="frame" x="285" y="5.3333333333333712" width="57" height="30"/>
+                                                <rect key="frame" x="285" y="4.6666666666667425" width="57" height="30"/>
                                                 <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9Ou-78-zeJ"/>
@@ -242,7 +242,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-6s-CuT">
-                                                <rect key="frame" x="285" y="5.3333333333333712" width="57" height="30"/>
+                                                <rect key="frame" x="285" y="4.6666666666667425" width="57" height="30"/>
                                                 <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="QsV-GQ-jxQ"/>
@@ -288,6 +288,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logout:" destination="OM6-oE-CBa" eventType="touchUpInside" id="WeL-3s-iC6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhf-4q-cyU">
                                         <rect key="frame" x="202" y="865" width="180" height="43"/>

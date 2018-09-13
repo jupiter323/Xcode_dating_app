@@ -10,10 +10,14 @@
 #import "LSFloatingActionMenu.h"
 #import <Foundation/Foundation.h>
 #import "Utilities.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "PDKeychainBindings.h"
 @interface WireframeViewController : UIViewController {
     ThemDefinition *  themKind;
 }
+-(void)logOut;
 -(void)returnFun:(UIButton *) sender ;
+-(void)returnFun;
 -(void)toAddConnection:(UIButton *)sender;
 -(void)addButtonTapped:(UIButton *)sender;
 -(void)toProfile:(UIButton *) sender;

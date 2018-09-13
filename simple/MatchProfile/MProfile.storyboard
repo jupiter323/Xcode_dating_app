@@ -14,16 +14,60 @@
         <scene sceneID="0Ih-4X-HhS">
             <objects>
                 <viewController storyboardIdentifier="idMProfile" id="qgM-To-P6b" customClass="MatchProfileViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u19-ae-vMd">
+                    <view key="view" contentMode="scaleToFill" id="d1P-LB-7RF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfQ-Me-cqI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="376" id="dqi-2e-YnY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auv-J5-Doy">
+                                <rect key="frame" x="24" y="46" width="15" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="L45-Dq-WxV"/>
+                                    <constraint firstAttribute="height" constant="21" id="Qdt-p4-VmU"/>
+                                </constraints>
+                                <state key="normal" image="return_"/>
+                                <connections>
+                                    <action selector="return:" destination="qgM-To-P6b" eventType="touchUpInside" id="Hcs-Z8-ws4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LO4-Pi-7yB">
+                                <rect key="frame" x="325.5" y="43.5" width="27.5" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27.5" id="N6E-eP-1dj"/>
+                                    <constraint firstAttribute="height" constant="27.5" id="iBM-ho-FKq"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="camera"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IoA-zz-h1S"/>
+                        <constraints>
+                            <constraint firstItem="auv-J5-Doy" firstAttribute="top" secondItem="d1P-LB-7RF" secondAttribute="top" constant="46" id="5zG-7B-uuF"/>
+                            <constraint firstItem="Qbp-hx-9BW" firstAttribute="trailing" secondItem="LO4-Pi-7yB" secondAttribute="trailing" constant="22" id="Ecg-ou-KUY"/>
+                            <constraint firstItem="pfQ-Me-cqI" firstAttribute="trailing" secondItem="Qbp-hx-9BW" secondAttribute="trailing" id="Wdj-fr-De1"/>
+                            <constraint firstItem="LO4-Pi-7yB" firstAttribute="centerY" secondItem="auv-J5-Doy" secondAttribute="centerY" id="iEt-Nh-kaT"/>
+                            <constraint firstItem="pfQ-Me-cqI" firstAttribute="leading" secondItem="Qbp-hx-9BW" secondAttribute="leading" id="mfP-Xb-UtA"/>
+                            <constraint firstItem="auv-J5-Doy" firstAttribute="leading" secondItem="Qbp-hx-9BW" secondAttribute="leading" constant="24" id="nTK-Gh-YcH"/>
+                            <constraint firstItem="pfQ-Me-cqI" firstAttribute="top" secondItem="d1P-LB-7RF" secondAttribute="top" id="zU7-Fd-dOq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qbp-hx-9BW"/>
                     </view>
+                    <connections>
+                        <outlet property="imageSlideView" destination="pfQ-Me-cqI" id="CXR-tu-7v7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpe-8j-WVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="30"/>
+            <point key="canvasLocation" x="96.799999999999997" y="29.23538230884558"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="42" height="42"/>
+        <image name="return_" width="15" height="25"/>
+    </resources>
 </document>
