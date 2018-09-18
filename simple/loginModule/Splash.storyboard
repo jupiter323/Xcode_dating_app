@@ -43,7 +43,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
-                                <state key="normal" title="Continue with Facebook" image="fbButtonNew">
+                                <state key="normal" title="Facebook Log In" image="fbButtonNew">
                                     <color key="titleColor" red="0.92156862745098034" green="0.25490196078431371" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="______ OR ______" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLq-YW-DOV">
-                                <rect key="frame" x="127.33333333333333" y="494" width="159.66666666666669" height="17"/>
+                                <rect key="frame" x="127" y="494" width="160" height="17"/>
                                 <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-E5-bRI" userLabel="sfgsfgsfg">
-                                <rect key="frame" x="210" y="449.66666666666669" width="53" height="28"/>
+                                <rect key="frame" x="210" y="450" width="53" height="28"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Register">
@@ -160,13 +160,37 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_______" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-Vt-aoM">
-                                <rect key="frame" x="209" y="454.33333333333331" width="55" height="20.333333333333314"/>
+                                <rect key="frame" x="209" y="455" width="55" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="4En-k5-uGX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email correctly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nig-wY-b5q">
+                                <rect key="frame" x="50" y="173" width="215" height="13"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter at least 6 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-KT-jb7">
+                                <rect key="frame" x="50" y="240" width="217" height="13"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter confirm password correctly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-9N-LQt">
+                                <rect key="frame" x="50" y="307" width="263" height="13"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-6T-4fb">
+                                <rect key="frame" x="50" y="107" width="152" height="13"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="13"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -180,23 +204,30 @@
                             <constraint firstItem="azK-cw-QyG" firstAttribute="top" secondItem="YAU-On-HSc" secondAttribute="bottom" constant="22" id="7VW-XV-bAj"/>
                             <constraint firstItem="RLq-YW-DOV" firstAttribute="centerX" secondItem="bSt-iN-WsR" secondAttribute="centerX" id="8rv-xR-9X4"/>
                             <constraint firstItem="cf3-9Z-OcX" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="Agh-jz-JQ5"/>
+                            <constraint firstItem="lJP-9N-LQt" firstAttribute="top" secondItem="Jbl-54-FUG" secondAttribute="bottom" constant="8" symbolic="YES" id="CfC-zu-h4C"/>
                             <constraint firstItem="azK-cw-QyG" firstAttribute="centerX" secondItem="bSt-iN-WsR" secondAttribute="centerX" id="Gh4-cn-tH8"/>
                             <constraint firstItem="YAU-On-HSc" firstAttribute="top" secondItem="IWp-uZ-CNt" secondAttribute="bottom" constant="100" id="GxM-OD-Owt"/>
                             <constraint firstItem="ezW-sJ-Fto" firstAttribute="trailing" secondItem="YAU-On-HSc" secondAttribute="trailing" id="Hi5-Uk-23u"/>
                             <constraint firstItem="UP8-E5-bRI" firstAttribute="leading" secondItem="LMZ-cw-khC" secondAttribute="trailing" constant="3" id="IRR-iG-Y09"/>
                             <constraint firstItem="Jbl-54-FUG" firstAttribute="top" secondItem="azK-cw-QyG" secondAttribute="bottom" constant="22" id="Nud-mO-fYL"/>
+                            <constraint firstItem="Nsr-KT-jb7" firstAttribute="leading" secondItem="Jbl-54-FUG" secondAttribute="leading" id="Rdy-pA-gqB"/>
                             <constraint firstItem="cf3-9Z-OcX" firstAttribute="top" secondItem="RLq-YW-DOV" secondAttribute="bottom" constant="22" id="Ufg-G0-TmA"/>
                             <constraint firstItem="ezW-sJ-Fto" firstAttribute="top" secondItem="ZsW-nU-WyD" secondAttribute="bottom" constant="22" id="WSi-r6-rei"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YAU-On-HSc" secondAttribute="trailing" constant="30" id="Yaa-Rm-HTn"/>
                             <constraint firstItem="WEK-AC-XSf" firstAttribute="top" secondItem="bsA-5d-6pK" secondAttribute="bottom" id="ZB1-J4-KEr"/>
                             <constraint firstItem="fv3-Vt-aoM" firstAttribute="centerX" secondItem="UP8-E5-bRI" secondAttribute="centerX" id="aXG-4B-qOw"/>
+                            <constraint firstItem="Nsr-KT-jb7" firstAttribute="top" secondItem="azK-cw-QyG" secondAttribute="bottom" constant="8" symbolic="YES" id="agn-iY-50S"/>
                             <constraint firstItem="cf3-9Z-OcX" firstAttribute="trailing" secondItem="YAU-On-HSc" secondAttribute="trailing" id="bos-7J-GxU"/>
                             <constraint firstItem="RLq-YW-DOV" firstAttribute="top" secondItem="LMZ-cw-khC" secondAttribute="bottom" constant="22" id="coM-da-TdO"/>
+                            <constraint firstItem="Nig-wY-b5q" firstAttribute="leading" secondItem="azK-cw-QyG" secondAttribute="leading" id="ct7-fl-1x2"/>
+                            <constraint firstItem="ANU-6T-4fb" firstAttribute="top" secondItem="IWp-uZ-CNt" secondAttribute="bottom" constant="87" id="dw9-NH-gca"/>
                             <constraint firstItem="fv3-Vt-aoM" firstAttribute="bottom" secondItem="UP8-E5-bRI" secondAttribute="bottom" constant="-3" id="eu0-e3-YNw"/>
+                            <constraint firstItem="ANU-6T-4fb" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="hnC-wo-ugf"/>
                             <constraint firstItem="LMZ-cw-khC" firstAttribute="trailing" secondItem="bSt-iN-WsR" secondAttribute="centerX" id="i7Q-4D-BY7"/>
                             <constraint firstItem="azK-cw-QyG" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="j3Y-jt-1ip"/>
                             <constraint firstItem="YAU-On-HSc" firstAttribute="leading" secondItem="bSt-iN-WsR" secondAttribute="leadingMargin" constant="30" id="jiK-i2-asr"/>
                             <constraint firstItem="bsA-5d-6pK" firstAttribute="top" secondItem="bSt-iN-WsR" secondAttribute="top" id="lNK-rd-nyo"/>
+                            <constraint firstItem="lJP-9N-LQt" firstAttribute="leading" secondItem="ZsW-nU-WyD" secondAttribute="leading" id="lla-GC-PWC"/>
                             <constraint firstItem="ezW-sJ-Fto" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="mTl-vL-5fI"/>
                             <constraint firstItem="ZsW-nU-WyD" firstAttribute="centerX" secondItem="bSt-iN-WsR" secondAttribute="centerX" id="nIu-dE-gKr"/>
                             <constraint firstItem="Jbl-54-FUG" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="na7-aJ-xH9"/>
@@ -207,15 +238,20 @@
                             <constraint firstItem="ZsW-nU-WyD" firstAttribute="leading" secondItem="YAU-On-HSc" secondAttribute="leading" id="s2p-iS-6cS"/>
                             <constraint firstItem="azK-cw-QyG" firstAttribute="trailing" secondItem="YAU-On-HSc" secondAttribute="trailing" id="sJq-OQ-qE1"/>
                             <constraint firstItem="cf3-9Z-OcX" firstAttribute="centerX" secondItem="bSt-iN-WsR" secondAttribute="centerX" id="vs9-82-YmH"/>
+                            <constraint firstItem="Nig-wY-b5q" firstAttribute="top" secondItem="YAU-On-HSc" secondAttribute="bottom" constant="8" symbolic="YES" id="wId-LV-3Qn"/>
                             <constraint firstItem="bsA-5d-6pK" firstAttribute="leading" secondItem="bSt-iN-WsR" secondAttribute="leading" id="xXh-YV-Kkq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="szS-R5-Hbg"/>
                     <connections>
                         <outlet property="CPasswordText" destination="ZsW-nU-WyD" id="RX4-Qe-TBS"/>
+                        <outlet property="cPCorrect" destination="lJP-9N-LQt" id="LyM-RV-ce2"/>
+                        <outlet property="emailCorrect" destination="Nig-wY-b5q" id="S5S-FE-5t2"/>
                         <outlet property="emailText" destination="azK-cw-QyG" id="D5V-YQ-34V"/>
                         <outlet property="loginButton" destination="ezW-sJ-Fto" id="bCB-hq-ZO9"/>
+                        <outlet property="nameCorrect" destination="ANU-6T-4fb" id="R8g-D1-E9k"/>
                         <outlet property="nameText" destination="YAU-On-HSc" id="Zkd-kP-zfD"/>
+                        <outlet property="passCorrect" destination="Nsr-KT-jb7" id="alV-pj-K25"/>
                         <outlet property="passwordText" destination="Jbl-54-FUG" id="MML-NO-JTL"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,7 @@ target 'Korte' do
   pod "GooglePlaces"
   pod "AffdexSDK-iOS"
   pod "Unirest", "~> 1.1.4"
+  pod 'SCLAlertView-Objective-C'
 #  pod "FBSDKLoginKit"
 
 #  pod "DSCircularCollectionView"

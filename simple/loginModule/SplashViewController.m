@@ -9,8 +9,10 @@
 #import "SplashViewController.h"
 #import "UNIRest/UNIRest.h"
 @interface SplashViewController (){
-    Boolean *isRegister;
+    BOOL isRegister;
+//    SCLAlertView *alert;
 }
+
 
 
 @end
@@ -64,39 +66,140 @@
     [textField resignFirstResponder];
     return YES;
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    if(textField == self.nameText)
+        self.nameCorrect.hidden = YES;
+    if(textField == self.emailText)
+        self.emailCorrect.hidden = YES;
+    if(textField == self.passwordText)
+        self.passCorrect.hidden = YES;
+    if(textField == self.CPasswordText)
+        self.cPCorrect.hidden = YES;
+}
+-(void)initData{   
+    self.nameText.text = @"";
+    self.emailText.text = @"";
+    self.passwordText.text = @"";
+    self.CPasswordText.text = @"";
+    self.nameCorrect.hidden = YES;
+    self.emailCorrect.hidden = YES;
+    self.passCorrect.hidden = YES;
+    self.cPCorrect.hidden = YES;
+}
 - (IBAction)loginAndRegister:(id)sender {
-    if(isRegister){
+    if(isRegister){//register
+        BOOL notValid =  false;
+        if([self.nameText.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0){
+            self.nameCorrect.hidden = NO;
+            notValid = true;
+        }
+        if(![self validEmail:self.emailText.text])
+        {
+            self.emailCorrect.hidden = NO;
+            notValid = true;
+        }
+        if(self.passwordText.text.length < 6)
+        {
+            self.passCorrect.hidden = NO;
+            notValid = true;
+        }
+        if(![self.passwordText.text isEqualToString:self.CPasswordText.text] ||self.CPasswordText.text.length == 0){
+            self.cPCorrect.hidden = NO;
+            notValid = true;
+        }
+        
+        if(notValid) return;
+        
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
+        
         NSDictionary *headers = @{@"accept": @"application/json"};
         NSDictionary *parameters = @{@"name": self.nameText.text,@"email": self.emailText.text, @"with":@"email", @"password":self.passwordText.text};
-        
-        //                          NSDictionary *parameters = @{@"item": [result objectForKey:@"name"]};
-        
-        [[UNIRest post:^(UNISimpleRequest *request) {
-            //                              [request setUrl:@"https://korteapi.herokuapp.com"];
-            [request setUrl:@"http://192.168.2.155:3000"];
+        UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *request) {
+            [request setUrl:[BaseURI stringByAppendingString:@"users"]];
             [request setHeaders:headers];
             [request setParameters:parameters];
-        }] asJsonAsync:^(UNIHTTPJsonResponse* response, NSError *error) {
-            if(!error){
-                // This is the asyncronous callback block
-                NSInteger code = response.code;
-                NSDictionary *responseHeaders = response.headers;
-                UNIJsonNode *body = response.body;
-                NSData *rawBody = response.rawBody;
-                NSLog(@"lo++++++++%@",jsonStringify(body.object));
-                ////save cash for user info
-                [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(body.object) forKey:@"logToken"];
-                [self.navigationController pushViewController:[MXViewController new] animated:YES];
+        }] asJson];
+        
+        if(response){
+            [self initData];
+            [alert hideView];
+            // This is the asyncronous callback block
+            NSInteger code = response.code;
+            if(code!=200) {
+                NSLog(@"server error");
+                alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                return;
             }
-        }];
-    } else {
-        NSLog(@"log in");
+            
+            UNIJsonNode *body = response.body;
+            
+            ////save cash for user info
+            if(![body.object objectForKey:@"err"]){
+                [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"logToken"];
+                NSLog(@"register and log in");
+                [self.navigationController pushViewController:[MXViewController new] animated:YES];
+            } else {
+                NSLog(@"error  %@", [body.object objectForKey:@"err"]);
+                alertCustom(SCLAlertViewStyleError, self, [body.object objectForKey:@"err"]);
+            }
+        }
+    } else {//log  in
+        BOOL notValid =  false;
+        if(![self validEmail:self.emailText.text])
+        {
+            self.emailCorrect.hidden = NO;
+            notValid = true;
+        }
+        if(self.passwordText.text.length <6)
+        {
+            self.passCorrect.hidden = NO;
+            notValid = true;
+        }
+        
+        if(notValid) return;
+
+        SCLAlertView *alert = [[SCLAlertView alloc] init];
+        [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
+        
+        NSDictionary *headers = @{@"accept": @"application/json"};
+        NSDictionary *parameters = @{@"email": self.emailText.text, @"password":self.passwordText.text};
+        UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *request) {
+            [request setUrl:[BaseURI stringByAppendingString:@"users/login"]];
+            [request setHeaders:headers];
+            [request setParameters:parameters];
+        }] asJson];
+        
+        if(response){
+            [self initData];
+            [alert hideView];
+            // This is the asyncronous callback block
+            NSInteger code = response.code;
+            if(code!=200) {
+                NSLog(@"server error");
+                alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                return;
+            }
+            
+            UNIJsonNode *body = response.body;
+            
+            ////save cash for user info
+            if(![body.object objectForKey:@"err"]){
+                [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"logToken"];
+                NSLog(@"log in");
+                [self.navigationController pushViewController:[MXViewController new] animated:YES];
+            } else {
+                NSLog(@"error  %@", [body.object objectForKey:@"err"]);
+                alertCustom(SCLAlertViewStyleError, self, [body.object objectForKey:@"err"]);
+            }
+        }
     }
     
     
 }
+
 - (IBAction)makeRegister:(id)sender {
-    
+    [self initData];
     isRegister = !isRegister;
     if(isRegister)
        [sender setTitle:@"Log In" forState:UIControlStateNormal];
@@ -122,14 +225,19 @@
 }
 -(IBAction)loginFacebook:(UIButton *)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
+   
     [login
      logInWithReadPermissions: @[@"public_profile",@"email"]
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (error) {
-             NSLog(@"Process error");
+             [alert hideView];
+             alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting error");
          } else if (result.isCancelled) {
-             NSLog(@"Cancelled");
+             [alert hideView];
+             alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting cancelled");
          } else {
              if(result.token) {
                  NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -140,42 +248,37 @@
                                                id result, NSError *error) {
                       if(!error){
                           NSLog(@"user:%@", jsonStringify(result));
-                   
-                                                 
+                          
                           NSDictionary *headers = @{@"accept": @"application/json"};
                           NSDictionary *parameters = @{@"name": [result objectForKey:@"name"],@"email": [result objectForKey:@"email"], @"with":@"facebook", @"password":@"good"};
-                          
-//                          NSDictionary *parameters = @{@"item": [result objectForKey:@"name"]};
-                          
-                          [[UNIRest post:^(UNISimpleRequest *request) {
-//                              [request setUrl:@"https://korteapi.herokuapp.com"];
-                              [request setUrl:@"http://192.168.2.155:3000"];
+                          UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *request) {
+                              [request setUrl:[BaseURI stringByAppendingString:@"users"]];
                               [request setHeaders:headers];
                               [request setParameters:parameters];
-                          }] asJsonAsync:^(UNIHTTPJsonResponse* response, NSError *error) {
-                              if(!error){
-                                  // This is the asyncronous callback block
-                                  NSInteger code = response.code;
-                                  NSDictionary *responseHeaders = response.headers;
-                                  UNIJsonNode *body = response.body;
-                                  NSData *rawBody = response.rawBody;
-                                  [self.navigationController pushViewController:[MXViewController new] animated:YES];
+                          }] asJson];
+                          
+                          if(response){
+                              [self initData];
+                              [alert hideView];
+                              // This is the asyncronous callback block
+                              NSInteger code = response.code;
+                              if(code!=200) {
+                                  NSLog(@"server error");
+                                  alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                                  return;
                               }
-                          }];
-                          
+                              NSLog(@"facebook log in");
+                              [self.navigationController pushViewController:[MXViewController new] animated:YES];
+                              UNIJsonNode *body = response.body;
+                              [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"facebookUser"];
+                             
+                          }
                      
-                          
+                      } else {
+                          alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting error");
                       }
                   }];
              }
-             //get profile
-//             [FBSDKProfile loadCurrentProfileWithCompletion:
-//              ^(FBSDKProfile *profile, NSError *error) {
-//                  if (profile) {
-//                      NSLog(@"Hello, %@!", profile.firstName);
-//                      [self.navigationController pushViewController:[MXViewController new] animated:YES];
-//                  }
-//              }];
          }
      }];
 }

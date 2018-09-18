@@ -11,6 +11,8 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "PDKeychainBindings.h"
+
+
 @interface SplashViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
@@ -18,5 +20,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UITextField *CPasswordText;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameCorrect;
+@property (weak, nonatomic) IBOutlet UILabel *emailCorrect;
+@property (weak, nonatomic) IBOutlet UILabel *passCorrect;
+@property (weak, nonatomic) IBOutlet UILabel *cPCorrect;
 
 @end

@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "SCLAlertView.h"
+//SCLAlertView *alert;
 //enum definition
 typedef NS_ENUM(NSInteger, SectionDefinition) {//for two cards
     LeftSecion = 0,
@@ -30,7 +31,8 @@ typedef NS_ENUM(NSInteger, MXCardDestination) {//tinder card
     MXCardDestinationRight,
     MXCardDestinationUp
 };
-
+//static NSString *BaseURI = @"http://192.168.2.155:3000/";
+static NSString *BaseURI = @"https://korteapi.herokuapp.com/";
 static UIView* copyView(UIView * view) {
     NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject: view];
     UIView* copy = [NSKeyedUnarchiver unarchiveObjectWithData: archivedData];
@@ -131,4 +133,38 @@ static NSData* jsonParse(NSString *stringJson){
     NSData *data = [stringJson dataUsingEncoding:NSUTF8StringEncoding];
     id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     return json;
+}
+
+static void alertCustom(SCLAlertViewStyle alertStyle, UIViewController *self,NSString *subtitle){
+    SCLAlertView *alert = [[SCLAlertView alloc] init];
+    switch (alertStyle) {
+        case SCLAlertViewStyleSuccess:
+            [alert showSuccess:self title:@"Hello World" subTitle:@"This is a more descriptive text." closeButtonTitle:@"Done" duration:0.0f];
+            break;
+        case SCLAlertViewStyleWaiting:
+            [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
+            break;
+        case SCLAlertViewStyleError:
+            [alert showError:self title:@"Error Notification!" subTitle:subtitle closeButtonTitle:@"OK" duration:0.0f]; // Error
+            break;
+        default:
+            [alert hideView];
+            break;
+    }
+    // Get started
+    
+    
+    
+    
+    // Alternative alert types
+    
+    //    [alert showNotice:self title:@"Hello Notice" subTitle:@"This is a more descriptive notice text." closeButtonTitle:@"Done" duration:0.0f]; // Notice
+    //    [alert showWarning:self title:@"Hello Warning" subTitle:@"This is a more descriptive warning text." closeButtonTitle:@"Done" duration:0.0f]; // Warning
+    //    [alert showInfo:self title:@"Hello Info" subTitle:@"This is a more descriptive info text." closeButtonTitle:@"Done" duration:0.0f]; // Info
+    //    [alert showEdit:self title:@"Hello Edit" subTitle:@"This is a more descriptive info text with a edit textbox" closeButtonTitle:@"Done" duration:0.0f]; // Edit
+    //    [alert showCustom:self image:[UIImage imageNamed:@"git"] color:StandardColor() title:@"Custom" subTitle:@"Add a custom icon and color for your own type of alert!" closeButtonTitle:@"OK" duration:0.0f]; // Custom
+    
+    //    [alert showQuestion:self title:@"Question?" subTitle:@"subtitle" closeButtonTitle:@"Dismiss" duration:0.0f];
+    
+    
 }
