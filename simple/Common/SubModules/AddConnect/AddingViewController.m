@@ -14,7 +14,11 @@
 @end
 
 @implementation AddingViewController
-
+@dynamic actionMenu;
+@dynamic messageButton;
+@dynamic returnButton;
+@dynamic notificationButton;
+@dynamic addConnection;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -62,14 +66,36 @@
     [self.view addSubview:self.messageButton];
     
     //    Notification buttons menu
+    int avatarCount = 2;    
+    forMeFriends = avatarCount;
     self.notificationButton = [[UIButton alloc] init];
     [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti"] forState:UIControlStateNormal];
     [self.notificationButton sizeToFit];
     self.notificationButton.frame = CGRectMake(18, 36, self.notificationButton.bounds.size.width, self.notificationButton.bounds.size.height);
     [self.notificationButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.notificationButton];
-    //    background
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newSplashBG"]];
+    if (avatarCount!=0)
+        [self.view addSubview:self.notificationButton];
+    // adding count of notification
+    UILabel *textLayer = [[UILabel alloc] initWithFrame:CGRectMake(30, 27, 16, 10)];
+    textLayer.lineBreakMode = NSLineBreakByWordWrapping;
+    textLayer.numberOfLines = 0;
+    textLayer.textColor = [UIColor colorWithRed:0.8 green:0.45 blue:0.39 alpha:1];
+    textLayer.textAlignment = UITextAlignmentCenter;
+    textLayer.text = [NSString stringWithFormat:@"%d", avatarCount];
+    [textLayer setFont:[UIFont fontWithName:@"GothamRounded-Medium" size:10.28]];
+//    NSString *textContent = [NSString stringWithFormat:@"%d", avatarCount];
+//    NSRange textRange = NSMakeRange(0, textContent.length);
+//    NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+//    UIFont *font = [UIFont fontWithName:@"GothamRounded-Medium" size:10.28];
+//    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+//    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//    [paragraphStyle setAlignment:NSTextAlignmentCenter];
+//    paragraphStyle.lineSpacing = 1.17;
+//    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+//    [textString addAttribute:NSKernAttributeName value:@(1.27) range:textRange];
+//    textLayer.attributedText = textString;
+//    [textLayer sizeToFit];
+    [self.notificationButton addSubview:textLayer];    
     
 }
 

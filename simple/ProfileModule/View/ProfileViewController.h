@@ -8,11 +8,24 @@
 #import "BasicMenuController.h"
 #import <UIKit/UIKit.h>
 #import "MKDropdownMenu.h"
-
-@interface ProfileViewController : BasicMenuController<MKDropdownMenuDelegate, MKDropdownMenuDataSource>
+#import "ProfileCollectionViewController.h"
+#import "TTRangeSlider.h"
+#import "Switch.h"
+#import "MXMemberCardView.h"
+#import "Utilities.h"
+@interface ProfileViewController : BasicMenuController<MKDropdownMenuDelegate, MKDropdownMenuDataSource, TTRangeSliderDelegate>
 @property (weak, nonatomic) IBOutlet UIView *verifyView;
 @property (weak, nonatomic) IBOutlet UILabel *holdLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *idVerifyView;
+@property (weak, nonatomic) IBOutlet UIView *ageRangeView;
+@property (strong, nonatomic)  TTRangeSlider *ageRange;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSeg;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *interesGenderSeg;
+@property (weak, nonatomic) IBOutlet UIView *soundSwitchView;
+@property (weak, nonatomic) IBOutlet UIView *notiSwitchView;
+@property (weak, nonatomic) IBOutlet UITextField *occupationText;
+@property (weak, nonatomic) IBOutlet UITextField *aboutMeText;
 
 @end

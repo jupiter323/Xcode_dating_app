@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+
 platform :ios, '9.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -15,7 +16,15 @@ target 'Korte' do
   pod "GooglePlaces"
   pod "AffdexSDK-iOS"
   pod "Unirest", "~> 1.1.4"
-  pod 'SCLAlertView-Objective-C'
+  pod "SCLAlertView-Objective-C"
+  pod "TTRangeSlider"
+  pod "Switch"
+  pod "Firebase/Core"
+  pod "Firebase/Auth"
+  pod "Firebase/Database" 
+  pod "Firebase/Storage"
+  pod 'Firebase/Messaging'
+
 #  pod "FBSDKLoginKit"
 
 #  pod "DSCircularCollectionView"

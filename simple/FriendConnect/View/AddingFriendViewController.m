@@ -198,6 +198,7 @@
     }
     
 }
+
 -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if(scrollView.tag==1){
         NSLog(@"vertical");

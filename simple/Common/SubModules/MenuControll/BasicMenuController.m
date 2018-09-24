@@ -48,15 +48,17 @@
     [self.view addSubview:self.floatingButton];
     
     //    Notification buttons menu
+    int avatarCount = 5;
+    forMeFriends = avatarCount;
     self.notificationButton = [[UIButton alloc] init];
     [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti"] forState:UIControlStateNormal];
     [self.notificationButton sizeToFit];
     self.notificationButton.frame = CGRectMake(self.view.bounds.size.width-20-self.notificationButton.bounds.size.width, 20, self.notificationButton.bounds.size.width, self.notificationButton.bounds.size.height);
     [self.notificationButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.notificationButton];
-    //    background
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"newSplashBG"]];
     
+    
+      
 }
 
 - (void)didReceiveMemoryWarning {

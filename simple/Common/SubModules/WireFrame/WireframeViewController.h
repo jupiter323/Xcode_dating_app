@@ -14,6 +14,7 @@
 #import "PDKeychainBindings.h"
 @interface WireframeViewController : UIViewController {
     ThemDefinition *  themKind;
+    int forMeFriends;
 }
 -(void)logOut;
 -(void)returnFun:(UIButton *) sender ;

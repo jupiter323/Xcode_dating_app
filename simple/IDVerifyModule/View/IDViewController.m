@@ -32,10 +32,11 @@
 //        NSLog(@"++++++++++++%@", face.facePoints);
         faceData = face;
         alert = [[UIAlertView alloc] initWithTitle:@"Wait" message:@"Are you sure you want to delete this.  This action cannot be undone" delegate:self cancelButtonTitle:@"Delete" otherButtonTitles:@"Cancel", nil];
-        static BOOL alertFlag = true;
-        if(alertFlag)
-        [alert show];
-        alertFlag = false;
+
+        self.idverifiedalertview.hidden = NO;
+        delay(1, ^{
+            [self changeProfileAndReturn];
+        });
 //        for(NSData *pointOfFace in face.facePoints){
 //            NSLog(@"%@",pointOfFace);
 ////            NSData *data = [pointOfFace dataUsingEncoding:NSUTF8StringEncoding];
@@ -60,11 +61,23 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
         //delete it
-        [self destroyDetector];
-        [self returnFun];
+        
     }
     NSLog(@"%@",faceData);
 }
+-(void)changeProfileAndReturn{
+    [self destroyDetector];
+    self.idverifiedalertview.hidden = NO;
+    
+    [[Utilities sharedUtilities] setIdVerifyStatus:YES];
+    id userInfo = [jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"]) mutableCopy];
+    [userInfo setObject:@"yes" forKey:@"idVerifyStatus"];
+    [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(userInfo) forKey:@"userInfo"];
+    [[PDKeychainBindings sharedKeychainBindings] setObject:@"yes" forKey:@"profileFlag"];
+    
+    [self returnFun];
+}
+
 // This is a convenience method that is called by the detector:hasResults:forImage:atTime: delegate method below.
 // It handles all UNPROCESSED images from the detector. Here I am displaying those images on the camera view.
 - (void)unprocessedImageReady:(AFDXDetector *)detector image:(UIImage *)image atTime:(NSTimeInterval)time;
@@ -116,13 +129,13 @@
             
             if (nil != error)
             {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Detector Error"
-                                                                               message:[error localizedDescription]
-                                                                        preferredStyle:UIAlertControllerStyleAlert];
-                
-                [self presentViewController:alert animated:YES completion:
-                 ^{}
-                 ];
+//                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Detector Error"
+//                                                                               message:[error localizedDescription]
+//                                                                        preferredStyle:UIAlertControllerStyleAlert];
+//
+//                [self presentViewController:alert animated:YES completion:
+//                 ^{}
+//                 ];
                 
                 return;
             }
@@ -160,11 +173,33 @@
     [super viewWillAppear:animated];
     [self createDetector]; // create the dector just before the view appears
 }
-
+- (void)viewDidAppear:(BOOL)animated{
+    self.idverifiedalertview.hidden = YES;
+    self.idverifiedalertview.layer.cornerRadius = 18;
+    self.idverifiedalertview.layer.backgroundColor = [UIColor colorWithRed:0.96 green:0.49 blue:0.39 alpha:1].CGColor;
+    
+    self.idverifiedtextlabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.idverifiedtextlabel.numberOfLines = 0;
+    self.idverifiedtextlabel.textColor = [UIColor whiteColor];
+    NSString *textContent = @"Identity verified!";
+    NSRange textRange = NSMakeRange(0, textContent.length);
+    NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+    UIFont *font = [UIFont fontWithName:@"GothamRounded-Medium" size:22];
+    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 1.18;
+    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+    self.idverifiedtextlabel.attributedText = textString;
+    [self.idverifiedtextlabel sizeToFit];
+    
+}
 - (void)viewWillDisappear:(BOOL)animated;
 {
     [super viewWillDisappear:animated];
     [self destroyDetector]; // destroy the detector before the view disappears
+}
+- (IBAction)returnButtonAction:(id)sender {
+    [self returnFun];
 }
 
 - (void)didReceiveMemoryWarning;

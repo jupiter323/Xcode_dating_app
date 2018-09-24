@@ -36,6 +36,7 @@
     [self.view addSubview:self.addConnection];
     
     //    message buttons menu
+    int avatarCount = 5;
     self.messageButton = [[UIButton alloc] init];
     [self.messageButton setImage:[UIImage imageNamed:@"message"] forState:UIControlStateNormal];
     [self.messageButton sizeToFit];
@@ -45,11 +46,14 @@
     
     //    Notification buttons menu
     self.notificationButton = [[UIButton alloc] init];
+    self.notificationButton.tag = avatarCount;
     [self.notificationButton setImage:[UIImage imageNamed:@"noti"] forState:UIControlStateNormal];
     [self.notificationButton sizeToFit];
     self.notificationButton.frame = CGRectMake(20, 20, self.notificationButton.bounds.size.width, self.notificationButton.bounds.size.height);
     [self.notificationButton addTarget:self action:@selector(tapedNoti:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.notificationButton];
+    
+    
     //    background
     self.view.backgroundColor = [UIColor whiteColor];
     

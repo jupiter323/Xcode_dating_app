@@ -7,7 +7,7 @@
 //
 
 #import "SplashViewController.h"
-#import "UNIRest/UNIRest.h"
+
 @interface SplashViewController (){
     BOOL isRegister;
 //    SCLAlertView *alert;
@@ -19,9 +19,17 @@
 
 @implementation SplashViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //logged in with face book
+    if ([FBSDKAccessToken currentAccessToken]||[[PDKeychainBindings sharedKeychainBindings] objectForKey:@"logToken"]) {
+        // User is logged in, do work such as go to next view controller.
+        NSLog(@"Already Logged in");
+        [self.navigationController pushViewController:[MXViewController new] animated:YES];
+        
+    } 
     //password security
     self.passwordText.secureTextEntry = YES;
     self.CPasswordText.secureTextEntry = YES;
@@ -30,12 +38,7 @@
     //register
     isRegister = false;
     [self registerOrLoginSetting];
-    //logged in with face book
-   if ([FBSDKAccessToken currentAccessToken]||[[PDKeychainBindings sharedKeychainBindings] objectForKey:@"logToken"]) {
-        // User is logged in, do work such as go to next view controller.
-       NSLog(@"Already Logged in");
-        [self.navigationController pushViewController:[MXViewController new] animated:YES];
-   } 
+  
 }
 - (BOOL) validEmail:(NSString*) emailString {
     
@@ -128,7 +131,7 @@
             NSInteger code = response.code;
             if(code!=200) {
                 NSLog(@"server error");
-                alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                alertCustom(SCLAlertViewStyleError, @"Server error");
                 return;
             }
             
@@ -137,11 +140,12 @@
             ////save cash for user info
             if(![body.object objectForKey:@"err"]){
                 [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"logToken"];
+                [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"userInfo"];
                 NSLog(@"register and log in");
                 [self.navigationController pushViewController:[MXViewController new] animated:YES];
             } else {
                 NSLog(@"error  %@", [body.object objectForKey:@"err"]);
-                alertCustom(SCLAlertViewStyleError, self, [body.object objectForKey:@"err"]);
+                alertCustom(SCLAlertViewStyleError, [body.object objectForKey:@"err"]);
             }
         }
     } else {//log  in
@@ -177,7 +181,7 @@
             NSInteger code = response.code;
             if(code!=200) {
                 NSLog(@"server error");
-                alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                alertCustom(SCLAlertViewStyleError, @"Server error");
                 return;
             }
             
@@ -190,7 +194,7 @@
                 [self.navigationController pushViewController:[MXViewController new] animated:YES];
             } else {
                 NSLog(@"error  %@", [body.object objectForKey:@"err"]);
-                alertCustom(SCLAlertViewStyleError, self, [body.object objectForKey:@"err"]);
+                alertCustom(SCLAlertViewStyleError, [body.object objectForKey:@"err"]);
             }
         }
     }
@@ -234,10 +238,10 @@
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (error) {
              [alert hideView];
-             alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting error");
+             alertCustom(SCLAlertViewStyleError, @"Facebook connecting error");
          } else if (result.isCancelled) {
              [alert hideView];
-             alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting cancelled");
+             alertCustom(SCLAlertViewStyleError, @"Facebook connecting cancelled");
          } else {
              if(result.token) {
                  NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
@@ -264,18 +268,19 @@
                               NSInteger code = response.code;
                               if(code!=200) {
                                   NSLog(@"server error");
-                                  alertCustom(SCLAlertViewStyleError, self, @"Server error");
+                                  alertCustom(SCLAlertViewStyleError, @"Server error");
                                   return;
                               }
                               NSLog(@"facebook log in");
-                              [self.navigationController pushViewController:[MXViewController new] animated:YES];
                               UNIJsonNode *body = response.body;
-                              [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"facebookUser"];
+                              [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"userInfo"];
+                              [self.navigationController pushViewController:[MXViewController new] animated:YES];
+                              
                              
                           }
                      
                       } else {
-                          alertCustom(SCLAlertViewStyleError, self, @"Facebook connecting error");
+                          alertCustom(SCLAlertViewStyleError, @"Facebook connecting error");
                       }
                   }];
              }

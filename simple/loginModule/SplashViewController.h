@@ -11,7 +11,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "PDKeychainBindings.h"
-
+#import "UNIRest/UNIRest.h"
 
 @interface SplashViewController : UIViewController
 

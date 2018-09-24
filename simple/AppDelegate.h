@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "PDKeychainBindings.h"
+#import "MXViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "ProfileCollectionViewController.h"
+#import "ProfileViewController.h"
+#import "Utilities.h"
+@import Firebase;
+@import GoogleMaps;
+@import GooglePlaces;
+@import UserNotifications;
+@import Firebase;
+@interface AppDelegate : UIResponder <UIApplicationDelegate, FIRMessagingDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

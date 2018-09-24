@@ -29,7 +29,10 @@
         FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
         [login logOut];
         NSLog(@"deleted FBToken");
-        //    animating
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MProfile" bundle:nil];
+        UINavigationController *mProfileScene = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"idMProfile"];
+             //    animating
         [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
         // go to root
         [self.navigationController popToRootViewControllerAnimated:NO];
@@ -217,16 +220,36 @@
 
 -(void)tapedNoti:(UIButton *) sender {
 //    [self showNotiFromButton:sender withDirection:LSFloatingActionMenuDirectionDown];
+   
 //    appear notification
+    int avatarCount = forMeFriends;
     static int flag_noti = 0;
     flag_noti++;
+    
+    CGFloat profileWidth = 32;
+    CGFloat notiWidth = 49;
+    CGFloat notiHeight = 100;
+    CGFloat sideHeight = profileWidth + 4;    
+
     if(flag_noti%2==1){
         [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti_acti"] forState:UIControlStateNormal];
-        CGFloat notiWidth = 49;
-        CGFloat notiHeight = 100;
         
         notiBackView = [[UIImageView alloc] initWithFrame:CGRectMake(sender.frame.origin.x + sender.frame.size.width+10, sender.frame.origin.y, notiWidth, notiHeight)];
-        [notiBackView setImage:[UIImage imageNamed:@"notify"]];
+        UIImageView *notyCover = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+        [notyCover setImage:[UIImage imageNamed:@"noty_cover"]];
+        [notyCover sizeToFit];
+        
+        
+        UIImageView *notyFloor = [[UIImageView alloc] initWithFrame:CGRectMake(0, notyCover.frame.size.height-2.3 + (avatarCount -1) * sideHeight, 10, 10)];
+        [notyFloor setImage:[UIImage imageNamed:@"noty_floor"]];
+        [notyFloor sizeToFit];
+        
+        UIView *sideView = [[UIView alloc] initWithFrame:CGRectMake(7.6, notyCover.frame.size.height, 43.6, sideHeight*(avatarCount -1))];
+        [sideView setBackgroundColor:[UIColor whiteColor]];
+        
+        [notiBackView addSubview:notyCover];
+        [notiBackView addSubview:sideView];
+        [notiBackView addSubview:notyFloor];
         [notiBackView sizeToFit];
         [self.view addSubview:notiBackView];
     }else {
@@ -235,16 +258,16 @@
     }
     
     
-    CGFloat profileWidth = 62;
-    UIButton *myProfile = [[UIButton alloc] init];
-    myProfile.frame = CGRectMake(0, 0 , profileWidth,profileWidth);
-    [myProfile setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
-    myProfile.imageView.contentMode =UIViewContentModeScaleAspectFill;
-    [myProfile addTarget:self action:@selector(toMatches:) forControlEvents:UIControlEventTouchUpInside];
-    myProfile.layer.cornerRadius = myProfile.frame.size.width / 2;
-    myProfile.clipsToBounds = YES;
-    myProfile.layer.borderWidth = 9.03f;
-    myProfile.layer.borderColor = [UIColor whiteColor].CGColor;
+    for(int i=0;i<avatarCount;i++){
+        UIButton *myProfile = [[UIButton alloc] init];
+        myProfile.frame = CGRectMake(13, 6 + i*sideHeight , profileWidth,profileWidth);
+        [myProfile setImage:[UIImage imageNamed:@"sunglassesGirl"] forState:UIControlStateNormal];
+        myProfile.imageView.contentMode =UIViewContentModeScaleAspectFill;
+        [myProfile addTarget:self action:@selector(toMatches:) forControlEvents:UIControlEventTouchUpInside];
+        myProfile.layer.cornerRadius = myProfile.frame.size.width / 2;
+        myProfile.clipsToBounds = YES;
+        [notiBackView addSubview:myProfile];
+    }
 
 }
 - (void)showNotiFromButton:(UIButton *)button withDirection:(LSFloatingActionMenuDirection)direction {

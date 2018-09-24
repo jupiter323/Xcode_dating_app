@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2287A49515E261FA5ACBECE0 /* Pods_Korte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */; };
+		CE09C21C215218B200DF5291 /* ProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09C21B215218B200DF5291 /* ProfileCollectionViewCell.m */; };
+		CE09C2302152648900DF5291 /* HTKDragAndDropCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09C22A2152648900DF5291 /* HTKDragAndDropCollectionViewController.m */; };
+		CE09C2312152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09C22C2152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m */; };
+		CE09C2322152648900DF5291 /* HTKDraggableCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09C22F2152648900DF5291 /* HTKDraggableCollectionViewCell.m */; };
+		CE09C2372152A4DA00DF5291 /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09C2362152A4DA00DF5291 /* ProfileCollectionViewController.m */; };
 		CE1778A7213FEF2700764C3B /* gothamroundedmedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778A6213FEEFB00764C3B /* gothamroundedmedium_21022.ttf */; };
 		CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */; };
 		CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */; };
@@ -46,6 +51,8 @@
 		CE7A351921470D9900973CB8 /* MatchProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A351821470D9900973CB8 /* MatchProfileViewController.m */; };
 		CE7A351B214711B300973CB8 /* MProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7A351A214711B300973CB8 /* MProfile.storyboard */; };
 		CE900CB421251E8B00503AF3 /* AddingFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */; };
+		CEAFBC9C21549115009BE456 /* FirebaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAFBC9B21549115009BE456 /* FirebaseViewController.m */; };
+		CEAFBCA321551344009BE456 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAFBCA221551344009BE456 /* Utilities.m */; };
 		CEB28729211388A900C51670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB28728211388A900C51670 /* AppDelegate.m */; };
 		CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB28730211388A900C51670 /* simple.xcdatamodeld */; };
 		CEB28734211388BA00C51670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB28733211388BA00C51670 /* Assets.xcassets */; };
@@ -59,13 +66,27 @@
 		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
 		CEBA56BA214828320025C87A /* SBSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA56B8214828320025C87A /* SBSliderView.m */; };
 		CEBA56BB214828320025C87A /* SBSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBA56B9214828320025C87A /* SBSliderView.xib */; };
+		CEC7CF312150B18600A8D221 /* MeQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC7CF302150B18600A8D221 /* MeQuestion.storyboard */; };
+		CEC7CF342150B30300A8D221 /* MeQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC7CF332150B30300A8D221 /* MeQuestionViewController.m */; };
 		CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2A59212A90FD0046D01E /* Matches.storyboard */; };
+		CEE321FD21569D0A007A8E08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE321FC21569D0A007A8E08 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.release.xcconfig"; sourceTree = "<group>"; };
 		66FBA8ABA9919E614E71EAC5 /* Pods_Korte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84CCF3D273BAACCEC0F3DEE /* Pods-Korte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Korte/Pods-Korte.debug.xcconfig"; sourceTree = "<group>"; };
+		CE09C21A215218B200DF5291 /* ProfileCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewCell.h; sourceTree = "<group>"; };
+		CE09C21B215218B200DF5291 /* ProfileCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewCell.m; sourceTree = "<group>"; };
+		CE09C2292152648900DF5291 /* HTKDragAndDropCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTKDragAndDropCollectionViewController.h; sourceTree = "<group>"; };
+		CE09C22A2152648900DF5291 /* HTKDragAndDropCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTKDragAndDropCollectionViewController.m; sourceTree = "<group>"; };
+		CE09C22B2152648900DF5291 /* HTKDragAndDropCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTKDragAndDropCollectionViewLayout.h; sourceTree = "<group>"; };
+		CE09C22C2152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTKDragAndDropCollectionViewLayout.m; sourceTree = "<group>"; };
+		CE09C22D2152648900DF5291 /* HTKDragAndDropCollectionViewLayoutConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTKDragAndDropCollectionViewLayoutConstants.h; sourceTree = "<group>"; };
+		CE09C22E2152648900DF5291 /* HTKDraggableCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTKDraggableCollectionViewCell.h; sourceTree = "<group>"; };
+		CE09C22F2152648900DF5291 /* HTKDraggableCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTKDraggableCollectionViewCell.m; sourceTree = "<group>"; };
+		CE09C2352152A4D900DF5291 /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
+		CE09C2362152A4DA00DF5291 /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		CE1778A6213FEEFB00764C3B /* gothamroundedmedium_21022.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gothamroundedmedium_21022.ttf; sourceTree = "<group>"; };
 		CE1778A821402C4E00764C3B /* GothamRoundedBold_21016.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBold_21016.ttf; sourceTree = "<group>"; };
 		CE1778AA21406BFA00764C3B /* GothamRoundedBook_21018.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedBook_21018.ttf; sourceTree = "<group>"; };
@@ -93,7 +114,7 @@
 		CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		CE3D2BCE211C7C5F005DE85C /* AddingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddingViewController.h; sourceTree = "<group>"; };
 		CE3D2BCF211C7C5F005DE85C /* AddingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddingViewController.m; sourceTree = "<group>"; };
-		CE3D333D2118F54400FE970D /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		CE3D333D2118F54400FE970D /* Utiliti2es.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utiliti2es.h; sourceTree = "<group>"; };
 		CE47908E2140D97B004DA76F /* MSCMoreOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCell.h; sourceTree = "<group>"; };
 		CE47908F2140D97B004DA76F /* MSCMoreOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSCMoreOptionTableViewCell.m; sourceTree = "<group>"; };
 		CE4790902140D97B004DA76F /* MSCMoreOptionTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCMoreOptionTableViewCellDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +150,10 @@
 		CE7A351821470D9900973CB8 /* MatchProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchProfileViewController.m; sourceTree = "<group>"; };
 		CE7A351A214711B300973CB8 /* MProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MProfile.storyboard; sourceTree = "<group>"; };
 		CE900CB321251E8B00503AF3 /* AddingFriend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingFriend.storyboard; sourceTree = "<group>"; };
+		CEAFBC9A21549115009BE456 /* FirebaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseViewController.h; sourceTree = "<group>"; };
+		CEAFBC9B21549115009BE456 /* FirebaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirebaseViewController.m; sourceTree = "<group>"; };
+		CEAFBCA121551344009BE456 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		CEAFBCA221551344009BE456 /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		CEB28724211388A900C51670 /* Korte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB28727211388A900C51670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CEB28728211388A900C51670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,7 +175,12 @@
 		CEBA56B7214828320025C87A /* SBSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSliderView.h; sourceTree = "<group>"; };
 		CEBA56B8214828320025C87A /* SBSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSliderView.m; sourceTree = "<group>"; };
 		CEBA56B9214828320025C87A /* SBSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBSliderView.xib; sourceTree = "<group>"; };
+		CEC7CF302150B18600A8D221 /* MeQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeQuestion.storyboard; sourceTree = "<group>"; };
+		CEC7CF322150B30300A8D221 /* MeQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeQuestionViewController.h; sourceTree = "<group>"; };
+		CEC7CF332150B30300A8D221 /* MeQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeQuestionViewController.m; sourceTree = "<group>"; };
 		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
+		CEE321FB21568F44007A8E08 /* Korte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Korte.entitlements; sourceTree = "<group>"; };
+		CEE321FC21569D0A007A8E08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +205,20 @@
 				0ABF510862DA2D2117C0BAC0 /* Pods-Korte.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE09C2282152648900DF5291 /* HTKDragAndDropCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				CE09C2292152648900DF5291 /* HTKDragAndDropCollectionViewController.h */,
+				CE09C22A2152648900DF5291 /* HTKDragAndDropCollectionViewController.m */,
+				CE09C22B2152648900DF5291 /* HTKDragAndDropCollectionViewLayout.h */,
+				CE09C22C2152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m */,
+				CE09C22D2152648900DF5291 /* HTKDragAndDropCollectionViewLayoutConstants.h */,
+				CE09C22E2152648900DF5291 /* HTKDraggableCollectionViewCell.h */,
+				CE09C22F2152648900DF5291 /* HTKDraggableCollectionViewCell.m */,
+			);
+			path = HTKDragAndDropCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		CE1778A4213FEE0000764C3B /* font */ = {
@@ -261,6 +305,10 @@
 				CE3BCEEB21168CEB00706FD1 /* Profile.storyboard */,
 				CE3BCEF021169B6A00706FD1 /* ProfileViewController.h */,
 				CE3BCEF121169B6A00706FD1 /* ProfileViewController.m */,
+				CE09C21A215218B200DF5291 /* ProfileCollectionViewCell.h */,
+				CE09C21B215218B200DF5291 /* ProfileCollectionViewCell.m */,
+				CE09C2352152A4D900DF5291 /* ProfileCollectionViewController.h */,
+				CE09C2362152A4DA00DF5291 /* ProfileCollectionViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,9 +484,19 @@
 			path = GettingSwipingModule;
 			sourceTree = "<group>";
 		};
+		CEAFBC99215490B1009BE456 /* FirebaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFBC9A21549115009BE456 /* FirebaseViewController.h */,
+				CEAFBC9B21549115009BE456 /* FirebaseViewController.m */,
+			);
+			path = FirebaseModule;
+			sourceTree = "<group>";
+		};
 		CEB2871B211388A900C51670 = {
 			isa = PBXGroup;
 			children = (
+				CEE321FB21568F44007A8E08 /* Korte.entitlements */,
 				CEB28726211388A900C51670 /* simple */,
 				CEB28725211388A900C51670 /* Products */,
 				559FE5F51B1CCD4D6D384768 /* Pods */,
@@ -475,6 +533,7 @@
 				CEB28728211388A900C51670 /* AppDelegate.m */,
 				CEB28733211388BA00C51670 /* Assets.xcassets */,
 				CEB28738211388BA00C51670 /* Info.plist */,
+				CEE321FC21569D0A007A8E08 /* GoogleService-Info.plist */,
 				CEB2876D211432C700C51670 /* LaunchScreen.storyboard */,
 				CEB28739211388BA00C51670 /* main.m */,
 				CEB28730211388A900C51670 /* simple.xcdatamodeld */,
@@ -485,6 +544,7 @@
 		CEB28742211391D400C51670 /* TinderModule */ = {
 			isa = PBXGroup;
 			children = (
+				CEC7CF2F2150B13E00A8D221 /* QuestionModule */,
 				CEB28743211391E300C51670 /* View */,
 			);
 			path = TinderModule;
@@ -514,13 +574,17 @@
 		CEB2876A21142F5C00C51670 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFBC99215490B1009BE456 /* FirebaseModule */,
+				CE09C2282152648900DF5291 /* HTKDragAndDropCollectionViewLayout */,
 				CE3480C1214A35A1005F33FB /* PDKeychainBindingsController */,
 				CE3480BA21493428005F33FB /* fbSDK */,
 				CE47909B21423303004DA76F /* CollectionCellCricleLayout */,
 				CE47908C2140D97B004DA76F /* MSCMoreOptionTableViewCell */,
 				CE603A42211DA424006E95F3 /* MXCardsSwipingView */,
 				CE1CCF56211B017900AD8701 /* SubModules */,
-				CE3D333D2118F54400FE970D /* Utilities.h */,
+				CE3D333D2118F54400FE970D /* Utiliti2es.h */,
+				CEAFBCA121551344009BE456 /* Utilities.h */,
+				CEAFBCA221551344009BE456 /* Utilities.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -563,6 +627,16 @@
 				CE598E4021380B8300306488 /* IDVerify.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEC7CF2F2150B13E00A8D221 /* QuestionModule */ = {
+			isa = PBXGroup;
+			children = (
+				CEC7CF302150B18600A8D221 /* MeQuestion.storyboard */,
+				CEC7CF322150B30300A8D221 /* MeQuestionViewController.h */,
+				CEC7CF332150B30300A8D221 /* MeQuestionViewController.m */,
+			);
+			path = QuestionModule;
 			sourceTree = "<group>";
 		};
 		CEDF2A58212A8EE30046D01E /* MatchesModule */ = {
@@ -626,6 +700,11 @@
 					CEB28723211388A900C51670 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -656,6 +735,7 @@
 				CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */,
 				CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */,
 				CE7A351B214711B300973CB8 /* MProfile.storyboard in Resources */,
+				CEC7CF312150B18600A8D221 /* MeQuestion.storyboard in Resources */,
 				CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
@@ -668,6 +748,7 @@
 				CE7A350C2146F34D00973CB8 /* Chat.storyboard in Resources */,
 				CE1778A7213FEF2700764C3B /* gothamroundedmedium_21022.ttf in Resources */,
 				CE27DE76211A2FCB00F5B1C2 /* data in Resources */,
+				CEE321FD21569D0A007A8E08 /* GoogleService-Info.plist in Resources */,
 				CE1FC6DB212F28B50094C0E9 /* GettingForMeSwiping.storyboard in Resources */,
 				CEB287692113F6DD00C51670 /* Splash.storyboard in Resources */,
 			);
@@ -704,22 +785,36 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework",
 				"${PODS_ROOT}/AffdexSDK-iOS/ios/Affdex.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/LSFloatingActionMenu/LSFloatingActionMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/MKDropdownMenu/MKDropdownMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework",
+				"${BUILT_PRODUCTS_DIR}/Switch/Switch.framework",
+				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/Unirest/Unirest.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSKinesis.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Affdex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSFloatingActionMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGCollapsingHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKDropdownMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView_Objective_C.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Switch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unirest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -754,12 +849,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
+				CEAFBC9C21549115009BE456 /* FirebaseViewController.m in Sources */,
 				CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */,
+				CEAFBCA321551344009BE456 /* Utilities.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CE3480C6214A35A1005F33FB /* PDKeychainBindings.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
+				CE09C2312152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m in Sources */,
 				CEB28746211391FD00C51670 /* MXViewController.m in Sources */,
+				CE09C21C215218B200DF5291 /* ProfileCollectionViewCell.m in Sources */,
 				CE3D2BD0211C7C5F005DE85C /* AddingViewController.m in Sources */,
 				CE4DF72E21243C1900C6E9F7 /* AddingFriendViewController.m in Sources */,
 				CE7A350E2146F34D00973CB8 /* ChatController.m in Sources */,
@@ -771,6 +870,7 @@
 				CE1FC6DA212F28B50094C0E9 /* MeTableViewCell.m in Sources */,
 				CE18E2B4212AE081004CACDB /* MatchesViewController.m in Sources */,
 				CE1FC6D0212EF0820094C0E9 /* FriendsTableViewCell.m in Sources */,
+				CE09C2302152648900DF5291 /* HTKDragAndDropCollectionViewController.m in Sources */,
 				CE3480C7214A35A1005F33FB /* PDKeychainBindingsController.m in Sources */,
 				CE1CCF55211AFFB800AD8701 /* BasicMenuController.m in Sources */,
 				CE4DF72F21243C1900C6E9F7 /* OnCard.m in Sources */,
@@ -782,7 +882,10 @@
 				CEB28729211388A900C51670 /* AppDelegate.m in Sources */,
 				CE1FC6DC212F28B50094C0E9 /* GettingForMeSwipingViewController.m in Sources */,
 				CE598E3F21380B6800306488 /* IDViewController.m in Sources */,
+				CE09C2372152A4DA00DF5291 /* ProfileCollectionViewController.m in Sources */,
+				CE09C2322152648900DF5291 /* HTKDraggableCollectionViewCell.m in Sources */,
 				CE4DF74621247B8900C6E9F7 /* WireframeViewController.m in Sources */,
+				CEC7CF342150B30300A8D221 /* MeQuestionViewController.m in Sources */,
 				CEB287492113925A00C51670 /* MXMemberCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,6 +1020,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Korte.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JSHQJ848VX;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -924,11 +1028,12 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.reema.dating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "52d94660-5190-4b03-97a7-be51df60d6a9";
@@ -946,6 +1051,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Korte.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JSHQJ848VX;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -953,11 +1059,12 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.reema.dating;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "52d94660-5190-4b03-97a7-be51df60d6a9";

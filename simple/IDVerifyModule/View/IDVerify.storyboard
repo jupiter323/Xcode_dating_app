@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,26 +21,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRH-dr-urZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facePol" translatesAutoresizingMaskIntoConstraints="NO" id="1nV-EN-5P8">
-                                <rect key="frame" x="87.5" y="193.5" width="200" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-S3-6d9">
+                                <rect key="frame" x="61" y="402" width="253" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlL-Zd-688">
+                                        <rect key="frame" x="105" y="15" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="YDc-q0-agd"/>
-                                    <constraint firstAttribute="height" constant="280" id="Yda-Gb-plg"/>
+                                    <constraint firstAttribute="height" constant="51" id="829-H0-9Zb"/>
+                                    <constraint firstAttribute="width" constant="253" id="he5-4J-Kro"/>
+                                    <constraint firstItem="UlL-Zd-688" firstAttribute="centerX" secondItem="NuC-S3-6d9" secondAttribute="centerX" id="mYH-ee-kAM"/>
+                                    <constraint firstItem="UlL-Zd-688" firstAttribute="centerY" secondItem="NuC-S3-6d9" secondAttribute="centerY" id="stS-qq-cdT"/>
                                 </constraints>
-                            </imageView>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-Ri-cUL">
+                                <rect key="frame" x="40.5" y="593.5" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="JmR-qO-5Tl"/>
+                                    <constraint firstAttribute="width" constant="27" id="rae-pu-sWm"/>
+                                </constraints>
+                                <state key="normal" image="closeGetting"/>
+                                <connections>
+                                    <action selector="returnButtonAction:" destination="CSb-0E-rv9" eventType="touchUpInside" id="ICz-l9-F5y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VRH-dr-urZ" secondAttribute="bottom" id="6oC-bG-U6F"/>
-                            <constraint firstItem="1nV-EN-5P8" firstAttribute="centerY" secondItem="JQ1-gF-Som" secondAttribute="centerY" id="9oJ-0e-xw2"/>
-                            <constraint firstItem="1nV-EN-5P8" firstAttribute="centerX" secondItem="JQ1-gF-Som" secondAttribute="centerX" id="AYH-A4-UJN"/>
+                            <constraint firstItem="NuC-S3-6d9" firstAttribute="centerX" secondItem="JQ1-gF-Som" secondAttribute="centerX" id="8eC-WR-8kC"/>
                             <constraint firstItem="VRH-dr-urZ" firstAttribute="top" secondItem="JQ1-gF-Som" secondAttribute="top" id="TKf-Ud-LE1"/>
                             <constraint firstAttribute="trailing" secondItem="VRH-dr-urZ" secondAttribute="trailing" id="UPE-Mv-Y9F"/>
                             <constraint firstItem="VRH-dr-urZ" firstAttribute="leading" secondItem="JQ1-gF-Som" secondAttribute="leading" id="XgO-zE-V1h"/>
+                            <constraint firstItem="NuC-S3-6d9" firstAttribute="top" secondItem="JQ1-gF-Som" secondAttribute="top" constant="402" id="gCT-ZQ-8nK"/>
+                            <constraint firstItem="cUh-Ri-cUL" firstAttribute="leading" secondItem="JQ1-gF-Som" secondAttribute="leading" constant="40.590000000000003" id="jor-tT-9z7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cUh-Ri-cUL" secondAttribute="bottom" constant="46.409999999999997" id="l7T-oy-AyT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="VRH-dr-urZ" id="KMB-TH-a0R"/>
+                        <outlet property="idverifiedalertview" destination="NuC-S3-6d9" id="CSy-Zv-s14"/>
+                        <outlet property="idverifiedtextlabel" destination="UlL-Zd-688" id="A4c-xN-veT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54v-AF-EOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,6 +75,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="facePol" width="198" height="294"/>
+        <image name="closeGetting" width="23" height="24"/>
     </resources>
 </document>

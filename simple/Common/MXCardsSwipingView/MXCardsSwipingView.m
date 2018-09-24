@@ -15,7 +15,6 @@ static const CGFloat kMXDistanceFromCenterDismissalThreshold = 30.0f;
 static const CGFloat kMXDistanceFromCenterShowViewsThreshold = 10.0f;
 
 @interface MXCardsSwipingView()
-
 @property (nonatomic, strong) NSMutableArray <UIView*>* cards;
 @property (nonatomic, strong) UIDynamicAnimator* animator;
 @property (nonatomic, strong) UIAttachmentBehavior* attachment;
