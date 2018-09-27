@@ -36,7 +36,6 @@
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.lineSpacing = 10;
     flowLayout.sectionInset = UIEdgeInsetsMake(15, 32, 0, 32);
-
 }
 -(void)setData:(NSMutableArray *)data local:(NSMutableArray *)localData {
     self.dataArray = data;
@@ -53,8 +52,6 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
     ProfileCollectionViewCell *cell = (ProfileCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:HTKDraggableCollectionViewCellIdentifier forIndexPath:indexPath];
     
     long i = indexPath.item;
@@ -129,6 +126,7 @@
         
         [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(localimages) forKey:@"images"];
         // changed showing images in local data
+
         
         id userInfo =[jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"]) mutableCopy];
         
@@ -137,6 +135,7 @@
             [userInfo setObject:images forKey:@"images"];
             [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(userInfo) forKey:@"userInfo"];// changed images in local data
         }
+        [[PDKeychainBindings sharedKeychainBindings] setObject:@"yes" forKey:@"profileFlag"];
     }
     
   
@@ -144,48 +143,85 @@
     // Reset
     [flowLayout resetDragging];
 }
-//camera
--(void)addAndChangeAvatar:(UIButton *) sender{
-    if ([UIImagePickerController isSourceTypeAvailable:
-         UIImagePickerControllerSourceTypeCamera])
+#pragma mark - alertActionSheet for camera roll
+- (void)addAndChangeAvatar:(UIButton *) sender {
+    
+    
+    self.cellToCapture = (ProfileCollectionViewCell *)sender.superview.superview;
+    self.cellIndexPath = [self.collectionView indexPathForCell:self.cellToCapture];
+//    [self.cellToCapture enableGestureC:NO];
+    
+    [[Utilities sharedUtilities] setIndexImageOfCell:(int)self.cellIndexPath.row];
+    
+    UIImagePickerController *imagePicker =
+    [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    
+    self.yourCurrentViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (self.yourCurrentViewController.presentedViewController)
     {
-        self.cellToCapture = (ProfileCollectionViewCell *)sender.superview.superview;
-        self.cellIndexPath = [self.collectionView indexPathForCell:self.cellToCapture];
-        [[Utilities sharedUtilities] setIndexImageOfCell:(int)self.cellIndexPath.row];
-        NSLog(@"sdf%ld%d",(long)self.cellIndexPath.row, [[Utilities sharedUtilities] indexImage]);
-        UIImagePickerController *imagePicker =
-        [[UIImagePickerController alloc] init];
-        imagePicker.delegate = self;
-        imagePicker.sourceType =
-        UIImagePickerControllerSourceTypeCamera;
+        self.yourCurrentViewController = self.yourCurrentViewController.presentedViewController;
+    }
+    //alert control
+    
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"" message:@"Change Profile image" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *takePhoto=[UIAlertAction actionWithTitle:@"Take Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        if ([UIImagePickerController isSourceTypeAvailable:
+                    UIImagePickerControllerSourceTypeCamera])
+        {
+            imagePicker.sourceType =
+            UIImagePickerControllerSourceTypeCamera;
+            self->_newMedia = YES;
+        } else
+            alertCustom(SCLAlertViewStyleError, @"Camera is error");
         imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
         imagePicker.allowsEditing = YES;
         
-        self.yourCurrentViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [self.yourCurrentViewController presentViewController:imagePicker
+                                                     animated:YES completion:nil];
         
-        while (self.yourCurrentViewController.presentedViewController)
-        {
-            self.yourCurrentViewController = self.yourCurrentViewController.presentedViewController;
-        }
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertController addAction:takePhoto];
+    
+    UIAlertAction *choosePhoto=[UIAlertAction actionWithTitle:@"Select From Photos" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        if ([UIImagePickerController isSourceTypeAvailable:
+             UIImagePickerControllerSourceTypeSavedPhotosAlbum]){
+            imagePicker.sourceType =
+            UIImagePickerControllerSourceTypePhotoLibrary;
+            self->_newMedia = YES;
+        } else
+            alertCustom(SCLAlertViewStyleError, @"Photo library is error");
+        
+        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
+        imagePicker.allowsEditing = YES;
         
         [self.yourCurrentViewController presentViewController:imagePicker
-                                                animated:YES completion:nil];
-
-        _newMedia = YES;
-    }   
-}
-
--(void)uploadImage:(UIImage *)image{
-    SCLAlertView *alert = [[SCLAlertView alloc] init];
-    [alert showWaiting:self.yourCurrentViewController title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
-   
+                                                     animated:YES completion:nil];
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
     
-    [alert hideView];
-
-
-   
+    [alertController addAction:choosePhoto];
+    
+    UIAlertAction *actionCancel=[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    
+    [alertController addAction:actionCancel];
+    
+    [self.yourCurrentViewController presentViewController:alertController animated:YES completion:nil];
+    
+    
+//    [self.cellToCapture enableGestureC:YES];
 }
 
+#pragma mark - imagepicker delegate
 -(void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -195,7 +231,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
         UIImage *image = info[UIImagePickerControllerEditedImage];
-        image = imageWithImage(image, CGSizeMake(768, 768));
+        image = imageWithImage(image, CGSizeMake(768, 768 * image.size.height/image.size.width));
 
         // changed showing images in local data
         if (_newMedia){
@@ -215,7 +251,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
            
             id localimages = [self.localDataArray mutableCopy];
             [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(localimages) forKey:@"images"];
-            
+            [[PDKeychainBindings sharedKeychainBindings] setObject:@"yes" forKey:@"profileFlag"];
             
        
             self.newMedia = NO;
@@ -228,8 +264,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie])
     {
         // Code here to support video if enabled
-    }
-    
+    }    
 }
 
 -(void)image:(UIImage *)image
@@ -249,23 +284,4 @@ finishedSavingWithError:(NSError *)error
     [self.yourCurrentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-//-(void)addAndChangeAvatar:(UIButton *) sender {
-//    if ([UIImagePickerController isSourceTypeAvailable:
-//         UIImagePickerControllerSourceTypeSavedPhotosAlbum])
-//    {
-//        UIImagePickerController *imagePicker =
-//        [[UIImagePickerController alloc] init];
-//        imagePicker.delegate = self;
-//        imagePicker.sourceType =
-//        UIImagePickerControllerSourceTypePhotoLibrary;
-//        imagePicker.mediaTypes = @[(NSString *) kUTTypeImage];
-//        imagePicker.allowsEditing = NO;
-//        [self presentViewController:imagePicker
-//                           animated:YES completion:nil];
-//        _newMedia = NO;
-//    }
-//
-//
-//
-//}
 @end

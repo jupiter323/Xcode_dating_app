@@ -13,6 +13,7 @@
 #import "Switch.h"
 #import "MXMemberCardView.h"
 #import "Utilities.h"
+#import "IDViewController.h"
 @interface ProfileViewController : BasicMenuController<MKDropdownMenuDelegate, MKDropdownMenuDataSource, TTRangeSliderDelegate>
 @property (weak, nonatomic) IBOutlet UIView *verifyView;
 @property (weak, nonatomic) IBOutlet UILabel *holdLabel;
@@ -27,5 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIView *notiSwitchView;
 @property (weak, nonatomic) IBOutlet UITextField *occupationText;
 @property (weak, nonatomic) IBOutlet UITextField *aboutMeText;
+@property (weak, nonatomic) IBOutlet UILabel *ageRangeAbove;
 
 @end

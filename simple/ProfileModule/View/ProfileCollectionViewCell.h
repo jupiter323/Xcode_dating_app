@@ -12,4 +12,5 @@
 @property (strong, nonatomic)  UIImageView *avatarImage;
 @property (strong, nonatomic)  UIButton *subButton;
 @property (nonatomic, strong) UILabel *numberLabel;
+- (void)enableGestureC:(BOOL) enable;
 @end

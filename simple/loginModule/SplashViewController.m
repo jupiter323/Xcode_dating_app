@@ -140,8 +140,8 @@
             ////save cash for user info
             if(![body.object objectForKey:@"err"]){
                 [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"logToken"];
-                [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"userInfo"];
                 NSLog(@"register and log in");
+                [self imageDataInit:body.object[@"user"] facebookImageUrl:nil];
                 [self.navigationController pushViewController:[MXViewController new] animated:YES];
             } else {
                 NSLog(@"error  %@", [body.object objectForKey:@"err"]);
@@ -191,6 +191,7 @@
             if(![body.object objectForKey:@"err"]){
                 [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"logToken"];
                 NSLog(@"log in");
+                [self imageDataInit:body.object[@"user"] facebookImageUrl:nil];
                 [self.navigationController pushViewController:[MXViewController new] animated:YES];
             } else {
                 NSLog(@"error  %@", [body.object objectForKey:@"err"]);
@@ -245,40 +246,44 @@
          } else {
              if(result.token) {
                  NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
-                 [parameters setValue:@"id,name,email" forKey:@"fields"];
+                 [parameters setValue:@"id,name,email,picture.width(100).height(100)" forKey:@"fields"];
                  
+               
                  [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:parameters]
                   startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
                                                id result, NSError *error) {
                       if(!error){
                           NSLog(@"user:%@", jsonStringify(result));
+                          ///////
+                          NSURL *fbURL = [NSURL URLWithString:result[@"picture"][@"data"][@"url"]];
+                          NSMutableArray *fbUrlArray = [[NSMutableArray alloc]init];
+                          [fbUrlArray addObject:fbURL];
+                          //save albums
+                          NSDictionary *albums = (NSDictionary *)result;
+                          NSMutableArray * albumids = [[NSMutableArray alloc] init];
+                          albumids = [albums objectForKey:@"data"];
                           
-                          NSDictionary *headers = @{@"accept": @"application/json"};
+                          for(int i =0; i< [albumids count]; i++)
+                          {
+                              NSDictionary *dictuser = (NSDictionary *)[albumids objectAtIndex:i];
+                              //                                  [album addObject:[dictuser objectForKey:@"id"]];
+                              //                                  [albumname addObject:[dictuser objectForKey:@"name"]];
+                          }
+                          ///////
                           NSDictionary *parameters = @{@"name": [result objectForKey:@"name"],@"email": [result objectForKey:@"email"], @"with":@"facebook", @"password":@"good"};
-                          UNIHTTPJsonResponse *response = [[UNIRest post:^(UNISimpleRequest *request) {
-                              [request setUrl:[BaseURI stringByAppendingString:@"users"]];
-                              [request setHeaders:headers];
-                              [request setParameters:parameters];
-                          }] asJson];
+                        
+                          id responseData = [[Utilities sharedUtilities] apiService:parameters requestMethod:Post url:@"users"];
                           
-                          if(response){
+                          if(responseData){
                               [self initData];
                               [alert hideView];
                               // This is the asyncronous callback block
-                              NSInteger code = response.code;
-                              if(code!=200) {
-                                  NSLog(@"server error");
-                                  alertCustom(SCLAlertViewStyleError, @"Server error");
-                                  return;
-                              }
                               NSLog(@"facebook log in");
-                              UNIJsonNode *body = response.body;
-                              [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify([body.object objectForKey:@"user"]) forKey:@"userInfo"];
+                              [self imageDataInit:responseData[@"user"] facebookImageUrl:fbUrlArray];
+                              
                               [self.navigationController pushViewController:[MXViewController new] animated:YES];
                               
-                             
                           }
-                     
                       } else {
                           alertCustom(SCLAlertViewStyleError, @"Facebook connecting error");
                       }
@@ -287,7 +292,36 @@
          }
      }];
 }
-
+-(void)imageDataInit:(id)userInfo facebookImageUrl:(NSMutableArray *)fbUrls {
+    NSMutableArray *localImageArray;
+    NSMutableArray *imageArray;
+    
+    NSString *imagepath = [[NSBundle mainBundle] pathForResource:@"imagePlace" ofType:@"png" inDirectory:@"data"];
+    NSURL *imageUrlI = [[NSURL alloc] initFileURLWithPath:imagepath];
+    NSString *videoImagepath = [[NSBundle mainBundle] pathForResource:@"videoPlace" ofType:@"png" inDirectory:@"data"];
+    NSURL *videoImageUrlI = [[NSURL alloc] initFileURLWithPath:videoImagepath];
+    localImageArray = [[NSMutableArray alloc] initWithObjects:imagepath,imagepath,imagepath,imagepath,imagepath,videoImagepath, nil];
+    if(!userInfo[@"images"]||[userInfo[@"images"] count]!=6){/// image and localimage array init
+        imageArray = [[NSMutableArray alloc] initWithObjects:imageUrlI.absoluteString,imageUrlI.absoluteString,imageUrlI.absoluteString,imageUrlI.absoluteString,imageUrlI.absoluteString,videoImageUrlI.absoluteString, nil]; //image array init
+        if(fbUrls)
+            for(int i=0;i<fbUrls.count;i++){
+                imageArray[i] = [fbUrls[i] absoluteString];
+                localImageArray[i] = urlToLocalPath(fbUrls[i]);
+            }
+    } else {
+        imageArray =[userInfo[@"images"] mutableCopy];
+        for(int i=0;i<6;i++){
+            if(![imageArray[i] containsString:@"imagePlace"]&&![imageArray[i] containsString:@"videoPlace"])
+                localImageArray[i] = urlToLocalPath([[NSURL alloc] initWithString:userInfo[@"images"][i]]);
+        }
+    }
+    
+    NSMutableDictionary *userInfoCopy = [userInfo mutableCopy];
+    userInfoCopy[@"images"] = imageArray ;
+    [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(userInfoCopy) forKey:@"userInfo"];//save user info
+    [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(localImageArray) forKey:@"images"];//save local images
+    return;
+}
 /*
 #pragma mark - Navigation
 

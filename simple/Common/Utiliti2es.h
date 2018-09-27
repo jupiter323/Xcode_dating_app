@@ -17,6 +17,12 @@ typedef NS_ENUM(NSInteger, SectionDefinition) {//for two cards
     RightSection,
     Center
 };
+typedef NS_ENUM(NSInteger, requestMethodDefinition) {//for two cards
+    Get = 0,
+    Post,
+    Put,
+    Delete
+};
 typedef NS_ENUM(NSInteger, ThemDefinition) {//for Theme distinguish
     StandardTheme = 0,
     ProTheme
@@ -125,7 +131,7 @@ static NSAttributedString* attributedString(NSString * contentString, UIColor * 
     return attributedString;
     
 }
-static NSString* jsonStringify(NSDictionary *arr){
+static NSString* jsonStringify(id arr){
     NSError *error;
     NSData *jsonData2 = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&error];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData2 encoding:NSUTF8StringEncoding];
@@ -143,17 +149,58 @@ static UIImage* imageWithImage(UIImage* image, CGSize size) {
     UIGraphicsEndImageContext();
     return destImage;
 }
-static void alertCustom(SCLAlertViewStyle alertStyle, UIViewController *self,NSString *subtitle){
+static NSString* encodeToBase64String(UIImage *image) {
+    return [UIImagePNGRepresentation(image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+}
+static UIImage * decodeBase64ToImage(NSString *strEncodeData) {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data];
+}
+static NSString * randomStringWithLength (int len) {
+    NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
+    
+    for (int i=0; i<len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform([letters length])]];
+    }
+    
+    return randomString;
+}
+
+static NSString * urlToLocalPath(NSURL * url){
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    NSString *imagename= randomStringWithLength(10);
+    imagename = [imagename stringByAppendingString:@".png"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                         NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString* path = [documentsDirectory stringByAppendingPathComponent:
+                      imagename];
+    NSData* data = UIImagePNGRepresentation(image);
+    [data writeToFile:path atomically:YES];
+    return path;
+}
+
+static void alertCustom(SCLAlertViewStyle alertStyle, NSString *subtitle){
+    UIViewController *yourCurrentViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (yourCurrentViewController.presentedViewController)
+    {
+        yourCurrentViewController = yourCurrentViewController.presentedViewController;
+    }
+    
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     switch (alertStyle) {
         case SCLAlertViewStyleSuccess:
-            [alert showSuccess:self title:@"Hello World" subTitle:@"This is a more descriptive text." closeButtonTitle:@"Done" duration:0.0f];
+            [alert showSuccess:yourCurrentViewController title:@"Hi" subTitle:subtitle closeButtonTitle:@"OK" duration:0.0f];
             break;
         case SCLAlertViewStyleWaiting:
-            [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
+            [alert showWaiting:yourCurrentViewController title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
             break;
         case SCLAlertViewStyleError:
-            [alert showError:self title:@"Error Notification!" subTitle:subtitle closeButtonTitle:@"OK" duration:0.0f]; // Error
+            [alert showError:yourCurrentViewController title:@"Error Notification!" subTitle:subtitle closeButtonTitle:@"OK" duration:0.0f]; // Error
             break;
         default:
             [alert hideView];

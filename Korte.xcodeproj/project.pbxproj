@@ -1028,7 +1028,7 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1059,7 +1059,7 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Utiliti2es.h"
+#import "PDKeychainBindings.h"
 @interface Utilities : NSObject{
-    int indexImage;
-    Boolean idVerifyStatus;
+    int indexImage;    
 }
 @property(assign, nonatomic) int indexImage;
-@property(assign, nonatomic) Boolean idVerifyStatus;
+
+//@property(assign, nonatomic) NSString *profilePath;
 + (id)sharedUtilities;
 -(void) setIndexImageOfCell:(int)index;
--(void) setIdVerifyStatus:(Boolean)idVerifyStatus;
+-(NSDictionary *)apiService:(NSDictionary *)parameters requestMethod:(requestMethodDefinition) method url:(NSString *)url;
+//-(void) setProfilePath:(NSString *) path;
 @end

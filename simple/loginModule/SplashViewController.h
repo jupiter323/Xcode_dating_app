@@ -12,7 +12,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "PDKeychainBindings.h"
 #import "UNIRest/UNIRest.h"
-
+#import "Utilities.h"
 @interface SplashViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *nameText;

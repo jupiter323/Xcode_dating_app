@@ -219,10 +219,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-b5-ZD0">
-                                                <rect key="frame" x="285" y="2.6666666666667425" width="51" height="35"/>
+                                                <rect key="frame" x="281" y="2" width="55" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="QMw-el-huq"/>
-                                                    <constraint firstAttribute="width" constant="51" id="mf1-Dl-krl"/>
+                                                    <constraint firstAttribute="width" constant="55" id="mf1-Dl-krl"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -252,11 +252,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-8X-nGj">
-                                                <rect key="frame" x="285" y="2.3333333333333712" width="51" height="35"/>
+                                                <rect key="frame" x="281" y="2.3333333333333712" width="55" height="35"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="VSc-9B-IsP"/>
-                                                    <constraint firstAttribute="width" constant="51" id="gqW-RM-qXv"/>
+                                                    <constraint firstAttribute="width" constant="55" id="gqW-RM-qXv"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -406,6 +406,7 @@
                     <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="aboutMeText" destination="lgT-wI-b9r" id="AGW-xg-SbA"/>
+                        <outlet property="ageRangeAbove" destination="5U8-rL-PVt" id="kfA-P4-aCc"/>
                         <outlet property="ageRangeView" destination="9YF-20-BES" id="FDg-wx-5oJ"/>
                         <outlet property="dropdownCateContainView" destination="0b2-nE-aoT" id="vki-Du-dWa"/>
                         <outlet property="dropdownContainView" destination="v6b-jc-xdd" id="o3o-47-cE1"/>

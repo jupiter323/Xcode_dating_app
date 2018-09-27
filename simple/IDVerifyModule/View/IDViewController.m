@@ -12,11 +12,12 @@
 {
     UIAlertView *alert;
     AFDXFace *faceData;
+    BOOL isImageDetecting;
 }
+
 @end
-
 @implementation IDViewController
-
+@synthesize indexOfNotPlaceHolder;
 #pragma mark -
 #pragma mark Convenience Methods
 
@@ -29,14 +30,18 @@
     {
         // Here's where you actually "do stuff" with the face object (e.g. examine the emotions, expressions,
         // emojis, and other metrics).
-//        NSLog(@"++++++++++++%@", face.facePoints);
-        faceData = face;
-        alert = [[UIAlertView alloc] initWithTitle:@"Wait" message:@"Are you sure you want to delete this.  This action cannot be undone" delegate:self cancelButtonTitle:@"Delete" otherButtonTitles:@"Cancel", nil];
-
-        self.idverifiedalertview.hidden = NO;
-        delay(1, ^{
+        NSLog(@"++++++++++++%@", face);
+        if(isImageDetecting){
+            faceData = face;
+            isImageDetecting = false;
+            [self createDetector];
+            NSLog(@"%@",faceData);
+        }else if(faceData.appearance==face.appearance||faceData.faceId==face.faceId){
             [self changeProfileAndReturn];
-        });
+        } else {
+//            [self notVerified];
+        }
+       
 //        for(NSData *pointOfFace in face.facePoints){
 //            NSLog(@"%@",pointOfFace);
 ////            NSData *data = [pointOfFace dataUsingEncoding:NSUTF8StringEncoding];
@@ -61,21 +66,37 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
         //delete it
-        
     }
     NSLog(@"%@",faceData);
 }
 -(void)changeProfileAndReturn{
-    [self destroyDetector];
     self.idverifiedalertview.hidden = NO;
+    NSString *textContent = @"Identity verified!";
+    NSRange textRange = NSMakeRange(0, textContent.length);
+    NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+    UIFont *font = [UIFont fontWithName:@"GothamRounded-Medium" size:22];
+    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 1.18;
+    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+    self.idverifiedtextlabel.attributedText = textString;
+    [self.idverifiedtextlabel sizeToFit];
     
-    [[Utilities sharedUtilities] setIdVerifyStatus:YES];
+    
+  
     id userInfo = [jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"]) mutableCopy];
     [userInfo setObject:@"yes" forKey:@"idVerifyStatus"];
     [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(userInfo) forKey:@"userInfo"];
     [[PDKeychainBindings sharedKeychainBindings] setObject:@"yes" forKey:@"profileFlag"];
+    delay(2, ^{
+        self.idverifiedalertview.hidden = YES;
+    });
+    delay(3, ^{
+        [self destroyDetector];
+        [self returnFun];
+    });
     
-    [self returnFun];
+    
 }
 
 // This is a convenience method that is called by the detector:hasResults:forImage:atTime: delegate method below.
@@ -83,7 +104,10 @@
 - (void)unprocessedImageReady:(AFDXDetector *)detector image:(UIImage *)image atTime:(NSTimeInterval)time;
 {
     IDViewController * __weak weakSelf = self;
-    
+    if(isImageDetecting){
+        [self notVerified];
+        return;
+    }
     // UI work must be done on the main thread, so dispatch it there.
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakSelf.cameraView setImage:image];
@@ -91,7 +115,27 @@
        
     });
 }
-
+-(void) notVerified{
+    self.idverifiedalertview.hidden = NO;
+    NSString *textContent = isImageDetecting?@"There is not face!":@"Please make correct image!";
+    NSRange textRange = NSMakeRange(0, textContent.length);
+    NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+    UIFont *font = [UIFont fontWithName:@"GothamRounded-Medium" size:22];
+    [textString addAttribute:NSFontAttributeName value:font range:textRange];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 1.18;
+    [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+    self.idverifiedtextlabel.attributedText = textString;
+    [self.idverifiedtextlabel sizeToFit];
+    
+    delay(2, ^{
+        self.idverifiedalertview.hidden = YES;
+    });
+    delay(4, ^{
+        [self destroyDetector];
+        [self returnFun];
+    });
+}
 - (void)destroyDetector;
 {
     [self.detector stop];
@@ -99,6 +143,7 @@
 
 - (void)createDetector;
 {
+    
     // ensure the detector has stopped
     [self destroyDetector];
     
@@ -145,6 +190,45 @@
     }
 }
 
+- (void)createDetectorForImage;
+{
+    
+    // ensure the detector has stopped
+    [self destroyDetector];
+    
+    self.detector = [[AFDXDetector alloc] initWithDelegate:self
+                                        discreteImages:true maximumFaces:1];
+    self.detector.maxProcessRate = 5;
+    [self.detector processImage:[UIImage imageWithContentsOfFile:[jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"images"]) mutableCopy][self.indexOfNotPlaceHolder]]];
+    // turn on all classifiers (emotions, expressions, and emojis)
+    [self.detector setDetectAllEmotions:YES];
+    [self.detector setDetectAllExpressions:YES];
+    [self.detector setDetectEmojis:YES];
+    
+    
+    // turn on gender and glasses
+    self.detector.gender = TRUE;
+    self.detector.glasses = TRUE;
+    
+    
+    // start the detector and check for failure
+    NSError *error = [self.detector start];
+    
+    if (nil != error)
+    {
+        //                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Detector Error"
+        //                                                                               message:[error localizedDescription]
+        //                                                                        preferredStyle:UIAlertControllerStyleAlert];
+        //
+        //                [self presentViewController:alert animated:YES completion:
+        //                 ^{}
+        //                 ];
+        
+        return;
+    }
+
+}
+
 
 #pragma mark -
 #pragma mark AFDXDetectorDelegate Methods
@@ -160,6 +244,8 @@
     }
     else
     {
+//        UIImage *profileImage = [jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"images"]) mutableCopy][self.indexOfNotPlaceHolder];
+//        [self processedImageReady:detector image:profileImage faces:faces atTime:time];
         [self processedImageReady:detector image:image faces:faces atTime:time];
     }
 }
@@ -171,9 +257,13 @@
 - (void)viewWillAppear:(BOOL)animated;
 {
     [super viewWillAppear:animated];
-    [self createDetector]; // create the dector just before the view appears
+    isImageDetecting = true;
+//    [self createDetector]; // create the dector just before the view appears
+    
+
 }
 - (void)viewDidAppear:(BOOL)animated{
+    NSLog(@"%d",self.indexOfNotPlaceHolder);
     self.idverifiedalertview.hidden = YES;
     self.idverifiedalertview.layer.cornerRadius = 18;
     self.idverifiedalertview.layer.backgroundColor = [UIColor colorWithRed:0.96 green:0.49 blue:0.39 alpha:1].CGColor;
@@ -191,6 +281,8 @@
     [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
     self.idverifiedtextlabel.attributedText = textString;
     [self.idverifiedtextlabel sizeToFit];
+    
+    [self createDetectorForImage];
     
 }
 - (void)viewWillDisappear:(BOOL)animated;

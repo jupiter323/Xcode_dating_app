@@ -119,6 +119,7 @@
     [self.navigationController popViewControllerAnimated:NO];
 }
 -(void)returnFun{
+    
     //    animating
     [self navAnimating:kCATransitionReveal subtype:kCATransitionFromBottom];
     

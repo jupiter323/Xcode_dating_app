@@ -27,5 +27,7 @@
     self.subButton = [[UIButton alloc] init];
     [self.contentView addSubview:self.subButton];
 }
-
+- (void)enableGestureC:(BOOL) enable{    
+    [self enableGesture:enable];
+}
 @end

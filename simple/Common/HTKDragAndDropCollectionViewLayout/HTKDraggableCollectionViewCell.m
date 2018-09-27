@@ -31,7 +31,7 @@
 /**
  * Long press to engage the dragging
  */
-@property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+
 
 /**
  * Allows the pan gesture to begin or not
@@ -82,9 +82,15 @@
     // Add our long press to cell
     self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     // Wait time before we being dragging
-    self.longPressGestureRecognizer.minimumPressDuration = 1.0;
+    self.longPressGestureRecognizer.minimumPressDuration = 0.1;
     self.longPressGestureRecognizer.delegate = self;
    [self addGestureRecognizer:self.longPressGestureRecognizer];
+}
+
+- (void)enableGesture:(BOOL) enable{
+    if(self.longPressGestureRecognizer != nil){
+        self.longPressGestureRecognizer.enabled = enable;
+    }
 }
 
 #pragma mark - UIGestureRecognizer Delegates

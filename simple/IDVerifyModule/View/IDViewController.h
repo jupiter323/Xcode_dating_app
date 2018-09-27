@@ -16,7 +16,7 @@
 @property (strong) IBOutlet UIImageView *cameraView;
 @property (weak, nonatomic) IBOutlet UIView *idverifiedalertview;
 @property (weak, nonatomic) IBOutlet UILabel *idverifiedtextlabel;
-
+@property (nonatomic, readwrite, assign) int indexOfNotPlaceHolder;
 
 @end
 

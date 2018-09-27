@@ -65,5 +65,7 @@ static NSString *HTKDraggableCollectionViewCellIdentifier = @"HTKDraggableCollec
  * Delegate for dragging the cell.
  */
 @property (nonatomic, weak) id<HTKDraggableCollectionViewCellDelegate> draggingDelegate;
-
+@property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+- (void)enableGesture:(BOOL) enable;
 @end
+
