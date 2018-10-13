@@ -204,6 +204,8 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     [[NSNotificationCenter defaultCenter] postNotificationName:
      @"FCMToken" object:nil userInfo:dataDict];
     // TODO: If necessary send token to application server.
+    [[PDKeychainBindings sharedKeychainBindings] setObject:fcmToken forKey:@"fcmToken"];
+    [[PDKeychainBindings sharedKeychainBindings] setObject:@"yes" forKey:@"profileFlag"];
     // Note: This callback is fired at each app startup and whenever a new token is generated.
 }
 // [END refresh_token]

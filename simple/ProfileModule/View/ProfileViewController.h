@@ -29,5 +29,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *occupationText;
 @property (weak, nonatomic) IBOutlet UITextField *aboutMeText;
 @property (weak, nonatomic) IBOutlet UILabel *ageRangeAbove;
-
+@property (weak, nonatomic) IBOutlet UISwitch *pushSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *soundSwitch;
 @end

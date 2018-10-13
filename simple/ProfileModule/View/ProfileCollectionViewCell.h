@@ -12,5 +12,7 @@
 @property (strong, nonatomic)  UIImageView *avatarImage;
 @property (strong, nonatomic)  UIButton *subButton;
 @property (nonatomic, strong) UILabel *numberLabel;
+@property (nonatomic, nonatomic) Boolean isVideo;
 - (void)enableGestureC:(BOOL) enable;
+-(void)flagIsVideo;
 @end

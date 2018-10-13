@@ -12,6 +12,7 @@
 @interface ProfileViewController (){
     UIButton *myProfile;
     MKDropdownMenu * heightDropdown;
+    
     MKDropdownMenu * interestedDropdown;
     NSArray *heightArray;
     NSArray *interestedArray;
@@ -118,7 +119,7 @@
     if(userInfo[@"indexOfInterest"])
         indexOfInterest = [userInfo[@"indexOfInterest"] intValue];
     else
-        indexOfInterest = -1;
+        indexOfInterest = 0;
     
     //// age range
     if(userInfo[@"ageMin"])
@@ -153,7 +154,7 @@
     }
     // driodown datas
     heightArray = @[@"4’", @"4’1”", @"4’2”", @"4’3”", @"4’4”",@"4’5”", @"4’6”", @"4’7”",@"4’8”", @"4’9”", @"5’", @"5’1”", @"5’2”", @"5’3”", @"5’4”", @"5’5”",@"5’6”",@"5’7”", @"5’8”", @"5’9”", @"6’",@"6’1”",@"6’2”",@"6’3”", @"6’4”", @"6’5”", @"6’6”", @"6’7”", @"6’8”", @"6’9”",@"7’",@"7’1”",@"7’2”",@"7’3”",@"7’4”",@"7’5”",@"7’6”",@"7’7”",@"7’8”",@"7’9”",@"8’"];
-    interestedArray = @[@"Assian", @"European", @"American"];
+    interestedArray = @[@"Everyone", @"Male", @"Female"];
     
   
 }
@@ -308,7 +309,6 @@
     [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
     self.ageRangeAbove.attributedText = textString;
     [self.ageRangeAbove sizeToFit];
-    
     [self changeUserInfo];
 }
 
@@ -322,6 +322,8 @@
 -(void)saveProfileAndReturn:(UIButton *) sender{
     if([[[PDKeychainBindings sharedKeychainBindings] objectForKey:@"profileFlag"] isEqual:@"yes"]){
         userInfo = [jsonParse([[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"]) mutableCopy];
+        //token save
+        [userInfo setObject:[[PDKeychainBindings sharedKeychainBindings] objectForKey:@"fcmToken"] forKey:@"fcmToken"];
         id responseData = [[Utilities sharedUtilities] apiService:@{@"data":jsonStringify(userInfo)} requestMethod:Post url:@"users/profile"];
         if(responseData[@"success"])
           [[PDKeychainBindings sharedKeychainBindings] setObject:@"no" forKey:@"profileFlag"];
@@ -385,23 +387,24 @@
     [self styleingSegment:self.interesGenderSeg];
     
     // switch
-   
+    self.pushSwitch.on = myswitchOn;
+    self.soundSwitch.on = myswitch1On;
+    self.pushSwitch.layer.cornerRadius = 17.5;
+    self.soundSwitch.layer.cornerRadius = 17.5;
     
-    
-    Switch* mySwitch = [Switch switchWithImage:onImage visibleWidth:52];
-    mySwitch.on = myswitchOn;
-    [mySwitch addTarget:self action:@selector(switchToggled:) forControlEvents:UIControlEventValueChanged];
-    mySwitch.layer.cornerRadius = 17.5;
-    mySwitch.tag = 0; // noti
-    [self.notiSwitchView addSubview:mySwitch];
-    
-    Switch* mySwitch1 = [Switch switchWithImage:onImage visibleWidth:52];
-    mySwitch1.on = myswitch1On;
-    [mySwitch1 addTarget:self action:@selector(switchToggled:) forControlEvents:UIControlEventValueChanged];
-    mySwitch1.layer.cornerRadius = 17.5;
-    mySwitch1.tag = 1; // sound
-    
-    [self.soundSwitchView addSubview:mySwitch1];
+//    Switch* mySwitch = [Switch switchWithImage:onImage visibleWidth:52];
+//    mySwitch.on = myswitchOn;
+//    [mySwitch addTarget:self action:@selector(switchToggled:) forControlEvents:UIControlEventValueChanged];
+//    mySwitch.layer.cornerRadius = 17.5;
+//    mySwitch.tag = 0; // noti
+////    [self.notiSwitchView addSubview:mySwitch];
+//
+//    Switch* mySwitch1 = [Switch switchWithImage:onImage visibleWidth:52];
+//    mySwitch1.on = myswitch1On;
+//    [mySwitch1 addTarget:self action:@selector(switchToggled:) forControlEvents:UIControlEventValueChanged];
+//    mySwitch1.layer.cornerRadius = 17.5;
+//    mySwitch1.tag = 1; // sound
+////    [self.soundSwitchView addSubview:mySwitch1];
 
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -452,6 +455,18 @@
     if( ((self.scrollContent.contentOffset.y - scrollOffsetY) > (self.scrollContent.contentSize.height - keyboardFrameBeginRect.size.height - selectedText.frame.size.height))|| (self.scrollContent.contentOffset.y<scrollOffsetY ))
         
       [self.scrollContent setContentOffset:CGPointMake(0, scrollOffsetY) animated:NO];
+}
+- (IBAction)pushChanged:(UISwitch *)sender {
+    myswitchOn = sender.on ? YES:NO;
+    [userInfo setObject:sender.on ?@"yes":@"no" forKey:@"notySwitchStatus"];
+    [self changeUserInfo];
+}
+
+
+- (IBAction)soundChanged:(UISwitch *)sender {
+    myswitch1On = sender.on ? YES:NO;
+    [userInfo setObject:sender.on ?@"yes":@"no" forKey:@"soundSwitchStatus"];
+    [self changeUserInfo];
 }
 
 -(void)switchToggled:(Switch*)mySwitch
@@ -546,7 +561,7 @@
     if(dropdownMenu == heightDropdown)
         return 41;
     else if(dropdownMenu == interestedDropdown)
-        return 3;
+        return 0;
     return 0;
 }
 
@@ -564,13 +579,10 @@
                                                attributes:@{NSFontAttributeName: [UIFont fontWithName:@"GothamRounded-Book" size:14.4],
                                                             NSForegroundColorAttributeName: [UIColor colorWithRed:0.61 green:0.61 blue:0.61 alpha:1]}];
     else if(dropdownMenu == interestedDropdown)
-        return [[NSAttributedString alloc] initWithString:indexOfInterest==-1?@"Everyone":interestedArray[indexOfInterest]
+        return [[NSAttributedString alloc] initWithString:interestedArray[indexOfInterest]
                                                attributes:@{NSFontAttributeName: [UIFont fontWithName:@"GothamRounded-Book" size:14.4],
                                                             NSForegroundColorAttributeName: [UIColor colorWithRed:0.61 green:0.61 blue:0.61 alpha:1]}];
-    return 0;
-    
-    
-    
+    return 0;   
 }
 
 - (NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {

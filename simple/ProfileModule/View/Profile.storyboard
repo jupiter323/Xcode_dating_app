@@ -220,8 +220,21 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-b5-ZD0">
                                                 <rect key="frame" x="281" y="2" width="55" height="35"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wvz-KT-r6n">
+                                                        <rect key="frame" x="6" y="1.3333333333333712" width="51" height="32.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="pushChanged:" destination="OM6-oE-CBa" eventType="valueChanged" id="vlL-a6-7P8"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="Wvz-KT-r6n" firstAttribute="top" secondItem="S4a-b5-ZD0" secondAttribute="top" constant="1.5" id="FJe-vG-2eW"/>
                                                     <constraint firstAttribute="height" constant="35" id="QMw-el-huq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Wvz-KT-r6n" secondAttribute="bottom" constant="1.5" id="Wqq-tq-bj4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Wvz-KT-r6n" secondAttribute="trailing" id="cJD-3F-Y0v"/>
                                                     <constraint firstAttribute="width" constant="55" id="mf1-Dl-krl"/>
                                                 </constraints>
                                             </view>
@@ -253,10 +266,24 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-8X-nGj">
                                                 <rect key="frame" x="281" y="2.3333333333333712" width="55" height="35"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X1C-O8-LRA">
+                                                        <rect key="frame" x="6" y="2" width="51" height="31"/>
+                                                        <color key="backgroundColor" red="0.92549019607843142" green="0.40000000000000002" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="onTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="soundChanged:" destination="OM6-oE-CBa" eventType="valueChanged" id="g2u-yH-Y6x"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="VSc-9B-IsP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="X1C-O8-LRA" secondAttribute="trailing" id="cJz-OC-I0T"/>
                                                     <constraint firstAttribute="width" constant="55" id="gqW-RM-qXv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="X1C-O8-LRA" secondAttribute="bottom" constant="1.5" id="mOm-ge-VVR"/>
+                                                    <constraint firstItem="X1C-O8-LRA" firstAttribute="centerY" secondItem="DLA-8X-nGj" secondAttribute="centerY" id="uRA-VT-iLl"/>
+                                                    <constraint firstItem="X1C-O8-LRA" firstAttribute="top" secondItem="DLA-8X-nGj" secondAttribute="top" constant="1.5" id="ujj-ix-3Em"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -417,7 +444,9 @@
                         <outlet property="interesGenderSeg" destination="7GZ-ei-Q8X" id="5jf-ch-J0S"/>
                         <outlet property="notiSwitchView" destination="S4a-b5-ZD0" id="IeF-uB-Twu"/>
                         <outlet property="occupationText" destination="Ukb-ef-XaU" id="J2E-nY-uqQ"/>
+                        <outlet property="pushSwitch" destination="Wvz-KT-r6n" id="AxK-DS-GaQ"/>
                         <outlet property="scrollContent" destination="oIC-R0-3dw" id="WB6-fQ-kmf"/>
+                        <outlet property="soundSwitch" destination="X1C-O8-LRA" id="4wc-Qp-FDb"/>
                         <outlet property="soundSwitchView" destination="DLA-8X-nGj" id="7b3-b1-rCy"/>
                         <outlet property="verifyView" destination="RIh-2y-jvA" id="A5Z-55-0uI"/>
                     </connections>

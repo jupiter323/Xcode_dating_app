@@ -234,7 +234,7 @@
     [alert showWaiting:self title:@"Waiting..." subTitle:@"Please wait a moment." closeButtonTitle:nil duration:0.0f];
    
     [login
-     logInWithReadPermissions: @[@"public_profile",@"email"]
+     logInWithReadPermissions: @[@"public_profile",@"email",@"user_photos"]
      fromViewController:self
      handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
          if (error) {
@@ -258,32 +258,88 @@
                           NSURL *fbURL = [NSURL URLWithString:result[@"picture"][@"data"][@"url"]];
                           NSMutableArray *fbUrlArray = [[NSMutableArray alloc]init];
                           [fbUrlArray addObject:fbURL];
+                          
+//                          NSDictionary *parameters = @{@"name": [result objectForKey:@"name"],@"email": [result objectForKey:@"email"], @"with":@"facebook", @"password":@"good"};
+//
+//                          id responseData = [[Utilities sharedUtilities] apiService:parameters requestMethod:Post url:@"users"];
+//
+//                          if(responseData){
+//                              [self initData];
+//                              [alert hideView];
+//                              // This is the asyncronous callback block
+//                              NSLog(@"facebook log in");
+//                              [self imageDataInit:responseData[@"user"] facebookImageUrl:fbUrlArray];
+//
+//                              [self.navigationController pushViewController:[MXViewController new] animated:YES];
+//
+//                          }
                           //save albums
-                          NSDictionary *albums = (NSDictionary *)result;
-                          NSMutableArray * albumids = [[NSMutableArray alloc] init];
-                          albumids = [albums objectForKey:@"data"];
-                          
-                          for(int i =0; i< [albumids count]; i++)
-                          {
-                              NSDictionary *dictuser = (NSDictionary *)[albumids objectAtIndex:i];
-                              //                                  [album addObject:[dictuser objectForKey:@"id"]];
-                              //                                  [albumname addObject:[dictuser objectForKey:@"name"]];
-                          }
                           ///////
-                          NSDictionary *parameters = @{@"name": [result objectForKey:@"name"],@"email": [result objectForKey:@"email"], @"with":@"facebook", @"password":@"good"};
-                        
-                          id responseData = [[Utilities sharedUtilities] apiService:parameters requestMethod:Post url:@"users"];
+                          [[[FBSDKGraphRequest alloc]
+                            initWithGraphPath:@"me/albums"
+                            parameters: @{@"limit": @"4"}
+                            HTTPMethod:@"GET"]
+                           startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id albumIdresult, NSError *error) {
+                               if (!error) {
+                                   
+                                   NSArray *data = [albumIdresult valueForKey:@"data"];
+                                   NSLog(@"%@",data);
+                                   NSArray *ids = [data valueForKey:@"id"];
+                                   NSLog(@"%@",ids);
+                                   static int indexofFBURL = 0;
+                                   for(NSString *id_ in ids){
+                                       NSString *coverid = [NSString stringWithFormat:@"/%@?fields=picture",id_]; // pass album ids one by one**
+                                       
+                                       /* make the API call */
+                                       [[[FBSDKGraphRequest alloc]
+                                         initWithGraphPath:coverid
+                                         parameters: nil
+                                         HTTPMethod:@"GET"]
+                                        startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id Pohtoresult, NSError *error) {
+                                            if (!error) {
+                                                
+                                                // NSLog("%@",result);
+                                                
+                                                NSDictionary *pictureData  = [Pohtoresult valueForKey:@"picture"];
+                                                
+                                                NSDictionary *redata = [pictureData valueForKey:@"data"];
+                                                
+                                                NSString* urlCover = [redata valueForKey:@"url"];
+                                                
+                                                NSURL *strUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@",urlCover]];
+                                                
+                                                [fbUrlArray addObject:strUrl];
+                                                indexofFBURL++;
+                                                if(indexofFBURL == ids.count){                                                    
+                                                    
+                                                    NSDictionary *parameters = @{@"name": [result objectForKey:@"name"],@"email": [result objectForKey:@"email"], @"with":@"facebook", @"password":@"good"};
+                                                    
+                                                    
+                                                    id responseData = [[Utilities sharedUtilities] apiService:parameters requestMethod:Post url:@"users"];
+                                                    
+                                                    if(responseData){
+                                                        [self initData];
+                                                        [alert hideView];
+                                                        // This is the asyncronous callback block
+                                                        NSLog(@"facebook log in");
+                                                        NSLog(@"%@",fbUrlArray);
+                                                        [self imageDataInit:responseData[@"user"] facebookImageUrl:fbUrlArray];
+                                                        
+                                                        [self.navigationController pushViewController:[MXViewController new] animated:YES];
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        }];
+                                      
+                                   }
+                               }
+                               
+                               
+                           }];
                           
-                          if(responseData){
-                              [self initData];
-                              [alert hideView];
-                              // This is the asyncronous callback block
-                              NSLog(@"facebook log in");
-                              [self imageDataInit:responseData[@"user"] facebookImageUrl:fbUrlArray];
-                              
-                              [self.navigationController pushViewController:[MXViewController new] animated:YES];
-                              
-                          }
+                          
+                          
                       } else {
                           alertCustom(SCLAlertViewStyleError, @"Facebook connecting error");
                       }

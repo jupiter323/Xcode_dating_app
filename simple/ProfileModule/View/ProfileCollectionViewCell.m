@@ -10,14 +10,14 @@
 
 @implementation ProfileCollectionViewCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype) initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupCell];
     }
     return self;
 }
-- (void)setupCell {
+- (void) setupCell {
     
     //Create image
     self.avatarImage = [[UIImageView alloc] init];
@@ -26,8 +26,13 @@
     // Create subbutton
     self.subButton = [[UIButton alloc] init];
     [self.contentView addSubview:self.subButton];
+    
+    self.isVideo = false;
 }
-- (void)enableGestureC:(BOOL) enable{    
+-(void) flagIsVideo{
+    self.isVideo = true;
+}
+- (void) enableGestureC:(BOOL) enable{
     [self enableGesture:enable];
 }
 @end

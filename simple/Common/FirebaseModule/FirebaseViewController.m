@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 -(void)configFireStorage{
@@ -34,7 +33,6 @@
                                                           NSError * _Nullable error) {
             if (error) {
                 NSLog(@"%@",error.description);
-                
             } else {
                 NSLog(@"Succedd");
             }
@@ -45,7 +43,7 @@
 -(void)uploadToFirebaseStorage:(id) file{
     
     NSData *imageData = UIImageJPEGRepresentation((UIImage *)file, 0.8);
-    NSString *folderName=[[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"];
+    NSString *folderName=   [[PDKeychainBindings sharedKeychainBindings] objectForKey:@"userInfo"];
     if(folderName)
         folderName = [jsonParse(folderName) valueForKey:@"email"];
     folderName = [folderName stringByReplacingOccurrencesOfString:@"@" withString:@""];
