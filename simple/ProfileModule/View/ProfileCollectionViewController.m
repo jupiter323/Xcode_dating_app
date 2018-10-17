@@ -65,28 +65,25 @@
     ProfileCollectionViewCell *cell = (ProfileCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:HTKDraggableCollectionViewCellIdentifier forIndexPath:indexPath];
     
     long i = indexPath.item;
-    // is video setting
-    if(i==5)
-        [cell flagIsVideo];
+  
+    
     CGFloat buttonWidth = 85;//88
     CGFloat buttonLocH =15;
     if(i>2)
         buttonLocH =buttonLocH+buttonWidth+10;
     cell.avatarImage.frame = CGRectMake(0,0 , buttonWidth, buttonWidth);
-    
-    if([self.localDataArray[i] containsString:@"MOV"])
+    cell.fileUrl = self.localDataArray[i];
+    if([self.localDataArray[i] containsString:@"MOV"])// if video is, set video
     {
-        vedioURL =[NSURL fileURLWithPath:self.localDataArray[i]];//init local video url
-        // add action button
-        UIButton *tapVideo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, cell.avatarImage.bounds.size.width,cell.avatarImage.bounds.size.height)];
-        [tapVideo addTarget:self action:@selector(actionPlayVideo:) forControlEvents:UIControlEventTouchDown];
-        [tapVideo setImage:[UIImage imageNamed:@"videoPlay"] forState:UIControlStateNormal];
-        [cell addSubview:tapVideo];
-       
-
+        [cell setVideo];        
     }
-    else
+    else{
         [cell.avatarImage setImage:[UIImage imageWithContentsOfFile:self.localDataArray[i]]];
+        [cell setImage];
+        
+        if([self.localDataArray[i] containsString:@"videoPlace"])// when video is not, set video
+            [cell flagIsVideo];
+    }
     
     cell.avatarImage.layer.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0.34].CGColor;
     
