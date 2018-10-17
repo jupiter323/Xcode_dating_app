@@ -82,7 +82,7 @@
     // Add our long press to cell
     self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
     // Wait time before we being dragging
-    self.longPressGestureRecognizer.minimumPressDuration = 0.1;
+    self.longPressGestureRecognizer.minimumPressDuration = 0.3;
     self.longPressGestureRecognizer.delegate = self;
    [self addGestureRecognizer:self.longPressGestureRecognizer];
 }

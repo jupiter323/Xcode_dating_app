@@ -536,7 +536,9 @@
             IDViewController *idVerify = (IDViewController *)[storyboard instantiateViewControllerWithIdentifier:@"idVerify"];
             // index push
             idVerify.indexOfNotPlaceHolder = i;
-            [self.navigationController pushViewController:idVerify animated:NO];
+            [self.navigationController pushViewController:idVerify animated:NO];      
+          
+            
             break;
         } else if(i == 5) alertCustom(SCLAlertViewStyleError, @"Please make your profile photo");
     }

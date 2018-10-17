@@ -66,10 +66,14 @@
 		CEB6FC932121A0D5003A7E69 /* AddConnectScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6FC922121A0D5003A7E69 /* AddConnectScreen.storyboard */; };
 		CEBA56BA214828320025C87A /* SBSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBA56B8214828320025C87A /* SBSliderView.m */; };
 		CEBA56BB214828320025C87A /* SBSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEBA56B9214828320025C87A /* SBSliderView.xib */; };
+		CEBDC4442174DD7B00F4D5B8 /* FacialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDC4432174DD7B00F4D5B8 /* FacialViewController.m */; };
+		CEBDC4462174DDFC00F4D5B8 /* Facial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBDC4452174DDFC00F4D5B8 /* Facial.storyboard */; };
 		CEC7CF312150B18600A8D221 /* MeQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC7CF302150B18600A8D221 /* MeQuestion.storyboard */; };
 		CEC7CF342150B30300A8D221 /* MeQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC7CF332150B30300A8D221 /* MeQuestionViewController.m */; };
 		CEDF2A5A212A90FD0046D01E /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2A59212A90FD0046D01E /* Matches.storyboard */; };
 		CEE321FD21569D0A007A8E08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE321FC21569D0A007A8E08 /* GoogleService-Info.plist */; };
+		CEFE015F2175F30500ACD3AE /* VideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE015E2175F30500ACD3AE /* VideoPlayViewController.m */; };
+		CEFE01612175FAF700ACD3AE /* VideoPlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFE01602175FAF700ACD3AE /* VideoPlay.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,12 +179,18 @@
 		CEBA56B7214828320025C87A /* SBSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSliderView.h; sourceTree = "<group>"; };
 		CEBA56B8214828320025C87A /* SBSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSliderView.m; sourceTree = "<group>"; };
 		CEBA56B9214828320025C87A /* SBSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBSliderView.xib; sourceTree = "<group>"; };
+		CEBDC4422174DD7B00F4D5B8 /* FacialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacialViewController.h; sourceTree = "<group>"; };
+		CEBDC4432174DD7B00F4D5B8 /* FacialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacialViewController.m; sourceTree = "<group>"; };
+		CEBDC4452174DDFC00F4D5B8 /* Facial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Facial.storyboard; sourceTree = "<group>"; };
 		CEC7CF302150B18600A8D221 /* MeQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeQuestion.storyboard; sourceTree = "<group>"; };
 		CEC7CF322150B30300A8D221 /* MeQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeQuestionViewController.h; sourceTree = "<group>"; };
 		CEC7CF332150B30300A8D221 /* MeQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeQuestionViewController.m; sourceTree = "<group>"; };
 		CEDF2A59212A90FD0046D01E /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
 		CEE321FB21568F44007A8E08 /* Korte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Korte.entitlements; sourceTree = "<group>"; };
 		CEE321FC21569D0A007A8E08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEFE015D2175F30500ACD3AE /* VideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayViewController.h; sourceTree = "<group>"; };
+		CEFE015E2175F30500ACD3AE /* VideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayViewController.m; sourceTree = "<group>"; };
+		CEFE01602175FAF700ACD3AE /* VideoPlay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlay.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +305,9 @@
 			isa = PBXGroup;
 			children = (
 				CE3BCEEA21168CCA00706FD1 /* View */,
+				CEFE015D2175F30500ACD3AE /* VideoPlayViewController.h */,
+				CEFE015E2175F30500ACD3AE /* VideoPlayViewController.m */,
+				CEFE01602175FAF700ACD3AE /* VideoPlay.storyboard */,
 			);
 			path = ProfileModule;
 			sourceTree = "<group>";
@@ -515,6 +528,7 @@
 		CEB28726211388A900C51670 /* simple */ = {
 			isa = PBXGroup;
 			children = (
+				CEBDC4412174DD0F00F4D5B8 /* FacialRecognition */,
 				CE7A351621470D4400973CB8 /* MatchProfile */,
 				CE7A35042146F2E600973CB8 /* ChatModule */,
 				CE1778A4213FEE0000764C3B /* font */,
@@ -617,6 +631,16 @@
 				CEBA56B9214828320025C87A /* SBSliderView.xib */,
 			);
 			path = SBSlider;
+			sourceTree = "<group>";
+		};
+		CEBDC4412174DD0F00F4D5B8 /* FacialRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				CEBDC4422174DD7B00F4D5B8 /* FacialViewController.h */,
+				CEBDC4432174DD7B00F4D5B8 /* FacialViewController.m */,
+				CEBDC4452174DDFC00F4D5B8 /* Facial.storyboard */,
+			);
+			path = FacialRecognition;
 			sourceTree = "<group>";
 		};
 		CEC440802138503E00D678F7 /* View */ = {
@@ -735,7 +759,9 @@
 				CE1778A921402C6C00764C3B /* GothamRoundedBold_21016.ttf in Resources */,
 				CE598E4121380B8300306488 /* IDVerify.storyboard in Resources */,
 				CE7A351B214711B300973CB8 /* MProfile.storyboard in Resources */,
+				CEBDC4462174DDFC00F4D5B8 /* Facial.storyboard in Resources */,
 				CEC7CF312150B18600A8D221 /* MeQuestion.storyboard in Resources */,
+				CEFE01612175FAF700ACD3AE /* VideoPlay.storyboard in Resources */,
 				CE1778AB21406BFF00764C3B /* GothamRoundedBook_21018.ttf in Resources */,
 				CEB28734211388BA00C51670 /* Assets.xcassets in Resources */,
 				CE3BCEEC21168CEB00706FD1 /* Profile.storyboard in Resources */,
@@ -848,12 +874,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBDC4442174DD7B00F4D5B8 /* FacialViewController.m in Sources */,
 				CE603A48211DA4C4006E95F3 /* MXCardsSwipingView.m in Sources */,
 				CEAFBC9C21549115009BE456 /* FirebaseViewController.m in Sources */,
 				CE4790912140D97B004DA76F /* MSCMoreOptionTableViewCell.m in Sources */,
 				CEAFBCA321551344009BE456 /* Utilities.m in Sources */,
 				CEB287652113F50E00C51670 /* SplashViewController.m in Sources */,
 				CE3480C6214A35A1005F33FB /* PDKeychainBindings.m in Sources */,
+				CEFE015F2175F30500ACD3AE /* VideoPlayViewController.m in Sources */,
 				CEB28732211388A900C51670 /* simple.xcdatamodeld in Sources */,
 				CEB6FC9121214488003A7E69 /* AddConnectViewController.m in Sources */,
 				CE09C2312152648900DF5291 /* HTKDragAndDropCollectionViewLayout.m in Sources */,
@@ -1028,7 +1056,7 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1059,7 +1087,7 @@
 					"$(PROJECT_DIR)/simple/Common/fbSDK",
 				);
 				INFOPLIST_FILE = simple/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

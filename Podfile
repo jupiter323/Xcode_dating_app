@@ -24,7 +24,7 @@ target 'Korte' do
   pod "Firebase/Database" 
   pod "Firebase/Storage"
   pod 'Firebase/Messaging'
-
+#  pod 'HyperSecureSDK'
 #  pod "FBSDKLoginKit"
 
 #  pod "DSCircularCollectionView"

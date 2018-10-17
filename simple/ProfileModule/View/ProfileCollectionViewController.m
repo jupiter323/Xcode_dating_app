@@ -8,13 +8,16 @@
 
 #import "ProfileCollectionViewController.h"
 #import "ProfileCollectionViewCell.h"
-@interface ProfileCollectionViewController ()
+@interface ProfileCollectionViewController (){
+    NSURL *vedioURL;
+}
 @property (nonatomic, strong) UICollectionView *uiCollection;
 @property (nonatomic) BOOL newMedia;
 @property (nonatomic, strong) ProfileCollectionViewCell *cellToCapture;
 @property (nonatomic, strong) UIViewController *yourCurrentViewController;
 @property (nonatomic, strong)  NSIndexPath *cellIndexPath;
 @property (nonatomic, strong)  FirebaseViewController *fireController;
+@property (strong, nonatomic) AVPlayerViewController *playerViewController;
 @end
 
 @implementation ProfileCollectionViewController
@@ -36,6 +39,13 @@
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.lineSpacing = 10;
     flowLayout.sectionInset = UIEdgeInsetsMake(15, 32, 0, 32);
+    
+    self.yourCurrentViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (self.yourCurrentViewController.presentedViewController)
+    {
+        self.yourCurrentViewController = self.yourCurrentViewController.presentedViewController;
+    }
 }
 -(void)setData:(NSMutableArray *)data local:(NSMutableArray *)localData {
     self.dataArray = data;
@@ -63,8 +73,20 @@
     if(i>2)
         buttonLocH =buttonLocH+buttonWidth+10;
     cell.avatarImage.frame = CGRectMake(0,0 , buttonWidth, buttonWidth);
+    
+    if([self.localDataArray[i] containsString:@"MOV"])
+    {
+        vedioURL =[NSURL fileURLWithPath:self.localDataArray[i]];//init local video url
+        // add action button
+        UIButton *tapVideo = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, cell.avatarImage.bounds.size.width,cell.avatarImage.bounds.size.height)];
+        [tapVideo addTarget:self action:@selector(actionPlayVideo:) forControlEvents:UIControlEventTouchDown];
+        [tapVideo setImage:[UIImage imageNamed:@"videoPlay"] forState:UIControlStateNormal];
+        [cell addSubview:tapVideo];
+       
 
-    [cell.avatarImage setImage:[UIImage imageWithContentsOfFile:self.localDataArray[i]]];
+    }
+    else
+        [cell.avatarImage setImage:[UIImage imageWithContentsOfFile:self.localDataArray[i]]];
     
     cell.avatarImage.layer.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0.34].CGColor;
     
@@ -76,9 +98,11 @@
     
     
     [cell.subButton sizeToFit];
+
     [cell.subButton addTarget:self
                        action:@selector(addAndChangeAvatar:)
              forControlEvents:UIControlEventTouchDown];
+    
     cell.subButton.backgroundColor = [UIColor clearColor];
     
     if([self.localDataArray[i] containsString:@"imagePlace"] ||[self.localDataArray[i] containsString:@"videoPlace"])
@@ -100,6 +124,39 @@
     return cell;
 }
 
+- (void) actionPlayVideo:(id)sender{
+    NSLog(@"%@", vedioURL);
+    
+    
+    AVPlayerItem* playerItem = [AVPlayerItem playerItemWithURL:vedioURL];
+    AVPlayer* playVideo = [[AVPlayer alloc] initWithPlayerItem:playerItem];
+    self.playerViewController = [[AVPlayerViewController alloc] init];
+    self.playerViewController.player = playVideo;
+    self.playerViewController.player.volume = 0;
+    self.playerViewController.view.frame = self.view.bounds;
+    [self.yourCurrentViewController.view addSubview:self.playerViewController.view];
+    [playVideo play];
+    
+    //close button
+    UIButton *closeVideo = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 30,30)];
+    [closeVideo addTarget:self action:@selector(closeVideoPlay:) forControlEvents:UIControlEventTouchDown];
+    [closeVideo setImage:[UIImage imageNamed:@"closeGetting"] forState:UIControlStateNormal];
+    [self.yourCurrentViewController.view addSubview:closeVideo];
+   
+    
+}
+-(void)closeVideoPlay:(id) sender{
+    for(UIView *tempViews in self.yourCurrentViewController.view.subviews){
+        [tempViews removeFromSuperview];
+    }
+//    [self.yourCurrentViewController popoverPresentationController:NO];
+    
+}
+-(NSString *)documentsDirectory{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    return documentsDirectory;
+}
 #pragma mark - HTKDraggableCollectionViewCellDelegate
 
 - (BOOL)userCanDragCell:(UICollectionViewCell *)cell {
@@ -122,9 +179,6 @@
         NSObject *localobjectToMove = [self.localDataArray objectAtIndex:flowLayout.draggedIndexPath.row];
         [self.localDataArray removeObjectAtIndex:flowLayout.draggedIndexPath.row];
         [self.localDataArray insertObject:localobjectToMove atIndex:flowLayout.finalIndexPath.row];
-        
-       
-        
         NSMutableArray *localimages = [self.localDataArray mutableCopy];
         
         [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(localimages) forKey:@"images"];
@@ -159,12 +213,7 @@
         [[UIImagePickerController alloc] init];
         imagePicker.delegate = self;
         
-        self.yourCurrentViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-        
-        while (self.yourCurrentViewController.presentedViewController)
-        {
-            self.yourCurrentViewController = self.yourCurrentViewController.presentedViewController;
-        }
+    
         //alert control
         
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"" message:self.cellToCapture.isVideo?@"Change Video":@"Change Profile image" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -265,10 +314,21 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie])
     {
         // Code here to support video if enabled
-        NSLog(@"here video");
-        NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
-        NSLog(@"here video%@", moviePath);
-        [self.localDataArray setObject:moviePath atIndexedSubscript:self.cellIndexPath.row];// setting avatar image
+    
+        NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+        NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
+        NSLog(@"here video%@", videoURL);
+        NSString *videoName= randomStringWithLength(10);
+        videoName = [videoName stringByAppendingString:@".MOV"];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                             NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString* path = [documentsDirectory stringByAppendingPathComponent:
+                          videoName];
+        [videoData writeToFile:path atomically:YES];
+        NSLog(@"%@",path);
+        
+        [self.localDataArray setObject:path atIndexedSubscript:self.cellIndexPath.row];// setting avatar image
         
         id localimages = [self.localDataArray mutableCopy];
         [[PDKeychainBindings sharedKeychainBindings] setObject:jsonStringify(localimages) forKey:@"images"];
@@ -277,10 +337,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         self.newMedia = NO;
         // to upload to firebase
 //        [self.fireController uploadToFirebaseStorage:image];
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePath))
-        {
-            UISaveVideoAtPathToSavedPhotosAlbum(moviePath, self,@selector(video:didFinishSavingWithError:contextInfo:), nil);
-        }
+//        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(videoURL.path))
+//        {
+//            UISaveVideoAtPathToSavedPhotosAlbum(videoURL.path, self,@selector(video:didFinishSavingWithError:contextInfo:), nil);
+//        }
     }    
 }
 -(void)video:(NSString*)videoPath didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo

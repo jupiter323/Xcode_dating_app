@@ -66,7 +66,7 @@
     [self.view addSubview:self.messageButton];
     
     //    Notification buttons menu
-    int avatarCount = 2;    
+    int avatarCount = 9;
     forMeFriends = avatarCount;
     self.notificationButton = [[UIButton alloc] init];
     [self.notificationButton setImage:[UIImage imageNamed:@"pro_noti"] forState:UIControlStateNormal];

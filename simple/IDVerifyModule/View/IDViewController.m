@@ -13,6 +13,7 @@
     UIAlertView *alert;
     AFDXFace *faceData;
     BOOL isImageDetecting;
+    int unRecognizedIndex;
 }
 
 @end
@@ -35,11 +36,8 @@
             faceData = face;
             isImageDetecting = false;
             [self createDetector];
-            NSLog(@"%@",faceData);
-        }else if(faceData.appearance==face.appearance||faceData.faceId==face.faceId){
+        } else if(faceData.appearance==face.appearance||faceData.faceId==face.faceId){
             [self changeProfileAndReturn];
-        } else {
-//            [self notVerified];
         }
        
 //        for(NSData *pointOfFace in face.facePoints){
@@ -65,6 +63,7 @@
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0){
+        
         //delete it
     }
     NSLog(@"%@",faceData);
@@ -105,8 +104,18 @@
 {
     IDViewController * __weak weakSelf = self;
     if(isImageDetecting){
-        [self notVerified];
-        return;
+        self.idverifiedalertview.hidden = NO;
+        NSString *textContent = isImageDetecting?@"There is not face!":@"Please make correct image!";
+        NSRange textRange = NSMakeRange(0, textContent.length);
+        NSMutableAttributedString *textString = [[NSMutableAttributedString alloc] initWithString:textContent];
+        UIFont *font = [UIFont fontWithName:@"GothamRounded-Medium" size:22];
+        [textString addAttribute:NSFontAttributeName value:font range:textRange];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineSpacing = 1.18;
+        [textString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:textRange];
+        self.idverifiedtextlabel.attributedText = textString;
+        [self.idverifiedtextlabel sizeToFit];
+//        return;
     }
     // UI work must be done on the main thread, so dispatch it there.
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -258,6 +267,7 @@
 {
     [super viewWillAppear:animated];
     isImageDetecting = true;
+    unRecognizedIndex = 0;
 //    [self createDetector]; // create the dector just before the view appears
     
 

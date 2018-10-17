@@ -11,6 +11,7 @@
 #import "Utilities.h"
 #import "FirebaseViewController.h"
 #import <Photos/Photos.h>
+#import "VideoPlayViewController.h"
 @interface ProfileCollectionViewController : HTKDragAndDropCollectionViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 -(void)setData:(NSMutableArray *)data local:(NSMutableArray *)localData;
 @property (nonatomic, strong) NSMutableArray *dataArray;

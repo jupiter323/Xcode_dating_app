@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, MXCardDestination) {//tinder card
     MXCardDestinationUp
 };
 
-//static NSString *BaseURI = @"http://192.168.2.155:3000/";
+//static NSString *BaseURI = @"http://192.168.2.131:3000/";
 static NSString *BaseURI = @"https://korteapi.herokuapp.com/";
 static UIView* copyView(UIView * view) {
     NSData *archivedData = [NSKeyedArchiver archivedDataWithRootObject: view];
